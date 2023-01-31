@@ -1,0 +1,37 @@
+1664393756
+23a5d615beaf9ee1823207936212b1a8907a6f09
+a:1:{s:54:"bn_count_Computer_34cfbaf9-a471-4852-b48c-0dadea7644de";s:1149:"      <style>
+         #bn_817860915 {
+            background-color: #f3d0d0;
+            color: #c53232;
+         }
+
+         #bn_817860915:hover {
+            background-color: #e39393;
+            border: 1px solid #d45656;
+         }
+
+         .theme-dark #bn_817860915 {
+            background-color: #c53232;
+            color: #f3d0d0;
+         }
+
+         .theme-dark #bn_817860915:hover {
+            background-color: #e39393;
+            color: #c53232;
+            border: 1px solid #d45656;
+         }
+      </style>
+      <a href='/glpi/front/computer.php?reset=reset'
+         id="bn_817860915"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Computador">Computador</div>
+         <i class="main-icon ti ti-device-laptop"></i>
+      </a>";}

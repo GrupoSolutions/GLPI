@@ -1,0 +1,37 @@
+1668770767
+8772dbfc6775971cd788121e8789efa7a6921911
+a:1:{s:50:"bn_count_User_ac0cbe52-3593-43c1-8ecc-0eb115de494d";s:1074:"      <style>
+         #bn_858525842 {
+            background-color: #fafafa;
+            color: #949494;
+         }
+
+         #bn_858525842:hover {
+            background-color: #d4d4d4;
+            border: 1px solid #aeaeae;
+         }
+
+         .theme-dark #bn_858525842 {
+            background-color: #949494;
+            color: #fafafa;
+         }
+
+         .theme-dark #bn_858525842:hover {
+            background-color: #d4d4d4;
+            color: #949494;
+            border: 1px solid #aeaeae;
+         }
+      </style>
+      <a href='/front/user.php?reset=reset'
+         id="bn_858525842"
+         class="card big-number  filter-dates filter-dates_mod filter-location"
+         title="">
+         <span class="content">            <span title="6"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">6</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Usuários">Usuários</div>
+         <i class="main-icon ti ti-user"></i>
+      </a>";}

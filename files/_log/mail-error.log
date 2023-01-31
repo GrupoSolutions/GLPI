@@ -1,0 +1,113 @@
+<<<<<<< HEAD
+2022-11-30 14:48:49 [2@localhost]
+Atenção: um e-mail não foi entregue para suporte@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000179] Novo chamado 0000179	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+=======
+2022-11-16 11:04:37 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000115] Novo chamado 0000115	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-16 13:47:04 [@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000115] Novo chamado 0000115	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-16 15:46:51 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 3 tentativas restantes. Mensagem: [GLPI #0000115] Novo chamado 0000115	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-16 19:12:07 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 2 tentativas restantes. Mensagem: [GLPI #0000115] Novo chamado 0000115	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-16 20:07:56 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 1 tentativas restantes. Mensagem: [GLPI #0000115] Novo chamado 0000115	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-16 20:21:38 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 0 tentativas restantes. Mensagem: [GLPI #0000115] Novo chamado 0000115	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-16 20:21:38 [2@GS003021]
+Erro fatal: desistindo da entrega do e-mail para glpiteste@gruposolutions.com.br: [GLPI #0000115] Novo chamado 0000115	
+2022-11-17 11:59:00 [@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000125] Novo chamado 0000125	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-17 14:43:59 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000126] NOVA RESPOSTA 0000126 - Teste de atribuição, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-17 14:44:05 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000125] Novo chamado 0000125	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-17 14:44:11 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000127] NOVA RESPOSTA 0000127 - Testing Behaviors, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-17 14:44:17 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000128] NOVA RESPOSTA 0000128 - Teste, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-18 19:19:02 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000126] NOVA RESPOSTA 0000126 - Teste de atribuição, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-18 19:19:08 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 3 tentativas restantes. Mensagem: [GLPI #0000125] Novo chamado 0000125	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-18 19:19:14 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000127] NOVA RESPOSTA 0000127 - Testing Behaviors, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-18 19:19:20 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000128] NOVA RESPOSTA 0000128 - Teste, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 12:56:29 [11@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 3 tentativas restantes. Mensagem: [GLPI #0000126] NOVA RESPOSTA 0000126 - Teste de atribuição, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 12:56:35 [11@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 2 tentativas restantes. Mensagem: [GLPI #0000125] Novo chamado 0000125	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 12:56:41 [11@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 3 tentativas restantes. Mensagem: [GLPI #0000127] NOVA RESPOSTA 0000127 - Testing Behaviors, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 12:56:47 [11@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 3 tentativas restantes. Mensagem: [GLPI #0000128] NOVA RESPOSTA 0000128 - Teste, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 13:28:22 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 2 tentativas restantes. Mensagem: [GLPI #0000126] NOVA RESPOSTA 0000126 - Teste de atribuição, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 13:28:28 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 1 tentativas restantes. Mensagem: [GLPI #0000125] Novo chamado 0000125	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 13:28:34 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 2 tentativas restantes. Mensagem: [GLPI #0000127] NOVA RESPOSTA 0000127 - Testing Behaviors, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 13:28:36 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 2 tentativas restantes. Mensagem: [GLPI #0000128] NOVA RESPOSTA 0000128 - Teste, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 13:28:38 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000133] Novo chamado 0000133	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 14:05:54 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 1 tentativas restantes. Mensagem: [GLPI #0000126] NOVA RESPOSTA 0000126 - Teste de atribuição, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 14:06:00 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 0 tentativas restantes. Mensagem: [GLPI #0000125] Novo chamado 0000125	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 14:06:00 [9@GS003021]
+Erro fatal: desistindo da entrega do e-mail para glpiteste@gruposolutions.com.br: [GLPI #0000125] Novo chamado 0000125	
+2022-11-21 14:06:06 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 1 tentativas restantes. Mensagem: [GLPI #0000127] NOVA RESPOSTA 0000127 - Testing Behaviors, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 14:06:12 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 1 tentativas restantes. Mensagem: [GLPI #0000128] NOVA RESPOSTA 0000128 - Teste, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 14:06:14 [9@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000133] Novo chamado 0000133	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 15:41:00 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 0 tentativas restantes. Mensagem: [GLPI #0000126] NOVA RESPOSTA 0000126 - Teste de atribuição, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 15:41:00 [2@GS003021]
+Erro fatal: desistindo da entrega do e-mail para glpi@gruposolutions.com.br: [GLPI #0000126] NOVA RESPOSTA 0000126 - Teste de atribuição
+2022-11-21 15:41:06 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 0 tentativas restantes. Mensagem: [GLPI #0000127] NOVA RESPOSTA 0000127 - Testing Behaviors, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 15:41:06 [2@GS003021]
+Erro fatal: desistindo da entrega do e-mail para glpi@gruposolutions.com.br: [GLPI #0000127] NOVA RESPOSTA 0000127 - Testing Behaviors
+2022-11-21 15:41:12 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 0 tentativas restantes. Mensagem: [GLPI #0000128] NOVA RESPOSTA 0000128 - Teste, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 15:41:12 [2@GS003021]
+Erro fatal: desistindo da entrega do e-mail para glpi@gruposolutions.com.br: [GLPI #0000128] NOVA RESPOSTA 0000128 - Teste
+2022-11-21 15:41:18 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 3 tentativas restantes. Mensagem: [GLPI #0000133] Novo chamado 0000133	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 15:41:20 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000138] Novo chamado 0000138	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 19:57:53 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 2 tentativas restantes. Mensagem: [GLPI #0000133] Novo chamado 0000133	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 19:57:59 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000138] Novo chamado 0000138	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 20:52:17 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 1 tentativas restantes. Mensagem: [GLPI #0000133] Novo chamado 0000133	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 20:52:27 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 3 tentativas restantes. Mensagem: [GLPI #0000138] Novo chamado 0000138	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 20:52:37 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000124] NOVA RESPOSTA 0000124 - SLA FUNCIONA, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 20:52:47 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000124] Chamado solucionado 0000124	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 20:52:49 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000135] Chamado solucionado 0000135	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-21 20:52:51 [2@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 5 tentativas restantes. Mensagem: [GLPI #0000135] Chamado solucionado 0000135	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-22 12:08:19 [@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 0 tentativas restantes. Mensagem: [GLPI #0000133] Novo chamado 0000133	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-22 12:08:19 [@GS003021]
+Erro fatal: desistindo da entrega do e-mail para glpiteste@gruposolutions.com.br: [GLPI #0000133] Novo chamado 0000133	
+2022-11-22 12:08:25 [@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 2 tentativas restantes. Mensagem: [GLPI #0000138] Novo chamado 0000138	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-22 12:08:31 [@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000124] NOVA RESPOSTA 0000124 - SLA FUNCIONA, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-22 12:08:37 [@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000124] Chamado solucionado 0000124	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-22 12:08:39 [@GS003021]
+Atenção: um e-mail não foi entregue para glpi@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000135] Chamado solucionado 0000135	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2022-11-22 12:08:41 [@GS003021]
+Atenção: um e-mail não foi entregue para glpiteste@gruposolutions.com.br com mais 4 tentativas restantes. Mensagem: [GLPI #0000135] Chamado solucionado 0000135	, Erro: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122

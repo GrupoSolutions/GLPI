@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+1672748746
+ed13ac29add079a9bfcfe649f0289e74ea6d745f
+a:1:{s:70:"plugin_formcreator_waiting_issues_c6a2b0c4-3e99-4431-b365-1aebffd0097e";s:1190:"      <style>
+         #bn_2087821189 {
+=======
+1669039615
+ed13ac29add079a9bfcfe649f0289e74ea6d745f
+a:1:{s:70:"plugin_formcreator_waiting_issues_c6a2b0c4-3e99-4431-b365-1aebffd0097e";s:1195:"      <style>
+         #bn_2125098330 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #ffcb7d;
+            color: #b06a00;
+         }
+
+<<<<<<< HEAD
+         #bn_2087821189:hover {
+=======
+         #bn_2125098330:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #ffac31;
+            border: 1px solid #e38800;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_2087821189 {
+=======
+         .theme-dark #bn_2125098330 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #b06a00;
+            color: #ffcb7d;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_2087821189:hover {
+=======
+         .theme-dark #bn_2125098330:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #ffac31;
+            color: #b06a00;
+            border: 1px solid #e38800;
+         }
+      </style>
+<<<<<<< HEAD
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset'
+         id="bn_2087821189"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+=======
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset'
+         id="bn_2125098330"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Aguardando Aprovação">Aguardando Aprovação</div>
+         <i class="main-icon fas fa-pause-circle"></i>
+      </a>";}

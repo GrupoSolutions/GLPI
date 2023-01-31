@@ -1,0 +1,69 @@
+<<<<<<< HEAD
+1670335637
+e64e0a465f128f1723639e7697d5d6bf190e1bb9
+a:1:{s:53:"bn_count_Printer_c9a385d4-76a3-4971-ad0e-1470efeafacc";s:1150:"      <style>
+         #bn_991092185 {
+=======
+1668171921
+e64e0a465f128f1723639e7697d5d6bf190e1bb9
+a:1:{s:53:"bn_count_Printer_c9a385d4-76a3-4971-ad0e-1470efeafacc";s:1157:"      <style>
+         #bn_1906428519 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #5da8d6;
+            color: #153b52;
+         }
+
+<<<<<<< HEAD
+         #bn_991092185:hover {
+=======
+         #bn_1906428519:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #2f84b8;
+            border: 1px solid #1f587b;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_991092185 {
+=======
+         .theme-dark #bn_1906428519 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #153b52;
+            color: #5da8d6;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_991092185:hover {
+=======
+         .theme-dark #bn_1906428519:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #2f84b8;
+            color: #153b52;
+            border: 1px solid #1f587b;
+         }
+      </style>
+      <a href='/front/printer.php?reset=reset'
+<<<<<<< HEAD
+         id="bn_991092185"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Impressora">Impressora</div>
+=======
+         id="bn_1906428519"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="2"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">2</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Impressoras">Impressoras</div>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+         <i class="main-icon ti ti-printer"></i>
+      </a>";}

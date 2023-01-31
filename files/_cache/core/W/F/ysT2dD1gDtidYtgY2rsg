@@ -1,0 +1,69 @@
+<<<<<<< HEAD
+1671048310
+57a335e241b2103783aebf39bab17be314c59111
+a:1:{s:54:"bn_count_Computer_34cfbaf9-a471-4852-b48c-0dadea7644de";s:1166:"      <style>
+         #bn_1583288977 {
+=======
+1667934702
+57a335e241b2103783aebf39bab17be314c59111
+a:1:{s:54:"bn_count_Computer_34cfbaf9-a471-4852-b48c-0dadea7644de";s:1162:"      <style>
+         #bn_1972189854 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #f3d0d0;
+            color: #c53232;
+         }
+
+<<<<<<< HEAD
+         #bn_1583288977:hover {
+=======
+         #bn_1972189854:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #e39393;
+            border: 1px solid #d45656;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_1583288977 {
+=======
+         .theme-dark #bn_1972189854 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #c53232;
+            color: #f3d0d0;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_1583288977:hover {
+=======
+         .theme-dark #bn_1972189854:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #e39393;
+            color: #c53232;
+            border: 1px solid #d45656;
+         }
+      </style>
+      <a href='/front/computer.php?reset=reset'
+<<<<<<< HEAD
+         id="bn_1583288977"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="7"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">7</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Computadores">Computadores</div>
+=======
+         id="bn_1972189854"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Computador">Computador</div>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+         <i class="main-icon ti ti-device-laptop"></i>
+      </a>";}

@@ -1,0 +1,37 @@
+1660324890
+ec5c9edf67c2b0d920fe9c88451c4ba3fa006f54
+a:1:{s:71:"plugin_formcreator_incoming_issues_a546f247-fca4-4268-a4aa-97fc0fbbe864";s:1158:"      <style>
+         #bn_1705403884 {
+            background-color: #6fd169;
+            color: #1d541a;
+         }
+
+         #bn_1705403884:hover {
+            background-color: #3fb638;
+            border: 1px solid #2b7b26;
+         }
+
+         .theme-dark #bn_1705403884 {
+            background-color: #1d541a;
+            color: #6fd169;
+         }
+
+         .theme-dark #bn_1705403884:hover {
+            background-color: #3fb638;
+            color: #1d541a;
+            border: 1px solid #2b7b26;
+         }
+      </style>
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=1&reset=reset'
+         id="bn_1705403884"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="2"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">2</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Novo">Novo</div>
+         <i class="main-icon ti ti-alert-circle"></i>
+      </a>";}

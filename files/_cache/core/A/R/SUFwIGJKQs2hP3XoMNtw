@@ -1,0 +1,37 @@
+1667508125
+66412701b6e7ec3619de95ce678478b2f09b92dc
+a:1:{s:53:"bn_count_Printer_517684b0-b064-49dd-943e-fcb6f915e453";s:1147:"      <style>
+         #bn_1903567900 {
+            background-color: #365a8f;
+            color: #b0c4e1;
+         }
+
+         #bn_1903567900:hover {
+            background-color: #537fbe;
+            border: 1px solid #8ba8d3;
+         }
+
+         .theme-dark #bn_1903567900 {
+            background-color: #b0c4e1;
+            color: #365a8f;
+         }
+
+         .theme-dark #bn_1903567900:hover {
+            background-color: #537fbe;
+            color: #b0c4e1;
+            border: 1px solid #8ba8d3;
+         }
+      </style>
+      <a href='/glpi/front/printer.php?reset=reset'
+         id="bn_1903567900"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech"
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Impressora">Impressora</div>
+         <i class="main-icon ti ti-printer"></i>
+      </a>";}

@@ -1,0 +1,37 @@
+1673608969
+01130c4074830f546c9ebc6ac76e2eb90f939c9a
+a:1:{s:69:"plugin_formcreator_closed_issues_ad09cc27-dcfc-4826-bcfb-defdcbde019a";s:1150:"      <style>
+         #bn_199324389 {
+            background-color: #bcbcbc;
+            color: #565656;
+         }
+
+         #bn_199324389:hover {
+            background-color: #969696;
+            border: 1px solid #707070;
+         }
+
+         .theme-dark #bn_199324389 {
+            background-color: #565656;
+            color: #bcbcbc;
+         }
+
+         .theme-dark #bn_199324389:hover {
+            background-color: #969696;
+            color: #565656;
+            border: 1px solid #707070;
+         }
+      </style>
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset'
+         id="bn_199324389"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Fechado">Fechado</div>
+         <i class="main-icon fas fa-archive"></i>
+      </a>";}

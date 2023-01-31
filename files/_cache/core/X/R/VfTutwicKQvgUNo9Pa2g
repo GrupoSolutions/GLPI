@@ -1,0 +1,66 @@
+<<<<<<< HEAD
+1670335638
+915c7a903fa98df8b61d43420de27d4c719a00c0
+a:1:{s:53:"bn_count_Monitor_890e16d3-b121-48c6-9713-d9c239d9a970";s:1156:"      <style>
+         #bn_1043178562 {
+=======
+1668171921
+915c7a903fa98df8b61d43420de27d4c719a00c0
+a:1:{s:53:"bn_count_Monitor_890e16d3-b121-48c6-9713-d9c239d9a970";s:1156:"      <style>
+         #bn_1781535203 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #dc6f6f;
+            color: #661919;
+         }
+
+<<<<<<< HEAD
+         #bn_1043178562:hover {
+=======
+         #bn_1781535203:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #cd3232;
+            border: 1px solid #8f2323;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_1043178562 {
+=======
+         .theme-dark #bn_1781535203 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #661919;
+            color: #dc6f6f;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_1043178562:hover {
+=======
+         .theme-dark #bn_1781535203:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #cd3232;
+            color: #661919;
+            border: 1px solid #8f2323;
+         }
+      </style>
+      <a href='/front/monitor.php?reset=reset'
+<<<<<<< HEAD
+         id="bn_1043178562"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+=======
+         id="bn_1781535203"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Monitor">Monitor</div>
+         <i class="main-icon ti ti-device-desktop"></i>
+      </a>";}

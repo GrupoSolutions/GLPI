@@ -1,0 +1,90 @@
+1672693395
+76c9276b57f8fe4a0c2f3a1789eba20b78dd8a7a
+a:1:{s:64:"table_count_tickets_planned_29c2cade-9d88-4e5e-871c-7bb266edc391";s:4909:"      <style>
+         #search-table-1161256626 .tab_cadrehov th {
+            background: #ededed;
+         }
+      </style>
+      <div
+         class="card search-table  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         id="search-table-1161256626"
+         style="background-color: #fafafa; color: #545454">
+         <div class='table-container'>
+            <table class="search-results table card-table table-hover table-striped" id="search_357818307">
+      <thead>
+         <tr style="display: none;">
+            
+            
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="2" data-nosort="true" data-sort-order="nosort">
+                                    ID
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="1" data-nosort="true" data-sort-order="nosort">
+                                    Título
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="12" data-nosort="true" data-sort-order="nosort">
+                                    Status
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="19" data-nosort="true" data-sort-order="nosort">
+                                    Última atualização
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="15" data-nosort="true" data-sort-order="nosort">
+                                    Data de abertura
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="4" data-nosort="true" data-sort-order="nosort">
+                                    Requerente - Requerente
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="5" data-nosort="true" data-sort-order="nosort">
+                                    Atribuído - Técnico
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="7" data-nosort="true" data-sort-order="nosort">
+                                    Categoria
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="18" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para solução
+                                 </th>
+            
+                                 </tr>
+      </thead>
+      <tbody>
+                     <tr>
+               <td colspan="9">
+                  <div class="alert alert-info mb-0 rounded-0 border-top-0 border-bottom-0 border-right-0" role="alert">
+                     Nenhum item encontrado
+                  </div>
+               </td>
+            </tr>
+               </tbody>
+   </table>
+         </div>
+         <span class="main-label">
+            <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset'>Chamados planejados</a>
+         </span>
+         <i class="main-icon fas fa-calendar-check"></i>
+      </div>";}

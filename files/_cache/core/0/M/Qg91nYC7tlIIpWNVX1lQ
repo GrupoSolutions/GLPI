@@ -1,0 +1,35 @@
+1671107457
+60db5b1ca843bd5c85e2ef7c5c4cfe487939c06f
+a:1:{s:68:"count_Peripheral_PeripheralType_7d58eccd-3875-4541-9f84-4436af6079ec";s:1268:"      <style>
+         #chart-dashboard_card_assets_4899c20b736357cc53c25f9c4a6c209a7c1548be {
+            background-color: #fafafa;
+            color: #949494
+         }
+
+         .theme-dark #chart-dashboard_card_assets_4899c20b736357cc53c25f9c4a6c209a7c1548be {
+            background-color: #2e2e2e;
+            color: #949494;
+         }
+
+         #chart-dashboard_card_assets_4899c20b736357cc53c25f9c4a6c209a7c1548be .ct-label {
+            fill: #949494;
+            color: #949494;
+         }
+
+         .theme-dark #chart-dashboard_card_assets_4899c20b736357cc53c25f9c4a6c209a7c1548be .ct-label {
+            fill: #949494;
+            color: #949494;
+         }
+
+         
+      </style>
+      <div style="height: 100%">
+         <div class="card g-chart pie donut filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+            id="chart-dashboard_card_assets_4899c20b736357cc53c25f9c4a6c209a7c1548be">
+            <div class="chart ct-chart"><span class='empty-card no-data'>
+               <div>Nenhum dado encontrado</div>
+            <span></div>
+            <span class="main-label">Dispositivos por Tipo</span>
+            <i class="main-icon fab fa-usb"></i>
+         </div>
+      </div>";}

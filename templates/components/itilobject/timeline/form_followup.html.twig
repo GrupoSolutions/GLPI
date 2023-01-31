@@ -1,0 +1,173 @@
+{#
+ # ---------------------------------------------------------------------
+ #
+ # GLPI - Gestionnaire Libre de Parc Informatique
+ #
+ # http://glpi-project.org
+ #
+ # @copyright 2015-2022 Teclib' and contributors.
+ # @copyright 2003-2014 by the INDEPNET Development Team.
+ # @licence   https://www.gnu.org/licenses/gpl-3.0.html
+ #
+ # ---------------------------------------------------------------------
+ #
+ # LICENSE
+ #
+ # This file is part of GLPI.
+ #
+ # This program is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 3 of the License, or
+ # (at your option) any later version.
+ #
+ # This program is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ #
+ # ---------------------------------------------------------------------
+ #}
+
+{% extends 'components/itilobject/timeline/form_timeline_item.html.twig' %}
+{% import 'components/form/fields_macros.html.twig' as fields %}
+
+{% set params = {'item': item}|merge(params|default({})) %}
+
+{% set candedit = item.maySolve() %}
+{% set can_read_kb = has_profile_right('knowbase', constant('READ')) or has_profile_right('knowbase', constant('KnowbaseItem::READFAQ')) %}
+{% set can_update_kb = has_profile_right('knowbase', constant('UPDATE')) %}
+{% set nokb = params['nokb'] is defined or params['nokb'] == true %}
+{% set rand = random() %}
+
+{% block timeline_card %}
+   {% if form_mode == 'view' %}
+      <div class="read-only-content">
+         {{ entry_i['content']|enhanced_html({
+            'user_mentions': true,
+            'images_gallery': true
+         }) }}
+
+         <div class="timeline-badges">
+            {% if entry_i['sourceitems_id'] %}
+               <span class="badge bg-blue-lt">
+                  <i class="fas fa-code-branch me-1"></i>
+                  {% set merged_badge %}
+                     <span class="badge ms-2 me-n2">
+                        {{ get_item_link('Ticket', entry_i['sourceitems_id']) }}
+                     </span>
+                  {% endset %}
+                  {{ __('Merged from Ticket %1$s')|format(merged_badge)|raw }}
+               </span>
+            {% endif %}
+
+            {% if entry_i['sourceof_items_id'] %}
+               <span class="badge bg-blue-lt">
+                  <i class="fas fa-code-branch me-1"></i>
+                  {% set promoted_badge %}
+                     <span class="badge ms-2 me-n2">
+                        {{ get_item_link('Ticket', entry_i['sourceof_items_id']) }}
+                     </span>
+                  {% endset %}
+                  {{ __('Promoted to Ticket %1$s')|format(promoted_badge)|raw }}
+               </span>
+            {% endif %}
+
+            {{ include('components/itilobject/timeline/pending_reasons_messages.html.twig') }}
+         </div>
+      </div>
+   {% else %}
+      <div class="itilfollowup">
+         <form name="asset_form" style="width: 100%;" class="d-flex flex-column" method="post"
+               action="{{ subitem.getFormURL() }}" enctype="multipart/form-data" data-track-changes="true" data-submit-once>
+            <input type="hidden" name="itemtype" value="{{ item.getType() }}" />
+            <input type="hidden" name="items_id" value="{{ item.fields['id'] }}" />
+            {{ call_plugin_hook('pre_item_form', {"item": subitem, 'options': params}) }}
+
+            {% set add_reopen = (_get['_openfollowup'] ?? false) or item.needReopen() %}
+            {% if add_reopen %}
+               <input type="hidden" name="add_reopen" value="1" />
+            {% endif %}
+
+            <div class="row">
+               <div class="col-12 {{ col_md }}">
+                  {{ fields.textareaField(
+                     'content',
+                     subitem.fields['content'],
+                     '',
+                     {
+                        'full_width': true,
+                        'no_label': true,
+                        'enable_richtext': true,
+                        'enable_fileupload': true,
+                        'enable_mentions': true,
+                        'rand': rand,
+                        'required': add_reopen
+                     }
+                  ) }}
+               </div>
+                           </div>
+
+            {{ call_plugin_hook('post_item_form', {"item": subitem, 'options': params}) }}
+            <div class="d-flex card-footer mx-n3 mb-n3">
+               {% if subitem.fields['id'] <= 0 %}
+                  <div class="input-group">
+                     <button class="btn btn-primary" type="submit" name="add">
+                        <i class="fa-fw ti ti-message-circle"></i>
+                        <span>Responder</span>
+                     </button>
+                                       </div>
+               {% else %}
+                  <input type="hidden" name="id" value="{{ subitem.fields['id'] }}" />
+                  <button class="btn btn-primary me-2" type="submit" name="update">
+                     <i class="far fa-save"></i>
+
+                  </button>
+
+                  {% if subitem.can(id, constant('PURGE')) %}
+                     <button class="btn btn-outline-danger me-2" type="submit" name="purge"
+                             onclick="return confirm('{{ __('Confirm the final deletion?') }}');">
+                        <i class="fas fa-trash-alt"></i>
+                        <span>{{ _x('button', 'Delete permanently') }}</span>
+                     </button>
+                  {% endif %}
+               {% endif %}
+            </div>
+
+            <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}" />
+         </form>
+      </div>
+
+      <script type="text/javascript">
+         function itilfollowuptemplate_update{{ rand }}(value) {
+            $.ajax({
+               url: '{{ path('/ajax/itilfollowup.php') }}',
+               type: 'POST',
+               data: {
+                  itilfollowuptemplates_id: value,
+                  items_id: '{{ item.fields['id'] }}',
+                  itemtype: '{{ item.getType() }}'
+               }
+            }).done(function (data) {
+               var requesttypes_id = isNaN(parseInt(data.requesttypes_id))
+                  ? 0
+                  : parseInt(data.requesttypes_id);
+
+               // set textarea content
+               if (tasktinymce = tinymce.get("content_{{ rand }}")) {
+                  tasktinymce.setContent(data.content);
+               }
+               // set category
+               $("#dropdown_requesttypes_id{{ rand }}").trigger("setValue", requesttypes_id);
+               // set is_private
+               $("#is_private_{{ rand }}")
+                  .prop("checked", data.is_private == "0"
+                     ? false
+                     : true);
+            });
+         }
+      </script>
+   {% endif %}
+{% endblock %}

@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+1672748747
+564ca3c3cd640abcd0ea464a6651d6409278d6a6
+a:1:{s:69:"plugin_formcreator_closed_issues_b1164761-fb6d-40f6-89ed-d973702ea295";s:1150:"      <style>
+         #bn_339306874 {
+=======
+1669039615
+564ca3c3cd640abcd0ea464a6651d6409278d6a6
+a:1:{s:69:"plugin_formcreator_closed_issues_b1164761-fb6d-40f6-89ed-d973702ea295";s:1155:"      <style>
+         #bn_852926680 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #515151;
+            color: #b7b7b7;
+         }
+
+<<<<<<< HEAD
+         #bn_339306874:hover {
+=======
+         #bn_852926680:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #777777;
+            border: 1px solid #9e9e9e;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_339306874 {
+=======
+         .theme-dark #bn_852926680 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #b7b7b7;
+            color: #515151;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_339306874:hover {
+=======
+         .theme-dark #bn_852926680:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #777777;
+            color: #b7b7b7;
+            border: 1px solid #9e9e9e;
+         }
+      </style>
+<<<<<<< HEAD
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset'
+         id="bn_339306874"
+=======
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset'
+         id="bn_852926680"
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Fechado">Fechado</div>
+         <i class="main-icon fas fa-archive"></i>
+      </a>";}

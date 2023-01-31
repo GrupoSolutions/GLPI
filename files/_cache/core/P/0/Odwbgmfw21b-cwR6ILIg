@@ -1,0 +1,37 @@
+1663934401
+f53ce4e8977b73082368ddb56c01374c3996f490
+a:1:{s:71:"plugin_formcreator_validate_issues_e806e324-67db-4b97-b863-482371d5868a";s:1191:"      <style>
+         #bn_965234199 {
+            background-color: #6298d5;
+            color: #173454;
+         }
+
+         #bn_965234199:hover {
+            background-color: #3171b9;
+            border: 1px solid #214c7d;
+         }
+
+         .theme-dark #bn_965234199 {
+            background-color: #173454;
+            color: #6298d5;
+         }
+
+         .theme-dark #bn_965234199:hover {
+            background-color: #3171b9;
+            color: #173454;
+            border: 1px solid #214c7d;
+         }
+      </style>
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=101&reset=reset'
+         id="bn_965234199"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="To validate">To validate</div>
+         <i class="main-icon far fa-eye"></i>
+      </a>";}

@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+1669899179
+4bf10efe6666dc72165aadcd12f51e250eeca1a6
+a:1:{s:62:"bn_count_tickets_assigned_d3d2f697-52b4-435e-9030-a760dd649085";s:1272:"      <style>
+         #bn_819214775 {
+=======
+1669063037
+4bf10efe6666dc72165aadcd12f51e250eeca1a6
+a:1:{s:62:"bn_count_tickets_assigned_d3d2f697-52b4-435e-9030-a760dd649085";s:1277:"      <style>
+         #bn_929922306 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #eaf4f7;
+            color: #56a7bf;
+         }
+
+<<<<<<< HEAD
+         #bn_819214775:hover {
+=======
+         #bn_929922306:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #b3d7e2;
+            border: 1px solid #7bbacd;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_819214775 {
+=======
+         .theme-dark #bn_929922306 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #56a7bf;
+            color: #eaf4f7;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_819214775:hover {
+=======
+         .theme-dark #bn_929922306:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #b3d7e2;
+            color: #56a7bf;
+            border: 1px solid #7bbacd;
+         }
+      </style>
+<<<<<<< HEAD
+      <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset'
+         id="bn_819214775"
+         class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+=======
+      <a href='/glpi/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset'
+         id="bn_929922306"
+         class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Chamados atribuídos">Chamados atribuídos</div>
+         <i class="main-icon fas fa-users"></i>
+      </a>";}

@@ -1,0 +1,37 @@
+1671052949
+991c125a79c1291595dbeefd9f02e6bf6a9da4c9
+a:1:{s:54:"bn_count_Computer_34cfbaf9-a471-4852-b48c-0dadea7644de";s:1161:"      <style>
+         #bn_932374328 {
+            background-color: #f3d0d0;
+            color: #c53232;
+         }
+
+         #bn_932374328:hover {
+            background-color: #e39393;
+            border: 1px solid #d45656;
+         }
+
+         .theme-dark #bn_932374328 {
+            background-color: #c53232;
+            color: #f3d0d0;
+         }
+
+         .theme-dark #bn_932374328:hover {
+            background-color: #e39393;
+            color: #c53232;
+            border: 1px solid #d45656;
+         }
+      </style>
+      <a href='/front/computer.php?reset=reset'
+         id="bn_932374328"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="7"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">7</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Computadores">Computadores</div>
+         <i class="main-icon ti ti-device-laptop"></i>
+      </a>";}

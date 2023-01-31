@@ -1,0 +1,37 @@
+1672765899
+3f3f601cd533ddded8425faefdafa756bc022008
+a:1:{s:70:"plugin_formcreator_waiting_issues_c6a2b0c4-3e99-4431-b365-1aebffd0097e";s:1190:"      <style>
+         #bn_1729238889 {
+            background-color: #ffcb7d;
+            color: #b06a00;
+         }
+
+         #bn_1729238889:hover {
+            background-color: #ffac31;
+            border: 1px solid #e38800;
+         }
+
+         .theme-dark #bn_1729238889 {
+            background-color: #b06a00;
+            color: #ffcb7d;
+         }
+
+         .theme-dark #bn_1729238889:hover {
+            background-color: #ffac31;
+            color: #b06a00;
+            border: 1px solid #e38800;
+         }
+      </style>
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset'
+         id="bn_1729238889"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Aguardando Aprovação">Aguardando Aprovação</div>
+         <i class="main-icon fas fa-pause-circle"></i>
+      </a>";}

@@ -1,0 +1,37 @@
+1672693591
+20d811b7b2ec71002145825918a441c57d2290cc
+a:1:{s:62:"bn_count_tickets_incoming_448cff54-1f62-4018-8a30-d6d0b2f685e1";s:1266:"      <style>
+         #bn_994124255 {
+            background-color: #fafafa;
+            color: #949494;
+         }
+
+         #bn_994124255:hover {
+            background-color: #d4d4d4;
+            border: 1px solid #aeaeae;
+         }
+
+         .theme-dark #bn_994124255 {
+            background-color: #949494;
+            color: #fafafa;
+         }
+
+         .theme-dark #bn_994124255:hover {
+            background-color: #d4d4d4;
+            color: #949494;
+            border: 1px solid #aeaeae;
+         }
+      </style>
+      <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=1&reset=reset'
+         id="bn_994124255"
+         class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Chamados novos">Chamados novos</div>
+         <i class="main-icon ti ti-alert-circle"></i>
+      </a>";}

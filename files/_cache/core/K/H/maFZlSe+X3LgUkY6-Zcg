@@ -1,0 +1,35 @@
+1670932767
+beb9efe524d80b69669ba7020b33bea66e4724d9
+a:1:{s:59:"count_Peripheral_State_bf774a19-8809-47d9-a58c-e99df007fed6";s:1278:"      <style>
+         #chart-dashboard_card_central_a9b2a9cde73fea46fac048d9b1ec3eb9fd0e9e58 {
+            background-color: #d5e1ec;
+            color: #4c7da9
+         }
+
+         .theme-dark #chart-dashboard_card_central_a9b2a9cde73fea46fac048d9b1ec3eb9fd0e9e58 {
+            background-color: #0d151c;
+            color: #4c7da9;
+         }
+
+         #chart-dashboard_card_central_a9b2a9cde73fea46fac048d9b1ec3eb9fd0e9e58 .ct-label {
+            fill: #4c7da9;
+            color: #4c7da9;
+         }
+
+         .theme-dark #chart-dashboard_card_central_a9b2a9cde73fea46fac048d9b1ec3eb9fd0e9e58 .ct-label {
+            fill: #4c7da9;
+            color: #4c7da9;
+         }
+
+         
+      </style>
+      <div style="height: 100%">
+         <div class="card g-chart pie donut filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+            id="chart-dashboard_card_central_a9b2a9cde73fea46fac048d9b1ec3eb9fd0e9e58">
+            <div class="chart ct-chart"><span class='empty-card no-data'>
+               <div>Nenhum dado encontrado</div>
+            <span></div>
+            <span class="main-label">Dispositivos por Status</span>
+            <i class="main-icon ti ti-subtask"></i>
+         </div>
+      </div>";}

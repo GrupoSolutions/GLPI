@@ -1,0 +1,114 @@
+1672693503
+ac0ae3f9768c0f794535e0e541e703e82cbd927a
+a:1:{s:61:"table_count_tickets_late_bb724971-e58d-407d-b10f-8959f8474dea";s:7352:"      <style>
+         #search-table-944425535 .tab_cadrehov th {
+            background: #ededed;
+         }
+      </style>
+      <div
+         class="card search-table  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         id="search-table-944425535"
+         style="background-color: #fafafa; color: #545454">
+         <div class='table-container'>
+            <table class="search-results table card-table table-hover table-striped" id="search_858096518">
+      <thead>
+         <tr style="display: none;">
+            
+            
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="2" data-nosort="true" data-sort-order="nosort">
+                                    ID
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="1" data-nosort="true" data-sort-order="nosort">
+                                    Título
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="12" data-nosort="true" data-sort-order="nosort">
+                                    Status
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="19" data-nosort="true" data-sort-order="nosort">
+                                    Última atualização
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="15" data-nosort="true" data-sort-order="nosort">
+                                    Data de abertura
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="4" data-nosort="true" data-sort-order="nosort">
+                                    Requerente - Requerente
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="5" data-nosort="true" data-sort-order="nosort">
+                                    Atribuído - Técnico
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="7" data-nosort="true" data-sort-order="nosort">
+                                    Categoria
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="18" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para solução
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="82" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para resolver excedido
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="182" data-nosort="true" data-sort-order="nosort">
+                                    Tempo interno para resolver excedido
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="159" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para adquirir excedido
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="187" data-nosort="true" data-sort-order="nosort">
+                                    Tempo interno para possuir excedido
+                                 </th>
+            
+                                 </tr>
+      </thead>
+      <tbody>
+                     <tr>
+               <td colspan="13">
+                  <div class="alert alert-info mb-0 rounded-0 border-top-0 border-bottom-0 border-right-0" role="alert">
+                     Nenhum item encontrado
+                  </div>
+               </td>
+            </tr>
+               </tbody>
+   </table>
+         </div>
+         <span class="main-label">
+            <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=notold&criteria%5B1%5D%5Blink%5D=AND&criteria%5B1%5D%5Bcriteria%5D%5B0%5D%5Bfield%5D=82&criteria%5B1%5D%5Bcriteria%5D%5B0%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B0%5D%5Bvalue%5D=1&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Blink%5D=OR&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Bfield%5D=182&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Bvalue%5D=1&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Blink%5D=OR&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Bfield%5D=159&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Bvalue%5D=1&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Blink%5D=OR&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Bfield%5D=187&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Bvalue%5D=1&reset=reset'>Chamados atrasados</a>
+         </span>
+         <i class="main-icon far fa-clock"></i>
+      </div>";}

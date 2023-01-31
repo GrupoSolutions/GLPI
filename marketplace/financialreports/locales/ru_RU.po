@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Financialreports Development Team
+# This file is distributed under the same license as the GLPI - Financialreports plugin package.
+# 
+# Translators:
+# Alexey Petukhov <lexx015@gmail.com>, 2014
+# Alexey Petukhov <lexx015@gmail.com>, 2014,2017
+# Kevin HAINRY <kevin.hainry@infotel.com>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: GLPI Project - financialreports plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-23 17:10+0100\n"
+"PO-Revision-Date: 2019-01-23 16:15+0000\n"
+"Last-Translator: Kevin HAINRY <kevin.hainry@infotel.com>\n"
+"Language-Team: Russian (Russia) (http://www.transifex.com/tsmr/GLPI_financialreports/language/ru_RU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: setup.php:67 inc/financialreport.class.php:49 inc/profile.class.php:152
+msgid "Financial report"
+msgid_plural "Financial reports"
+msgstr[0] "Состояние оборудования"
+msgstr[1] "Состояния оборудования"
+msgstr[2] "Состояния оборудования"
+msgstr[3] "Состояния оборудования"
+
+#: front/config.form.php:71
+msgid "Please activate the plugin"
+msgstr "Пожалуйста включите это дополнение"
+
+#: front/financialreport.php:158
+msgid "Report date"
+msgstr "Дата отчета"
+
+#: inc/config.class.php:90 inc/config.class.php:107
+msgid "Disposal status"
+msgstr "Статус утилизации"
+
+#: inc/financialreport.class.php:419
+msgid "Financial report ended on"
+msgstr "Размещение оборудования закочилось"
+
+#: inc/financialreport.class.php:454 inc/financialreport.class.php:456
+#: inc/parameter.class.php:54
+msgid "Notebook"
+msgid_plural "Notebooks"
+msgstr[0] "Ноутбук"
+msgstr[1] "Ноутбуки"
+msgstr[2] "Ноутбуки"
+msgstr[3] "Ноутбуки"
+
+#: inc/financialreport.class.php:464 inc/financialreport.class.php:466
+#: inc/parameter.class.php:58
+msgid "Server"
+msgid_plural "Servers"
+msgstr[0] "Сервер"
+msgstr[1] "Серверы"
+msgstr[2] "Серверы"
+msgstr[3] "Серверы"
+
+#: inc/financialreport.class.php:551 inc/financialreport.class.php:553
+msgid "Element out"
+msgid_plural "Elements out"
+msgstr[0] "Элемент закончился"
+msgstr[1] "Элементы закончились"
+msgstr[2] "Элементы закончились"
+msgstr[3] "Элементы закончились"
+
+#: inc/financialreport.class.php:575 inc/pdf.class.php:321
+msgid "General Total"
+msgstr "Итого"
+
+#: inc/financialreport.class.php:576 inc/financialreport.class.php:626
+#: inc/financialreport.class.php:652 inc/financialreport.class.php:676
+msgid "Euro"
+msgid_plural "Euros"
+msgstr[0] "Евро"
+msgstr[1] "Евро"
+msgstr[2] "Евро"
+msgstr[3] "Евро"
+
+#: inc/financialreport.class.php:638
+msgid "Hide"
+msgstr "Скрыть"
+
+#: inc/financialreport.class.php:640
+msgid "Display"
+msgstr "Отобразить"
+
+#: inc/financialreport.class.php:666 inc/pdf.class.php:252
+msgid "User / Group"
+msgstr "Пользователь / Группа"
+
+#: inc/financialreport.class.php:676
+msgid "Purchase Price HT in"
+msgstr "С НДС"
+
+#: inc/financialreport.class.php:708
+msgid "In stock / available"
+msgstr "В наличии / доступно"
+
+#: inc/parameter.class.php:46
+msgid "Identification parameters of inventory number"
+msgstr "Параметр, определяющий номер оборудования"
+
+#: inc/pdf.class.php:210
+msgid "Asset situation ended on"
+msgstr "Размещение оборудования закочилось"
+
+#: inc/pdf.class.php:259 inc/pdf.class.php:263
+msgid "HT"
+msgstr "НДС"

@@ -1,0 +1,549 @@
+2022-11-03 15:00:38 [@GS003021]
+[login] 3: glpi fez login no IP ::1
+2022-11-03 15:49:02 [@GS003021]
+[login] 3: glpi fez login no IP ::1
+2022-11-03 15:50:11 [@GS003021]
+[login] 3: Login falhou para  no IP ::1
+2022-11-03 15:50:15 [@GS003021]
+[login] 3: glpi fez login no IP ::1
+2022-11-03 17:45:51 [@GS003021]
+[login] 3: Login falhou para glpi no IP ::1
+2022-11-03 17:46:26 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-03 17:46:37 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-04 08:46:39 [@GS003021]
+[login] 3: Login falhou para  no IP ::1
+2022-11-07 09:46:15 [@GS003021]
+[login] 3: Login falhou para  no IP ::1
+2022-11-07 09:46:15 [@GS003021]
+[login] 3: Login falhou para  no IP ::1
+2022-11-07 09:46:49 [@GS003021]
+[login] 3: Login falhou para glpi no IP ::1
+2022-11-07 09:48:01 [@GS003021]
+[login] 3: Login falhou para glpi no IP ::1
+2022-11-07 09:51:15 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-07 09:57:33 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+<<<<<<< HEAD
+2022-11-28 17:19:39 [@localhost]
+[login] 3: Login falhou para solutions no IP 186.220.101.49
+2022-11-28 17:20:04 [@localhost]
+[login] 3: Login falhou para solutions no IP 186.220.101.49
+2022-11-28 17:20:18 [@localhost]
+[login] 3: solutions fez login no IP 186.220.101.49
+2022-11-28 17:21:20 [15@localhost]
+[Impersonate] 3: solutions começa a personificar o usuário FCOLARES
+2022-11-28 17:21:55 [2@localhost]
+[Impersonate] 3: solutions pára de personificar o usuário FCOLARES
+2022-11-28 17:27:12 [@localhost]
+[login] 3: Login falhou para solutions no IP 179.213.217.34
+2022-11-28 17:27:22 [@localhost]
+[login] 3: solutions fez login no IP 179.213.217.34
+2022-11-28 17:27:31 [@localhost]
+[login] 3: Login falhou para solutions no IP 186.220.101.49
+2022-11-29 07:56:58 [@localhost]
+[login] 3: Login falhou para solutions no IP 187.11.126.226
+2022-11-29 07:58:06 [@localhost]
+[login] 3: solutions fez login no IP 187.11.126.226
+2022-11-29 08:19:25 [@localhost]
+[login] 3: solutions fez login no IP 191.22.175.65
+2022-11-29 17:18:15 [16@localhost]
+[Impersonate] 3: solutions começa a personificar o usuário teste
+2022-11-29 17:19:12 [2@localhost]
+[Impersonate] 3: solutions pára de personificar o usuário teste
+2022-11-29 17:25:55 [16@localhost]
+[Impersonate] 3: solutions começa a personificar o usuário teste
+2022-11-29 17:26:14 [2@localhost]
+[Impersonate] 3: solutions pára de personificar o usuário teste
+2022-11-29 17:35:31 [16@localhost]
+[Impersonate] 3: solutions começa a personificar o usuário teste
+2022-11-29 17:40:37 [2@localhost]
+[Impersonate] 3: solutions pára de personificar o usuário teste
+2022-11-30 14:38:44 [@localhost]
+[login] 3: Login falhou para solutions no IP 191.193.30.228
+2022-11-30 14:39:21 [@localhost]
+[login] 3: Login falhou para solutions no IP 191.193.30.228
+2022-11-30 14:39:33 [@localhost]
+[login] 3: Login falhou para  no IP 191.193.30.228
+2022-11-30 14:39:37 [@localhost]
+[login] 3: solutions fez login no IP 191.193.30.228
+2022-11-30 14:40:12 [@localhost]
+[login] 3: solutions fez login no IP 191.193.30.228
+2022-11-30 14:41:55 [@localhost]
+[login] 3: solutions fez login no IP 191.193.30.228
+2022-11-30 14:42:52 [@localhost]
+[login] 3: solutions fez login no IP 191.193.30.228
+2022-11-30 14:44:06 [@localhost]
+[login] 3: solutions fez login no IP 191.193.30.228
+2022-11-30 14:44:36 [@localhost]
+[login] 3: solutions fez login no IP 191.193.30.228
+2022-11-30 14:47:35 [16@localhost]
+[Impersonate] 3: solutions começa a personificar o usuário teste
+2022-11-30 14:51:47 [2@localhost]
+[Impersonate] 3: solutions pára de personificar o usuário teste
+2022-11-30 14:51:59 [@localhost]
+[login] 3: teste fez login no IP 191.193.30.228
+2022-11-30 15:09:30 [@localhost]
+[login] 3: Login falhou para solutions no IP 191.193.30.228
+2022-11-30 15:15:57 [@localhost]
+[login] 3: Login falhou para operador no IP 191.193.30.228
+2022-11-30 15:16:58 [@localhost]
+[login] 3: solutions fez login no IP 191.193.30.228
+2022-11-30 15:17:06 [@localhost]
+[login] 3: Login falhou para solutions no IP 191.193.30.228
+2022-11-30 15:17:14 [@localhost]
+[login] 3: teste fez login no IP 191.193.30.228
+2022-11-30 15:57:18 [15@localhost]
+[Impersonate] 3: solutions começa a personificar o usuário FCOLARES
+2022-11-30 15:57:45 [@localhost]
+[login] 3: Login falhou para solutions no IP 191.255.9.88
+2022-11-30 15:59:13 [@localhost]
+[login] 3: solutions fez login no IP 191.255.9.88
+2022-11-30 15:59:55 [2@localhost]
+[Impersonate] 3: solutions pára de personificar o usuário FCOLARES
+2022-12-06 10:41:17 [@localhost]
+[login] 3: GENESS fez login no IP 187.11.126.226
+2022-12-06 11:08:47 [@localhost]
+[login] 3: solutions fez login no IP 187.11.126.226
+2022-12-07 15:13:03 [@localhost]
+[login] 3: solutions fez login no IP 187.11.126.226
+2023-01-23 16:46:07 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-23 17:04:47 [@localhost]
+[login] 3: Alanis Almeida fez login no IP 187.11.126.226
+2023-01-23 17:46:41 [@localhost]
+[login] 3: Thais Martins ligou-se do IP 179.229.74.28
+2023-01-23 17:50:05 [@localhost]
+[login] 3: Thais Martins ligou-se do IP 179.229.74.28
+2023-01-23 17:59:44 [@localhost]
+[login] 3: Marcos Cardoso fez login no IP 179.170.146.137
+2023-01-23 19:29:29 [@localhost]
+[login] 3: Marcos Cardoso fez login no IP 179.170.146.137
+2023-01-24 06:49:30 [@localhost]
+[login] 3: Bruno Avellar login from IP 138.186.241.23
+2023-01-24 06:55:29 [@localhost]
+[login] 3: Failed login for Bruno Avellar from IP 138.186.241.23
+2023-01-24 06:56:14 [@localhost]
+[login] 3: Failed login for Bruno Avellar from IP 138.186.241.23
+2023-01-24 06:56:52 [@localhost]
+[login] 3: Failed login for Brunno from IP 138.186.241.23
+2023-01-24 06:57:18 [@localhost]
+[login] 3: Bruno Avellar login from IP 138.186.241.23
+2023-01-24 08:25:13 [@localhost]
+[login] 3: Jhemeson Pereira fez login no IP 191.241.242.5
+2023-01-24 08:27:00 [@localhost]
+[login] 3: Login falhou para  no IP 131.255.236.26
+2023-01-24 08:27:08 [@localhost]
+[login] 3: Paulo Henrique fez login no IP 131.255.236.26
+2023-01-24 08:34:48 [@localhost]
+[login] 3: Gabriela Fortes fez login no IP 201.91.196.50
+2023-01-24 08:39:48 [@localhost]
+[login] 3: Aline Cubertino fez login no IP 201.91.196.50
+2023-01-24 08:40:59 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-24 08:58:07 [@localhost]
+[login] 3: Login falhou para  no IP 187.11.126.226
+2023-01-24 08:58:20 [@localhost]
+[login] 3: Administrador fez login no IP 187.11.126.226
+2023-01-24 10:03:49 [@localhost]
+[login] 3: Patricia Miranda fez login no IP 177.67.59.230
+2023-01-24 10:14:38 [@localhost]
+[login] 3: administrador fez login no IP 187.11.126.226
+2023-01-24 10:39:31 [@localhost]
+[login] 3: Andressa Modesti fez login no IP 177.107.72.210
+2023-01-24 10:44:19 [@localhost]
+[login] 3: Isaac Araujo fez login no IP 201.16.177.65
+2023-01-24 13:32:35 [@localhost]
+[login] 3: Alanis Almeida fez login no IP 187.11.126.226
+2023-01-24 13:38:05 [@localhost]
+[login] 3: Thais Martins ligou-se do IP 191.189.11.162
+2023-01-24 13:38:21 [@localhost]
+[login] 3: Login falhou para Tarciana.reis@gruposolutions.com.br no IP 143.208.119.84
+2023-01-24 13:38:31 [@localhost]
+[login] 3: ANDREI SANTOS fez login no IP 187.89.176.3
+2023-01-24 13:41:07 [@localhost]
+[login] 3: Login falhou para Tarciana.reis@gruposolutions.com.br no IP 143.208.119.84
+2023-01-24 13:42:19 [@localhost]
+[login] 3: Login falhou para Tarciana Reis no IP 143.208.119.84
+2023-01-24 13:43:03 [@localhost]
+[login] 3: Everton Silva ligou-se do IP 189.112.251.113
+2023-01-24 13:47:49 [@localhost]
+[login] 3: Marcos Cardoso fez login no IP 179.230.49.221
+2023-01-24 13:49:05 [82@localhost]
+[login] 3: Marcos Cardoso fez login no IP 179.230.49.221
+2023-01-24 13:49:26 [@localhost]
+[login] 3: Login falhou para  no IP 143.208.119.84
+2023-01-24 13:49:42 [@localhost]
+[login] 3: Tarciana Reis fez login no IP 143.208.119.84
+2023-01-24 13:49:49 [@localhost]
+[login] 3: Login falhou para  no IP 179.230.49.221
+2023-01-24 13:50:30 [@localhost]
+[login] 3: Marcos Cardoso fez login no IP 179.230.49.221
+2023-01-24 13:52:50 [@localhost]
+[login] 3: Login falhou para everton silva no IP 187.26.218.42
+2023-01-24 13:53:39 [@localhost]
+[login] 3: Login falhou para everton silva no IP 187.26.218.42
+2023-01-24 13:53:49 [@localhost]
+[login] 3: Jhenny Oliveira fez login no IP 187.122.62.250
+2023-01-24 13:54:34 [@localhost]
+[login] 3: Login falhou para Everton Silva no IP 187.26.218.42
+2023-01-24 13:55:40 [@localhost]
+[login] 3: Login falhou para Everton Silva no IP 187.26.218.42
+2023-01-24 13:56:53 [@localhost]
+[login] 3: Login falhou para Everton silva no IP 187.26.218.42
+2023-01-24 14:04:00 [@localhost]
+[login] 3: Izaias batista fez login no IP 177.27.7.60
+2023-01-24 14:04:10 [@localhost]
+[login] 3: Login falhou para  no IP 177.27.7.60
+2023-01-24 14:04:17 [@localhost]
+[login] 3: Izaias batista fez login no IP 177.27.7.60
+2023-01-24 14:42:46 [@localhost]
+[login] 3: Izaias batista fez login no IP 189.24.162.124
+2023-01-24 14:43:25 [@localhost]
+[login] 3: Login falhou para izaias soares no IP 189.24.162.124
+2023-01-24 14:44:12 [@localhost]
+[login] 3: Login falhou para izaias soares no IP 189.24.162.124
+2023-01-24 14:45:24 [125@localhost]
+[login] 3: Izaias batista fez login no IP 189.24.162.124
+2023-01-24 14:45:29 [@localhost]
+[login] 3: Login falhou para izaias soares no IP 189.24.162.124
+2023-01-24 15:20:15 [22@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Patricia Miranda
+2023-01-24 15:20:37 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Patricia Miranda
+2023-01-24 15:25:05 [@localhost]
+[login] 3: administrador fez login no IP 187.11.126.226
+2023-01-24 15:25:37 [@localhost]
+[login] 3: Administrador fez login no IP 187.11.126.226
+2023-01-24 15:32:51 [22@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Patricia Miranda
+2023-01-24 15:43:10 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Patricia Miranda
+2023-01-24 15:44:57 [27@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Alanis Almeida
+2023-01-24 15:51:09 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Alanis Almeida
+2023-01-24 15:56:08 [@localhost]
+[login] 3: Izaias Batista fez login no IP 189.24.162.124
+2023-01-24 16:11:55 [@localhost]
+[login] 3: Everton Silva fez login no IP 179.242.253.245
+2023-01-24 16:12:28 [@localhost]
+[login] 3: Everton Silva fez login no IP 179.242.253.245
+2023-01-24 16:14:04 [@localhost]
+[login] 3: Everton Silva fez login no IP 187.11.126.226
+2023-01-24 16:15:39 [@localhost]
+[login] 3: Everton Silva fez login no IP 187.11.126.226
+2023-01-24 16:16:37 [@localhost]
+[login] 3: Everton Silva fez login no IP 179.242.253.245
+2023-01-24 16:19:30 [@localhost]
+[login] 3: Everton Silva fez login no IP 187.11.126.226
+2023-01-24 16:20:31 [@localhost]
+[login] 3: Alanis Almeida fez login no IP 187.11.126.226
+2023-01-24 16:27:59 [62@localhost]
+[login] 3: Jose Morgan fez login no IP 179.242.253.245
+2023-01-24 16:42:01 [22@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Patricia Miranda
+2023-01-24 16:42:53 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Patricia Miranda
+2023-01-24 16:46:12 [28@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Andre Roveder
+2023-01-24 16:47:04 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Andre Roveder
+2023-01-24 16:49:53 [28@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Andre Roveder
+2023-01-24 16:50:04 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Andre Roveder
+2023-01-24 16:50:05 [28@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Andre Roveder
+2023-01-24 17:09:34 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Andre Roveder
+2023-01-24 17:10:06 [@localhost]
+[login] 3: andre roveder fez login no IP 187.11.126.226
+2023-01-24 17:11:18 [28@localhost]
+[Impersonate] 3: Administrador começa a personificar o usuário Andre Roveder
+2023-01-24 17:12:24 [2@localhost]
+[Impersonate] 3: Administrador pára de personificar o usuário Andre Roveder
+2023-01-24 17:12:28 [@localhost]
+[login] 3: andre roveder fez login no IP 187.11.126.226
+2023-01-24 17:22:32 [@localhost]
+[login] 3: Login falhou para Andre Roveder no IP 187.11.126.226
+2023-01-24 17:25:00 [@localhost]
+[login] 3: andre roveder fez login no IP 187.11.126.226
+2023-01-24 17:26:40 [@localhost]
+[login] 3: andre roveder fez login no IP 187.11.126.226
+2023-01-24 17:31:15 [@localhost]
+[login] 3: Izaias Batista fez login no IP 177.27.6.203
+2023-01-24 17:37:05 [@localhost]
+[login] 3: andre roveder fez login no IP 187.11.126.226
+2023-01-24 17:48:27 [@localhost]
+[login] 3: andre roveder fez login no IP 187.11.126.226
+2023-01-24 17:49:28 [@localhost]
+[login] 3: administrador fez login no IP 187.11.126.226
+2023-01-24 20:20:04 [@localhost]
+[login] 3: Login falhou para  no IP 138.186.241.23
+2023-01-24 20:20:20 [@localhost]
+[login] 3: Bruno Avellar fez login no IP 138.186.241.23
+2023-01-25 08:26:58 [@localhost]
+[login] 3: Everton Silva fez login no IP 187.111.164.93
+2023-01-25 08:31:09 [@localhost]
+[login] 3: Paulo Henrique fez login no IP 131.255.236.26
+2023-01-25 08:35:07 [@localhost]
+[login] 3: Alanis Almeida fez login no IP 177.180.70.138
+2023-01-25 08:56:57 [@localhost]
+[login] 3: Patricia Miranda fez login no IP 177.67.59.230
+2023-01-25 09:38:05 [@localhost]
+[login] 3: Kátia Fernanda fez login no IP 131.255.236.26
+2023-01-25 09:50:22 [@localhost]
+[login] 3: eduardo araujo fez login no IP 168.232.85.225
+2023-01-25 09:58:03 [@localhost]
+[login] 3: Aline Cubertino fez login no IP 201.91.196.50
+2023-01-25 10:39:44 [@localhost]
+[login] 3: Tarciana Reis fez login no IP 143.208.119.84
+2023-01-25 10:48:28 [@localhost]
+[login] 3: Gabriela Fortes fez login no IP 201.91.196.50
+2023-01-25 12:30:21 [@localhost]
+[login] 3: Gabriela Fortes fez login no IP 201.91.196.50
+2023-01-25 14:17:16 [@localhost]
+[login] 3: Marcos Cardoso fez login no IP 179.168.36.119
+2023-01-25 14:19:35 [@localhost]
+[login] 3: Aline Cubertino fez login no IP 201.91.196.50
+2023-01-25 14:35:30 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-26 05:14:07 [@localhost]
+[login] 3: Everton Silva fez login no IP 187.111.164.93
+2023-01-26 07:58:10 [@localhost]
+[login] 3: Andre Roveder fez login no IP 179.213.217.34
+2023-01-26 08:19:32 [@localhost]
+[login] 3: Hélio Soares fez login no IP 45.71.161.114
+2023-01-26 08:29:52 [@localhost]
+[login] 3: Gabriela Fortes fez login no IP 201.91.196.50
+2023-01-26 08:30:05 [@localhost]
+[login] 3: Aline Cubertino fez login no IP 201.91.196.50
+2023-01-26 08:43:08 [@localhost]
+[login] 3: Login falhou para  no IP 201.75.186.148
+2023-01-26 08:43:36 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-26 08:44:30 [@localhost]
+[login] 3: Clecio Silva fez login no IP 179.91.205.184
+2023-01-26 08:48:12 [@localhost]
+[login] 3: Login falhou para  no IP 191.254.88.217
+2023-01-26 08:54:54 [@localhost]
+[login] 3: Administrador fez login no IP 191.254.88.217
+2023-01-26 08:55:37 [@localhost]
+[login] 3: Paulo Henrique fez login no IP 201.75.186.148
+2023-01-26 11:00:11 [@localhost]
+[login] 3: Adriana Cordeiro fez login no IP 189.98.78.213
+2023-01-26 11:03:01 [@localhost]
+[login] 3: andre roveder fez login no IP 179.213.217.34
+2023-01-26 11:03:43 [@localhost]
+[login] 3: andre roveder fez login no IP 179.213.217.34
+2023-01-26 11:09:32 [@localhost]
+[login] 3: Aline Brunasso fez login no IP 131.255.236.26
+2023-01-26 11:14:28 [@localhost]
+[login] 3: Paulo Henrique fez login no IP 201.75.186.148
+2023-01-26 11:19:31 [@localhost]
+[login] 3: Alanis Almeida fez login no IP 177.180.70.138
+2023-01-26 11:20:10 [@localhost]
+[login] 3: Adriana Cordeiro fez login no IP 177.180.70.138
+2023-01-26 15:22:56 [@localhost]
+[login] 3: Hélio Soares fez login no IP 45.71.161.114
+2023-01-26 15:33:39 [@localhost]
+[login] 3: Login falhou para  no IP 191.254.88.217
+2023-01-26 15:33:48 [@localhost]
+[login] 3: administrador fez login no IP 191.254.88.217
+2023-01-26 15:38:33 [@localhost]
+[login] 3: Thais Martins ligou-se do IP 179.229.9.38
+2023-01-26 15:38:54 [@localhost]
+[login] 3: Izaias batista fez login no IP 177.26.92.110
+2023-01-26 15:39:18 [@localhost]
+[login] 3: Login falhou para  no IP 177.26.92.110
+2023-01-26 15:39:37 [@localhost]
+[login] 3: Izaias batista fez login no IP 177.26.92.110
+2023-01-26 15:40:08 [@localhost]
+[login] 3: Izaias batista fez login no IP 177.26.92.110
+2023-01-26 15:41:31 [@localhost]
+[login] 3: Thiago Siqueira fez login no IP 170.239.111.140
+2023-01-26 15:42:00 [@localhost]
+[login] 3: Marcos Cardoso fez login no IP 177.145.174.83
+2023-01-26 15:42:30 [@localhost]
+[login] 3: Marcos Cardoso fez login no IP 177.145.174.83
+2023-01-26 15:47:47 [@localhost]
+[login] 3: Alanis Almeida fez login no IP 177.180.70.138
+2023-01-26 15:56:55 [@localhost]
+[login] 3: Everton Silva fez login no IP 200.173.178.148
+2023-01-26 15:57:20 [@localhost]
+[login] 3: Jose Morgan fez login no IP 200.173.178.148
+2023-01-26 16:41:01 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-26 17:00:57 [@localhost]
+[login] 3: Jose Morgan fez login no IP 187.111.164.93
+2023-01-26 17:04:59 [@localhost]
+[login] 3: Bruno Avellar login from IP 191.195.25.239
+2023-01-27 07:46:49 [@localhost]
+[login] 3: Login falhou para  no IP 131.255.236.26
+2023-01-27 08:03:36 [@localhost]
+[login] 3: Paulo Henrique fez login no IP 131.255.236.26
+2023-01-27 08:45:08 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-27 08:48:09 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-27 09:00:14 [69@localhost]
+[login] 3: Isaac Araujo fez login no IP 45.162.145.10
+2023-01-27 11:17:40 [@localhost]
+[login] 3: Kátia Fernanda fez login no IP 131.255.236.26
+2023-01-27 11:43:50 [@localhost]
+[login] 3: Aline Brunasso fez login no IP 131.255.236.26
+2023-01-27 12:07:45 [@localhost]
+[login] 3: Andressa Modesti fez login no IP 177.107.72.210
+2023-01-27 14:16:11 [@localhost]
+[login] 3: Administrador fez login no IP 191.254.88.217
+2023-01-27 14:16:11 [@localhost]
+[login] 3: Administrador fez login no IP 191.254.88.217
+2023-01-27 14:33:33 [@localhost]
+[login] 3: Login falhou para  no IP 201.75.186.148
+2023-01-27 14:46:14 [@localhost]
+[login] 3: Paulo Henrique fez login no IP 201.75.186.148
+2023-01-27 14:49:44 [@localhost]
+[login] 3: Andressa Modesti fez login no IP 177.107.72.210
+2023-01-27 15:10:54 [@localhost]
+[login] 3: Fabiana Colares fez login no IP 168.194.164.22
+2023-01-27 17:35:12 [@localhost]
+[login] 3: Izaias Batista fez login no IP 189.24.162.124
+2023-01-30 11:15:04 [@localhost]
+[login] 3: Administrador fez login no IP 187.11.126.226
+2023-01-30 11:17:19 [@localhost]
+[login] 3: Login falhou para  no IP 131.255.236.26
+2023-01-30 11:17:54 [@localhost]
+[login] 3: Paulo Henrique fez login no IP 131.255.236.26
+=======
+2022-11-07 14:55:18 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-07 14:55:31 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-14 16:29:16 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-14 16:30:13 [@GS003021]
+[login] 3: TRIADOR fez login no IP ::1
+2022-11-14 16:36:17 [@GS003021]
+[login] 3: TRIADOR fez login no IP ::1
+2022-11-14 16:44:37 [@GS003021]
+[login] 3: TRIADOR fez login no IP ::1
+2022-11-16 12:47:27 [@GS003021]
+[login] 3: TRIADOR fez login no IP ::1
+2022-11-16 12:51:41 [@GS003021]
+[login] 3: Fabiana fez login no IP ::1
+2022-11-16 12:53:06 [14@GS003021]
+[Impersonate] 3: solutions começa a personificar o usuário Suporte
+2022-11-16 12:53:56 [2@GS003021]
+[Impersonate] 3: solutions pára de personificar o usuário Suporte
+2022-11-16 12:55:53 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-16 13:06:41 [@GS003021]
+[login] 3: Triador fez login no IP ::1
+2022-11-16 13:08:20 [8@GS003021]
+[Impersonate] 3: solutions começa a personificar o usuário Fabiana
+2022-11-16 13:10:50 [2@GS003021]
+[Impersonate] 3: solutions pára de personificar o usuário Fabiana
+2022-11-16 13:11:42 [8@GS003021]
+[Impersonate] 3: solutions começa a personificar o usuário Fabiana
+2022-11-16 13:18:18 [2@GS003021]
+[Impersonate] 3: solutions pára de personificar o usuário Fabiana
+2022-11-16 13:47:07 [@GS003021]
+[login] 3: TRIADOR fez login no IP ::1
+2022-11-16 14:09:44 [@GS003021]
+[login] 3: Triador fez login no IP ::1
+2022-11-16 16:56:03 [@GS003021]
+[login] 3: TRIADOR fez login no IP ::1
+2022-11-16 16:58:05 [@GS003021]
+[login] 3: Login falhou para glpi no IP ::1
+2022-11-17 11:59:04 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-17 14:35:34 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-17 14:39:28 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-17 14:45:55 [@GS003021]
+[login] 3: Login falhou para teste no IP ::1
+2022-11-17 14:46:43 [@GS003021]
+[login] 3: teste fez login no IP ::1
+2022-11-17 14:47:00 [@GS003021]
+[login] 3: Fabiana fez login no IP ::1
+2022-11-17 14:47:11 [@GS003021]
+[login] 3: Login falhou para Usuario Teste no IP ::1
+2022-11-17 14:48:23 [@GS003021]
+[login] 3: Fabiana fez login no IP ::1
+2022-11-18 13:06:04 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-18 15:55:38 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-18 15:57:15 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-18 19:50:56 [@GS003021]
+[login] 3: Login falhou para  no IP ::1
+2022-11-18 19:51:00 [@GS003021]
+[login] 3: fabiana fez login no IP ::1
+2022-11-18 19:51:20 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-21 12:30:04 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-21 12:53:46 [@GS003021]
+[login] 3: Triador fez login no IP ::1
+2022-11-21 12:54:53 [@GS003021]
+[login] 3: BSILVA fez login no IP ::1
+2022-11-21 12:56:43 [@GS003021]
+[login] 3: Login falhou para  no IP ::1
+2022-11-21 12:56:50 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-21 12:57:50 [@GS003021]
+[login] 3: BSILVA fez login no IP ::1
+2022-11-21 12:58:40 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-21 12:59:21 [@GS003021]
+[login] 3: BSILVA fez login no IP ::1
+2022-11-21 13:00:08 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-21 13:00:43 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-21 13:01:16 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-21 13:17:46 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-21 13:21:28 [@GS003021]
+[login] 3: BSILVA fez login no IP ::1
+2022-11-21 13:22:33 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-21 13:24:26 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-21 13:24:33 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-21 13:28:29 [@GS003021]
+[login] 3: Login falhou para  no IP ::1
+2022-11-21 13:28:35 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-21 13:34:18 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-21 14:10:24 [@GS003021]
+[login] 3: FABIANA fez login no IP ::1
+2022-11-21 15:02:52 [@GS003021]
+[login] 3: triador fez login no IP ::1
+2022-11-21 18:35:23 [@GS003021]
+[login] 3: TRIADOR fez login no IP ::1
+2022-11-21 20:25:31 [@GS003021]
+[login] 3: Login falhou para Braian no IP ::1
+2022-11-21 20:27:59 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-21 20:28:20 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-21 20:36:30 [@GS003021]
+[login] 3: Fabiana fez login no IP ::1
+2022-11-21 20:36:47 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+2022-11-22 11:24:45 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-22 12:08:14 [@GS003021]
+[login] 3: Login falhou para solutions no IP ::1
+2022-11-22 12:08:41 [@GS003021]
+[login] 3: solutions fez login no IP ::1
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122

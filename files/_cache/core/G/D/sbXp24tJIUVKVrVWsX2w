@@ -1,0 +1,63 @@
+1671048939
+e732740ea1e7a3cdf284fe25a9b708ba2ad4fd23
+a:1:{s:68:"count_Peripheral_PeripheralType_b81b1595-1822-489a-9807-ae20745ba54d";s:2939:"      <style>
+         
+
+         #chart-1877933699 {
+            background-color: #fafafa;
+            color: #949494;
+         }
+
+         .theme-dark #chart-1877933699 {
+            background-color: #949494;
+            color: #fafafa;
+         }
+      </style>
+
+      <div class="card multiple-numbers filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+           id="chart-1877933699"
+           title="">
+         <div class='scrollable'>
+            <div class='table'>
+                        <a href='/front/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=5&reset=reset' class="line line-a">
+               <span class="content" >            <span title="5"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">5</span>
+               <span class="suffix"></span>
+            </span></span>
+               <i class="icon " ></i>
+               <span class="label" >MODEM</span>
+            </a>            <a href='/front/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset' class="line line-b">
+               <span class="content" >            <span title="2"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">2</span>
+               <span class="suffix"></span>
+            </span></span>
+               <i class="icon " ></i>
+               <span class="label" >SIM CARD CORPORATIVO</span>
+            </a>            <a href='/front/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset' class="line line-c">
+               <span class="content" >            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+               <i class="icon " ></i>
+               <span class="label" >ROTEADOR</span>
+            </a>            <a href='/front/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=1&reset=reset' class="line line-d">
+               <span class="content" >            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+               <i class="icon " ></i>
+               <span class="label" >Scanner</span>
+            </a>
+            </div>
+         </div>
+         <span class="main-label">Dispositivos por Tipo</span>
+         <i class="main-icon fab fa-usb" style="color: #949494"></i>
+      </div>";}

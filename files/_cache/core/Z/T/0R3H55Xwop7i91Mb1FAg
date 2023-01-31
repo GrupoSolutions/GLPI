@@ -1,0 +1,35 @@
+1669030500
+e7858de3cb508d41da44453354d4c5645b6fe00b
+a:1:{s:60:"top_ticket_ITILCategory_c7023965-95ed-4d61-b796-e139788def6a";s:1303:"      <style>
+         #chart-dashboard_card_assistance_7d282af0aa697ac57f56cf1a3f8abf7a89e4108b {
+            background-color: #fafafa;
+            color: #949494
+         }
+
+         .theme-dark #chart-dashboard_card_assistance_7d282af0aa697ac57f56cf1a3f8abf7a89e4108b {
+            background-color: #2e2e2e;
+            color: #949494;
+         }
+
+         #chart-dashboard_card_assistance_7d282af0aa697ac57f56cf1a3f8abf7a89e4108b .ct-label {
+            fill: #949494;
+            color: #949494;
+         }
+
+         .theme-dark #chart-dashboard_card_assistance_7d282af0aa697ac57f56cf1a3f8abf7a89e4108b .ct-label {
+            fill: #949494;
+            color: #949494;
+         }
+
+         
+      </style>
+      <div style="height: 100%">
+         <div class="card g-chart pie donut filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+            id="chart-dashboard_card_assistance_7d282af0aa697ac57f56cf1a3f8abf7a89e4108b">
+            <div class="chart ct-chart"><span class='empty-card no-data'>
+               <div>Nenhum dado encontrado</div>
+            <span></div>
+            <span class="main-label">Top chamados por categorias</span>
+            <i class="main-icon ti ti-subtask"></i>
+         </div>
+      </div>";}

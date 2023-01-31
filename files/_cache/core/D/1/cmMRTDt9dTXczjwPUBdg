@@ -1,0 +1,37 @@
+1674063035
+2a17bdaa0eef97e27563b359ad450f09d2f33f82
+a:1:{s:60:"bn_count_ConsumableItem_7f001979-9b6f-4cee-ac45-0126bc7ed1fc";s:1169:"      <style>
+         #bn_1170401511 {
+            background-color: #fafafa;
+            color: #949494;
+         }
+
+         #bn_1170401511:hover {
+            background-color: #d4d4d4;
+            border: 1px solid #aeaeae;
+         }
+
+         .theme-dark #bn_1170401511 {
+            background-color: #949494;
+            color: #fafafa;
+         }
+
+         .theme-dark #bn_1170401511:hover {
+            background-color: #d4d4d4;
+            color: #949494;
+            border: 1px solid #aeaeae;
+         }
+      </style>
+      <a href='/front/consumableitem.php?reset=reset'
+         id="bn_1170401511"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech"
+         title="">
+         <span class="content">            <span title="106"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">106</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Modelos de insumos">Modelos de insumos</div>
+         <i class="main-icon ti ti-package"></i>
+      </a>";}

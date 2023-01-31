@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+1672748746
+7837a2e84ec8a841591f26680b4c80bc8d3b18bc
+a:1:{s:71:"plugin_formcreator_incoming_issues_2ea62aff-ad5e-4750-8c99-12093a473ea8";s:1153:"      <style>
+         #bn_2144595597 {
+=======
+1669039615
+7837a2e84ec8a841591f26680b4c80bc8d3b18bc
+a:1:{s:71:"plugin_formcreator_incoming_issues_2ea62aff-ad5e-4750-8c99-12093a473ea8";s:1153:"      <style>
+         #bn_652800475 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #6fd169;
+            color: #1d541a;
+         }
+
+<<<<<<< HEAD
+         #bn_2144595597:hover {
+=======
+         #bn_652800475:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #3fb638;
+            border: 1px solid #2b7b26;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_2144595597 {
+=======
+         .theme-dark #bn_652800475 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #1d541a;
+            color: #6fd169;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_2144595597:hover {
+=======
+         .theme-dark #bn_652800475:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #3fb638;
+            color: #1d541a;
+            border: 1px solid #2b7b26;
+         }
+      </style>
+<<<<<<< HEAD
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=1&reset=reset'
+         id="bn_2144595597"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+=======
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=1&reset=reset'
+         id="bn_652800475"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Novo">Novo</div>
+         <i class="main-icon ti ti-alert-circle"></i>
+      </a>";}

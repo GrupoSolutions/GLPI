@@ -1,0 +1,457 @@
+1667934504
+af44daab095e55821d1d7676457bf3e38fee623e
+a:1:{s:75:"table_count_tickets_waiting_validation_e9890c34-3c9e-4769-8d70-ec50a5f8e0b1";s:20752:"      <style>
+         #search-table-1244324694 .tab_cadrehov th {
+            background: #ededed;
+         }
+      </style>
+      <div
+         class="card search-table  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         id="search-table-1244324694"
+         style="background-color: #fafafa; color: #545454">
+         <div class='table-container'>
+            <table class="search-results table card-table table-hover table-striped" id="search_1084874963">
+      <thead>
+         <tr>
+            
+            
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="2" data-nosort="true" data-sort-order="nosort">
+                                    ID
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="1" data-nosort="true" data-sort-order="nosort">
+                                    Título
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="12" data-nosort="true" data-sort-order="nosort">
+                                    Status
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="19" data-nosort="true" data-sort-order="nosort">
+                                    Última atualização
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="15" data-nosort="true" data-sort-order="nosort">
+                                    Data de abertura
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="3" data-nosort="true" data-sort-order="nosort">
+                                    Prioridade
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="4" data-nosort="true" data-sort-order="nosort">
+                                    Requerente - Requerente
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="5" data-nosort="true" data-sort-order="nosort">
+                                    Atribuído - Técnico
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="7" data-nosort="true" data-sort-order="nosort">
+                                    Categoria
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="18" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para solução
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="55" data-nosort="true" data-sort-order="nosort">
+                                    Aprovação - Status de aprovação
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="59" data-nosort="true" data-sort-order="nosort">
+                                    Aprovação - Aprovador
+                                 </th>
+            
+                                 </tr>
+      </thead>
+      <tbody>
+                                    <tr>
+                  
+                                                                                 <td valign="top"><span class="text-nowrap">114</span></td>
+
+                                                                                 <td valign="top"><a id="Ticket114" href="/front/ticket.form.php?id=114">Solicitação de Etiquetas e Lacres</a> <div id="contentTicket114" class="tooltip-invisible"><h1>Dados do formulário</h1><h2>Solicitação de Materiais</h2><div><b>1) Lacres : </b><br>Solutions</div><div><b>2) Solutions : </b><br>NÃO DOA - SOLUTIONS</div><h2>Quantidades</h2><div><b>3) NÃO DOA - SOLUTIONS : </b>6</div></div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#Ticket114').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contentTicket114')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap"><i class="itilstatus far fa-circle assigned me-1" title="Em atendimento (atribuído)" data-bs-toggle="tooltip"></i> Em atendimento (atribuído)</span></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap">01-11-2022 15:34</span></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap">01-11-2022 15:34</span></td>
+
+                                                                                 <td valign="top"><div class="priority_block" style="border-color: #ffcece">
+                        <span style="background: #ffcece"></span> Média
+                       </div></td>
+
+                                                                                 <td valign="top">solutions <a id="tooltiplink1667108272" class="dropdown_tooltip " href="/front/user.form.php?id=2"><span id="tooltip1667108272" class="fas fa-info fa-fw"></span></a><div id="contenttooltip1667108272" class="tooltip-invisible">
+
+<div class="p-0 user-info-card">
+   <div class="row">
+      <div class="col pt-1">
+                     
+
+   <a href="/front/user.form.php?id=2" class="d-flex align-items-center">
+
+<span class="avatar avatar-md rounded" style="background-color: #af81e4">
+            SO
+   </span>
+
+   
+   </a>
+
+               </div>
+      <div class="col-auto ms-2">
+         <h4 class="card-title mb-1">
+                           <a href="/front/user.form.php?id=2">solutions</a>
+                     </h4>
+
+         <div class="text-muted">
+                           <div>
+                  <i class="fas fa-fw fa-envelope"></i>
+                  <a href="mailto:suporte@gruposolutions.com.br">suporte@gruposolutions.com.br</a>
+               </div>
+                                                                                             </div>
+      </div>
+
+         </div>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#tooltip1667108272').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contenttooltip1667108272')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top">solutions <a id="tooltiplink656746955" class="dropdown_tooltip " href="/front/user.form.php?id=2"><span id="tooltip656746955" class="fas fa-info fa-fw"></span></a><div id="contenttooltip656746955" class="tooltip-invisible">
+
+<div class="p-0 user-info-card">
+   <div class="row">
+      <div class="col pt-1">
+                     
+
+   <a href="/front/user.form.php?id=2" class="d-flex align-items-center">
+
+<span class="avatar avatar-md rounded" style="background-color: #af81e4">
+            SO
+   </span>
+
+   
+   </a>
+
+               </div>
+      <div class="col-auto ms-2">
+         <h4 class="card-title mb-1">
+                           <a href="/front/user.form.php?id=2">solutions</a>
+                     </h4>
+
+         <div class="text-muted">
+                           <div>
+                  <i class="fas fa-fw fa-envelope"></i>
+                  <a href="mailto:suporte@gruposolutions.com.br">suporte@gruposolutions.com.br</a>
+               </div>
+                                                                                             </div>
+      </div>
+
+         </div>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#tooltip656746955').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contenttooltip656746955')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top"></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap"></span></td>
+
+                                                                                 <td valign="top"><div style="background-color:#FFC65D;">Esperando por uma validação</div></td>
+
+                                                                                 <td valign="top">solutions <a id="tooltiplink805225978" class="dropdown_tooltip " href="/front/user.form.php?id=2"><span id="tooltip805225978" class="fas fa-info fa-fw"></span></a><div id="contenttooltip805225978" class="tooltip-invisible">
+
+<div class="p-0 user-info-card">
+   <div class="row">
+      <div class="col pt-1">
+                     
+
+   <a href="/front/user.form.php?id=2" class="d-flex align-items-center">
+
+<span class="avatar avatar-md rounded" style="background-color: #af81e4">
+            SO
+   </span>
+
+   
+   </a>
+
+               </div>
+      <div class="col-auto ms-2">
+         <h4 class="card-title mb-1">
+                           <a href="/front/user.form.php?id=2">solutions</a>
+                     </h4>
+
+         <div class="text-muted">
+                           <div>
+                  <i class="fas fa-fw fa-envelope"></i>
+                  <a href="mailto:suporte@gruposolutions.com.br">suporte@gruposolutions.com.br</a>
+               </div>
+                                                                                             </div>
+      </div>
+
+         </div>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#tooltip805225978').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contenttooltip805225978')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                  
+                                                   </tr>
+                           <tr>
+                  
+                                                                                 <td valign="top"><span class="text-nowrap">113</span></td>
+
+                                                                                 <td valign="top"><a id="Ticket113" href="/front/ticket.form.php?id=113">Solicitação de Etiquetas e Lacres</a> <div id="contentTicket113" class="tooltip-invisible"><h1>Dados do formulário</h1><h2>Solicitação de Materiais</h2><div><b>1) Lacres : </b><br>Solutions</div><div><b>2) Solutions : </b><br>NÃO DOA - SOLUTIONS</div><h2>Quantidades</h2><div><b>3) NÃO DOA - SOLUTIONS : </b></div></div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#Ticket113').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contentTicket113')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap"><i class="itilstatus far fa-circle assigned me-1" title="Em atendimento (atribuído)" data-bs-toggle="tooltip"></i> Em atendimento (atribuído)</span></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap">01-11-2022 15:34</span></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap">01-11-2022 15:34</span></td>
+
+                                                                                 <td valign="top"><div class="priority_block" style="border-color: #ffcece">
+                        <span style="background: #ffcece"></span> Média
+                       </div></td>
+
+                                                                                 <td valign="top">solutions <a id="tooltiplink179699042" class="dropdown_tooltip " href="/front/user.form.php?id=2"><span id="tooltip179699042" class="fas fa-info fa-fw"></span></a><div id="contenttooltip179699042" class="tooltip-invisible">
+
+<div class="p-0 user-info-card">
+   <div class="row">
+      <div class="col pt-1">
+                     
+
+   <a href="/front/user.form.php?id=2" class="d-flex align-items-center">
+
+<span class="avatar avatar-md rounded" style="background-color: #af81e4">
+            SO
+   </span>
+
+   
+   </a>
+
+               </div>
+      <div class="col-auto ms-2">
+         <h4 class="card-title mb-1">
+                           <a href="/front/user.form.php?id=2">solutions</a>
+                     </h4>
+
+         <div class="text-muted">
+                           <div>
+                  <i class="fas fa-fw fa-envelope"></i>
+                  <a href="mailto:suporte@gruposolutions.com.br">suporte@gruposolutions.com.br</a>
+               </div>
+                                                                                             </div>
+      </div>
+
+         </div>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#tooltip179699042').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contenttooltip179699042')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top">solutions <a id="tooltiplink1882257552" class="dropdown_tooltip " href="/front/user.form.php?id=2"><span id="tooltip1882257552" class="fas fa-info fa-fw"></span></a><div id="contenttooltip1882257552" class="tooltip-invisible">
+
+<div class="p-0 user-info-card">
+   <div class="row">
+      <div class="col pt-1">
+                     
+
+   <a href="/front/user.form.php?id=2" class="d-flex align-items-center">
+
+<span class="avatar avatar-md rounded" style="background-color: #af81e4">
+            SO
+   </span>
+
+   
+   </a>
+
+               </div>
+      <div class="col-auto ms-2">
+         <h4 class="card-title mb-1">
+                           <a href="/front/user.form.php?id=2">solutions</a>
+                     </h4>
+
+         <div class="text-muted">
+                           <div>
+                  <i class="fas fa-fw fa-envelope"></i>
+                  <a href="mailto:suporte@gruposolutions.com.br">suporte@gruposolutions.com.br</a>
+               </div>
+                                                                                             </div>
+      </div>
+
+         </div>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#tooltip1882257552').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contenttooltip1882257552')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top"></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap"></span></td>
+
+                                                                                 <td valign="top"><div style="background-color:#FFC65D;">Esperando por uma validação</div></td>
+
+                                                                                 <td valign="top">solutions <a id="tooltiplink1143650114" class="dropdown_tooltip " href="/front/user.form.php?id=2"><span id="tooltip1143650114" class="fas fa-info fa-fw"></span></a><div id="contenttooltip1143650114" class="tooltip-invisible">
+
+<div class="p-0 user-info-card">
+   <div class="row">
+      <div class="col pt-1">
+                     
+
+   <a href="/front/user.form.php?id=2" class="d-flex align-items-center">
+
+<span class="avatar avatar-md rounded" style="background-color: #af81e4">
+            SO
+   </span>
+
+   
+   </a>
+
+               </div>
+      <div class="col-auto ms-2">
+         <h4 class="card-title mb-1">
+                           <a href="/front/user.form.php?id=2">solutions</a>
+                     </h4>
+
+         <div class="text-muted">
+                           <div>
+                  <i class="fas fa-fw fa-envelope"></i>
+                  <a href="mailto:suporte@gruposolutions.com.br">suporte@gruposolutions.com.br</a>
+               </div>
+                                                                                             </div>
+      </div>
+
+         </div>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#tooltip1143650114').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contenttooltip1143650114')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                  
+                                                   </tr>
+                           </tbody>
+   </table>
+         </div>
+         <span class="main-label">
+            <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=55&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&criteria%5B1%5D%5Blink%5D=AND&criteria%5B1%5D%5Bfield%5D=59&criteria%5B1%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bvalue%5D=2&reset=reset'>Chamados aguardando validação</a>
+         </span>
+         <i class="main-icon far fa-eye"></i>
+      </div>";}

@@ -1,0 +1,37 @@
+1673609025
+542546545bb385275604055de274c908aab2dd41
+a:1:{s:62:"bn_count_tickets_assigned_3bd92137-ce5c-4f8c-afc4-7a6fe773fdc5";s:1277:"      <style>
+         #bn_1660112846 {
+            background-color: #f6b26b;
+            color: #8c4c09;
+         }
+
+         #bn_1660112846:hover {
+            background-color: #f28c23;
+            border: 1px solid #bd660b;
+         }
+
+         .theme-dark #bn_1660112846 {
+            background-color: #8c4c09;
+            color: #f6b26b;
+         }
+
+         .theme-dark #bn_1660112846:hover {
+            background-color: #f28c23;
+            color: #8c4c09;
+            border: 1px solid #bd660b;
+         }
+      </style>
+      <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset'
+         id="bn_1660112846"
+         class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Chamados atribuídos">Chamados atribuídos</div>
+         <i class="main-icon fas fa-users"></i>
+      </a>";}

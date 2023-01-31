@@ -1,0 +1,37 @@
+1660326256
+b3a057669a3a108e9add2428924d3855044d2f8c
+a:1:{s:53:"bn_count_Printer_c9a385d4-76a3-4971-ad0e-1470efeafacc";s:1144:"      <style>
+         #bn_561434544 {
+            background-color: #5da8d6;
+            color: #153b52;
+         }
+
+         #bn_561434544:hover {
+            background-color: #2f84b8;
+            border: 1px solid #1f587b;
+         }
+
+         .theme-dark #bn_561434544 {
+            background-color: #153b52;
+            color: #5da8d6;
+         }
+
+         .theme-dark #bn_561434544:hover {
+            background-color: #2f84b8;
+            color: #153b52;
+            border: 1px solid #1f587b;
+         }
+      </style>
+      <a href='/glpi/front/printer.php?reset=reset'
+         id="bn_561434544"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech"
+         title="">
+         <span class="content">            <span title="3"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">3</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Impressoras">Impressoras</div>
+         <i class="main-icon ti ti-printer"></i>
+      </a>";}

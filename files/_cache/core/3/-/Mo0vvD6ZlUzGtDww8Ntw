@@ -1,0 +1,32 @@
+1670932767
+510418cda71832cf249a2c66e153763d69e38822
+a:1:{s:68:"count_Peripheral_PeripheralType_24ce2859-4288-4441-962b-65a37fa5458e";s:975:"      <style>
+         
+
+         #chart-857876388 {
+            background-color: #d5e1ec;
+            color: #4c7da9;
+         }
+
+         .theme-dark #chart-857876388 {
+            background-color: #4c7da9;
+            color: #d5e1ec;
+         }
+      </style>
+
+      <div class="card summary-numbers filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+           id="chart-857876388"
+           title="">
+         <div class='scrollable'>
+            <div class='table'>
+            <span class='line empty-card no-data'>
+               <span class='content'>
+                  <i class='icon fas fa-alert-triangle'></i>
+               </span>
+               <span class='label'>Nenhum dado encontrado</span>
+            <span>
+            </div>
+         </div>
+         <span class="main-label">Dispositivos por Tipo</span>
+         <i class="main-icon fab fa-usb" style="color: #4c7da9"></i>
+      </div>";}

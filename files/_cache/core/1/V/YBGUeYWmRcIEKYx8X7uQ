@@ -1,0 +1,37 @@
+1659554600
+0e9c5d7f17ca8f3b32acb9b9343f94c821bcf70a
+a:1:{s:55:"bn_count_Enclosure_c21ce30a-58c3-456a-81ec-3c5f01527a8f";s:1133:"      <style>
+         #bn_77253029 {
+            background-color: #d7e8e4;
+            color: #599a8b;
+         }
+
+         #bn_77253029:hover {
+            background-color: #a6ccc3;
+            border: 1px solid #76b0a2;
+         }
+
+         .theme-dark #bn_77253029 {
+            background-color: #599a8b;
+            color: #d7e8e4;
+         }
+
+         .theme-dark #bn_77253029:hover {
+            background-color: #a6ccc3;
+            color: #599a8b;
+            border: 1px solid #76b0a2;
+         }
+      </style>
+      <a href='/glpi/front/enclosure.php?reset=reset'
+         id="bn_77253029"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Chassis">Chassis</div>
+         <i class="main-icon ti ti-columns"></i>
+      </a>";}

@@ -1,0 +1,60 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "community",
+  "signedByOrg": "grafana",
+  "signedByOrgName": "Grafana Labs",
+  "plugin": "ddurieux-glpi-app",
+  "version": "1.3.1",
+  "time": 1622740875122,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "datasource/query_ctrl.d.ts": "d89211178a08d4688fde70e9a8b51ef30b5f8a5b4eaddba22d161e4bf55482d7",
+    "datasource/datasource.d.ts": "2a0e3ad531653cb7949eccf63d0514a701d78e7845e948db3d2d1f4773329443",
+    "datasource/query_ctrl.js": "44cf1284a07bc4fe0d32c29374320dafac8da350f540e79d35d9807bfbd272bf",
+    "datasource/module.ts": "ae2850455791b28110c40a323907b9e5a8944feb6822f6cf442facde77897ca9",
+    "datasource/query_ctrl.js.map": "aeec0f9072a1b16f015a201aec5b59a028df250f06c1304a48f5c3cd26da9a45",
+    "datasource/module.js.map": "a742c3c8b953072bb2c5f3cc600757771a0e4267bbe8a24815460e8fec54842d",
+    "datasource/plugin.json": "d5d91a7bc259f548a2148adb9264e50fcbd772725832642cba9a9139253d744c",
+    "datasource/datasource.ts": "9251194f53046b19fa3f92179dbb9b462ade5dc1c49ff3af2c2aa0d207a84001",
+    "datasource/img/small_logo.png": "58892f1bd7a1403fba0ede8db6e240d5c55011605d85bb90999911da8a105dc6",
+    "datasource/img/large_logo.png": "f675d0220d44eeae6e4ce817037b2aa8c014883768f71ef72242370f455c430d",
+    "datasource/module.js": "81b282a6ac158a878fc6de3b7a4cf3e59895eb1c123126b5fb3ba41a9b8e09f1",
+    "datasource/module.d.ts": "7faa7cd8da0a2f43bd42faac32e55f3b58f0d4a28c7875113a3aac13b721f2d5",
+    "datasource/datasource.js.map": "3a88409ae29fd0c4fd70843ebb0f7a7ed31f4178e713a63c369c1771c7c93ffd",
+    "datasource/query_ctrl.ts": "f8bc7a21274eb9fb8a50f8795e51b16712a39cf14ff0158621f640e88eda5863",
+    "datasource/datasource.js": "1f365f2946b58ef23ed58cafbdff0ba520baec617f17ee3e4ba506056f99cdc9",
+    "datasource/partials/query.editor.html": "8f63962b03cadca4877759e06e718ad09564fb911f1a0d7a9339f56d6b76d247",
+    "datasource/partials/config.html": "41d493145f13cf67ca513a06cf73eb1201ad9b91a2863d1b6977336e8459914a",
+    "module.ts": "082d24ca00aad7d11feaaf6e7bcf2f687bf68294a6d8534e985cc5333950a589",
+    "module.js.map": "53d8f8314c41c2ebf7d6c704b3bfcadd5ddb7061fd897d1bbd7a0ee7f84e93b5",
+    "plugin.json": "5fa5327a69f2023fbc52a6cee5f110eccd051d97110fb5bb8136126c38a1bbc7",
+    "README.md": "1d1c24a510377834796a8cc5edfc971fbcb23679c837ad53bc18800b254a7d92",
+    "img/small_logo.png": "58892f1bd7a1403fba0ede8db6e240d5c55011605d85bb90999911da8a105dc6",
+    "img/large_logo.png": "f675d0220d44eeae6e4ce817037b2aa8c014883768f71ef72242370f455c430d",
+    "module.js": "957315732b53323fab94851b73f5321148de885d68632a6eceba0dc55acbc335",
+    "dashboards/glpi_app_dashboard.json": "d82e5234738133f481b7b3f398ecec44b629809b4e87881170c9ca3b2c90aab3",
+    "module.d.ts": "4dcf85bd8f5cc4381ab0ec6d1c629c74645e226da42c6970553e1a944fb46532",
+    "vendor/public/index.js": "1707b65099f08240ccada0d4e5a4c5b4a204b24dd7ec81c997508d23bda53a0a",
+    "vendor/public/moment-timezone.js": "1551c6253657e6aab517323cd795c7ef14161dca0106b13206bac60c20a2d003",
+    "vendor/public/builds/moment-timezone-with-data-2012-2022.min.js": "23190e1539469cc8b5faccb038b260ccda2cc62672c70efa1900a51a8e3d1be5",
+    "vendor/public/builds/moment-timezone-with-data.js": "efcd29aad323fd7b39930d20b2954547c071b618c8857faee501c21f1abbf137",
+    "vendor/public/builds/moment-timezone.min.js": "37662a804371b5e50e1d96da5003fb400118dcd9613611cdae36d9f5b7455223",
+    "vendor/public/builds/moment-timezone-with-data.min.js": "d798e787695e7ba2e2f788fa5c26f0f0f4733597b6f4efd6f62f7bc975724660",
+    "vendor/public/builds/moment-timezone-with-data-2012-2022.js": "2c511723d82cb630337054a3f2f2bd4e6a4e95958e00941798bc50fac5d90c75",
+    "vendor/public/moment-timezone-utils.js": "aa86870fe432bb82d5f87d29603236145cee35aea83dffd423713e6e381612c8"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.1
+Comment: https://openpgpjs.org
+
+wqAEARMKAAYFAmC5D4sACgkQfk0ManCIZuf/VAIHRI6dK2I4lZJqfrjLskh4
+SDU6+PnvBCzdCHT3S+8JAZz8rLwGUvltxeW0QCfDvhGAHUuusvjmDirWJMge
+BNww0ngCBiQgst4a/QAw9552gdaEarygKZy7DYoW3Z/IA3RQ1OzJDkJXC2ar
+u9XgTsKAlgqc0YCjiwYnJshrDDe0QEKFx6Ce
+=JIkP
+-----END PGP SIGNATURE-----

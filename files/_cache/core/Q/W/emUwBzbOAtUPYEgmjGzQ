@@ -1,0 +1,37 @@
+1668456572
+b6719716fd11c3c062d21feeea340f3b143291d9
+a:1:{s:53:"bn_count_Problem_bdb4002b-a674-4493-820f-af85bed44d2a";s:1064:"      <style>
+         #bn_77620694 {
+            background-color: #f0967b;
+            color: #8f2d10;
+         }
+
+         #bn_77620694:hover {
+            background-color: #e85f36;
+            border: 1px solid #bd3c15;
+         }
+
+         .theme-dark #bn_77620694 {
+            background-color: #8f2d10;
+            color: #f0967b;
+         }
+
+         .theme-dark #bn_77620694:hover {
+            background-color: #e85f36;
+            color: #8f2d10;
+            border: 1px solid #bd3c15;
+         }
+      </style>
+      <a href='/front/problem.php?reset=reset'
+         id="bn_77620694"
+         class="card big-number  filter-dates filter-dates_mod"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Problema">Problema</div>
+         <i class="main-icon ti ti-alert-triangle"></i>
+      </a>";}

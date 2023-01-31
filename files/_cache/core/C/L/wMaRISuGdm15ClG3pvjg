@@ -1,0 +1,32 @@
+1671048388
+b724c0faa5974ea7bbcc46d661e680c61e45f05b
+a:1:{s:80:"count_NetworkEquipment_NetworkEquipmentType_ec3a1c80-7371-46e0-9740-bc470d707f5c";s:983:"      <style>
+         
+
+         #chart-868673926 {
+            background-color: #fafafa;
+            color: #949494;
+         }
+
+         .theme-dark #chart-868673926 {
+            background-color: #949494;
+            color: #fafafa;
+         }
+      </style>
+
+      <div class="card summary-numbers filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+           id="chart-868673926"
+           title="">
+         <div class='scrollable'>
+            <div class='table'>
+            <span class='line empty-card no-data'>
+               <span class='content'>
+                  <i class='icon fas fa-alert-triangle'></i>
+               </span>
+               <span class='label'>Nenhum dado encontrado</span>
+            <span>
+            </div>
+         </div>
+         <span class="main-label">Dispositivos de rede por Tipo</span>
+         <i class="main-icon ti ti-edit" style="color: #949494"></i>
+      </div>";}

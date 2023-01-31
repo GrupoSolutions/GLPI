@@ -1,0 +1,37 @@
+1663934401
+621285f2fa9da9bbab59b7b5234a7eda58df11ce
+a:1:{s:69:"plugin_formcreator_solved_issues_52bda11b-d554-4db6-93e0-4efa0b61956d";s:1273:"      <style>
+         #bn_473458009 {
+            background-color: #d7d7d7;
+            color: #717171;
+         }
+
+         #bn_473458009:hover {
+            background-color: #b1b1b1;
+            border: 1px solid #8b8b8b;
+         }
+
+         .theme-dark #bn_473458009 {
+            background-color: #717171;
+            color: #d7d7d7;
+         }
+
+         .theme-dark #bn_473458009:hover {
+            background-color: #b1b1b1;
+            color: #717171;
+            border: 1px solid #8b8b8b;
+         }
+      </style>
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Blink%5D=OR&criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Bvalue%5D=5&reset=reset'
+         id="bn_473458009"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="18"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">18</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Solved">Solved</div>
+         <i class="main-icon far fa-check-square"></i>
+      </a>";}

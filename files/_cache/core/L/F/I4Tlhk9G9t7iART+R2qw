@@ -1,0 +1,37 @@
+1672756036
+31c630be39fb0d2820a1ccea45c5a1e66b18cfa6
+a:1:{s:71:"plugin_formcreator_validate_issues_1d6b68a9-0fc6-490a-89f7-a26b17aa0444";s:1183:"      <style>
+         #bn_1026465324 {
+            background-color: #fafafa;
+            color: #949494;
+         }
+
+         #bn_1026465324:hover {
+            background-color: #d4d4d4;
+            border: 1px solid #aeaeae;
+         }
+
+         .theme-dark #bn_1026465324 {
+            background-color: #949494;
+            color: #fafafa;
+         }
+
+         .theme-dark #bn_1026465324:hover {
+            background-color: #d4d4d4;
+            color: #949494;
+            border: 1px solid #aeaeae;
+         }
+      </style>
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=101&reset=reset'
+         id="bn_1026465324"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Validar">Validar</div>
+         <i class="main-icon far fa-eye"></i>
+      </a>";}

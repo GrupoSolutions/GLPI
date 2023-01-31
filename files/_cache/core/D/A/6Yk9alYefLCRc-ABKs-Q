@@ -1,0 +1,37 @@
+1663934401
+60963d8e359d09cf679c7205e2acd13167b781e8
+a:1:{s:66:"plugin_formcreator_all_issues_413a3877-bca4-413c-8bc8-5f5a72855753";s:1137:"      <style>
+         #bn_104483252 {
+            background-color: #ffd957;
+            color: #8a6b00;
+         }
+
+         #bn_104483252:hover {
+            background-color: #ffc80b;
+            border: 1px solid #bd9200;
+         }
+
+         .theme-dark #bn_104483252 {
+            background-color: #8a6b00;
+            color: #ffd957;
+         }
+
+         .theme-dark #bn_104483252:hover {
+            background-color: #ffc80b;
+            color: #8a6b00;
+            border: 1px solid #bd9200;
+         }
+      </style>
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=all&reset=reset'
+         id="bn_104483252"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="40"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">40</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="All">All</div>
+         <i class="main-icon "></i>
+      </a>";}

@@ -1,0 +1,7 @@
+2022-11-03 17:00:07 [2@GS003021]
+New rights has been added for locked_field, you should review ACLs after update @ 2022-11-03 17:00:07 [2@GS003021]
+New rights has been added for snmpcredential, you should review ACLs after update @ 2022-11-03 17:00:07 [2@GS003021]
+New rights has been added for refusedequipment, you should review ACLs after update @ 2022-11-03 17:00:07 [2@GS003021]
+New rights has been added for agent, you should review ACLs after update @ 2022-11-03 17:00:09 [2@GS003021]
+O esquema do banco de dados não é consistente com a versão atual do GLPI.
+Recomenda-se executar o comando "php bin/console glpi:database:check_schema_integrity" para ver as diferenças. @ 

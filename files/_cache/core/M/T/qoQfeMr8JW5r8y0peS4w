@@ -1,0 +1,155 @@
+1668619314
+73baf00d004b470e9bf895c930c5b78b1e79f104
+a:1:{s:60:"top_ticket_ITILCategory_c7023965-95ed-4d61-b796-e139788def6a";s:6956:"      <style>
+         #chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 {
+            background-color: #fafafa;
+            color: #949494
+         }
+
+         .theme-dark #chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 {
+            background-color: #2e2e2e;
+            color: #949494;
+         }
+
+         #chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 .ct-label {
+            fill: #949494;
+            color: #949494;
+         }
+
+         .theme-dark #chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 .ct-label {
+            fill: #949494;
+            color: #949494;
+         }
+
+         
+      </style>
+      <div style="height: 100%">
+         <div class="card g-chart pie donut filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+            id="chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525">
+            <div class="chart ct-chart"></div>
+            <span class="main-label">Top chamados por categorias</span>
+            <i class="main-icon ti ti-subtask"></i>
+         </div>
+      </div><script type="text/javascript">
+//<![CDATA[
+
+      $(function () {
+         var chart = new Chartist.Pie('#chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 .chart', {
+            labels: ["sem","RH > D\u00favidas","Suporte Tecnico > Acessos","Suporte Tecnico > D\u00favidas","Suporte Tecnico > Problemas"],
+            series: [{"meta":"sem","value":7,"url":"\/front\/ticket.php?reset&criteria%5B0%5D%5Bfield%5D=7&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=0&reset=reset"},{"meta":"RH > D\u00favidas","value":1,"url":"\/front\/ticket.php?reset&criteria%5B0%5D%5Bfield%5D=7&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=8&reset=reset"},{"meta":"Suporte Tecnico > Acessos","value":1,"url":"\/front\/ticket.php?reset&criteria%5B0%5D%5Bfield%5D=7&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset"},{"meta":"Suporte Tecnico > D\u00favidas","value":1,"url":"\/front\/ticket.php?reset&criteria%5B0%5D%5Bfield%5D=7&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=5&reset=reset"},{"meta":"Suporte Tecnico > Problemas","value":1,"url":"\/front\/ticket.php?reset&criteria%5B0%5D%5Bfield%5D=7&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset"}],
+         }, {
+            width: 'calc(100% - 5px)',
+            chartPadding: 4,
+            donut: true,
+            
+            donutSolid: true,
+            showLabel: true,
+            labelInterpolationFnc: function(value) {
+               return '11';
+            },
+         
+            
+            donutWidth: '50%',
+            plugins: [
+               Chartist.plugins.tooltip({
+                  appendToBody: true,
+                  class: 'dashboard-tooltip'
+               })
+            ]
+         });
+
+
+         chart.on('draw', function(data) {
+            // animate
+            if (data.type === 'slice') {
+               // set url redirecting on slice
+               var url = _.get(data, 'series.url') || "";
+               if (url.length > 0) {
+                  data.element.attr({
+                     'data-clickable': true
+                  });
+                  data.element._node.onclick = function() {
+                     if (!Dashboard.edit_mode) {
+                        window.location = url;
+                     }
+                  }
+               }
+
+               // Get the total path length in order to use for dash array animation
+               var pathLength = data.element._node.getTotalLength();
+
+               // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+               data.element.attr({
+                  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+               });
+
+               // Create animation definition while also assigning an ID to the animation for later sync usage
+               var animationDefinition = {
+                  'stroke-dashoffset': {
+                     id: 'anim' + data.index,
+                     dur: 1000,
+                     from: -pathLength + 'px',
+                     to:  '0px',
+                     easing: Chartist.Svg.Easing.easeOutQuint,
+                     // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+                     fill: 'freeze'
+                  }
+               };
+
+               // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+               data.element.attr({
+                  'stroke-dashoffset': -pathLength + 'px'
+               });
+
+               // We can't use guided mode as the animations need to rely on setting begin manually
+               // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+               data.element.animate(animationDefinition, false);
+            }
+
+            // donut center label
+            if (data.type === 'label') {
+               if (data.index === 0) {
+                  var width = data.element.root().width() / 2;
+                  var height = data.element.root().height() / 2;
+                  var fontsize = ((height / 1) / (1.3 * "11".length));
+                  data.element.attr({
+                     dx: width,
+                     dy: height - (4 / 2),
+                     'style': 'font-size: '+fontsize,
+                  });
+
+                  // apend real total
+                  var text = new Chartist.Svg('title');
+                  text.text("11");
+                  data.element.append(text);
+               } else {
+                  data.element.remove();
+               }
+            }
+
+            // fade others bars on one mouseouver
+            chart.on('created', function(bar) {
+               $('#chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 .ct-series')
+                  .mouseover(function() {
+                     $(this).parent().children().addClass('disable-animation');
+                     $(this).addClass('mouseover');
+                     $(this).siblings()
+                        .addClass('notmouseover');
+
+                     $('#chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 .ct-label')
+                        .addClass('fade');
+                  })
+                  .mouseout(function() {
+                     $(this).removeClass('mouseover');
+                     $(this).siblings()
+                        .removeClass('notmouseover');
+
+                     $('#chart-dashboard_card_assistance_fc4e7860df9acff10ee014f5bf8a8e6ef85cb525 .ct-label')
+                        .removeClass('fade');
+                  });
+            });
+         });
+      });
+
+//]]>
+</script>";}

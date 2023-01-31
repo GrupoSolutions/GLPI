@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+1669899179
+06cd7ffea4cb344862dccc777973fd3500a5586a
+a:1:{s:61:"bn_count_tickets_planned_0c7f3569-c23b-4ee3-8e85-279229b23e70";s:1279:"      <style>
+         #bn_872122324 {
+=======
+1669063037
+06cd7ffea4cb344862dccc777973fd3500a5586a
+a:1:{s:61:"bn_count_tickets_planned_0c7f3569-c23b-4ee3-8e85-279229b23e70";s:1284:"      <style>
+         #bn_519254268 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #6298d5;
+            color: #173454;
+         }
+
+<<<<<<< HEAD
+         #bn_872122324:hover {
+=======
+         #bn_519254268:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #3171b9;
+            border: 1px solid #214c7d;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_872122324 {
+=======
+         .theme-dark #bn_519254268 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #173454;
+            color: #6298d5;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_872122324:hover {
+=======
+         .theme-dark #bn_519254268:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #3171b9;
+            color: #173454;
+            border: 1px solid #214c7d;
+         }
+      </style>
+<<<<<<< HEAD
+      <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset'
+         id="bn_872122324"
+=======
+      <a href='/glpi/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset'
+         id="bn_519254268"
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+         class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Chamados planejados">Chamados planejados</div>
+         <i class="main-icon fas fa-calendar-check"></i>
+      </a>";}

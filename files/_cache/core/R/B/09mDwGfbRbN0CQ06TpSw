@@ -1,0 +1,37 @@
+1672765899
+82c4a5e78011ddf1ec767f1e973b046053abdd8c
+a:1:{s:66:"plugin_formcreator_all_issues_413a3877-bca4-413c-8bc8-5f5a72855753";s:1134:"      <style>
+         #bn_982175935 {
+            background-color: #ffd957;
+            color: #8a6b00;
+         }
+
+         #bn_982175935:hover {
+            background-color: #ffc80b;
+            border: 1px solid #bd9200;
+         }
+
+         .theme-dark #bn_982175935 {
+            background-color: #8a6b00;
+            color: #ffd957;
+         }
+
+         .theme-dark #bn_982175935:hover {
+            background-color: #ffc80b;
+            color: #8a6b00;
+            border: 1px solid #bd9200;
+         }
+      </style>
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=all&reset=reset'
+         id="bn_982175935"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Todos">Todos</div>
+         <i class="main-icon "></i>
+      </a>";}

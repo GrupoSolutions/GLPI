@@ -1,0 +1,37 @@
+1660324890
+787aea5d43440948288fdcc204d8068f007dc8d4
+a:1:{s:69:"plugin_formcreator_solved_issues_1aaae419-b86c-4e44-b648-ec64da2d4d0d";s:1277:"      <style>
+         #bn_174908755 {
+            background-color: #d7d7d7;
+            color: #717171;
+         }
+
+         #bn_174908755:hover {
+            background-color: #b1b1b1;
+            border: 1px solid #8b8b8b;
+         }
+
+         .theme-dark #bn_174908755 {
+            background-color: #717171;
+            color: #d7d7d7;
+         }
+
+         .theme-dark #bn_174908755:hover {
+            background-color: #b1b1b1;
+            color: #717171;
+            border: 1px solid #8b8b8b;
+         }
+      </style>
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Blink%5D=OR&criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bcriteria%5D%5B0%5D%5Bvalue%5D=5&reset=reset'
+         id="bn_174908755"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Resolvido">Resolvido</div>
+         <i class="main-icon far fa-check-square"></i>
+      </a>";}

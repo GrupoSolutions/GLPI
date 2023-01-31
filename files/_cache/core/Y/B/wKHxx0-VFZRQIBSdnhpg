@@ -1,0 +1,66 @@
+<<<<<<< HEAD
+1670335637
+bc073dc00a0d92f87410f5833b9997dfa2bb15cb
+a:1:{s:51:"bn_count_Phone_c31fde2d-510a-4482-b17d-2f65b61eae08";s:1147:"      <style>
+         #bn_1775731223 {
+=======
+1668171921
+bc073dc00a0d92f87410f5833b9997dfa2bb15cb
+a:1:{s:51:"bn_count_Phone_c31fde2d-510a-4482-b17d-2f65b61eae08";s:1147:"      <style>
+         #bn_1133035706 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #a0cec2;
+            color: #376b5d;
+         }
+
+<<<<<<< HEAD
+         #bn_1775731223:hover {
+=======
+         #bn_1133035706:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #6eb4a2;
+            border: 1px solid #488d7b;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_1775731223 {
+=======
+         .theme-dark #bn_1133035706 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #376b5d;
+            color: #a0cec2;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_1775731223:hover {
+=======
+         .theme-dark #bn_1133035706:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #6eb4a2;
+            color: #376b5d;
+            border: 1px solid #488d7b;
+         }
+      </style>
+      <a href='/front/phone.php?reset=reset'
+<<<<<<< HEAD
+         id="bn_1775731223"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+=======
+         id="bn_1133035706"
+         class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Telefone">Telefone</div>
+         <i class="main-icon ti ti-phone"></i>
+      </a>";}

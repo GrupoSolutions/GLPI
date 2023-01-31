@@ -1,0 +1,37 @@
+1660308254
+16fdc2c3e630fb98249eb20467f470536c31e5d7
+a:1:{s:52:"bn_count_Ticket_344e761b-f7e8-4617-8c90-154b266b4d67";s:1111:"      <style>
+         #bn_1887149120 {
+            background-color: #ffdc64;
+            color: #977500;
+         }
+
+         #bn_1887149120:hover {
+            background-color: #ffcb18;
+            border: 1px solid #ca9c00;
+         }
+
+         .theme-dark #bn_1887149120 {
+            background-color: #977500;
+            color: #ffdc64;
+         }
+
+         .theme-dark #bn_1887149120:hover {
+            background-color: #ffcb18;
+            color: #977500;
+            border: 1px solid #ca9c00;
+         }
+      </style>
+      <a href='/glpi/front/ticket.php?reset=reset'
+         id="bn_1887149120"
+         class="card big-number  filter-dates filter-dates_mod filter-requesttype filter-location"
+         title="">
+         <span class="content">            <span title="3"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">3</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Chamados">Chamados</div>
+         <i class="main-icon ti ti-alert-circle"></i>
+      </a>";}

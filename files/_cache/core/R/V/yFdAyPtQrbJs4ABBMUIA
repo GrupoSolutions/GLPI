@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+1672748747
+2235c7e8f9e5125fa897c8674961ae5bd294feed
+a:1:{s:71:"plugin_formcreator_validate_issues_e806e324-67db-4b97-b863-482371d5868a";s:1178:"      <style>
+         #bn_896960525 {
+=======
+1669039615
+2235c7e8f9e5125fa897c8674961ae5bd294feed
+a:1:{s:71:"plugin_formcreator_validate_issues_e806e324-67db-4b97-b863-482371d5868a";s:1178:"      <style>
+         #bn_60557142 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #6298d5;
+            color: #173454;
+         }
+
+<<<<<<< HEAD
+         #bn_896960525:hover {
+=======
+         #bn_60557142:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #3171b9;
+            border: 1px solid #214c7d;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_896960525 {
+=======
+         .theme-dark #bn_60557142 {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #173454;
+            color: #6298d5;
+         }
+
+<<<<<<< HEAD
+         .theme-dark #bn_896960525:hover {
+=======
+         .theme-dark #bn_60557142:hover {
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+            background-color: #3171b9;
+            color: #173454;
+            border: 1px solid #214c7d;
+         }
+      </style>
+<<<<<<< HEAD
+      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=101&reset=reset'
+         id="bn_896960525"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+=======
+      <a href='/glpi/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=101&reset=reset'
+         id="bn_60557142"
+         class="card big-number "
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+>>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Validar">Validar</div>
+         <i class="main-icon far fa-eye"></i>
+      </a>";}

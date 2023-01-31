@@ -1,0 +1,191 @@
+1672693405
+0093fd5197991889f39481ae5baf4a10d0fd4725
+a:1:{s:61:"table_count_tickets_late_bb724971-e58d-407d-b10f-8959f8474dea";s:10821:"      <style>
+         #search-table-2140177331 .tab_cadrehov th {
+            background: #ededed;
+         }
+      </style>
+      <div
+         class="card search-table  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         id="search-table-2140177331"
+         style="background-color: #fafafa; color: #545454">
+         <div class='table-container'>
+            <table class="search-results table card-table table-hover table-striped" id="search_1365868154">
+      <thead>
+         <tr>
+            
+            
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="2" data-nosort="true" data-sort-order="nosort">
+                                    ID
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="1" data-nosort="true" data-sort-order="nosort">
+                                    Título
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="12" data-nosort="true" data-sort-order="nosort">
+                                    Status
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="19" data-nosort="true" data-sort-order="nosort">
+                                    Última atualização
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="15" data-nosort="true" data-sort-order="nosort">
+                                    Data de abertura
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="4" data-nosort="true" data-sort-order="nosort">
+                                    Requerente - Requerente
+                                 </th>
+                                                                                                                                    
+                                                                                                
+                              
+               <th data-searchopt-id="5" data-nosort="true" data-sort-order="nosort">
+                                    Atribuído - Técnico
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="7" data-nosort="true" data-sort-order="nosort">
+                                    Categoria
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="18" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para solução
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="82" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para resolver excedido
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="182" data-nosort="true" data-sort-order="nosort">
+                                    Tempo interno para resolver excedido
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="159" data-nosort="true" data-sort-order="nosort">
+                                    Tempo para adquirir excedido
+                                 </th>
+                                                                                                                                    
+                                             
+                              
+               <th data-searchopt-id="187" data-nosort="true" data-sort-order="nosort">
+                                    Tempo interno para possuir excedido
+                                 </th>
+            
+                                 </tr>
+      </thead>
+      <tbody>
+                                    <tr>
+                  
+                                                                                 <td valign="top"><span class="text-nowrap">183</span></td>
+
+                                                                                 <td valign="top"><a id="Ticket183" href="/front/ticket.form.php?id=183">Teste</a> <div id="contentTicket183" class="tooltip-invisible"><p>teste</p></div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#Ticket183').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contentTicket183')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap"><i class="itilstatus fas fa-circle new me-1" title="Novo" data-bs-toggle="tooltip"></i> Novo</span></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap">28-12-2022 16:01</span></td>
+
+                                                                                 <td valign="top"><span class="text-nowrap">28-12-2022 16:01</span></td>
+
+                                                                                 <td valign="top">teste <a id="tooltiplink1459475388" class="dropdown_tooltip " href="/front/user.form.php?id=16"><span id="tooltip1459475388" class="fas fa-info fa-fw"></span></a><div id="contenttooltip1459475388" class="tooltip-invisible">
+
+<div class="p-0 user-info-card">
+   <div class="row">
+      <div class="col pt-1">
+                     
+
+   <a href="/front/user.form.php?id=16" class="d-flex align-items-center">
+
+<span class="avatar avatar-md rounded" style="background-color: #db707b">
+            T
+   </span>
+
+   
+   </a>
+
+               </div>
+      <div class="col-auto ms-2">
+         <h4 class="card-title mb-1">
+                           <a href="/front/user.form.php?id=16"></a>
+                     </h4>
+
+         <div class="text-muted">
+                                                                                             </div>
+      </div>
+
+         </div>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+
+$(function(){$('#tooltip1459475388').qtip({
+         position: { viewport: $(window) },
+         content: {text: $('#contenttooltip1459475388')}, style: { classes: 'qtip-shadow qtip-bootstrap'}, hide: {
+                  fixed: true,
+                  delay: 200,
+                  leave: false,
+                  when: { event: 'unfocus' }
+                }});});
+
+//]]>
+</script></td>
+
+                                                                                 <td valign="top"></td>
+
+                                                                                 <td valign="top">Suporte Tecnico &gt; Dúvidas</td>
+
+                                                                                 <td class="shadow-none" style="background-color: #cf9b9b" valign="top"><span class="text-nowrap">30-12-2022 16:01</span></td>
+
+                                                                                 <td valign="top">Sim</td>
+
+                                                                                 <td valign="top">Sim</td>
+
+                                                                                 <td valign="top">Sim</td>
+
+                                                                                 <td valign="top">Sim</td>
+
+                  
+                                                   </tr>
+                           </tbody>
+   </table>
+         </div>
+         <span class="main-label">
+            <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=notold&criteria%5B1%5D%5Blink%5D=AND&criteria%5B1%5D%5Bcriteria%5D%5B0%5D%5Bfield%5D=82&criteria%5B1%5D%5Bcriteria%5D%5B0%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B0%5D%5Bvalue%5D=1&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Blink%5D=OR&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Bfield%5D=182&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B1%5D%5Bvalue%5D=1&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Blink%5D=OR&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Bfield%5D=159&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B2%5D%5Bvalue%5D=1&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Blink%5D=OR&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Bfield%5D=187&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bcriteria%5D%5B3%5D%5Bvalue%5D=1&reset=reset'>Chamados atrasados</a>
+         </span>
+         <i class="main-icon far fa-clock"></i>
+      </div>";}

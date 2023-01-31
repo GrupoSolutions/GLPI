@@ -1,0 +1,37 @@
+1667934632
+bfb6af13fb8ab9405d0489e523ef6a00cf0309b4
+a:1:{s:72:"bn_count_tickets_waiting_validation_78e9b23e-32a4-40f7-bfc4-160f7f69b1eb";s:1420:"      <style>
+         #bn_945989212 {
+            background-color: #fafafa;
+            color: #949494;
+         }
+
+         #bn_945989212:hover {
+            background-color: #d4d4d4;
+            border: 1px solid #aeaeae;
+         }
+
+         .theme-dark #bn_945989212 {
+            background-color: #949494;
+            color: #fafafa;
+         }
+
+         .theme-dark #bn_945989212:hover {
+            background-color: #d4d4d4;
+            color: #949494;
+            border: 1px solid #aeaeae;
+         }
+      </style>
+      <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=55&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&criteria%5B1%5D%5Blink%5D=AND&criteria%5B1%5D%5Bfield%5D=59&criteria%5B1%5D%5Bsearchtype%5D=equals&criteria%5B1%5D%5Bvalue%5D=2&reset=reset'
+         id="bn_945989212"
+         class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
+         title="">
+         <span class="content">            <span title="2"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">2</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Chamados aguardando validação">Chamados aguardando validação</div>
+         <i class="main-icon far fa-eye"></i>
+      </a>";}

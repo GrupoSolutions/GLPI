@@ -1,0 +1,37 @@
+1668797348
+44a967f35dbc1a900cf4aeb95bbb9bb88a910494
+a:1:{s:54:"bn_count_Document_7dc7f4b8-61ff-4147-b994-5541bddd7b66";s:1063:"      <style>
+         #bn_892718399 {
+            background-color: #b4b4b4;
+            color: #4e4e4e;
+         }
+
+         #bn_892718399:hover {
+            background-color: #8e8e8e;
+            border: 1px solid #686868;
+         }
+
+         .theme-dark #bn_892718399 {
+            background-color: #4e4e4e;
+            color: #b4b4b4;
+         }
+
+         .theme-dark #bn_892718399:hover {
+            background-color: #8e8e8e;
+            color: #4e4e4e;
+            border: 1px solid #686868;
+         }
+      </style>
+      <a href='/front/document.php?reset=reset'
+         id="bn_892718399"
+         class="card big-number  filter-dates filter-dates_mod"
+         title="">
+         <span class="content">            <span title="1"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">1</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Documento">Documento</div>
+         <i class="main-icon ti ti-files"></i>
+      </a>";}
