@@ -1,29 +1,29 @@
-1669030497
+1675431260
 67e9f495ea5470f0831841da17246462e7fa1bdc
-a:1:{s:52:"bn_count_Ticket_d5bf3576-5033-40fb-bbdb-292294a7698e";s:1122:"      <style>
-         #bn_1946783618 {
+a:1:{s:52:"bn_count_Ticket_d5bf3576-5033-40fb-bbdb-292294a7698e";s:1130:"      <style>
+         #bn_1763977591 {
             background-color: #ffd957;
             color: #8a6b00;
          }
 
-         #bn_1946783618:hover {
+         #bn_1763977591:hover {
             background-color: #ffc80b;
             border: 1px solid #bd9200;
          }
 
-         .theme-dark #bn_1946783618 {
+         .theme-dark #bn_1763977591 {
             background-color: #8a6b00;
             color: #ffd957;
          }
 
-         .theme-dark #bn_1946783618:hover {
+         .theme-dark #bn_1763977591:hover {
             background-color: #ffc80b;
             color: #8a6b00;
             border: 1px solid #bd9200;
          }
       </style>
-      <a href='/front/ticket.php?reset=reset'
-         id="bn_1946783618"
+      <a href='/glpi106/front/ticket.php?reset=reset'
+         id="bn_1763977591"
          class="card big-number  filter-dates filter-dates_mod filter-requesttype filter-location filter-tickettype"
          title="">
          <span class="content">            <span title="0"

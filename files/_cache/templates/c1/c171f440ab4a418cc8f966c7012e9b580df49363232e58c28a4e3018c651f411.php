@@ -408,6 +408,6 @@ class __TwigTemplate_61c4f93d1143cc3fd2fc32ac256ba8c7147de13eee30b292d676ada79cd
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/profile_selector.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\profile_selector.html.twig");
+        return new Source("", "layout/parts/profile_selector.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\profile_selector.html.twig");
     }
 }

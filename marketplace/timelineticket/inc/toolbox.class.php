@@ -385,7 +385,7 @@ class PluginTimelineticketToolbox {
       if (!empty($configTimezone['timezone']) && !is_null($configTimezone['timezone'])) {
          $baseTimezone = $configTimezone['timezone'];
       } else if (!empty($tz)) {
-         $baseTimezone = $tz;
+         $baseTimezone = $configTimezone['timezone'];
       }
 
       if ($baseTimezone > 0) {

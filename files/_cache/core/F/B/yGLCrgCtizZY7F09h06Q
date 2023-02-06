@@ -1,29 +1,29 @@
-1675088148
+1675429966
 b9f299400eafd4822462c0b62a293a38daeb89a9
-a:1:{s:53:"bn_count_Printer_517684b0-b064-49dd-943e-fcb6f915e453";s:1145:"      <style>
-         #bn_52850320 {
+a:1:{s:53:"bn_count_Printer_517684b0-b064-49dd-943e-fcb6f915e453";s:1163:"      <style>
+         #bn_1114275203 {
             background-color: #365a8f;
             color: #b0c4e1;
          }
 
-         #bn_52850320:hover {
+         #bn_1114275203:hover {
             background-color: #537fbe;
             border: 1px solid #8ba8d3;
          }
 
-         .theme-dark #bn_52850320 {
+         .theme-dark #bn_1114275203 {
             background-color: #b0c4e1;
             color: #365a8f;
          }
 
-         .theme-dark #bn_52850320:hover {
+         .theme-dark #bn_1114275203:hover {
             background-color: #537fbe;
             color: #b0c4e1;
             border: 1px solid #8ba8d3;
          }
       </style>
-      <a href='/front/printer.php?reset=reset'
-         id="bn_52850320"
+      <a href='/glpi106/front/printer.php?reset=reset'
+         id="bn_1114275203"
          class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech filter-state"
          title="">
          <span class="content">            <span title="1"

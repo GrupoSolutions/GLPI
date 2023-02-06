@@ -119,6 +119,6 @@ class __TwigTemplate_0df71c45b93cd2a6f5983702faec37e6b827fb9add591f4a47d7ed52468
 
     public function getSourceContext()
     {
-        return new Source("", "pages/assets/printer.html.twig", "C:\\wamp64\\www\\glpi\\templates\\pages\\assets\\printer.html.twig");
+        return new Source("", "pages/assets/printer.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\pages\\assets\\printer.html.twig");
     }
 }

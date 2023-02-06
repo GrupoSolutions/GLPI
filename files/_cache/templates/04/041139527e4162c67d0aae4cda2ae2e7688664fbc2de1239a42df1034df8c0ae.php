@@ -52,7 +52,7 @@ class __TwigTemplate_6eacfc5f2bc576b206279b74a24b9256a8e7d1e46e453db839f32b72282
             }
             // line 39
             echo "
-   <button class=\"btn btn-icon btn-sm btn-ghost-secondary trigger-fuzzy justify-content-start mb-md-2 ps-1 menu\"
+   <button class=\"btn btn-icon btn-sm btn-ghost-secondary trigger-fuzzy justify-content-start mb-md-2 ps-1\"
            title=\"";
             // line 41
             echo twig_escape_filter($this->env, ($context["shortcut"] ?? null), "html", null, true);
@@ -91,6 +91,6 @@ class __TwigTemplate_6eacfc5f2bc576b206279b74a24b9256a8e7d1e46e453db839f32b72282
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/goto_button.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\goto_button.html.twig");
+        return new Source("", "layout/parts/goto_button.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\goto_button.html.twig");
     }
 }

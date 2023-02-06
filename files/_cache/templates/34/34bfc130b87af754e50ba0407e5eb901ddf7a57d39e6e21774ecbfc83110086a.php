@@ -136,6 +136,6 @@ class __TwigTemplate_a26ebd95d4ee1567349dddef6f8f2769f87089212d2f41e25d1abf1cdaf
 
     public function getSourceContext()
     {
-        return new Source("", "central/messages.html.twig", "C:\\wamp64\\www\\glpi\\templates\\central\\messages.html.twig");
+        return new Source("", "central/messages.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\central\\messages.html.twig");
     }
 }

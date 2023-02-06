@@ -42,7 +42,7 @@ class __TwigTemplate_1cdd1e0c1e58ecd032f67da60a46723681039839fb3dacf80468e077d95
         if (($this->extensions['Glpi\Application\View\Extension\SessionExtension']->userPref("timeline_order") == twig_constant("CommonITILObject::TIMELINE_ORDER_REVERSE"))) {
             // line 36
             echo "    ";
-            $context["timeline_order"] = "flex-column-reverse";
+            $context["timeline_order"] = "flex-column";
         }
         // line 38
         echo "
@@ -50,16 +50,17 @@ class __TwigTemplate_1cdd1e0c1e58ecd032f67da60a46723681039839fb3dacf80468e077d95
         // line 39
         echo twig_escape_filter($this->env, ($context["timeline_order"] ?? null), "html", null, true);
         echo " align-items-start mb-auto\">
-   ";
+";
         // line 40
-        echo twig_include($this->env, $context, "components/itilobject/timeline/main_description.html.twig");
+        echo twig_include($this->env, $context, "components/itilobject/answer.html.twig");
         echo "
-
    ";
+        // line 41
+        $context["status_closed"] = twig_in_filter((($__internal_compile_0 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 41)) && is_array($__internal_compile_0) || $__internal_compile_0 instanceof ArrayAccess ? ($__internal_compile_0["status"] ?? null) : null), twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getClosedStatusArray", [], "method", false, false, false, 41));
         // line 42
-        $context["status_closed"] = twig_in_filter((($__internal_compile_0 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 42)) && is_array($__internal_compile_0) || $__internal_compile_0 instanceof ArrayAccess ? ($__internal_compile_0["status"] ?? null) : null), twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getClosedStatusArray", [], "method", false, false, false, 42));
+        echo "
+   ";
         // line 43
-        echo "   ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["timeline"] ?? null));
         $context['loop'] = [
@@ -431,34 +432,34 @@ $context["entry"]]);
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entry'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 173
+        echo "   ";
+        echo twig_include($this->env, $context, "components/itilobject/timeline/main_description.html.twig");
         echo "
+
    <div class=\"timeline-item tasks-title d-none\">
       <h3>";
-        // line 175
+        // line 176
         echo twig_escape_filter($this->env, _n("Task", "Tasks", Session::getPluralNumber()), "html", null, true);
         echo "</h3>
    </div>
 
    ";
-        // line 178
+        // line 179
         echo twig_include($this->env, $context, "components/itilobject/timeline/todo-list-summary.html.twig");
         echo "
 
    <div class=\"timeline-item validations-title d-none mt-4\">
       <h3>";
-        // line 181
+        // line 182
         echo twig_escape_filter($this->env, _n("Validation", "Validations", Session::getPluralNumber()), "html", null, true);
         echo "</h3>
    </div>
 
    ";
-        // line 184
+        // line 185
         echo twig_include($this->env, $context, "components/itilobject/timeline/approbation_form.html.twig");
         echo "
-   ";
-        // line 185
-        echo twig_include($this->env, $context, "components/itilobject/answer.html.twig");
-        echo "
+   
 
 </div>
 
@@ -476,20 +477,20 @@ $context["entry"]]);
          .find(\".ajax-content\")
          .html('<i class=\"fas fa-3x fa-spinner fa-spin ms-auto\"></i>')
          .load(\"";
-        // line 202
+        // line 203
         echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("/ajax/timeline.php"), "html", null, true);
         echo "\", {
             'action'     : 'viewsubitem',
             'type'       : itemtype,
             'parenttype' : '";
-        // line 205
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getType", [], "method", false, false, false, 205), "html", null, true);
+        // line 206
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getType", [], "method", false, false, false, 206), "html", null, true);
         echo "',
             '";
-        // line 206
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getForeignKeyField", [], "method", false, false, false, 206), "html", null, true);
+        // line 207
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getForeignKeyField", [], "method", false, false, false, 207), "html", null, true);
         echo "': ";
-        echo twig_escape_filter($this->env, (($__internal_compile_32 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 206)) && is_array($__internal_compile_32) || $__internal_compile_32 instanceof ArrayAccess ? ($__internal_compile_32["id"] ?? null) : null), "html", null, true);
+        echo twig_escape_filter($this->env, (($__internal_compile_32 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 207)) && is_array($__internal_compile_32) || $__internal_compile_32 instanceof ArrayAccess ? ($__internal_compile_32["id"] ?? null) : null), "html", null, true);
         echo ",
             'id'         : items_id,
             'item_action': item_action
@@ -528,11 +529,11 @@ $context["entry"]]);
 
     public function getDebugInfo()
     {
-        return array (  490 => 206,  486 => 205,  480 => 202,  460 => 185,  456 => 184,  450 => 181,  444 => 178,  438 => 175,  434 => 173,  417 => 169,  413 => 167,  411 => 166,  410 => 165,  408 => 164,  406 => 163,  398 => 157,  392 => 154,  389 => 153,  386 => 152,  383 => 151,  377 => 149,  374 => 148,  371 => 147,  368 => 146,  365 => 145,  363 => 144,  358 => 142,  351 => 140,  347 => 138,  341 => 136,  338 => 135,  335 => 134,  333 => 132,  332 => 129,  330 => 127,  328 => 126,  324 => 124,  322 => 123,  321 => 122,  320 => 121,  315 => 120,  312 => 119,  309 => 118,  306 => 117,  303 => 116,  300 => 115,  298 => 114,  296 => 113,  292 => 112,  288 => 110,  280 => 108,  278 => 107,  271 => 106,  269 => 105,  265 => 104,  256 => 102,  250 => 101,  240 => 100,  237 => 99,  234 => 98,  231 => 97,  228 => 96,  225 => 95,  222 => 94,  219 => 93,  216 => 92,  213 => 91,  210 => 90,  207 => 89,  204 => 88,  202 => 87,  199 => 86,  196 => 85,  193 => 84,  190 => 83,  187 => 82,  184 => 81,  181 => 80,  178 => 79,  175 => 78,  172 => 77,  170 => 76,  167 => 75,  165 => 74,  162 => 73,  159 => 72,  156 => 71,  153 => 70,  150 => 69,  147 => 68,  144 => 67,  141 => 66,  138 => 65,  135 => 64,  132 => 63,  130 => 62,  127 => 61,  124 => 60,  121 => 59,  119 => 58,  116 => 57,  113 => 56,  110 => 55,  107 => 54,  104 => 52,  101 => 51,  98 => 50,  95 => 49,  92 => 48,  89 => 47,  86 => 46,  83 => 45,  80 => 44,  62 => 43,  60 => 42,  55 => 40,  51 => 39,  48 => 38,  44 => 36,  42 => 35,  40 => 34,  37 => 33,);
+        return array (  491 => 207,  487 => 206,  481 => 203,  460 => 185,  454 => 182,  448 => 179,  442 => 176,  435 => 173,  418 => 169,  414 => 167,  412 => 166,  411 => 165,  409 => 164,  407 => 163,  399 => 157,  393 => 154,  390 => 153,  387 => 152,  384 => 151,  378 => 149,  375 => 148,  372 => 147,  369 => 146,  366 => 145,  364 => 144,  359 => 142,  352 => 140,  348 => 138,  342 => 136,  339 => 135,  336 => 134,  334 => 132,  333 => 129,  331 => 127,  329 => 126,  325 => 124,  323 => 123,  322 => 122,  321 => 121,  316 => 120,  313 => 119,  310 => 118,  307 => 117,  304 => 116,  301 => 115,  299 => 114,  297 => 113,  293 => 112,  289 => 110,  281 => 108,  279 => 107,  272 => 106,  270 => 105,  266 => 104,  257 => 102,  251 => 101,  241 => 100,  238 => 99,  235 => 98,  232 => 97,  229 => 96,  226 => 95,  223 => 94,  220 => 93,  217 => 92,  214 => 91,  211 => 90,  208 => 89,  205 => 88,  203 => 87,  200 => 86,  197 => 85,  194 => 84,  191 => 83,  188 => 82,  185 => 81,  182 => 80,  179 => 79,  176 => 78,  173 => 77,  171 => 76,  168 => 75,  166 => 74,  163 => 73,  160 => 72,  157 => 71,  154 => 70,  151 => 69,  148 => 68,  145 => 67,  142 => 66,  139 => 65,  136 => 64,  133 => 63,  131 => 62,  128 => 61,  125 => 60,  122 => 59,  120 => 58,  117 => 57,  114 => 56,  111 => 55,  108 => 54,  105 => 52,  102 => 51,  99 => 50,  96 => 49,  93 => 48,  90 => 47,  87 => 46,  84 => 45,  81 => 44,  64 => 43,  61 => 42,  59 => 41,  55 => 40,  51 => 39,  48 => 38,  44 => 36,  42 => 35,  40 => 34,  37 => 33,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/timeline/timeline.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\timeline\\timeline.html.twig");
+        return new Source("", "components/itilobject/timeline/timeline.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\timeline\\timeline.html.twig");
     }
 }

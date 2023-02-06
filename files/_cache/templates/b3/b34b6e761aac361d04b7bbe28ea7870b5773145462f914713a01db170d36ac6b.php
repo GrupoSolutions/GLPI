@@ -569,6 +569,6 @@ class __TwigTemplate_d24d1c44301b1ade4b49a1cf9e4469b5a05d2557b4cfc9872054823b8ba
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/actors/field.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\actors\\field.html.twig");
+        return new Source("", "components/itilobject/actors/field.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\actors\\field.html.twig");
     }
 }

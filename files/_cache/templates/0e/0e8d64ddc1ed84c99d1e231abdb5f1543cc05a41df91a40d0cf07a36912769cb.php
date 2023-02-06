@@ -332,6 +332,6 @@ $context["field"]) && is_array($__internal_compile_8) || $__internal_compile_8 i
 
     public function getSourceContext()
     {
-        return new Source("", "@fields/fields.html.twig", "C:\\wamp64\\www\\glpi\\marketplace\\fields\\templates\\fields.html.twig");
+        return new Source("", "@fields/fields.html.twig", "C:\\wamp64\\www\\glpi106\\marketplace\\fields\\templates\\fields.html.twig");
     }
 }

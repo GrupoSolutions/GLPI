@@ -2853,6 +2853,6 @@ class __TwigTemplate_7592ca9f4cd3474930fd7c9d5297e56467957dbd3e118b1184c06fe2cb6
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/fields_macros.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\fields_macros.html.twig");
+        return new Source("", "components/form/fields_macros.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\fields_macros.html.twig");
     }
 }

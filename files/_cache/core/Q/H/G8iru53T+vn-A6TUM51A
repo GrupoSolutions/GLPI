@@ -1,6 +1,6 @@
-1674851347
+1675429967
 2c06094335a001d06afcaa3744d0ebdc0f90060e
-a:1:{s:59:"count_Peripheral_State_bf774a19-8809-47d9-a58c-e99df007fed6";s:6053:"      <style>
+a:1:{s:59:"count_Peripheral_State_bf774a19-8809-47d9-a58c-e99df007fed6";s:6119:"      <style>
          #chart-dashboard_card_central_347966e313727a406e2c104c7d93d54f37346b11 {
             background-color: #d5e1ec;
             color: #4c7da9
@@ -34,11 +34,11 @@ a:1:{s:59:"count_Peripheral_State_bf774a19-8809-47d9-a58c-e99df007fed6";s:6053:"
 //<![CDATA[
 
       $(function () {
-         var chart = new Chartist.Pie('#chart-dashboard_card_central_347966e313727a406e2c104c7d93d54f37346b11 .chart', {
+         var chart = new Chartist.Pie(Dashboard.getActiveDashboard().element.find('#chart-dashboard_card_central_347966e313727a406e2c104c7d93d54f37346b11 .chart')[0], {
             labels: ["OK"],
-            series: [{"meta":"OK","value":41,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=31&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset"}],
+            series: [{"meta":"OK","value":41,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=31&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset"}],
          }, {
-            width: 'calc(100% - 5px)',
+            width: '100%',
             chartPadding: 4,
             donut: true,
             
@@ -69,7 +69,7 @@ a:1:{s:59:"count_Peripheral_State_bf774a19-8809-47d9-a58c-e99df007fed6";s:6053:"
                      'data-clickable': true
                   });
                   data.element._node.onclick = function() {
-                     if (!Dashboard.edit_mode) {
+                     if (!Dashboard.getActiveDashboard().edit_mode) {
                         window.location = url;
                      }
                   }

@@ -1,0 +1,5 @@
+2023-02-02 13:16:11 [2@GS003021]
+Rights has been updated for cable_management, you should review ACLs after update @ 2023-02-02 13:16:16 [2@GS003021]
+O esquema do banco de dados não é consistente com a versão atual do GLPI.
+É recomendado executar o comando "php bin/console database:check_schema_integrity" para visualizar as diferenças. @ 2023-02-03 13:39:58 [2@GS003021]
+Rights has been updated for cable_management, you should review ACLs after update @ 

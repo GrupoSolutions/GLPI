@@ -292,32 +292,23 @@ class PluginMydashboardConfig extends CommonDBTM {
 
       echo "<tr class='tab_bg_1'><td>" . __("Title of alerts widget", "mydashboard") . "</td>";
       echo "<td>";
-      echo Html::input('title_alerts_widget', ['value' => $this->fields['title_alerts_widget'], 'size' => 70]);
+      echo Html::input('title_alerts_widget', ['value' => $this->fields['title_alerts_widget'], 'size' => 100]);
       echo "</td>";
       echo "</tr>";
 
       echo "<tr class='tab_bg_1'><td>" . __("Title of scheduled maintenances widget", "mydashboard") . "</td>";
       echo "<td>";
-      echo Html::input('title_maintenances_widget', ['value' => $this->fields['title_maintenances_widget'], 'size' => 70]);
+      echo Html::input('title_maintenances_widget', ['value' => $this->fields['title_maintenances_widget'], 'size' => 100]);
       echo "</td>";
       echo "</tr>";
 
       echo "<tr class='tab_bg_1'><td>" . __("Title of informations widget", "mydashboard") . "</td>";
       echo "<td>";
-      echo Html::input('title_informations_widget', ['value' => $this->fields['title_informations_widget'], 'size' => 70]);
+      echo Html::input('title_informations_widget', ['value' => $this->fields['title_informations_widget'], 'size' => 100]);
       echo "</td>";
       echo "</tr>";
 
-       echo Html::submit(_sx('button', 'Reconstruct global backlog', 'mydashboard'),
-                         ['name' => 'reconstructBacklog', 'class' => 'btn btn-primary']);
-       echo Html::submit(_sx('button', 'Reconstruct global indicators per week', 'mydashboard'),
-                         ['name' => 'reconstructIndicators', 'class' => 'btn btn-primary']);
-       echo "<br/><br/><div class='alert alert-important alert-warning d-flex'>";
-       echo  __('Can take many time if you have many tickets', 'mydashboard');
-       echo "</div>";
-
       $this->showFormButtons($options);
-
    }
 
    /*
@@ -386,56 +377,4 @@ class PluginMydashboardConfig extends CommonDBTM {
       }
       return $item->fields[$field];
    }
-
-    /**
-     * @return string
-     */
-    public function getGridTheme(): string {
-        if (str_contains($_SESSION['glpipalette'], 'darker') == true
-            || str_contains($_SESSION['glpipalette'], 'midnight') == true) {
-            return '';
-        } else {
-            return '#fbfbfb!important;';
-        }
-
-    }
-
-    /**
-     * @return string
-     */
-    public function getWidgetTheme(): string {
-        if (str_contains($_SESSION['glpipalette'], 'darker') == true
-            || str_contains($_SESSION['glpipalette'], 'midnight') == true) {
-            return '';
-        } else {
-            return '#FFFFFF!important;';
-        }
-
-    }
-
-    /**
-     * @return string
-     */
-    public function getSlidePanelTheme(): string {
-        if (str_contains($_SESSION['glpipalette'], 'darker') == true
-            || str_contains($_SESSION['glpipalette'], 'midnight') == true) {
-            return '#242323';
-        } else {
-            return '#FFFFFF!important;';
-        }
-
-    }
-
-    /**
-     * @return string
-     */
-    public function getSlideLinkTheme(): string {
-        if (str_contains($_SESSION['glpipalette'], 'darker') == true
-            || str_contains($_SESSION['glpipalette'], 'midnight') == true) {
-            return '#FFFFFF';
-        } else {
-            return '#000000!important;';
-        }
-
-    }
 }

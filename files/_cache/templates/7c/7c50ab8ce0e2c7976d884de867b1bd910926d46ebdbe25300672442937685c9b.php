@@ -126,6 +126,6 @@ class __TwigTemplate_c4e656a2e91d4c4029dda8d4b9cfc6e76b1e430c65e1cc31491c9e71b22
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/page_footer.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\page_footer.html.twig");
+        return new Source("", "layout/parts/page_footer.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\page_footer.html.twig");
     }
 }

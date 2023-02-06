@@ -1,0 +1,37 @@
+1675431254
+54eb043389b5c152c5c34a12324ada85b3795722
+a:1:{s:53:"bn_count_Problem_c1cf5cfb-f626-472e-82a1-49c3e200e746";s:1077:"      <style>
+         #bn_394350639 {
+            background-color: #f08d7b;
+            color: #8f2410;
+         }
+
+         #bn_394350639:hover {
+            background-color: #e85236;
+            border: 1px solid #bd2f15;
+         }
+
+         .theme-dark #bn_394350639 {
+            background-color: #8f2410;
+            color: #f08d7b;
+         }
+
+         .theme-dark #bn_394350639:hover {
+            background-color: #e85236;
+            color: #8f2410;
+            border: 1px solid #bd2f15;
+         }
+      </style>
+      <a href='/glpi106/front/problem.php?reset=reset'
+         id="bn_394350639"
+         class="card big-number  filter-dates filter-dates_mod"
+         title="">
+         <span class="content">            <span title="0"
+                  class="formatted-number"
+                  data-precision='0'>
+               <span class="number">0</span>
+               <span class="suffix"></span>
+            </span></span>
+         <div class="label" title="Problema">Problema</div>
+         <i class="main-icon ti ti-alert-triangle"></i>
+      </a>";}

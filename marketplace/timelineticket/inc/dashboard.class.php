@@ -50,9 +50,9 @@ class PluginTimelineticketDashboard extends CommonGLPI {
    function getWidgetsForItem() {
       $widgets = [
          __('Line charts', "mydashboard") => [
-            $this->getType() . "1" => ["title"   => __("Number of assignments per technician to a ticket", "timelineticket"),
+            $this->getType() . "1" => ["title"   => __("Number of assignments per technician to a ticket", "mydashboard"),
                                        "icon"    => "ti ti-chart-bar",
-                                       "comment" => __("Number of time where a technician has been affected to a ticket", 'timelineticket')]
+                                       "comment" => __("Number of time where a technician has been affected to a ticket", 'mydashboard')]
          ],
       ];
       return $widgets;
@@ -66,12 +66,12 @@ class PluginTimelineticketDashboard extends CommonGLPI {
 
       switch ($widgetId) {
          case $this->getType() . "1":
-            if (Plugin::isPluginActive("timelineticket")) {
+            $plugin = new Plugin();
+            if ($plugin->isActivated("timelineticket")) {
                $name    = 'AffectionTechBarChart';
                $widget = new PluginMydashboardHtml();
-               $title  = __("Number of assignments per technician to a ticket", "timelineticket");
-                $comment = "";
-               $widget->setWidgetComment($comment);
+               $title  = __("Number of assignments per technician to a ticket", "mydashboard");
+               $widget->setWidgetComment("");
 
                $preference = new PluginMydashboardPreference();
                $preference->getFromDB(Session::getLoginUserID());
@@ -138,36 +138,36 @@ class PluginTimelineticketDashboard extends CommonGLPI {
                foreach ($time_per_tech as $tech_id => $tickets) {
                   $nb_bar++;
                }
-
+               $palette = PluginMydashboardColor::getColors($nb_bar);
                $i       = 0;
                $dataset = [];
                foreach ($time_per_tech as $tech_id => $times) {
                   unset($time_per_tech[$tech_id]);
                   $username  = getUserName($tech_id);
-                   $dataset['data'][] = array_values($times);
-                   $dataset['type']   = 'bar';
-                   $dataset['name']   = $username;
+                  $dataset[] = [
+                     "label"           => $username,
+                     "data"            => array_values($times),
+                     "backgroundColor" => $palette[$i]
+                  ];
                   $i++;
                }
                $dataLineset = json_encode($dataset);
                $labelsLine  = json_encode($labels);
 
-               $graph_datas = ['title'   => $title,
-                               'comment' => $comment,
-                               'name'   => $name,
+               $graph_datas = ['name'   => $name,
                                'ids'    => json_encode([]),
                                'data'   => $dataLineset,
                                'labels' => $labelsLine];
-//               $graph_criterias = ['entities_id' => $entities_id_criteria,
-//                                   'sons'        => $sons_criteria,
-//                                   'type'        => $opt['type'],
-//                                   //                                'year'        => $year_criteria,
-//                                   'begin'       => $opt['begin'],
-//                                   'end'         => $opt['end'],
-//                                   'technicians_groups_id'         => $opt['technicians_groups_id'],
-//                                   'multiple_time'         => $opt['multiple_time'],
-//                                   'widget'      => $widgetId];
-               $graph = PluginMydashboardBarChart::launchGraph($graph_datas, []);
+               $graph_criterias = ['entities_id' => $entities_id_criteria,
+                                   'sons'        => $sons_criteria,
+                                   'type'        => $opt['type'],
+                                   //                                'year'        => $year_criteria,
+                                   'begin'       => $opt['begin'],
+                                   'end'         => $opt['end'],
+                                   'technicians_groups_id'         => $opt['technicians_groups_id'],
+                                   'multiple_time'         => $opt['multiple_time'],
+                                   'widget'      => $widgetId];
+               $graph = PluginMydashboardBarChart::launchMultipleGraph($graph_datas, []);
 
                $params = ["widgetId"  => $widgetId,
                           "name"      => $name,

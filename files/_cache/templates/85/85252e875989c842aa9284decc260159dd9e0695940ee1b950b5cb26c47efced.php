@@ -84,15 +84,15 @@ class __TwigTemplate_9c34b2cd1f8efc39e56bd3de453d02569a1546c5d8a1d867c3d913b10cc
                 echo "</div>
                      ";
                 // line 53
-                $context["entity_completename"] = $this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiactive_entity_name");
+                $context["entity_completename"] = $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->getVerbatimValue($this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiactive_entity_name"));
                 // line 54
-                echo "                     <div class=\"mt-1 small text-muted \"  title=\"";
+                echo "                     <div class=\"mt-1 small text-muted\" title=\"";
                 echo twig_escape_filter($this->env, ($context["entity_completename"] ?? null), "html", null, true);
                 echo "\"
                           data-bs-toggle=\"tooltip\" data-bs-placement=\"bottom\">
                         ";
                 // line 56
-                echo twig_escape_filter($this->env, ($context["entity_completename"] ?? null), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->truncateLeft(($context["entity_completename"] ?? null)), "html", null, true);
                 echo "
                      </div>
                   </div>
@@ -338,6 +338,6 @@ class __TwigTemplate_9c34b2cd1f8efc39e56bd3de453d02569a1546c5d8a1d867c3d913b10cc
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/user_header.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\user_header.html.twig");
+        return new Source("", "layout/parts/user_header.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\user_header.html.twig");
     }
 }

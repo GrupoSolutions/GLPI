@@ -35,7 +35,7 @@ class __TwigTemplate_01ae5aa6cc4ae73aec27aa4e5fb7503c1d2d75b134060024d2ba7e10e6d
         $macros = $this->macros;
         // line 33
         echo "
-<div id=\"new-itilobject-form\" class=\"ms-auto ps-3\">
+<div id=\"new-itilobject-form\" class=\"ms-auto ps-3\" style=\"width:100%\">
    ";
         // line 35
         $context['_parent'] = $context;
@@ -76,7 +76,7 @@ class __TwigTemplate_01ae5aa6cc4ae73aec27aa4e5fb7503c1d2d75b134060024d2ba7e10e6d
             </div>
             <div class=\"col\">
                <div class=\"row timeline-content t-right card mt-4\">
-                  <div class=\"card-body\">
+                  <div class=\"card-body\" style=\"width:100%\">
                      <div class=\"clearfix\">
                         <button class=\"btn btn-sm btn-ghost-secondary float-end mb-1 close-itil-answer\"
                               data-bs-toggle=\"collapse\" data-bs-target=\"#new-";
@@ -161,6 +161,6 @@ $context["timeline_itemtype"], "item", [], "any", false, false, false, 56), "kb_
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/answer.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\answer.html.twig");
+        return new Source("", "components/itilobject/answer.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\answer.html.twig");
     }
 }

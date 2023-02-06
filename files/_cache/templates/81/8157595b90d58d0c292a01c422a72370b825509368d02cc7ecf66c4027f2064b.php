@@ -177,6 +177,6 @@ class __TwigTemplate_0aaa496f30c6e7e92114f4a3c448352d54e4a9af0f6d74b7d54d727490c
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/breadcrumbs.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\breadcrumbs.html.twig");
+        return new Source("", "layout/parts/breadcrumbs.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\breadcrumbs.html.twig");
     }
 }

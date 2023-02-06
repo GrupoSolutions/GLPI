@@ -106,29 +106,40 @@ class __TwigTemplate_e0b1686083fa8e8fa382a386a60a381f406cb6eee013f37dc5803d8790d
                     }
                     // line 60
                     echo "
-   
+         ";
+                    // line 61
+                    echo twig_call_macro($macros["fields"], "macro_field", ["_add_validation", twig_get_attribute($this->env, $this->source,                     // line 63
+($context["validation"] ?? null), "dropdownValidator", [0 => twig_array_merge(["name" => "users_id_validate", "entity" => (($__internal_compile_2 = twig_get_attribute($this->env, $this->source,                     // line 65
+($context["item"] ?? null), "fields", [], "any", false, false, false, 65)) && is_array($__internal_compile_2) || $__internal_compile_2 instanceof ArrayAccess ? ($__internal_compile_2["entities_id"] ?? null) : null), "right" =>                     // line 66
+($context["validation_right"] ?? null), "users_id_validate" => (($__internal_compile_3 =                     // line 67
+($context["params"] ?? null)) && is_array($__internal_compile_3) || $__internal_compile_3 instanceof ArrayAccess ? ($__internal_compile_3["users_id_validate"] ?? null) : null), "display" => false, "disabled" =>  !                    // line 69
+($context["canupdate"] ?? null)],                     // line 70
+($context["required"] ?? null))], "method", false, false, false, 63), __("Approval request"),                     // line 72
+($context["field_options"] ?? null)], 61, $context, $this->getSourceContext());
+                    // line 73
+                    echo "
 
          <input type=\"hidden\" name=\"_add_validation\" value=\"";
-                    // line 63
-                    echo twig_escape_filter($this->env, (($__internal_compile_2 = ($context["params"] ?? null)) && is_array($__internal_compile_2) || $__internal_compile_2 instanceof ArrayAccess ? ($__internal_compile_2["_add_validation"] ?? null) : null), "html", null, true);
+                    // line 75
+                    echo twig_escape_filter($this->env, (($__internal_compile_4 = ($context["params"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["_add_validation"] ?? null) : null), "html", null, true);
                     echo "\" />
       ";
                 }
-                // line 65
+                // line 77
                 echo "   ";
             } else {
-                // line 66
+                // line 78
                 echo "        ";
-                if ( !twig_get_attribute($this->env, $this->source, ($context["itiltemplate"] ?? null), "isHiddenField", [0 => "global_validation"], "method", false, false, false, 66)) {
-                    // line 67
+                if ( !twig_get_attribute($this->env, $this->source, ($context["itiltemplate"] ?? null), "isHiddenField", [0 => "global_validation"], "method", false, false, false, 78)) {
+                    // line 79
                     echo "            ";
-                    echo twig_call_macro($macros["fields"], "macro_htmlField", ["global_validation", $this->extensions['Glpi\Application\View\Extension\PhpExtension']->call("TicketValidation::getStatus", [0 => (($__internal_compile_3 = twig_get_attribute($this->env, $this->source,                     // line 69
-($context["item"] ?? null), "fields", [], "any", false, false, false, 69)) && is_array($__internal_compile_3) || $__internal_compile_3 instanceof ArrayAccess ? ($__internal_compile_3["global_validation"] ?? null) : null), 1 => true]), $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("CommonITILValidation"), ["full_width" => true]], 67, $context, $this->getSourceContext());
-                    // line 74
+                    echo twig_call_macro($macros["fields"], "macro_htmlField", ["global_validation", $this->extensions['Glpi\Application\View\Extension\PhpExtension']->call("TicketValidation::getStatus", [0 => (($__internal_compile_5 = twig_get_attribute($this->env, $this->source,                     // line 81
+($context["item"] ?? null), "fields", [], "any", false, false, false, 81)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["global_validation"] ?? null) : null), 1 => true]), $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("CommonITILValidation"), ["full_width" => true]], 79, $context, $this->getSourceContext());
+                    // line 86
                     echo "
         ";
                 }
-                // line 76
+                // line 88
                 echo "   ";
             }
         }
@@ -146,11 +157,11 @@ class __TwigTemplate_e0b1686083fa8e8fa382a386a60a381f406cb6eee013f37dc5803d8790d
 
     public function getDebugInfo()
     {
-        return array (  132 => 76,  128 => 74,  126 => 69,  124 => 67,  121 => 66,  118 => 65,  113 => 63,  108 => 60,  105 => 59,  102 => 56,  99 => 55,  96 => 54,  93 => 53,  91 => 52,  88 => 51,  85 => 50,  82 => 49,  79 => 48,  76 => 47,  73 => 46,  70 => 45,  67 => 44,  64 => 43,  61 => 42,  58 => 41,  55 => 40,  52 => 39,  50 => 38,  47 => 37,  45 => 36,  42 => 35,  40 => 34,  37 => 33,);
+        return array (  143 => 88,  139 => 86,  137 => 81,  135 => 79,  132 => 78,  129 => 77,  124 => 75,  120 => 73,  118 => 72,  117 => 70,  116 => 69,  115 => 67,  114 => 66,  113 => 65,  112 => 63,  111 => 61,  108 => 60,  105 => 59,  102 => 56,  99 => 55,  96 => 54,  93 => 53,  91 => 52,  88 => 51,  85 => 50,  82 => 49,  79 => 48,  76 => 47,  73 => 46,  70 => 45,  67 => 44,  64 => 43,  61 => 42,  58 => 41,  55 => 40,  52 => 39,  50 => 38,  47 => 37,  45 => 36,  42 => 35,  40 => 34,  37 => 33,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/fields/global_validation.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\fields\\global_validation.html.twig");
+        return new Source("", "components/itilobject/fields/global_validation.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\fields\\global_validation.html.twig");
     }
 }

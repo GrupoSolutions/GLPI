@@ -69,6 +69,6 @@ class __TwigTemplate_b0ec4bdb61ca2f4da6b154c84be8e1ed176723cba5fa06de864288a1702
 
     public function getSourceContext()
     {
-        return new Source("", "display_and_die.html.twig", "C:\\wamp64\\www\\glpi\\templates\\display_and_die.html.twig");
+        return new Source("", "display_and_die.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\display_and_die.html.twig");
     }
 }

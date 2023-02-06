@@ -1,29 +1,29 @@
-1675088148
+1675429967
 c704033e31080bafb1ceed4e5c2e7ef70acb0fdf
-a:1:{s:60:"bn_count_ConsumableItem_7f001979-9b6f-4cee-ac45-0126bc7ed1fc";s:1169:"      <style>
-         #bn_1111068139 {
+a:1:{s:60:"bn_count_ConsumableItem_7f001979-9b6f-4cee-ac45-0126bc7ed1fc";s:1172:"      <style>
+         #bn_496195923 {
             background-color: #fafafa;
             color: #949494;
          }
 
-         #bn_1111068139:hover {
+         #bn_496195923:hover {
             background-color: #d4d4d4;
             border: 1px solid #aeaeae;
          }
 
-         .theme-dark #bn_1111068139 {
+         .theme-dark #bn_496195923 {
             background-color: #949494;
             color: #fafafa;
          }
 
-         .theme-dark #bn_1111068139:hover {
+         .theme-dark #bn_496195923:hover {
             background-color: #d4d4d4;
             color: #949494;
             border: 1px solid #aeaeae;
          }
       </style>
-      <a href='/front/consumableitem.php?reset=reset'
-         id="bn_1111068139"
+      <a href='/glpi106/front/consumableitem.php?reset=reset'
+         id="bn_496195923"
          class="card big-number  filter-dates filter-dates_mod filter-location filter-manufacturer filter-group_tech filter-user_tech"
          title="">
          <span class="content">            <span title="111"

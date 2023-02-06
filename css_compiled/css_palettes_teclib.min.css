@@ -18607,8 +18607,8 @@ a.badge {
   border-color: rgba(32, 107, 196, 0.05)(98, 105, 118, 0.24);
 }
 .btn-primary:hover, .btn-secondary:hover, .btn-success:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-light:hover, .btn-dark:hover, .btn-muted:hover, .btn-blue:hover, .btn-azure:hover, .btn-indigo:hover, .btn-purple:hover, .btn-pink:hover, .btn-red:hover, .btn-orange:hover, .btn-yellow:hover, .btn-lime:hover, .btn-green:hover, .btn-teal:hover, .btn-cyan:hover, .btn-facebook:hover, .btn-twitter:hover, .btn-linkedin:hover, .btn-google:hover, .btn-youtube:hover, .btn-vimeo:hover, .btn-dribbble:hover, .btn-github:hover, .btn-instagram:hover, .btn-pinterest:hover, .btn-vk:hover, .btn-rss:hover, .btn-flickr:hover, .btn-bitbucket:hover, .btn-tabler:hover {
-  color: var(--tblr-btn-color-text);
-  background: var(--tblr-btn-color-interactive);
+  color: black;
+  background: white;
   border-color: var(--tblr-btn-color);
 }
 .btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-info, .btn-outline-warning, .btn-outline-danger, .btn-outline-light, .btn-outline-dark, .btn-outline-muted, .btn-outline-blue, .btn-outline-azure, .btn-outline-indigo, .btn-outline-purple, .btn-outline-pink, .btn-outline-red, .btn-outline-orange, .btn-outline-yellow, .btn-outline-lime, .btn-outline-green, .btn-outline-teal, .btn-outline-cyan, .btn-outline-facebook, .btn-outline-twitter, .btn-outline-linkedin, .btn-outline-google, .btn-outline-youtube, .btn-outline-vimeo, .btn-outline-dribbble, .btn-outline-github, .btn-outline-instagram, .btn-outline-pinterest, .btn-outline-vk, .btn-outline-rss, .btn-outline-flickr, .btn-outline-bitbucket, .btn-outline-tabler {
@@ -20013,9 +20013,6 @@ Form control
 }
 .form-control[size] {
   width: auto;
-}
-.usu{
-  width:200px;
 }
 .form-control[type="number"]::-webkit-inner-spin-button {
   opacity: 1;
@@ -24372,12 +24369,9 @@ which broke styles of btn-group > .btn-check
  */
 .fileupload:not(.only-uploaded-files) {
   text-align: center;
-  border: 1px dashed #ccc;
   background: #cccccc1c;
-  min-height: 65px;
   border-radius: 5px;
   padding: 0.5em;
-  margin: 5px auto 0.5em;
   width: 100%;
 }
 .fileupload:not(.only-uploaded-files) input[type="file"] {

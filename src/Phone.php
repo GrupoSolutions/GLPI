@@ -96,7 +96,7 @@ class Phone extends CommonDBTM
         $ong = [];
         $this->addDefaultFormTab($ong);
         $this->addStandardTab('Infocom', $ong, $options);
-       
+        $this->addStandardTab('Document_Item', $ong, $options);
         $this->addStandardTab('Log', $ong, $options);
 
         return $ong;

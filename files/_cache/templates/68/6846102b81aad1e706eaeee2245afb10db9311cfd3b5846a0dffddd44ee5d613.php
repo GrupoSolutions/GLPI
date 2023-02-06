@@ -179,6 +179,6 @@ class __TwigTemplate_c4af7fe86af58cdb66ccc07957a3693983a488f122f7267309aec2847e7
 
     public function getSourceContext()
     {
-        return new Source("", "components/messages_after_redirect_toasts.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\messages_after_redirect_toasts.html.twig");
+        return new Source("", "components/messages_after_redirect_toasts.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\messages_after_redirect_toasts.html.twig");
     }
 }

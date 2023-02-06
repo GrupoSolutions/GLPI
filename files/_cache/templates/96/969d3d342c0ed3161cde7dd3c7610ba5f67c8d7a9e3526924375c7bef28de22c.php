@@ -350,6 +350,6 @@ $context["firstlevel"], "default", [], "array", true, true, false, 95) && ((((tw
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/menu.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\menu.html.twig");
+        return new Source("", "layout/parts/menu.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\menu.html.twig");
     }
 }

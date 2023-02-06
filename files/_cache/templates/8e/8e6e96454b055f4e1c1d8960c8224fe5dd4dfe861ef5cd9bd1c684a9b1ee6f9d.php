@@ -98,6 +98,6 @@ class __TwigTemplate_142b07fec473191ab0f4872beb443e745466c8dc245ce01b298febf0fae
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/flags.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\flags.html.twig");
+        return new Source("", "components/form/flags.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\flags.html.twig");
     }
 }

@@ -272,6 +272,6 @@ $context["type"] == "config")) {
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/context_links.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\context_links.html.twig");
+        return new Source("", "layout/parts/context_links.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\context_links.html.twig");
     }
 }

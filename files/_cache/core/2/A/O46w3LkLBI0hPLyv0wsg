@@ -1,29 +1,29 @@
-1669030497
+1675431260
 3f0b07c5680709bf67110c99d00965129688a7bd
-a:1:{s:61:"bn_count_tickets_waiting_793c665b-b620-4b3a-a5a8-cf502defc008";s:1275:"      <style>
-         #bn_601419317 {
+a:1:{s:61:"bn_count_tickets_waiting_793c665b-b620-4b3a-a5a8-cf502defc008";s:1283:"      <style>
+         #bn_228377379 {
             background-color: #ffcb7d;
             color: #b06a00;
          }
 
-         #bn_601419317:hover {
+         #bn_228377379:hover {
             background-color: #ffac31;
             border: 1px solid #e38800;
          }
 
-         .theme-dark #bn_601419317 {
+         .theme-dark #bn_228377379 {
             background-color: #b06a00;
             color: #ffcb7d;
          }
 
-         .theme-dark #bn_601419317:hover {
+         .theme-dark #bn_228377379:hover {
             background-color: #ffac31;
             color: #b06a00;
             border: 1px solid #e38800;
          }
       </style>
-      <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset'
-         id="bn_601419317"
+      <a href='/glpi106/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset'
+         id="bn_228377379"
          class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
          title="">
          <span class="content">            <span title="0"

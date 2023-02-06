@@ -65,179 +65,204 @@ class __TwigTemplate_a4a0cc995589145c76e98df5ee1ca075 extends Template
         echo twig_escape_filter($this->env, Session::getNewCSRFToken(), "html", null, true);
         echo "\" />
 
-      <div class=\"row justify-content-center \">
+      <div class=\"row justify-content-center\">
          <div class=\"col-md-5\">
-
-            <h2 class=\"card-header text-center mb-4 ml-3\">";
+            <div class=\"card-header mb-4\">
+               <h2 class=\"mx-auto\">";
         // line 45
         echo twig_escape_filter($this->env, __("Login to your account"), "html", null, true);
         echo "</h2>
+            </div>
             <div class=\"mb-3\">
                <label class=\"form-label\">";
-        // line 47
+        // line 48
         echo twig_escape_filter($this->env, __("Login"), "html", null, true);
         echo "</label>
                <input type=\"text\" class=\"form-control\" id=\"login_name\" name=\"";
-        // line 48
+        // line 49
         echo twig_escape_filter($this->env, ($context["namfield"] ?? null), "html", null, true);
         echo "\" placeholder=\"\" tabindex=\"1\" />
             </div>
             <div class=\"mb-4\">
                <label class=\"form-label\">
                   ";
-        // line 52
+        // line 53
         echo twig_escape_filter($this->env, __("Password"), "html", null, true);
         echo "
 
                   ";
-        // line 54
+        // line 55
         if (($context["show_lost_password"] ?? null)) {
-            // line 55
+            // line 56
             echo "                     <span class=\"form-label-description\">
                         <a href=\"";
-            // line 56
+            // line 57
             echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("front/lostpassword.php?lostpassword=1"), "html", null, true);
             echo "\">
                            ";
-            // line 57
+            // line 58
             echo twig_escape_filter($this->env, __("Forgotten password?"), "html", null, true);
             echo "
                         </a>
                      </span>
                   ";
         }
-        // line 61
+        // line 62
         echo "               </label>
                <input type=\"password\" class=\"form-control\" name=\"";
-        // line 62
+        // line 63
         echo twig_escape_filter($this->env, ($context["pwdfield"] ?? null), "html", null, true);
         echo "\" placeholder=\"\" autocomplete=\"off\" tabindex=\"2\" />
             </div>
 
             ";
-        // line 65
+        // line 66
         if (twig_constant("GLPI_DEMO_MODE")) {
-            // line 66
+            // line 67
             echo "               <div class=\"mb-3\">
                   <label class=\"form-label\">";
-            // line 67
+            // line 68
             echo twig_escape_filter($this->env, __("Language"), "html", null, true);
             echo "</label>
                   ";
-            // line 68
+            // line 69
             echo ($context["languages_dropdown"] ?? null);
             echo "
                </div>
             ";
         }
-        // line 71
+        // line 72
         echo "
             ";
-        // line 78
-        echo "            ";
+        // line 73
+        if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("display_login_source")) {
+            // line 74
+            echo "               <div class=\"mb-3\">
+                  <label class=\"form-label\">";
+            // line 75
+            echo twig_escape_filter($this->env, __("Login source"), "html", null, true);
+            echo "</label>
+                  ";
+            // line 76
+            echo ($context["auth_dropdown_login"] ?? null);
+            echo "
+               </div>
+            ";
+        }
+        // line 79
+        echo "
+            ";
+        // line 80
         if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("login_remember_time")) {
-            // line 79
+            // line 81
             echo "               <div class=\"mb-2\">
                   <label class=\"form-check\">
                      <input type=\"checkbox\" class=\"form-check-input\" name=\"";
-            // line 81
+            // line 83
             echo twig_escape_filter($this->env, ($context["rmbfield"] ?? null), "html", null, true);
             echo "\" ";
             echo (($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("login_remember_default")) ? ("checked") : (""));
             echo " />
                      <span class=\"form-check-label\">";
-            // line 82
+            // line 84
             echo twig_escape_filter($this->env, __("Remember me"), "html", null, true);
             echo "</span>
                   </label>
                </div>
             ";
         }
-        // line 86
+        // line 88
         echo "
             <div class=\"form-footer\">
                <button type=\"submit\" name=\"submit\" class=\"btn btn-primary w-100\" tabindex=\"3\">
                   ";
-        // line 89
+        // line 91
         echo twig_escape_filter($this->env, __("Sign in"), "html", null, true);
         echo "
                </button>
             </div>
 
             ";
-        // line 93
+        // line 95
         if ((twig_length_filter($this->env, ($context["errors"] ?? null)) > 0)) {
-            // line 94
+            // line 96
             echo "               <hr />
                <div class=\"alert alert-danger\" role=\"alert\">
                   ";
-            // line 96
+            // line 98
             echo twig_escape_filter($this->env, ($context["errors"] ?? null), "html", null, true);
             echo "
                </div>
             ";
         }
-        // line 99
+        // line 101
         echo "         </div>
 
          ";
-        // line 101
+        // line 103
         if (($context["right_panel"] ?? null)) {
-            // line 102
-            echo "            <div class=\"col-auto offset-md-1 p-2 text-center\">
+            // line 104
+            echo "            <div class=\"col-auto px-2 text-center\">
                ";
-            // line 103
+            // line 105
             if ((twig_length_filter($this->env, ($context["text_login"] ?? null)) > 0)) {
-                // line 104
+                // line 106
                 echo "                  <div class=\"rich_text_container\">
                      ";
-                // line 105
+                // line 107
                 echo $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->getSafeHtml(($context["text_login"] ?? null));
                 echo "
                   </div>
                ";
             }
-            // line 108
+            // line 110
             echo "
                ";
-            // line 109
+            // line 111
             if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("use_public_faq")) {
-                // line 110
+                // line 112
                 echo "                  <hr />
 
+                  <a class=\"btn btn-outline-secondary btn-icon\" href=\"front/helpdesk.faq.php\">
+                     <i class=\"fas fa-question\"></i>&nbsp;
+                     ";
+                // line 116
+                echo twig_escape_filter($this->env, __("FAQ"), "html", null, true);
+                echo "
+                  </a>
                ";
             }
-            // line 113
+            // line 119
             echo "
-               <hr />
-
                ";
-            // line 116
+            // line 120
             echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook(twig_constant("Glpi\\Plugin\\Hooks::DISPLAY_LOGIN")), "html", null, true);
             echo "
             </div>
          ";
         }
-        // line 119
+        // line 123
         echo "      </div>
    </form>
 ";
     }
 
-    // line 123
+    // line 127
     public function block_footer_block($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 124
-        echo "<a href=\"https://gruposolutions.com.br\"> © Grupo Solutions 2005 - 2022 </a>
+        // line 128
+        echo "   ";
+        echo ($context["copyright_message"] ?? null);
+        echo "
 ";
     }
 
-    // line 127
+    // line 131
     public function block_javascript_block($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 128
+        // line 132
         echo "<script type=\"text/javascript\">
    \$(function () {
 \$('#login_name').focus();
@@ -258,7 +283,7 @@ class __TwigTemplate_a4a0cc995589145c76e98df5ee1ca075 extends Template
 
     public function getDebugInfo()
     {
-        return array (  241 => 128,  237 => 127,  232 => 124,  228 => 123,  222 => 119,  216 => 116,  211 => 113,  206 => 110,  204 => 109,  201 => 108,  195 => 105,  192 => 104,  190 => 103,  187 => 102,  185 => 101,  181 => 99,  175 => 96,  171 => 94,  169 => 93,  162 => 89,  157 => 86,  150 => 82,  144 => 81,  140 => 79,  137 => 78,  134 => 71,  128 => 68,  124 => 67,  121 => 66,  119 => 65,  113 => 62,  110 => 61,  103 => 57,  99 => 56,  96 => 55,  94 => 54,  89 => 52,  82 => 48,  78 => 47,  73 => 45,  65 => 40,  61 => 39,  57 => 38,  52 => 37,  48 => 36,  37 => 34,);
+        return array (  266 => 132,  262 => 131,  255 => 128,  251 => 127,  245 => 123,  239 => 120,  236 => 119,  230 => 116,  224 => 112,  222 => 111,  219 => 110,  213 => 107,  210 => 106,  208 => 105,  205 => 104,  203 => 103,  199 => 101,  193 => 98,  189 => 96,  187 => 95,  180 => 91,  175 => 88,  168 => 84,  162 => 83,  158 => 81,  156 => 80,  153 => 79,  147 => 76,  143 => 75,  140 => 74,  138 => 73,  135 => 72,  129 => 69,  125 => 68,  122 => 67,  120 => 66,  114 => 63,  111 => 62,  104 => 58,  100 => 57,  97 => 56,  95 => 55,  90 => 53,  83 => 49,  79 => 48,  73 => 45,  65 => 40,  61 => 39,  57 => 38,  52 => 37,  48 => 36,  37 => 34,);
     }
 
     public function getSourceContext()

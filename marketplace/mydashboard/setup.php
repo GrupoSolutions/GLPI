@@ -24,7 +24,7 @@
  --------------------------------------------------------------------------
  */
 
-define('PLUGIN_MYDASHBOARD_VERSION', '2.1.0');
+define('PLUGIN_MYDASHBOARD_VERSION', '2.0.4');
 
 if (!defined("PLUGIN_MYDASHBOARD_DIR")) {
    define("PLUGIN_MYDASHBOARD_DIR", Plugin::getPhpDir("mydashboard"));
@@ -44,7 +44,7 @@ function plugin_init_mydashboard() {
    $PLUGIN_HOOKS['display_login']['mydashboard'] = "plugin_mydashboard_display_login";
 
    $PLUGIN_HOOKS['add_css']['mydashboard'] = [
-      "css/mydashboard.scss",
+      "css/mydashboard.css",
       "css/jquery.newsTicker.css",
    ];
 
@@ -89,14 +89,16 @@ function plugin_init_mydashboard() {
    if (Session::getLoginUserID()) {
       Plugin::registerClass('PluginMydashboardProfile', ['addtabon' => 'Profile']);
 
-      if (Plugin::isPluginActive("mydashboard")) {
+      $plugin = new Plugin();
+
+      if ($plugin->isActivated("mydashboard")) {
          //If user has right to see configuration
          if (Session::haveRightsOr("plugin_mydashboard_config", [CREATE, UPDATE])) {
             $PLUGIN_HOOKS['config_page']['mydashboard'] = 'front/config.form.php';
             //            $PLUGIN_HOOKS['menu_toadd']['mydashboard']['links']['config'] = 'front/config.form.php';
          }
 
-         if (Plugin::isPluginActive('servicecatalog')) {
+         if ($plugin->isActivated('servicecatalog')) {
             $PLUGIN_HOOKS['servicecatalog']['mydashboard'] = ['PluginMydashboardServicecatalog'];
          }
 
@@ -108,7 +110,7 @@ function plugin_init_mydashboard() {
 
             //            $CFG_GLPI['javascript']['tools']['pluginmydashboardmenu']['PluginMydashboardConfig'] = ['colorpicker'];
 
-            if (Plugin::isPluginActive('servicecatalog')
+            if ($plugin->isActivated('servicecatalog')
                 && Session::haveRight("plugin_servicecatalog", READ)) {
                unset($PLUGIN_HOOKS['helpdesk_menu_entry']['mydashboard']);
             }
@@ -127,7 +129,7 @@ function plugin_init_mydashboard() {
                         $_SESSION["glpi_plugin_mydashboard_loaded"] = 1;
                         Html::redirect(PLUGIN_MYDASHBOARD_WEBDIR . "/front/menu.php");
 
-                     } else if (!Plugin::isPluginActive("servicecatalog")
+                     } else if (!$plugin->isActivated("servicecatalog")
                                 || Session::haveRight("plugin_servicecatalog", 1)) {
                         $_SESSION["glpi_plugin_mydashboard_loaded"] = 1;
                         Html::redirect(PLUGIN_MYDASHBOARD_WEBDIR . "/front/menu.php");
@@ -140,11 +142,11 @@ function plugin_init_mydashboard() {
             if (Session::getCurrentInterface() == 'central') {
                if (PluginMydashboardHelper::getReplaceCentral()
                    && Session::haveRightsOr("plugin_mydashboard", [CREATE, READ])) {
-                  $PLUGIN_HOOKS["add_javascript"]['mydashboard'][] = 'scripts/replace_central.js.php';
+                  $PLUGIN_HOOKS["add_javascript"]['mydashboard'][] = 'scripts/replace_central.js';
                } else if (PluginMydashboardHelper::getReplaceCentralConf()
                           && PluginMydashboardHelper::getReplaceCentral()
                           && Session::haveRightsOr("plugin_mydashboard", [CREATE, READ])) {
-                  $PLUGIN_HOOKS["add_javascript"]['mydashboard'][] = 'scripts/replace_central.js.php';
+                  $PLUGIN_HOOKS["add_javascript"]['mydashboard'][] = 'scripts/replace_central.js';
                }
             }
 

@@ -27,156 +27,451 @@
 /**
  * Class PluginMydashboardBarChart
  */
-abstract class PluginMydashboardBarChart extends PluginMydashboardChart
-{
+abstract class PluginMydashboardBarChart extends PluginMydashboardChart {
 
-    /**
-     * @param array $graph_datas
-     * @param array $graph_criterias
-     *
-     * @return string
-     */
-    static function launchGraph($graph_datas = [], $graph_criterias = [])
-    {
+   private $orientation = "v";
 
-        $onclick = 0;
-        if (count($graph_criterias) > 0)
-        {
-            $onclick = 1;
-        }
-        $name    = $graph_datas['name'];
-        $datas   = $graph_datas['data'];
-        $ids     = $graph_datas['ids'];
-        $label   = $graph_datas['label'] ?? "";
-        $labels  = $graph_datas['labels'];
-        $title   = $graph_datas['title'] ?? "";
-        $comment = $graph_datas['comment'] ?? "";
-        $url     = $graph_criterias['url'] ?? PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php";
+   /**
+    * PluginMydashboardBarChart constructor.
+    */
+   function __construct() {
+      parent::__construct();
+      $this->setOption('grid', ['verticalLines' => true, 'horizontalLines' => true]);
+      $this->setOption('xaxis', ['showLabels' => true]);
+      $this->setOption('yaxis', ['showLabels' => true]);
+      $this->setOption('mouse', ['track' => true, 'relative' => true]);
+      $this->setOption('legend', ['position' => 'se', 'backgroundColor' => '#D2E8FF']);
+      $this->setOption('bars', ['show' => true]);
+      $this->setOption('bars', ['fillOpacity' => PluginMydashboardColor::getOpacity()]);
+   }
 
-        $json_criterias = json_encode($graph_criterias);
-        $theme          = PluginMydashboardPreference::getPalette(Session::getLoginUserID());
-        $graph          = "<script type='text/javascript'>
 
-          var canvas$name = echarts.init(document.getElementById('$name'), '$theme');
-          window.onresize = function() {
-            canvas$name.resize();
-          };
-          var option;
+   /**
+    * Sets the orientation of the barchart
+    *
+    * @param string $_o , orientation
+    *        $_o is only accepted within "h" or "v"
+    */
+   function setOrientation($_o) {
+      $possibleOrientations = ["h", "v"];
+      if (in_array($_o, $possibleOrientations)) {
+         $this->orientation = $_o;
+      }
+   }
 
-            option = {
-//               title: {
-//                text: '$title',
-//                textStyle: {
-//                  fontSize: '14',
-//                  },
-//                subtext: '$comment'
-//              },
-              tooltip: {
-                backgroundColor: 'rgba(255,255,255)',
-                trigger: 'axis',
-                axisPointer: {
-                  type: 'shadow'
-                }
-              },
-              legend: { show: true, bottom: 0, itemHeight: 10, itemWidth: 8 },
-              toolbox: {
-                show: true,
-                feature: {
-                  dataView: { show: true, readOnly: false },
-                  magicType: { show: true, type: ['line', 'bar'] },
-                  restore: { show: true },
-                  saveAsImage: { show: true },
-//                  myPDFExport: {
-//                        show: true,
-//                        title: 'PDF Export',
-//                        icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-//                        onclick: function (){
-////                            const btnExport = document.getElementById('export');
-//
-//                            self.addEventListener('click', async () => {
-//                            try {
-//  
-//                            function loadImage(src) {
-//                              return new Promise((resolve, reject) => {
-//                                const img = new Image();
-//                                img.onload = () => resolve(img);
-//                                img.onerror = reject;
-//                                img.src = src;
-//                              });
-//                            }
-//                            function getChartImage(chart) {
-//                              return loadImage(chart.getDataURL());
-//                            }
-//                            const img = await getChartImage(canvas$name);
-//                            const dpr = canvas$name.getDevicePixelRatio();
-//                        
-//                            const doc = new jspdf.jsPDF({
-//                              unit: 'px',
-//                              orientation: 'l',
-//                              hotfixes: ['px_scaling']
-//                            });
-//                        
-////                            doc.addImage(img1.src, 'PNG', 0, 0, img1.width / dpr1, img1.height / dpr1);
-//                            const canvas = await html2canvas(document.getElementById('$name'));
-//                            const pageWidth = doc.internal.pageSize.getWidth();
-//                            const pageHeight = doc.internal.pageSize.getHeight();
-//                        
-//                            const widthRatio = pageWidth / canvas.width;
-//                            const heightRatio = pageHeight / canvas.height;
-//    
-//                            const canvasWidth = img.width / dpr;
-//                            const canvasHeight = img.height / dpr;
-//                            
-//                            const marginX = (pageWidth - canvasWidth) / 2;
-//                            const marginY = (pageHeight - canvasHeight) / 2;
-//                        
-//                            doc.addImage(img.src, 'PNG', marginX, marginY, canvasWidth, canvasHeight);
-//                            
-//                        
-//                            await doc.save('charts.pdf', {
-//                              returnPromise: true
-//                            });
-//                           } catch (e) {
-//                                console.error('failed to export', e);
-//                              }
-//                        });
-//                        }
-//                    },
-                }
-              },
-              calculable: true,
-//              grid: { left: 16, right: 32, top: 32, bottom: 32, containLabel: true },
-              xAxis: [
-                {
-                  type: 'category',
-                  data: $labels,
-                  axisPointer: {
-                    type: 'shadow'
-                  }
-                }
-              ],
-              yAxis: [
-                {
-                  type: 'value'
-                },{
-                  type: 'value'
-                }
-                
-              ],
-              series: $datas
-            };
+   /**
+    * Return an array of two item ordered according to orientation
+    *
+    * @param type $dataValue , the Y value
+    * @param type $dataLabel , the X value
+    *
+    * @return array like [X,Y] or [Y,X]
+    */
+   private function getCouple($dataValue, $dataLabel) {
+      switch ($this->orientation) {
+         case "h" :
+            return [$dataValue * 1, $dataLabel];
+         case "v" :
+            return [$dataLabel, $dataValue * 1];
+      }
+   }
+
+   /**
+    * If there is more than one serie the format of the data for Flotr2 isn't the same
+    * This method return a formatted array for few series
+    * @return array
+    */
+   private function getStackedFormat() {
+      //If we need stacked format we can guess that we want a stacked barchart
+      $options = $this->getOptions();
+      if (!isset($options['bar']['stacked'])) {
+         $this->setOption('bars', ['stacked' => true]);
+      }
+      $jsonDatasLabels = [];
+
+      //every item of tabDatas should be a serie for the stacked bar chart, it's labelled by its key
+      foreach ($this->getTabDatas() as $serieLabel => $serie) {
+         $data = [];
+         //each item of the serie is a couple X => Y
+         //TODO handle when X is not numeric
+         $count = 0;
+         foreach ($serie as $label => $item) {
+            if (is_numeric($label)) {
+               array_push($data, $this->getCouple($item, $label));
+            } else {
+               array_push($data, $this->getCouple($item, $count));
+            }
+            $count++;
+         }
+
+         //By default, if not specifically labelled, in the legend the serie name will look like "Serie 1"
+         if (is_numeric($serieLabel)) {
+            $serieLabel = __("Serie") . " " . $serieLabel;
+         }
+
+         //We ad this serie to the widget data
+         $jsonDatasLabels[] = ["data" => $data, "label" => $serieLabel];
+      }
+      return $jsonDatasLabels;
+   }
+
+   /**
+    * Get a json formatted string representing data and options for the barchart Flotr2
+    * @return string
+    */
+   function getJSonDatas() {
+      $stacked         = false;
+      $count           = 0;
+      $jsonDatasLabels = [];
+
+      foreach ($this->getTabDatas() as $dataLabel => $dataValue) {
+         //If dataValue is an array it means there are few Y-values for one X-values, by default we understand it as a stacked bar chart
+         if (is_array($dataValue)) {
+            $stacked = true;
+            break;
+         } else {
+            //We have to check if dataLabel is numeric because to place a point on a chart it must have numerical coordinate
+            if (is_numeric($dataLabel)) {
+               $jsonDatasLabels[] = ["data" => [$this->getCouple($dataValue, $dataLabel)], "label" => $dataLabel];
+            } else {   //If it's not numeric we have a counter to place values on every 1 step
+               $jsonDatasLabels[] = ["data" => [$this->getCouple($dataValue, $count)], "label" => $dataLabel];
+            }
+            //Here is our step
+            $count += 1;
+         }
+      }
+
+      //If the barchart is considered as a stacked bar chart, we need a different format of data
+      if ($stacked) {
+         //getStackedFormat gives an array formatted to display a stacked bar chart
+         $jsonDatasLabels = $this->getStackedFormat();
+      }
+
+      return PluginMydashboardHelper::safeJsonData($jsonDatasLabels, $this->getOptions());
+   }
+
+   /**
+    * Get a label formatter javascript function for a barchart Flotr2
+    *
+    * @param int $id
+    *      0 : Y value (default)
+    *      1 : X value
+    *
+    * @return string
+    */
+   static function getLabelFormatter($id = 0) {
+      switch ($id) {
+         case 1 :
+            $funct = 'function(o){ return o.x; }';
+            break;
+         default :
+            $funct = 'function(o){ return o.y; }';
+            break;
+      }
+
+      return $funct;
+   }
+
+
+   /**
+    * Get a tick formatter javascript function for a barchart Flotr2
+    *
+    * @param int $id
+    *      0 : value (default)
+    *
+    * @return string, a tick formatter function
+    */
+   static function getTickFormatter($id = 0) {
+      switch ($id) {
+         default :
+            $funct = 'function(value){ return value; }';
+            break;
+      }
+
+      return $funct;
+   }
+
+   /**
+    * Get ticks form an array of datas, useful for non-numeric labels
+    * Warning : for stacked bar it doesn't work for the moment (TODO)
+    *
+    * @param array $datas
+    *
+    * @return an array of ticks as wanted by Flotr2
+    */
+   static function getTicksFromLabels($datas) {
+      $cumul   = [];
+      $count   = 0;
+      $stacked = false;
+      if (!empty($datas)) {
+         //each data must be as X => Y
+         foreach ($datas as $key => $data) {
+            if (is_array($data)) {
+               $stacked = true;
+               break;
+            }
+            //If X is numeric then its corresponding key is itself
+            if (is_numeric($key)) {
+               $cumul[] = [$key, $key];
+            } else {   //If X is not numeric then its corresponding key is count (numeric)
+               $cumul[] = [$count, $key];
+            }
+            $count++;
+         }
+         if ($stacked) {
+            $values = array_values($datas);
+            $cumul  = self::getTicksFromLabels($values[0]);
+         }
+      }
+      //Finally $cumul looks like [[0,"label1"],[1,"label2"],...]
+      return $cumul;
+   }
+
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    * @param       $max
+    *
+    * @return string
+    */
+   static function launchMultipleAxisAndGroupableBar($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
+
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+
+      $name      = $graph_datas['name'];
+      $datas     = $graph_datas['data'];
+      $ids       = $graph_datas['ids'];
+      $labels    = $graph_datas['labels'];
+      $max_right = isset($graph_datas['max_right']) ? "max:" . $graph_datas['max_right'] . "," : "";
+      $max_left  = isset($graph_datas['max_left']) ? "max:" . $graph_datas['max_left'] . "," : "";
+
+      $json_criterias = json_encode($graph_criterias);
+
+      $graph = "<script type='text/javascript'>
             
-            option && canvas$name.setOption(option);
-            //canvas$name.resize();
-            canvas$name.on('click', function(params) {
-              // Print name in console
-            //  console.log(params);
-              if ($onclick) {
-                 var idx = params.dataIndex;
-                 var tab = $ids;
+            var dataBar$name = {
+              datasets: $datas,
+              labels: $labels
+            };
+        
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+               type: 'bar',
+               data: dataBar$name,
+               plugins: [{
+                      beforeInit: function(ctx, options) {
+                      ctx.legend.afterFit = function() {
+                      this.height = this.height + 10;
+                  };
+                }
+              },
+             ],
+               options: {
+                  plugins: {
+                   datalabels: {
+                     color: 'white',
+                   },
+                   labels: {
+                     render: 'value',
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+//                     fontColor: '#000',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 scaleShowVerticalLines: false,
+                 title:{
+                     display:false,
+                     text:'$name'
+                 },
+                 tooltips: {
+//                     mode:'label',
+                     enabled: true,
+                 },
+                 scales: {
+                        xAxes: [{
+                        stacked: true,
+                        ticks: {
+                        beginAtZero: true
+                    }
+                     }],
+                     yAxes: [
+                          {
+                         id: 'left-y-axis',
+                         type: 'linear',
+                         position: 'right',
+//                         stacked : false,
+                         ticks: {
+                             $max_left
+                             beginAtZero: true
+                         }
+                        }, 
+                        {
+                         id: 'bar-y-axis',
+                         type: 'linear',
+                         position: 'left',
+                         stacked: true, 
+                         ticks: { 
+                             $max_right
+                             beginAtZero: true
+                         }
+                      }],
+                 },
+                 animation: {
+                  onComplete: function() {
+//                    var ctx = this.chart.ctx;
+//                   ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+//                   ctx.fillStyle = '#595959';
+//                   ctx.textAlign = 'center';
+//                   ctx.textBaseline = 'bottom';
+/*                   this.data.datasets.forEach(function (dataset) {
+                       for (var i = 0; i < dataset.data.length; i++) {
+                           if (dataset.type == 'bar') {
+                           var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                           ctx.fillText(dataset.data[i], model.x, model.y - 5);
+                       }
+                     }      
+                   });*/
+                    isChartRendered = true;
+                  }
+                 },
+                 hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                }
+             });
+          </script>";
+
+      return $graph;
+   }
+
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    *
+    * @return string
+    */
+   static function launchGraph($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
+
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+      $name            = $graph_datas['name'];
+      $datas           = $graph_datas['data'];
+      $ids             = $graph_datas['ids'];
+      $label           = $graph_datas['label'];
+      $labels          = $graph_datas['labels'];
+      $backgroundColor = $graph_datas['backgroundColor'];
+
+      $json_criterias = json_encode($graph_criterias);
+
+      $graph = "<script type='text/javascript'>
+            var dataBar$name = {
+              datasets: [{
+                data: $datas,
+                label: \"$label\",
+                backgroundColor: $backgroundColor,
+              }],
+              labels: $labels,
+            };
+             var id$name = $ids;
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+               type: 'bar',
+               data: dataBar$name,
+               options: {
+                 plugins: {
+                    datalabels: {
+                     color: 'white',
+                   },
+                   labels: {
+                     render: 'value',
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+//                     fontColor: '#000',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 title:{
+                     display:false,
+                     text:'$name'
+                 },
+//                 tooltips: {
+//                     enabled: false,
+//                 },
+                 tooltips: {
+                     mode: 'index',
+                     intersect: false
+                 },
+                 scales: {
+                     xAxes: [{
+                         stacked: true,
+                     }],
+                     yAxes: [{
+                         stacked: true
+                     }]
+                 },
+                 animation: {
+                     onComplete: function() {
+//                       var chartInstance = this.chart,
+//                        ctx = chartInstance.ctx;
+//                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 
+//                        Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+//                        ctx.textAlign = 'center';
+//                        ctx.textBaseline = 'bottom';
+//            
+//                        this.data.datasets.forEach(function (dataset, i) {
+//                            var meta = chartInstance.controller.getDatasetMeta(i);
+//                            meta.data.forEach(function (bar, index) {
+//                                var data = dataset.data[index];
+//                                ctx.fillText(data, bar._model.x, bar._model.y - 5);
+//                            });
+//                        });
+                       isChartRendered = true;
+                     }
+                   },
+                   hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                 }
+             });
+             canvas$name.onclick = function(evt) {
+               var activePoints = $name.getElementsAtEvent(evt);
+               if (activePoints[0] && $onclick) {
+                 var chartData = activePoints[0]['_chart'].config.data;
+                 var idx = activePoints[0]['_index'];
+                 var label = chartData.labels[idx];
+                 var value = chartData.datasets[0].data[idx];
+                 var tab = id$name;
                  var selected_id = tab[idx];
                  $.ajax({
-                    url: '$url',
+                    url: '" . PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php',
                     type: 'POST',
                     data:
                     {
@@ -188,164 +483,116 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart
                           }
                  });
                }
-});
-
+             };
              
           </script>";
 
-        return $graph;
-    }
+      return $graph;
+   }
 
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    *
+    * @return string
+    */
+   static function launchStackedGraph($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
 
-    /**
-     * @param array $graph_datas
-     * @param array $graph_criterias
-     *
-     * @return string
-     */
-    static function launchMultipleGraph($graph_datas = [], $graph_criterias = [])
-    {
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+      $name   = $graph_datas['name'];
+      $datas  = $graph_datas['data'];
+      $ids    = $graph_datas['ids'];
+      $labels = $graph_datas['labels'];
 
-        $onclick = 0;
-        if (count($graph_criterias) > 0)
-        {
-            $onclick = 1;
-        }
-        $name    = $graph_datas['name'];
-        $datas   = $graph_datas['data'];
-        $ids     = $graph_datas['ids'];
-        $label   = $graph_datas['label'] ?? "";
-        $labels  = $graph_datas['labels'];
-        $title   = $graph_datas['title'] ?? "";
-        $comment = $graph_datas['comment'] ?? "";
-        $url     = $graph_criterias['url'] ?? PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php";
+      $json_criterias = json_encode($graph_criterias);
 
-        $json_criterias = json_encode($graph_criterias);
-        $theme          = PluginMydashboardPreference::getPalette(Session::getLoginUserID());
-        $graph          = "<script type='text/javascript'>
-
-          var canvas$name = echarts.init(document.getElementById('$name'), '$theme');
-          window.onresize = function() {
-            canvas$name.resize();
-          };
-          var option;
-
-            option = {
-//               title: {
-//                text: '$title',
-//                textStyle: {
-//                  fontSize: '14',
-//                  },
-//                subtext: '$comment'
-//              },
-              tooltip: {
-                backgroundColor: 'rgba(255,255,255)',
-                trigger: 'axis',
-                axisPointer: {
-                  type: 'shadow'
-                }
-              },
-              legend: { show: true, bottom: 0, itemHeight: 10, itemWidth: 8 },
-              toolbox: {
-                show: true,
-                feature: {
-                  dataView: { show: true, readOnly: false },
-                  magicType: { show: true, type: ['line', 'bar'] },
-                  restore: { show: true },
-                  saveAsImage: { show: true },
-//                  myPDFExport: {
-//                        show: true,
-//                        title: 'PDF Export',
-//                        icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-//                        onclick: function (){
-////                            const btnExport = document.getElementById('export');
-//
-//                            self.addEventListener('click', async () => {
-//                            try {
-//  
-//                            function loadImage(src) {
-//                              return new Promise((resolve, reject) => {
-//                                const img = new Image();
-//                                img.onload = () => resolve(img);
-//                                img.onerror = reject;
-//                                img.src = src;
-//                              });
-//                            }
-//                            function getChartImage(chart) {
-//                              return loadImage(chart.getDataURL());
-//                            }
-//                            const img = await getChartImage(canvas$name);
-//                            const dpr = canvas$name.getDevicePixelRatio();
-//                        
-//                            const doc = new jspdf.jsPDF({
-//                              unit: 'px',
-//                              orientation: 'l',
-//                              hotfixes: ['px_scaling']
-//                            });
-//                        
-////                            doc.addImage(img1.src, 'PNG', 0, 0, img1.width / dpr1, img1.height / dpr1);
-//                            const canvas = await html2canvas(document.getElementById('$name'));
-//                            const pageWidth = doc.internal.pageSize.getWidth();
-//                            const pageHeight = doc.internal.pageSize.getHeight();
-//                        
-//                            const widthRatio = pageWidth / canvas.width;
-//                            const heightRatio = pageHeight / canvas.height;
-//    
-//                            const canvasWidth = img.width / dpr;
-//                            const canvasHeight = img.height / dpr;
-//                            
-//                            const marginX = (pageWidth - canvasWidth) / 2;
-//                            const marginY = (pageHeight - canvasHeight) / 2;
-//                        
-//                            doc.addImage(img.src, 'PNG', marginX, marginY, canvasWidth, canvasHeight);
-//                            
-//                        
-//                            await doc.save('charts.pdf', {
-//                              returnPromise: true
-//                            });
-//                           } catch (e) {
-//                                console.error('failed to export', e);
-//                              }
-//                        });
-//                        }
-//                    },
-                }
-              },
-              calculable: true,
-//              grid: { left: 16, right: 32, top: 32, bottom: 32, containLabel: true },
-              xAxis: [
-                {
-                  type: 'category',
-                  data: $labels,
-                  axisPointer: {
-                    type: 'shadow'
-                  }
-                }
-              ],
-              yAxis: [
-                {
-                  type: 'value'
-                },{
-                  type: 'value'
-                }
-                
-              ],
-              series: $datas
+      $graph = "<script type='text/javascript'>
+            var dataBar$name = {
+              datasets: $datas,
+              labels: $labels,
             };
-            
-            option && canvas$name.setOption(option);
-            //canvas$name.resize();
-            canvas$name.on('click', function(params) {
-              // Print name in console
-            //  console.log(params);
-              if ($onclick) {
-                 var idx = params.dataIndex;
-                 var serie = params.seriesIndex;
-
-                 var tab = $ids;
-                 var selected_id = tab[serie][idx];
+             var id$name = $ids;
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+                plugins: [{
+                         beforeInit: function(ctx, options) {
+                         ctx.legend.afterFit = function() {
+                         this.height = this.height + 15;
+                     };
+                   }
+                 }],
+               type: 'bar',
+               data: dataBar$name,
+               options: {
+                 plugins: {
+                    datalabels: {
+                     display: function(context) {
+                         return context.dataset.data[context.dataIndex] >= 1;
+                      },
+                     color: 'white',
+                   },
+                   labels: {
+                     render: 'value',
+                     precision: 0,
+                     showZero: false,
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+//                     fontColor: '#000',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 title:{
+                     display:false,
+                     text:'$name'
+                 },
+                 tooltips: {
+                     mode: 'index',
+                     intersect: false
+                 },
+                 scales: {
+                     xAxes: [{
+                         stacked: true,
+                     }],
+                     yAxes: [{
+                         stacked: true
+                     }]
+                 },
+                 legend: { position: 'top'},
+                 animation: {
+                     onComplete: function() {
+                       isChartRendered = true;
+                     }
+                   },
+                   hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                }
+             });
+             canvas$name.onclick = function(evt) {
+               var activePoints = $name.getElementsAtEvent(evt);
+               if (activePoints[0] && $onclick) {
+                 var chartData = activePoints[0]['_chart'].config.data;
+                 var idx = activePoints[0]['_index'];
+                 var label = chartData.labels[idx];
+                 var value = chartData.datasets[0].data[idx];
+                 var tab = id$name;
+                 var selected_id = tab[idx];
                  $.ajax({
-                    url: '$url',
+                    url: '" . PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php',
                     type: 'POST',
                     data:
                     {
@@ -357,168 +604,384 @@ abstract class PluginMydashboardBarChart extends PluginMydashboardChart
                           }
                  });
                }
-         });
+             };
+             
           </script>";
 
-        return $graph;
-    }
+      return $graph;
+   }
 
-    /**
-     * @param array $graph_datas
-     * @param array $graph_criterias
-     *
-     * @return string
-     */
-    static function launchHorizontalGraph($graph_datas = [], $graph_criterias = [])
-    {
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    *
+    * @return string
+    */
+   static function launchHorizontalGraph($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
 
-        $onclick = 0;
-        if (count($graph_criterias) > 0)
-        {
-            $onclick = 1;
-        }
-        $name    = $graph_datas['name'];
-        $datas   = $graph_datas['data'];
-        $ids     = $graph_datas['ids'];
-        $label   = $graph_datas['label'] ?? "";
-        $labels  = $graph_datas['labels'];
-        $title   = $graph_datas['title'] ?? "";
-        $comment = $graph_datas['comment'] ?? "";
-        $url     = $graph_criterias['url'] ?? PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php";
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+      $name  = $graph_datas['name'];
+      $title = $name;
+      $disp  = 'false';
+      if (isset($graph_datas['title'])) {
+         $title = $graph_datas['title'];
+         $disp  = 'true';
+      }
+      $datas = $graph_datas['data'];
+      $ids   = $graph_datas['ids'];
+      //      $label           = $graph_datas['label'];
+      $labels = $graph_datas['labels'];
+      //      $backgroundColor = $graph_datas['backgroundColor'];
 
-        $json_criterias = json_encode($graph_criterias);
-        $theme          = PluginMydashboardPreference::getPalette(Session::getLoginUserID());
-        $graph          = "<script type='text/javascript'>
+      $linkURL = isset($graph_criterias['url']) ? $graph_criterias['url'] : PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php";
+      unset($graph_criterias['url']);
+      $json_criterias = json_encode($graph_criterias);
 
-              var canvas$name = echarts.init(document.getElementById('$name'), '$theme');
-              window.onresize = function() {
-                canvas$name.resize();
-              };
-              var option;
-
-            option = {
-//               title: {
-//                text: '$title',
-//                textStyle: {
-//                  fontSize: '14',
-//                  },
-//                subtext: '$comment'
-//              },
-              tooltip: {
-                backgroundColor: 'rgba(255,255,255)',
-                trigger: 'axis',
-                axisPointer: {
-                  type: 'shadow'
-                }
-              },
-              legend: { show: true, bottom: 0, itemHeight: 10, itemWidth: 8 },
-              toolbox: {
-                show: true,
-                feature: {
-                  dataView: { show: true, readOnly: false },
-                  magicType: { show: true, type: ['line', 'bar'] },
-                  restore: { show: true },
-                  saveAsImage: { show: true },
-//                  myPDFExport: {
-//                        show: true,
-//                        title: 'PDF Export',
-//                        icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-//                        onclick: function (){
-////                            const btnExport = document.getElementById('export');
-//
-//                            self.addEventListener('click', async () => {
-//                            try {
-//  
-//                            function loadImage(src) {
-//                              return new Promise((resolve, reject) => {
-//                                const img = new Image();
-//                                img.onload = () => resolve(img);
-//                                img.onerror = reject;
-//                                img.src = src;
-//                              });
-//                            }
-//                            function getChartImage(chart) {
-//                              return loadImage(chart.getDataURL());
-//                            }
-//                            const img = await getChartImage(canvas$name);
-//                            const dpr = canvas$name.getDevicePixelRatio();
-//                        
-//                            const doc = new jspdf.jsPDF({
-//                              unit: 'px',
-//                              orientation: 'l',
-//                              hotfixes: ['px_scaling']
-//                            });
-//                        
-////                            doc.addImage(img1.src, 'PNG', 0, 0, img1.width / dpr1, img1.height / dpr1);
-//                            const canvas = await html2canvas(document.getElementById('$name'));
-//                            const pageWidth = doc.internal.pageSize.getWidth();
-//                            const pageHeight = doc.internal.pageSize.getHeight();
-//                        
-//                            const widthRatio = pageWidth / canvas.width;
-//                            const heightRatio = pageHeight / canvas.height;
-//    
-//                            const canvasWidth = img.width / dpr;
-//                            const canvasHeight = img.height / dpr;
-//                            
-//                            const marginX = (pageWidth - canvasWidth) / 2;
-//                            const marginY = (pageHeight - canvasHeight) / 2;
-//                        
-//                            doc.addImage(img.src, 'PNG', marginX, marginY, canvasWidth, canvasHeight);
-//                            
-//                        
-//                            await doc.save('charts.pdf', {
-//                              returnPromise: true
-//                            });
-//                           } catch (e) {
-//                                console.error('failed to export', e);
-//                              }
-//                        });
-//                        }
-//                    },
-                }
-              },
-              calculable: true,
-              grid: { left: 16, right: 32, top: 32, bottom: 32, containLabel: true },
-              //Specific
-              yAxis: [
-                {
-                  type: 'category',
-                  data: $labels
-                }
-              ],
-              xAxis: [
-                {
-                  type: 'value'
-                }
-              ],
-              series: $datas
+      $graph = "<script type='text/javascript'>
+            var dataBar$name = {
+              datasets: $datas,
+              labels: $labels,
             };
+             var id$name = $ids;
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+               type: 'horizontalBar',
+               data: dataBar$name,
+               options: {
+                 plugins: {
+                    datalabels: {
+                     color: '#000',
+                     align: 'end', 
+                     anchor: 'end',
+                   },
+                   labels: {
+                     render: 'value',
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+//                     fontColor: '#000',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 title:{
+                     display:$disp,
+                     text:'$title'
+                 },
+                 legend: {
+                     display:false,
+                     position: 'right',
+                 },
+                 tooltips: {
+                     enabled: true,
+                 },
+                 legend: { position: 'top'},
+                 animation: {
+                     onComplete: function() {
+                       var chartInstance = this.chart;
+                        ctx = chartInstance.ctx;
+                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 
+                        Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                        ctx.textAlign = 'right';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillStyle = '#333';
             
-            option && canvas$name.setOption(option);
-            //canvas$name.resize();
-            canvas$name.on('click', function(params) {
-              // Print name in console
-            //  console.log(params);
-              if ($onclick) {
-                             var idx = params.dataIndex;
-                             var tab = $ids;
-                             var selected_id = tab[idx];
-                             $.ajax({
-                                url: '$url',
-                                type: 'POST',
-                                data:
-                                {
-                                    selected_id:selected_id,
-                                    params: $json_criterias
-                                  },
-                                success:function(response) {
-                                        window.open(response);
-                                      }
-                             });
-                           }
-            });
+//                        this.data.datasets.forEach(function (dataset, i) {
+//                            var meta = chartInstance.controller.getDatasetMeta(i);
+//                            meta.data.forEach(function (bar, index) {
+//                                var data = dataset.data[index];                            
+//                                ctx.fillText(data, bar._model.x + 40, bar._model.y);
+//                            });
+//                        });
+                       isChartRendered = true;
+                     }
+                   },
+                   hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                }
+             });
+             canvas$name.onclick = function(evt) {
+               var activePoints = $name.getElementsAtEvent(evt);
+               if (activePoints[0] && $onclick) {
+                 var chartData = activePoints[0]['_chart'].config.data;
+                 var idx = activePoints[0]['_index'];
+                 var label = chartData.labels[idx];
+                 var value = chartData.datasets[0].data[idx];
+                 var tab = id$name;
+                 var selected_id = tab[idx];
+                 $.ajax({
+                    url: '$linkURL',
+                    type: 'POST',
+                    data:
+                    {
+                        selected_id:selected_id,
+                        params: $json_criterias
+                      },
+                    success:function(response) {
+                            window.open(response);
+                          }
+                 });
+               }
+             };
+             
           </script>";
 
-        return $graph;
-    }
+      return $graph;
+   }
+
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    * @param int   $isStartedAtZero
+    *
+    * @return string
+    */
+   static function launchMultipleGraph($graph_datas = [], $graph_criterias = [], $isStartedAtZero = 0) {
+      global $CFG_GLPI;
+
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+      $name   = $graph_datas['name'];
+      $datas  = $graph_datas['data'];
+      $ids    = $graph_datas['ids'];
+      $labels = $graph_datas['labels'];
+
+      $json_criterias = json_encode($graph_criterias);
+
+      $graph = "<script type='text/javascript'>
+            var disp = $isStartedAtZero;
+            var dataBar$name = {
+              datasets: $datas,
+              labels: $labels,
+            };
+            var id$name = $ids;
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+              plugins: [{
+                      beforeInit: function(ctx, options) {
+                      ctx.legend.afterFit = function() {
+                      this.height = this.height + 15;
+                  };
+                }
+              }],
+               type: 'bar',
+               data: dataBar$name,
+               options: {
+                 plugins: {
+                    datalabels: {
+                     display: function(context) {
+                         return context.dataset.data[context.dataIndex] >= 1;
+                      },
+                     color: 'grey',
+                   },
+                   labels: {
+                     render: 'value',
+                     precision: 0,
+                     showZero: false,
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+//                     fontColor: '#000',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 scales: {
+                    yAxes: [{
+                         ticks: {
+                         beginAtZero: disp
+                        }
+                    }]
+                },
+                 title:{
+                     display:false,
+                     text:'$name'
+                 },
+                 tooltips: {
+                     enabled: true,
+                 },
+                  animation: {
+                     onComplete: function() {
+                       isChartRendered = true;
+                     }
+                   },
+                   hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                }
+             });
+             
+             canvas$name.onclick = function(evt) {
+               if ($onclick) {
+                  var activePoints = $name.getElementAtEvent(evt);
+                  activePoints.forEach(function (dataset) {
+                  var datasetidx = dataset['_datasetIndex'];
+                  var idx = dataset['_index'];
+                  var tab = id$name;
+                  var selected_id = tab[datasetidx][idx];
+                     if (selected_id.length > 0) {
+                        $.ajax({
+                       url: '" . PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php',
+                       type: 'POST',
+                       data:
+                       {
+                           selected_id:selected_id,
+                           params: $json_criterias
+                         },
+                       success:function(response) {
+                               window.open(response);
+                             }
+                     });
+                     }
+                  });
+               }
+             };
+             
+          </script>";
+
+      return $graph;
+   }
+
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    *
+    * @return string
+    */
+   static function launchMultipleGraphWithMultipleAxis($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
+
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+
+      $name      = $graph_datas['name'];
+      $datas     = $graph_datas['data'];
+      $ids       = $graph_datas['ids'];
+      $labels    = $graph_datas['labels'];
+      $max_right = isset($graph_datas['max_right']) ? "max:" . $graph_datas['max_right'] . "," : "";
+      $max_left  = isset($graph_datas['max_left']) ? "max:" . $graph_datas['max_left'] . "," : "";
+
+      $json_criterias = json_encode($graph_criterias);
+
+      $graph = "<script type='text/javascript'>
+            
+            var dataBar$name = {
+              datasets: $datas,
+              labels: $labels,
+            };
+        
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+               type: 'bar',
+               data: dataBar$name,
+               plugins: [{
+                      beforeInit: function(ctx, options) {
+                      ctx.legend.afterFit = function() {
+                      this.height = this.height + 10;
+                  };
+                }
+              }],
+               options: {
+                 plugins: {
+                    datalabels: {
+//                     display:false,
+                     color: '#000',
+                   },
+                   labels: {
+                     render: 'value',
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+//                     fontColor: '#000',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 title:{
+                     display:false,
+                     text:'$name'
+                 },
+                 tooltips: {
+                     mode: 'index',
+                     intersect: false
+                 },
+                 scales: {
+                     yAxes: [{
+                         id: 'left-y-axis',
+                         type: 'linear',
+                         position: 'left',
+                         ticks: {
+                             $max_left
+                             beginAtZero: true
+                         }
+                        
+                     }, {
+                         id: 'right-y-axis',
+                         type: 'linear',
+                         position: 'right',
+                         ticks: {
+                             $max_right
+                             beginAtZero: true
+                         }
+                      }]
+                 },
+                 animation: {
+                  onComplete: function() {
+//                    var ctx = this.chart.ctx;
+//                   ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+//                   ctx.fillStyle = '#595959';
+//                   ctx.textAlign = 'center';
+//                   ctx.textBaseline = 'bottom';
+////                   this.data.datasets.forEach(function (dataset) {
+//                       for (var i = 0; i < dataset.data.length; i++) {
+//                           var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+//                           ctx.fillText(dataset.data[i], model.x, model.y - 5);
+//                       }
+//                   });
+                     
+                    isChartRendered = true;
+                  }
+                 },
+                 hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                }
+             });
+          </script>";
+
+      return $graph;
+   }
 }

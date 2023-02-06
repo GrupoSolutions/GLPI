@@ -151,112 +151,113 @@ class __TwigTemplate_8299c5beda8467d2518b0a127edb4c6d50be93cc8df31950f8c1b1d1674
                 }
                 // line 85
                 echo "   
+   
 ";
             }
-            // line 87
+            // line 88
             echo "
 
 <form name=\"asset_form\" method=\"post\" action=\"";
-            // line 89
+            // line 90
             echo twig_escape_filter($this->env, ($context["target"] ?? null), "html", null, true);
             echo "\" ";
             echo ($context["formoptions"] ?? null);
             echo " enctype=\"multipart/form-data\" data-submit-once>
    <input type=\"hidden\" name=\"entities_id\" value=\"";
-            // line 90
+            // line 91
             echo twig_escape_filter($this->env, ($context["entity_id"] ?? null), "html", null, true);
             echo "\" />
 
 ";
         }
-        // line 93
+        // line 94
         echo "   <div id=\"mainformtable\">
       ";
-        // line 94
-        $context["template_name"] = $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->getVerbatimValue((($__internal_compile_20 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 94)) && is_array($__internal_compile_20) || $__internal_compile_20 instanceof ArrayAccess ? ($__internal_compile_20["template_name"] ?? null) : null));
         // line 95
+        $context["template_name"] = $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->getVerbatimValue((($__internal_compile_20 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 95)) && is_array($__internal_compile_20) || $__internal_compile_20 instanceof ArrayAccess ? ($__internal_compile_20["template_name"] ?? null) : null));
+        // line 96
         echo "      ";
-        if (((($context["withtemplate"] ?? null) == 2) &&  !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 95))) {
-            // line 96
+        if (((($context["withtemplate"] ?? null) == 2) &&  !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 96))) {
+            // line 97
             echo "         <input type=\"hidden\" name=\"template_name\" value=\"";
             echo twig_escape_filter($this->env, ($context["template_name"] ?? null), "html", null, true);
             echo "\" />
          ";
-            // line 97
-            $context["nametype"] = twig_sprintf(__("Created from the template %s"), ($context["template_name"] ?? null));
             // line 98
+            $context["nametype"] = twig_sprintf(__("Created from the template %s"), ($context["template_name"] ?? null));
+            // line 99
             echo "      ";
         } elseif ((($context["withtemplate"] ?? null) == 1)) {
-            // line 99
+            // line 100
             echo "         <input type=\"hidden\" name=\"is_template\" value=\"1\" />
       ";
-        } elseif (twig_get_attribute($this->env, $this->source,         // line 100
-($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 100)) {
-            // line 101
+        } elseif (twig_get_attribute($this->env, $this->source,         // line 101
+($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 101)) {
+            // line 102
             echo "         ";
             $context["nametype"] = twig_sprintf(__("%1\$s - %2\$s"), __("New item"), ($context["nametype"] ?? null));
-            // line 102
+            // line 103
             echo "      ";
         } else {
-            // line 103
+            // line 104
             echo "         ";
             if (((($context["noid"] ?? null) == false) && ($this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiis_ids_visible") || (twig_length_filter($this->env, ($context["nametype"] ?? null)) == 0)))) {
-                // line 104
-                echo "            ";
-                $context["nametype"] = twig_sprintf(__("%1\$s - %2\$s"), ($context["nametype"] ?? null), (($__internal_compile_21 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 104)) && is_array($__internal_compile_21) || $__internal_compile_21 instanceof ArrayAccess ? ($__internal_compile_21["id"] ?? null) : null));
                 // line 105
+                echo "            ";
+                $context["nametype"] = twig_sprintf(__("%1\$s - %2\$s"), ($context["nametype"] ?? null), (($__internal_compile_21 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 105)) && is_array($__internal_compile_21) || $__internal_compile_21 instanceof ArrayAccess ? ($__internal_compile_21["id"] ?? null) : null));
+                // line 106
                 echo "         ";
             }
-            // line 106
+            // line 107
             echo "      ";
         }
-        // line 107
+        // line 108
         echo "
       ";
-        // line 108
+        // line 109
         if (( !array_key_exists("no_header", $context) || (($context["no_header"] ?? null) == false))) {
-            // line 109
+            // line 110
             echo "         <div class=\"card-header main-header d-flex flex-wrap mx-n2 mt-n2 align-items-stretch\">
             ";
-            // line 110
+            // line 111
             if ((($context["withtemplate"] ?? null) == 1)) {
-                // line 111
+                // line 112
                 echo "               <input type=\"text\" class=\"form-control ms-4 mb-2\" placeholder=\"";
                 echo twig_escape_filter($this->env, __("Template name"), "html", null, true);
                 echo "\"
                   name=\"template_name\" id=\"textfield_template_name";
-                // line 112
+                // line 113
                 echo twig_escape_filter($this->env, ($context["rand"] ?? null), "html", null, true);
                 echo "\"
                   value=\"";
-                // line 113
+                // line 114
                 echo twig_escape_filter($this->env, ($context["template_name"] ?? null), "html", null, true);
                 echo "\" />
             ";
             }
-            // line 115
+            // line 116
             echo "            <h3 class=\"card-title d-flex align-items-center ps-4\">
                ";
-            // line 116
-            $context["icon"] = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getIcon", [], "method", false, false, false, 116);
             // line 117
+            $context["icon"] = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getIcon", [], "method", false, false, false, 117);
+            // line 118
             echo "               ";
             if ((twig_length_filter($this->env, ($context["icon"] ?? null)) > 0)) {
-                // line 118
+                // line 119
                 echo "                  <div class=\"ribbon ribbon-bookmark ribbon-top ribbon-start bg-blue s-1\">
                      <i class=\"";
-                // line 119
+                // line 120
                 echo twig_escape_filter($this->env, ($context["icon"] ?? null), "html", null, true);
                 echo " fa-2x\"></i>
                   </div>
                ";
             }
-            // line 122
+            // line 123
             echo "               <span>
                ";
-            // line 123
-            if ((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "id", [], "any", false, false, false, 123) > 0)) {
-                // line 124
+            // line 124
+            if ((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "id", [], "any", false, false, false, 124) > 0)) {
+                // line 125
                 echo "                  ";
                 echo twig_escape_filter($this->env, ($context["nametype"] ?? null), "html", null, true);
                 echo " - ";
@@ -264,27 +265,27 @@ class __TwigTemplate_8299c5beda8467d2518b0a127edb4c6d50be93cc8df31950f8c1b1d1674
                 echo " 
                ";
             } else {
-                // line 126
+                // line 127
                 echo "                  ";
                 echo twig_escape_filter($this->env, ($context["nametype"] ?? null), "html", null, true);
                 echo "
                ";
             }
-            // line 128
+            // line 129
             echo "               
                </span>
                
                ";
-            // line 131
+            // line 132
             if (($context["header_toolbar"] ?? null)) {
-                // line 132
+                // line 133
                 echo "                  <div class=\"d-inline-block toolbar ms-2\">
                      ";
-                // line 133
+                // line 134
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(($context["header_toolbar"] ?? null));
                 foreach ($context['_seq'] as $context["_key"] => $context["raw_element"]) {
-                    // line 134
+                    // line 135
                     echo "                        ";
                     echo $context["raw_element"];
                     echo "
@@ -293,110 +294,110 @@ class __TwigTemplate_8299c5beda8467d2518b0a127edb4c6d50be93cc8df31950f8c1b1d1674
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['raw_element'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 136
+                // line 137
                 echo "                  </div>
                ";
             }
-            // line 138
+            // line 139
             echo "            </h3>
             
             ";
-            // line 140
-            $context["single_actions_ms_auto"] = true;
             // line 141
+            $context["single_actions_ms_auto"] = true;
+            // line 142
             echo "            
             ";
-            // line 142
-            if (((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isEntityAssign", [], "method", false, false, false, 142) && Session::isMultiEntitiesMode()) &&  !$this->extensions['Glpi\Application\View\Extension\PhpExtension']->isInstanceOf(($context["item"] ?? null), "Entity"))) {
-                // line 143
+            // line 143
+            if (((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isEntityAssign", [], "method", false, false, false, 143) && Session::isMultiEntitiesMode()) &&  !$this->extensions['Glpi\Application\View\Extension\PhpExtension']->isInstanceOf(($context["item"] ?? null), "Entity"))) {
+                // line 144
                 echo "               ";
                 $context["single_actions_ms_auto"] = false;
-                // line 144
+                // line 145
                 echo "               <span class=\"badge entity-name mx-1 px-2 ms-auto align-items-center\" title=\"";
                 echo twig_escape_filter($this->env, ($context["entity_name"] ?? null), "html", null, true);
                 echo "\">
                   <i class=\"ti ti-stack me-2\"></i>
                   ";
-                // line 146
+                // line 147
                 echo twig_escape_filter($this->env, ($context["entity_name"] ?? null), "html", null, true);
                 echo "
                </span>
 
                ";
-                // line 149
-                if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "maybeRecursive", [], "method", false, false, false, 149)) {
-                    // line 150
+                // line 150
+                if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "maybeRecursive", [], "method", false, false, false, 150)) {
+                    // line 151
                     echo "                  <span class=\"badge is_recursive-toggle mx-1 px-2 align-items-center\">
                      <label class=\"form-check d-flex align-items-center mb-0\">
                         ";
-                    // line 152
-                    $context["disabled"] = (($context["canedit"] ?? null) == false);
                     // line 153
+                    $context["disabled"] = (($context["canedit"] ?? null) == false);
+                    // line 154
                     echo "                        ";
                     $context["comment"] = __("Change visibility in child entities.");
-                    // line 154
+                    // line 155
                     echo "
                         ";
-                    // line 155
+                    // line 156
                     if ($this->extensions['Glpi\Application\View\Extension\PhpExtension']->isInstanceOf(($context["item"] ?? null), "CommonDBChild")) {
-                        // line 156
-                        echo "                           ";
-                        $context["comment"] = __("Can՛t change this attribute. It՛s inherited from its parent.");
                         // line 157
                         echo "                           ";
-                        $context["disabled"] = true;
+                        $context["comment"] = __("Can՛t change this attribute. It՛s inherited from its parent.");
                         // line 158
-                        echo "                        ";
-                    } elseif ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "can", [0 => ($context["id"] ?? null), 1 => "recursive"], "method", false, false, false, 158)) {
-                        // line 159
                         echo "                           ";
-                        $context["comment"] = __("You are not allowed to change the visibility flag for child entities.");
+                        $context["disabled"] = true;
+                        // line 159
+                        echo "                        ";
+                    } elseif ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "can", [0 => ($context["id"] ?? null), 1 => "recursive"], "method", false, false, false, 159)) {
                         // line 160
                         echo "                           ";
-                        $context["disabled"] = true;
+                        $context["comment"] = __("You are not allowed to change the visibility flag for child entities.");
                         // line 161
-                        echo "                        ";
-                    } elseif ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "canUnrecurs", [], "method", false, false, false, 161)) {
-                        // line 162
                         echo "                           ";
-                        $context["comment"] = __("Flag change forbidden. Linked items found.");
+                        $context["disabled"] = true;
+                        // line 162
+                        echo "                        ";
+                    } elseif ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "canUnrecurs", [], "method", false, false, false, 162)) {
                         // line 163
                         echo "                           ";
-                        $context["disabled"] = true;
+                        $context["comment"] = __("Flag change forbidden. Linked items found.");
                         // line 164
+                        echo "                           ";
+                        $context["disabled"] = true;
+                        // line 165
                         echo "                        ";
                     }
-                    // line 165
+                    // line 166
                     echo "
                         <input class=\"form-check-input\" type=\"checkbox\" name=\"is_recursive\" value=\"1\"
                               ";
-                    // line 167
-                    if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isRecursive", [], "method", false, false, false, 167)) {
+                    // line 168
+                    if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isRecursive", [], "method", false, false, false, 168)) {
                         echo "checked=\"checked\"";
                     }
-                    // line 168
+                    // line 169
                     echo "                              ";
                     if (($context["disabled"] ?? null)) {
                         echo "disabled=\"disabled\"";
                     }
                     echo " />
                         ";
-                    // line 169
-                    if ((($this->extensions['Glpi\Application\View\Extension\PhpExtension']->isInstanceOf(($context["item"] ?? null), "CommonDBChild") && twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 169)) && twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isRecursive", [], "method", false, false, false, 169))) {
-                        // line 170
-                        echo "                            ";
+                    // line 170
+                    if ((($this->extensions['Glpi\Application\View\Extension\PhpExtension']->isInstanceOf(($context["item"] ?? null), "CommonDBChild") && twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 170)) && twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isRecursive", [], "method", false, false, false, 170))) {
                         // line 171
+                        echo "                            ";
+                        // line 172
                         echo "                            <input type=\"hidden\" name=\"is_recursive\" value=\"1\" />
                         ";
                     }
-                    // line 173
+                    // line 174
                     echo "                        <span class=\"form-check-label mb-0 mx-2\">
                            ";
-                    // line 174
+                    // line 175
                     echo twig_escape_filter($this->env, __("Child entities"), "html", null, true);
                     echo "
                            <i class=\"fas fa-info ms-1\" title=\"";
-                    // line 175
+                    // line 176
                     echo twig_escape_filter($this->env, ($context["comment"] ?? null), "html", null, true);
                     echo "\"></i>
                         </span>
@@ -405,30 +406,30 @@ class __TwigTemplate_8299c5beda8467d2518b0a127edb4c6d50be93cc8df31950f8c1b1d1674
                   
                ";
                 }
-                // line 181
+                // line 182
                 echo "            ";
             }
-            // line 182
+            // line 183
             echo "
             ";
-            // line 183
+            // line 184
             echo twig_include($this->env, $context, "components/form/single-action.html.twig");
             echo "
          </div>
       ";
         }
-        // line 186
+        // line 187
         echo "
       ";
-        // line 187
+        // line 188
         echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook(twig_constant("Glpi\\Plugin\\Hooks::PRE_ITEM_FORM"), ["item" => ($context["item"] ?? null), "options" => ($context["params"] ?? null)]), "html", null, true);
         echo "
 
       ";
-        // line 190
+        // line 191
         echo "      ";
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, false, false, 190), "request", [0 => "in_modal"], "method", false, false, false, 190) == true)) {
-            // line 191
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, false, false, 191), "request", [0 => "in_modal"], "method", false, false, false, 191) == true)) {
+            // line 192
             echo "      
       <input type=\"hidden\" name=\"_no_message_link\" value=\"1\" />
       ";
@@ -447,11 +448,11 @@ class __TwigTemplate_8299c5beda8467d2518b0a127edb4c6d50be93cc8df31950f8c1b1d1674
 
     public function getDebugInfo()
     {
-        return array (  432 => 191,  429 => 190,  424 => 187,  421 => 186,  415 => 183,  412 => 182,  409 => 181,  400 => 175,  396 => 174,  393 => 173,  389 => 171,  387 => 170,  385 => 169,  378 => 168,  374 => 167,  370 => 165,  367 => 164,  364 => 163,  361 => 162,  358 => 161,  355 => 160,  352 => 159,  349 => 158,  346 => 157,  343 => 156,  341 => 155,  338 => 154,  335 => 153,  333 => 152,  329 => 150,  327 => 149,  321 => 146,  315 => 144,  312 => 143,  310 => 142,  307 => 141,  305 => 140,  301 => 138,  297 => 136,  288 => 134,  284 => 133,  281 => 132,  279 => 131,  274 => 128,  268 => 126,  260 => 124,  258 => 123,  255 => 122,  249 => 119,  246 => 118,  243 => 117,  241 => 116,  238 => 115,  233 => 113,  229 => 112,  224 => 111,  222 => 110,  219 => 109,  217 => 108,  214 => 107,  211 => 106,  208 => 105,  205 => 104,  202 => 103,  199 => 102,  196 => 101,  194 => 100,  191 => 99,  188 => 98,  186 => 97,  181 => 96,  178 => 95,  176 => 94,  173 => 93,  167 => 90,  161 => 89,  157 => 87,  153 => 85,  143 => 78,  134 => 72,  130 => 71,  121 => 66,  118 => 65,  116 => 64,  110 => 61,  106 => 60,  102 => 59,  95 => 58,  93 => 57,  89 => 55,  86 => 54,  84 => 53,  81 => 52,  78 => 51,  75 => 50,  72 => 49,  69 => 48,  66 => 47,  64 => 46,  62 => 45,  60 => 44,  58 => 43,  56 => 42,  54 => 41,  52 => 40,  50 => 39,  48 => 38,  46 => 37,  44 => 36,  42 => 35,  40 => 34,  37 => 33,);
+        return array (  433 => 192,  430 => 191,  425 => 188,  422 => 187,  416 => 184,  413 => 183,  410 => 182,  401 => 176,  397 => 175,  394 => 174,  390 => 172,  388 => 171,  386 => 170,  379 => 169,  375 => 168,  371 => 166,  368 => 165,  365 => 164,  362 => 163,  359 => 162,  356 => 161,  353 => 160,  350 => 159,  347 => 158,  344 => 157,  342 => 156,  339 => 155,  336 => 154,  334 => 153,  330 => 151,  328 => 150,  322 => 147,  316 => 145,  313 => 144,  311 => 143,  308 => 142,  306 => 141,  302 => 139,  298 => 137,  289 => 135,  285 => 134,  282 => 133,  280 => 132,  275 => 129,  269 => 127,  261 => 125,  259 => 124,  256 => 123,  250 => 120,  247 => 119,  244 => 118,  242 => 117,  239 => 116,  234 => 114,  230 => 113,  225 => 112,  223 => 111,  220 => 110,  218 => 109,  215 => 108,  212 => 107,  209 => 106,  206 => 105,  203 => 104,  200 => 103,  197 => 102,  195 => 101,  192 => 100,  189 => 99,  187 => 98,  182 => 97,  179 => 96,  177 => 95,  174 => 94,  168 => 91,  162 => 90,  158 => 88,  153 => 85,  143 => 78,  134 => 72,  130 => 71,  121 => 66,  118 => 65,  116 => 64,  110 => 61,  106 => 60,  102 => 59,  95 => 58,  93 => 57,  89 => 55,  86 => 54,  84 => 53,  81 => 52,  78 => 51,  75 => 50,  72 => 49,  69 => 48,  66 => 47,  64 => 46,  62 => 45,  60 => 44,  58 => 43,  56 => 42,  54 => 41,  52 => 40,  50 => 39,  48 => 38,  46 => 37,  44 => 36,  42 => 35,  40 => 34,  37 => 33,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/header.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\header.html.twig");
+        return new Source("", "components/form/header.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\header.html.twig");
     }
 }

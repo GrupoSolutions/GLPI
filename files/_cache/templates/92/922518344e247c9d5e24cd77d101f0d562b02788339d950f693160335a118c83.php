@@ -211,33 +211,31 @@ class __TwigTemplate_5bf97c25b508e186ba17abedfc93ff2f6b818ac93954e5b1600c34a5f73
             echo "
                <hr />
 
-               ";
-            // line 116
-            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook(twig_constant("Glpi\\Plugin\\Hooks::DISPLAY_LOGIN")), "html", null, true);
-            echo "
             </div>
          ";
         }
-        // line 119
+        // line 118
         echo "      </div>
    </form>
 ";
     }
 
-    // line 123
+    // line 122
     public function block_footer_block($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 124
-        echo "<a href=\"https://gruposolutions.com.br\"> © Grupo Solutions 2005 - 2022 </a>
+        // line 123
+        echo "<a href=\"https://gruposolutions.com.br\"> © Grupo Solutions 2005 - ";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
+        echo " </a>
 ";
     }
 
-    // line 127
+    // line 126
     public function block_javascript_block($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 128
+        // line 127
         echo "<script type=\"text/javascript\">
    \$(function () {
 \$('#login_name').focus();
@@ -258,11 +256,11 @@ class __TwigTemplate_5bf97c25b508e186ba17abedfc93ff2f6b818ac93954e5b1600c34a5f73
 
     public function getDebugInfo()
     {
-        return array (  241 => 128,  237 => 127,  232 => 124,  228 => 123,  222 => 119,  216 => 116,  211 => 113,  206 => 110,  204 => 109,  201 => 108,  195 => 105,  192 => 104,  190 => 103,  187 => 102,  185 => 101,  181 => 99,  175 => 96,  171 => 94,  169 => 93,  162 => 89,  157 => 86,  150 => 82,  144 => 81,  140 => 79,  137 => 78,  134 => 71,  128 => 68,  124 => 67,  121 => 66,  119 => 65,  113 => 62,  110 => 61,  103 => 57,  99 => 56,  96 => 55,  94 => 54,  89 => 52,  82 => 48,  78 => 47,  73 => 45,  65 => 40,  61 => 39,  57 => 38,  52 => 37,  48 => 36,  37 => 34,);
+        return array (  239 => 127,  235 => 126,  228 => 123,  224 => 122,  218 => 118,  211 => 113,  206 => 110,  204 => 109,  201 => 108,  195 => 105,  192 => 104,  190 => 103,  187 => 102,  185 => 101,  181 => 99,  175 => 96,  171 => 94,  169 => 93,  162 => 89,  157 => 86,  150 => 82,  144 => 81,  140 => 79,  137 => 78,  134 => 71,  128 => 68,  124 => 67,  121 => 66,  119 => 65,  113 => 62,  110 => 61,  103 => 57,  99 => 56,  96 => 55,  94 => 54,  89 => 52,  82 => 48,  78 => 47,  73 => 45,  65 => 40,  61 => 39,  57 => 38,  52 => 37,  48 => 36,  37 => 34,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "pages/login.html.twig", "C:\\wamp64\\www\\glpi\\templates\\pages\\login.html.twig");
+        return new Source("", "pages/login.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\pages\\login.html.twig");
     }
 }

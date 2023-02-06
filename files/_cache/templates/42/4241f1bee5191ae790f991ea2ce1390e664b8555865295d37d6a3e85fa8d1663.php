@@ -64,7 +64,7 @@ class __TwigTemplate_3095f370c4ea91d72b685c33274871d08ea8566ee02dc975e6083dbe9a4
         echo "
 <body class=\"welcome-anonymous\">
    <div class=\"page-anonymous\">
-      <div class=\"flex-fill d-flex flex-column justify-content-center\">
+      <div class=\"flex-fill d-flex flex-column justify-content-center py-4 mt-4\">
          ";
         // line 53
         $context["style"] = null;
@@ -88,7 +88,7 @@ class __TwigTemplate_3095f370c4ea91d72b685c33274871d08ea8566ee02dc975e6083dbe9a4
         }
         // line 60
         echo "
-         <div class=\"container-tight mt-5\" ";
+         <div class=\"container-tight py-6\" ";
         // line 61
         if ( !(null === ($context["style"] ?? null))) {
             echo "style=\"";
@@ -98,7 +98,7 @@ class __TwigTemplate_3095f370c4ea91d72b685c33274871d08ea8566ee02dc975e6083dbe9a4
         echo ">
             <div class=\"text-center\">
                <div class=\"col-md\">
-                  <span class=\"glpi-logo mb-2\" title=\"GLPI\"></span>
+                  <span class=\"glpi-logo mb-4\" title=\"GLPI\"></span>
                </div>
             </div>
             <div class=\"card card-md\">
@@ -139,7 +139,6 @@ class __TwigTemplate_3095f370c4ea91d72b685c33274871d08ea8566ee02dc975e6083dbe9a4
     public function block_footer_block($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo " ";
     }
 
     // line 80
@@ -160,11 +159,11 @@ class __TwigTemplate_3095f370c4ea91d72b685c33274871d08ea8566ee02dc975e6083dbe9a4
 
     public function getDebugInfo()
     {
-        return array (  146 => 80,  139 => 74,  133 => 69,  127 => 81,  125 => 80,  118 => 75,  116 => 74,  110 => 70,  108 => 69,  93 => 61,  90 => 60,  87 => 59,  84 => 58,  81 => 57,  78 => 56,  75 => 55,  72 => 54,  70 => 53,  63 => 49,  60 => 48,  56 => 43,  54 => 42,  51 => 40,  49 => 38,  47 => 36,  45 => 35,  43 => 34,  40 => 33,);
+        return array (  145 => 80,  139 => 74,  133 => 69,  127 => 81,  125 => 80,  118 => 75,  116 => 74,  110 => 70,  108 => 69,  93 => 61,  90 => 60,  87 => 59,  84 => 58,  81 => 57,  78 => 56,  75 => 55,  72 => 54,  70 => 53,  63 => 49,  60 => 48,  56 => 43,  54 => 42,  51 => 40,  49 => 38,  47 => 36,  45 => 35,  43 => 34,  40 => 33,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "layout/page_card_notlogged.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\page_card_notlogged.html.twig");
+        return new Source("", "layout/page_card_notlogged.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\page_card_notlogged.html.twig");
     }
 }

@@ -87,6 +87,6 @@ class __TwigTemplate_fb74a21652d67f49981f5c5d37d5aecd9154e013e8bf5ec91ca3f541781
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/page_header_empty.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\page_header_empty.html.twig");
+        return new Source("", "layout/parts/page_header_empty.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\page_header_empty.html.twig");
     }
 }

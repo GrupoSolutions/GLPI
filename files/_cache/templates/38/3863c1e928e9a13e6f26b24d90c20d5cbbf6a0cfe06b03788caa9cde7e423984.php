@@ -129,6 +129,6 @@ class __TwigTemplate_5f5bb22dcf358e9e2644f7ace2e372f1d533b303b2f85ccacc3cfb4c145
 
     public function getSourceContext()
     {
-        return new Source("", "components/user/picture.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\user\\picture.html.twig");
+        return new Source("", "components/user/picture.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\user\\picture.html.twig");
     }
 }

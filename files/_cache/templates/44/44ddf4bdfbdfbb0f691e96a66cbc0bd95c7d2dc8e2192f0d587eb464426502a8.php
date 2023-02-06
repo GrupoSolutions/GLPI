@@ -208,6 +208,6 @@ class __TwigTemplate_197c54e2245e6f0f89a9ca8aed8a3b320e7bb11cd751ac5cedc085e73d1
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/timeline/pending_reasons.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\timeline\\pending_reasons.html.twig");
+        return new Source("", "components/itilobject/timeline/pending_reasons.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\timeline\\pending_reasons.html.twig");
     }
 }

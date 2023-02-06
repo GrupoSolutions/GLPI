@@ -435,6 +435,6 @@ array_key_exists("entity_id", $context)) {
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/header_content.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\header_content.html.twig");
+        return new Source("", "components/form/header_content.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\header_content.html.twig");
     }
 }

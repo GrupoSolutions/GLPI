@@ -87,8 +87,8 @@ msgid "User / Group"
 msgstr "Usuário / Grupo"
 
 #: inc/financialreport.class.php:676
-msgid "Purchase Price"
-msgstr "Preço de compra"
+msgid "Purchase Price HT in"
+msgstr "Preço de compra HT em"
 
 #: inc/financialreport.class.php:708
 msgid "In stock / available"

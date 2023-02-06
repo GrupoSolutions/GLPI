@@ -302,6 +302,6 @@ class __TwigTemplate_8f1b090f1cd2f5d942b1a31a326d4bc85d7c54383eda09c91f5db58f819
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/saved_searches.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\saved_searches.html.twig");
+        return new Source("", "layout/parts/saved_searches.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\saved_searches.html.twig");
     }
 }

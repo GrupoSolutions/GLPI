@@ -420,6 +420,6 @@ class __TwigTemplate_2b2746c878df2bcef9802b9029bafdef4c7a0f345b9ab285d1cb44c0521
 
     public function getSourceContext()
     {
-        return new Source("", "components/search/controls.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\search\\controls.html.twig");
+        return new Source("", "components/search/controls.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\search\\controls.html.twig");
     }
 }

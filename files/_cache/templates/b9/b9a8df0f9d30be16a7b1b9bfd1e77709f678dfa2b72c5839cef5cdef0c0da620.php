@@ -414,6 +414,6 @@ class __TwigTemplate_d0d4ba6e609e2f494da09ccf3a77c3f045d68e71217940cb21f079fb4f4
 
     public function getSourceContext()
     {
-        return new Source("", "components/search/table.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\search\\table.html.twig");
+        return new Source("", "components/search/table.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\search\\table.html.twig");
     }
 }

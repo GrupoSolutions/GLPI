@@ -293,7 +293,7 @@ class __TwigTemplate_b072650cdd3044c6a2757746e4f2d748096a222aeb49f8648d269686472
             ";
         // line 182
         echo twig_call_macro($macros["fields"], "macro_dropdownField", ["ITILCategory", "itilcategories_id", (($__internal_compile_15 = twig_get_attribute($this->env, $this->source,         // line 185
-($context["item"] ?? null), "fields", [], "any", false, false, false, 185)) && is_array($__internal_compile_15) || $__internal_compile_15 instanceof ArrayAccess ? ($__internal_compile_15["itilcategories_id"] ?? null) : null), _n("Departamento", "Categories", 1),         // line 187
+($context["item"] ?? null), "fields", [], "any", false, false, false, 185)) && is_array($__internal_compile_15) || $__internal_compile_15 instanceof ArrayAccess ? ($__internal_compile_15["itilcategories_id"] ?? null) : null), _n("Category", "Categories", 1),         // line 187
 ($context["cat_params"] ?? null)], 182, $context, $this->getSourceContext());
         // line 188
         echo "
@@ -856,6 +856,6 @@ var reloadCategory = function() {
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/fields_panel.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\fields_panel.html.twig");
+        return new Source("", "components/itilobject/fields_panel.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\fields_panel.html.twig");
     }
 }

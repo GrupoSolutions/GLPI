@@ -52,7 +52,7 @@ class __TwigTemplate_2a5bebbf4a7cc4539cd03386f9064f7b extends Template
             }
             // line 39
             echo "
-   <button class=\"btn btn-icon btn-sm btn-ghost-secondary trigger-fuzzy justify-content-start mb-md-2 ps-1 menu\"
+   <button class=\"btn btn-icon btn-sm btn-ghost-secondary trigger-fuzzy justify-content-start mb-md-2 ps-1\"
            title=\"";
             // line 41
             echo twig_escape_filter($this->env, ($context["shortcut"] ?? null), "html", null, true);

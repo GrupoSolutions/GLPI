@@ -92,7 +92,7 @@ class __TwigTemplate_76a05270ab4ab80199163f9827557b45 extends Template
             echo "\" accesskey=\"1\" title=\"";
             echo twig_escape_filter($this->env, __("Home"), "html", null, true);
             echo "\"
-               class=\"navbar-brand navbar-brand-autodark solutions\">
+               class=\"navbar-brand navbar-brand-autodark\">
                <span class=\"glpi-logo\"></span>
             </a>
 
@@ -144,7 +144,7 @@ class __TwigTemplate_76a05270ab4ab80199163f9827557b45 extends Template
 
 
                   <p class=\"text-start\">
-                     <button class=\"btn btn-sm btn-ghost-secondary mb-2 reduce-menu d-none d-md-block menu\">
+                     <button class=\"btn btn-sm btn-ghost-secondary mb-2 reduce-menu d-none d-md-block\">
                         <span class=\"menu-label\">";
                 // line 84
                 echo twig_escape_filter($this->env, __("Collapse menu"), "html", null, true);
@@ -174,21 +174,29 @@ class __TwigTemplate_76a05270ab4ab80199163f9827557b45 extends Template
             echo twig_include($this->env, $context, "layout/parts/breadcrumbs.html.twig");
             echo "
 
-               <div class=\"ms-lg-auto d-none d-lg-block flex-grow-1 flex-lg-grow-0\">
-                  ";
-            // line 99
-            echo twig_include($this->env, $context, "layout/parts/global_search_form.html.twig");
+               ";
+            // line 98
+            if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("allow_search_global")) {
+                // line 99
+                echo "                  <div class=\"ms-lg-auto d-none d-lg-block flex-grow-1 flex-lg-grow-0\">
+                     ";
+                // line 100
+                echo twig_include($this->env, $context, "layout/parts/global_search_form.html.twig");
+                echo "
+                  </div>
+               ";
+            }
+            // line 103
             echo "
-               </div>
             ";
         } elseif (($this->extensions['Glpi\Application\View\Extension\SessionExtension']->userPref("page_layout") == "horizontal")) {
-            // line 102
+            // line 105
             echo "               <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbar-menu\">
                   <span class=\"navbar-toggler-icon\"></span>
                </button>
 
                <a href=\"";
-            // line 106
+            // line 109
             echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->indexPath(), "html", null, true);
             echo "\" accesskey=\"1\" title=\"";
             echo twig_escape_filter($this->env, __("Home"), "html", null, true);
@@ -199,30 +207,30 @@ class __TwigTemplate_76a05270ab4ab80199163f9827557b45 extends Template
 
                <div class=\"d-lg-none\">
                   ";
-            // line 112
+            // line 115
             echo twig_include($this->env, $context, "layout/parts/user_header.html.twig");
             echo "
                </div>
 
                <div class=\"collapse navbar-collapse justify-content-center\" id=\"navbar-menu\">
                   ";
-            // line 116
+            // line 119
             echo twig_include($this->env, $context, "layout/parts/menu.html.twig");
             echo "
                   <span class=\"ms-xl-2 d-inline-block mt-2 mt-xl-2\">
                      ";
-            // line 118
+            // line 121
             echo twig_include($this->env, $context, "layout/parts/goto_button.html.twig");
             echo "
                   </span>
                </div>
             ";
         }
-        // line 122
+        // line 125
         echo "
             <div class=\"ms-md-4 d-none d-lg-block\">
                ";
-        // line 124
+        // line 127
         echo twig_include($this->env, $context, "layout/parts/user_header.html.twig");
         echo "
             </div>
@@ -230,26 +238,33 @@ class __TwigTemplate_76a05270ab4ab80199163f9827557b45 extends Template
       </header>
 
       ";
-        // line 129
+        // line 132
         if (($this->extensions['Glpi\Application\View\Extension\SessionExtension']->userPref("page_layout") == "horizontal")) {
-            // line 130
+            // line 133
             echo "      <div class=\"navbar navbar-expand-md navbar-light secondary-bar sticky-md-top shadow-sm\">
          <div class=\"container-fluid justify-content-start\">
             ";
-            // line 132
+            // line 135
             echo twig_include($this->env, $context, "layout/parts/breadcrumbs.html.twig");
             echo "
-            <div class=\"ms-md-auto d-none d-md-block flex-grow-1 flex-md-grow-0\">
-               ";
-            // line 134
-            echo twig_include($this->env, $context, "layout/parts/global_search_form.html.twig");
-            echo "
-            </div>
-         </div>
+            ";
+            // line 136
+            if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("allow_search_global")) {
+                // line 137
+                echo "               <div class=\"ms-md-auto d-none d-md-block flex-grow-1 flex-md-grow-0\">
+                  ";
+                // line 138
+                echo twig_include($this->env, $context, "layout/parts/global_search_form.html.twig");
+                echo "
+               </div>
+            ";
+            }
+            // line 141
+            echo "         </div>
       </div>
       ";
         }
-        // line 139
+        // line 144
         echo "
       <div class=\"page-wrapper mb-0\">
          <div class=\"page-body container-fluid\">
@@ -269,7 +284,7 @@ class __TwigTemplate_76a05270ab4ab80199163f9827557b45 extends Template
 
     public function getDebugInfo()
     {
-        return array (  253 => 139,  245 => 134,  240 => 132,  236 => 130,  234 => 129,  226 => 124,  222 => 122,  215 => 118,  210 => 116,  203 => 112,  192 => 106,  186 => 102,  180 => 99,  173 => 96,  171 => 95,  166 => 93,  163 => 92,  158 => 89,  150 => 84,  142 => 79,  137 => 77,  133 => 75,  131 => 74,  128 => 73,  122 => 70,  119 => 69,  117 => 68,  115 => 67,  112 => 66,  106 => 63,  103 => 62,  101 => 61,  91 => 56,  83 => 50,  81 => 49,  74 => 45,  69 => 44,  63 => 41,  60 => 40,  58 => 39,  50 => 38,  47 => 37,  45 => 36,  42 => 35,  40 => 34,  37 => 33,);
+        return array (  268 => 144,  263 => 141,  257 => 138,  254 => 137,  252 => 136,  248 => 135,  244 => 133,  242 => 132,  234 => 127,  230 => 125,  223 => 121,  218 => 119,  211 => 115,  200 => 109,  194 => 105,  190 => 103,  184 => 100,  181 => 99,  179 => 98,  173 => 96,  171 => 95,  166 => 93,  163 => 92,  158 => 89,  150 => 84,  142 => 79,  137 => 77,  133 => 75,  131 => 74,  128 => 73,  122 => 70,  119 => 69,  117 => 68,  115 => 67,  112 => 66,  106 => 63,  103 => 62,  101 => 61,  91 => 56,  83 => 50,  81 => 49,  74 => 45,  69 => 44,  63 => 41,  60 => 40,  58 => 39,  50 => 38,  47 => 37,  45 => 36,  42 => 35,  40 => 34,  37 => 33,);
     }
 
     public function getSourceContext()

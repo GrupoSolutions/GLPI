@@ -97,69 +97,69 @@ class __TwigTemplate_0f0a22c8bda647bbae9e8dfc21393c94 extends Template
                   ";
         // line 59
         $this->displayBlock('form_fields', $context, $blocks);
-        // line 595
-        echo "               </div> ";
-        // line 596
-        echo "            </div> ";
         // line 597
-        echo "         </div> ";
+        echo "               </div> ";
         // line 598
+        echo "            </div> ";
+        // line 599
+        echo "         </div> ";
+        // line 600
         echo "      </div>
       ";
-        // line 599
+        // line 601
         if (($context["item_has_pictures"] ?? null)) {
-            // line 600
+            // line 602
             echo "         <div class=\"col-12 col-xxl-3 flex-column\">
             <div class=\"flex-row asset-pictures\">
                ";
-            // line 602
+            // line 604
             echo twig_include($this->env, $context, "components/form/pictures.html.twig", ["gallery_type" => ""]);
             echo "
             </div>
          </div>
       ";
         }
-        // line 606
+        // line 608
         echo "   </div> ";
-        // line 607
+        // line 609
         echo "
    ";
-        // line 608
+        // line 610
         if ((($context["item_type"] ?? null) == "Contract")) {
-            // line 609
+            // line 611
             echo "      ";
             echo twig_include($this->env, $context, "components/form/support_hours.html.twig");
             echo "
    ";
         }
-        // line 611
+        // line 613
         echo "   ";
         echo twig_include($this->env, $context, "components/form/buttons.html.twig");
         echo "
    ";
-        // line 612
+        // line 614
         if (( !array_key_exists("no_inventory_footer", $context) || (($context["no_inventory_footer"] ?? null) == false))) {
-            // line 613
+            // line 615
             echo "      ";
             echo twig_include($this->env, $context, "components/form/inventory_info.html.twig");
             echo "
    ";
         }
-        // line 615
+        // line 617
         echo "
    ";
-        // line 616
+        // line 618
         if (((null === (($__internal_compile_4 = ($context["params"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["formfooter"] ?? null) : null)) || ((($__internal_compile_5 = ($context["params"] ?? null)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["formfooter"] ?? null) : null) == true))) {
-            // line 617
+            // line 619
             echo "      <div class=\"card-footer mx-n2 mb-n2 mt-4\">
          ";
-            // line 618
+            // line 620
             echo twig_include($this->env, $context, "components/form/dates.html.twig");
             echo "
       </div>
    ";
         }
-        // line 621
+        // line 623
         echo "</div>
 ";
     }
@@ -175,7 +175,7 @@ class __TwigTemplate_0f0a22c8bda647bbae9e8dfc21393c94 extends Template
             echo "                        ";
             echo twig_call_macro($macros["fields"], "macro_autoNameField", ["name",             // line 63
 ($context["item"] ?? null), (((            // line 64
-($context["item_type"] ?? null) == "Contact")) ? (__("Surname")) : (__("Name"))),             // line 65
+($context["item_type"] ?? null) == "Contact")) ? (__("Patrimônio")) : (__("Patrimônio"))),             // line 65
 ($context["withtemplate"] ?? null), twig_array_merge(            // line 66
 ($context["field_options"] ?? null), ["required" => true])], 61, $context, $this->getSourceContext());
             // line 69
@@ -499,361 +499,361 @@ class __TwigTemplate_0f0a22c8bda647bbae9e8dfc21393c94 extends Template
             echo "                        ";
             echo twig_call_macro($macros["fields"], "macro_autoNameField", ["email",             // line 272
 ($context["item"] ?? null), _n("Email", "Emails", 1),             // line 274
-($context["withtemplate"] ?? null),             // line 275
-($context["field_options"] ?? null)], 270, $context, $this->getSourceContext());
-            // line 276
+($context["withtemplate"] ?? null), twig_array_merge(            // line 275
+($context["field_options"] ?? null), ["required" => true])], 270, $context, $this->getSourceContext());
+            // line 278
             echo "
                      ";
         }
-        // line 278
+        // line 280
         echo "
                      ";
-        // line 279
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "address"], "method", false, false, false, 279)) {
-            // line 280
+        // line 281
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "address"], "method", false, false, false, 281)) {
+            // line 282
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_textareaField", ["address", (($__internal_compile_19 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 280)) && is_array($__internal_compile_19) || $__internal_compile_19 instanceof ArrayAccess ? ($__internal_compile_19["address"] ?? null) : null), __("Address")], 280, $context, $this->getSourceContext());
+            echo twig_call_macro($macros["fields"], "macro_textareaField", ["address", (($__internal_compile_19 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 282)) && is_array($__internal_compile_19) || $__internal_compile_19 instanceof ArrayAccess ? ($__internal_compile_19["address"] ?? null) : null), __("Address")], 282, $context, $this->getSourceContext());
             echo "
                      ";
         }
-        // line 282
+        // line 284
         echo "
                      ";
-        // line 283
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "postalcode"], "method", false, false, false, 283)) {
-            // line 284
+        // line 285
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "postalcode"], "method", false, false, false, 285)) {
+            // line 286
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["postalcode",             // line 286
-($context["item"] ?? null), __("Postal code"),             // line 288
-($context["withtemplate"] ?? null),             // line 289
-($context["field_options"] ?? null)], 284, $context, $this->getSourceContext());
-            // line 290
+            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["postalcode",             // line 288
+($context["item"] ?? null), __("Postal code"),             // line 290
+($context["withtemplate"] ?? null),             // line 291
+($context["field_options"] ?? null)], 286, $context, $this->getSourceContext());
+            // line 292
             echo "
                      ";
         }
-        // line 292
+        // line 294
         echo "
                      ";
-        // line 293
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "town"], "method", false, false, false, 293)) {
-            // line 294
+        // line 295
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "town"], "method", false, false, false, 295)) {
+            // line 296
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["town",             // line 296
-($context["item"] ?? null), __("City"),             // line 298
-($context["withtemplate"] ?? null),             // line 299
-($context["field_options"] ?? null)], 294, $context, $this->getSourceContext());
-            // line 300
+            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["town",             // line 298
+($context["item"] ?? null), __("City"),             // line 300
+($context["withtemplate"] ?? null),             // line 301
+($context["field_options"] ?? null)], 296, $context, $this->getSourceContext());
+            // line 302
             echo "
                      ";
         }
-        // line 302
-        echo "
-                     ";
         // line 304
+        echo "
+                     ";
+        // line 306
         echo "                     ";
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "postcode"], "method", false, false, false, 304)) {
-            // line 305
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "postcode"], "method", false, false, false, 306)) {
+            // line 307
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["postcode",             // line 307
-($context["item"] ?? null), __("Postal code"),             // line 309
-($context["withtemplate"] ?? null),             // line 310
-($context["field_options"] ?? null)], 305, $context, $this->getSourceContext());
-            // line 311
+            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["postcode",             // line 309
+($context["item"] ?? null), __("Postal code"),             // line 311
+($context["withtemplate"] ?? null),             // line 312
+($context["field_options"] ?? null)], 307, $context, $this->getSourceContext());
+            // line 313
             echo "
                      ";
         }
-        // line 313
+        // line 315
         echo "
                      ";
-        // line 314
+        // line 316
         if (((($context["item_type"] ?? null) == "Supplier") || (($context["item_type"] ?? null) == "Contact"))) {
-            // line 315
+            // line 317
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["state",             // line 317
-($context["item"] ?? null), _x("location", "State"),             // line 319
-($context["withtemplate"] ?? null),             // line 320
-($context["field_options"] ?? null)], 315, $context, $this->getSourceContext());
-            // line 321
+            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["state",             // line 319
+($context["item"] ?? null), _x("location", "State"),             // line 321
+($context["withtemplate"] ?? null),             // line 322
+($context["field_options"] ?? null)], 317, $context, $this->getSourceContext());
+            // line 323
             echo "
                      ";
         }
-        // line 323
+        // line 325
         echo "
                      ";
-        // line 324
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "country"], "method", false, false, false, 324)) {
-            // line 325
+        // line 326
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "country"], "method", false, false, false, 326)) {
+            // line 327
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["country",             // line 327
-($context["item"] ?? null), __("Country"),             // line 329
-($context["withtemplate"] ?? null),             // line 330
-($context["field_options"] ?? null)], 325, $context, $this->getSourceContext());
-            // line 331
+            echo twig_call_macro($macros["fields"], "macro_autoNameField", ["country",             // line 329
+($context["item"] ?? null), __("Country"),             // line 331
+($context["withtemplate"] ?? null),             // line 332
+($context["field_options"] ?? null)], 327, $context, $this->getSourceContext());
+            // line 333
             echo "
                      ";
         }
-        // line 333
+        // line 335
         echo "
                      ";
-        // line 334
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "date_expiration"], "method", false, false, false, 334)) {
-            // line 335
+        // line 336
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "date_expiration"], "method", false, false, false, 336)) {
+            // line 337
             echo "                        ";
             if ((($context["item_type"] ?? null) == "Certificate")) {
-                // line 336
+                // line 338
                 echo "                           ";
-                echo twig_call_macro($macros["fields"], "macro_dateField", ["date_expiration", (($__internal_compile_20 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 336)) && is_array($__internal_compile_20) || $__internal_compile_20 instanceof ArrayAccess ? ($__internal_compile_20["date_expiration"] ?? null) : null), __("Expiration date"), ["helper" => __("Empty for infinite"), "checkIsExpired" => true]], 336, $context, $this->getSourceContext());
-                // line 339
+                echo twig_call_macro($macros["fields"], "macro_dateField", ["date_expiration", (($__internal_compile_20 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 338)) && is_array($__internal_compile_20) || $__internal_compile_20 instanceof ArrayAccess ? ($__internal_compile_20["date_expiration"] ?? null) : null), __("Expiration date"), ["helper" => __("Empty for infinite"), "checkIsExpired" => true]], 338, $context, $this->getSourceContext());
+                // line 341
                 echo "
                         ";
             } else {
-                // line 341
+                // line 343
                 echo "                           ";
-                echo twig_call_macro($macros["fields"], "macro_datetimeField", ["date_expiration", (($__internal_compile_21 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 341)) && is_array($__internal_compile_21) || $__internal_compile_21 instanceof ArrayAccess ? ($__internal_compile_21["date_expiration"] ?? null) : null), __("Expiration date"), ["helper" => __("Empty for infinite"), "checkIsExpired" => true]], 341, $context, $this->getSourceContext());
-                // line 344
+                echo twig_call_macro($macros["fields"], "macro_datetimeField", ["date_expiration", (($__internal_compile_21 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 343)) && is_array($__internal_compile_21) || $__internal_compile_21 instanceof ArrayAccess ? ($__internal_compile_21["date_expiration"] ?? null) : null), __("Expiration date"), ["helper" => __("Empty for infinite"), "checkIsExpired" => true]], 343, $context, $this->getSourceContext());
+                // line 346
                 echo "
                         ";
             }
-            // line 346
+            // line 348
             echo "                     ";
         }
-        // line 347
+        // line 349
         echo "
                      ";
-        // line 348
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "ref"], "method", false, false, false, 348)) {
-            // line 349
+        // line 350
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "ref"], "method", false, false, false, 350)) {
+            // line 351
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_textField", ["ref", (($__internal_compile_22 = twig_get_attribute($this->env, $this->source,             // line 351
-($context["item"] ?? null), "fields", [], "any", false, false, false, 351)) && is_array($__internal_compile_22) || $__internal_compile_22 instanceof ArrayAccess ? ($__internal_compile_22["ref"] ?? null) : null), __("Reference"),             // line 353
-($context["field_options"] ?? null)], 349, $context, $this->getSourceContext());
-            // line 354
+            echo twig_call_macro($macros["fields"], "macro_textField", ["ref", (($__internal_compile_22 = twig_get_attribute($this->env, $this->source,             // line 353
+($context["item"] ?? null), "fields", [], "any", false, false, false, 353)) && is_array($__internal_compile_22) || $__internal_compile_22 instanceof ArrayAccess ? ($__internal_compile_22["ref"] ?? null) : null), __("Reference"),             // line 355
+($context["field_options"] ?? null)], 351, $context, $this->getSourceContext());
+            // line 356
             echo "
                      ";
         }
-        // line 356
+        // line 358
         echo "
                     ";
-        // line 369
+        // line 371
         echo "
                      ";
-        // line 370
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "manufacturers_id"], "method", false, false, false, 370)) {
-            // line 371
+        // line 372
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "manufacturers_id"], "method", false, false, false, 372)) {
+            // line 373
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_dropdownField", ["Manufacturer", "manufacturers_id", (($__internal_compile_23 = twig_get_attribute($this->env, $this->source,             // line 374
-($context["item"] ?? null), "fields", [], "any", false, false, false, 374)) && is_array($__internal_compile_23) || $__internal_compile_23 instanceof ArrayAccess ? ($__internal_compile_23["manufacturers_id"] ?? null) : null), (((is_string($__internal_compile_24 =             // line 375
-($context["item_type"] ?? null)) && is_string($__internal_compile_25 = "Software") && ('' === $__internal_compile_25 || 0 === strpos($__internal_compile_24, $__internal_compile_25)))) ? (__("Publisher")) : ($this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("Manufacturer"))),             // line 376
-($context["field_options"] ?? null)], 371, $context, $this->getSourceContext());
-            // line 377
+            echo twig_call_macro($macros["fields"], "macro_dropdownField", ["Manufacturer", "manufacturers_id", (($__internal_compile_23 = twig_get_attribute($this->env, $this->source,             // line 376
+($context["item"] ?? null), "fields", [], "any", false, false, false, 376)) && is_array($__internal_compile_23) || $__internal_compile_23 instanceof ArrayAccess ? ($__internal_compile_23["manufacturers_id"] ?? null) : null), (((is_string($__internal_compile_24 =             // line 377
+($context["item_type"] ?? null)) && is_string($__internal_compile_25 = "Software") && ('' === $__internal_compile_25 || 0 === strpos($__internal_compile_24, $__internal_compile_25)))) ? (__("Publisher")) : ($this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("Manufacturer"))),             // line 378
+($context["field_options"] ?? null)], 373, $context, $this->getSourceContext());
+            // line 379
             echo "
                      ";
         }
-        // line 379
+        // line 381
         echo "
                      ";
-        // line 392
-        echo "
-                     ";
-        // line 393
-        $context["model_itemtype"] = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getModelClass", [], "method", false, false, false, 393);
         // line 394
-        echo "                     ";
-        $context["model_fk"] = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getModelForeignKeyField", [], "method", false, false, false, 394);
+        echo "
+                     ";
         // line 395
+        $context["model_itemtype"] = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getModelClass", [], "method", false, false, false, 395);
+        // line 396
         echo "                     ";
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => ($context["model_fk"] ?? null)], "method", false, false, false, 395)) {
-            // line 396
+        $context["model_fk"] = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getModelForeignKeyField", [], "method", false, false, false, 396);
+        // line 397
+        echo "                     ";
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => ($context["model_fk"] ?? null)], "method", false, false, false, 397)) {
+            // line 398
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_dropdownField", [            // line 397
-($context["model_itemtype"] ?? null),             // line 398
-($context["model_fk"] ?? null), (($__internal_compile_26 = twig_get_attribute($this->env, $this->source,             // line 399
-($context["item"] ?? null), "fields", [], "any", false, false, false, 399)) && is_array($__internal_compile_26) || $__internal_compile_26 instanceof ArrayAccess ? ($__internal_compile_26[($context["model_fk"] ?? null)] ?? null) : null), _n("Model", "Models", 1), twig_array_merge(            // line 401
-($context["field_options"] ?? null), ["required" => true])], 396, $context, $this->getSourceContext());
-            // line 404
+            echo twig_call_macro($macros["fields"], "macro_dropdownField", [            // line 399
+($context["model_itemtype"] ?? null),             // line 400
+($context["model_fk"] ?? null), (($__internal_compile_26 = twig_get_attribute($this->env, $this->source,             // line 401
+($context["item"] ?? null), "fields", [], "any", false, false, false, 401)) && is_array($__internal_compile_26) || $__internal_compile_26 instanceof ArrayAccess ? ($__internal_compile_26[($context["model_fk"] ?? null)] ?? null) : null), _n("Model", "Models", 1), twig_array_merge(            // line 403
+($context["field_options"] ?? null), ["required" => true])], 398, $context, $this->getSourceContext());
+            // line 406
             echo "
                      ";
         }
-        // line 406
+        // line 408
         echo "
                      ";
-        // line 416
+        // line 418
         echo "
                      ";
-        // line 417
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "serial"], "method", false, false, false, 417)) {
-            // line 418
+        // line 419
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "serial"], "method", false, false, false, 419)) {
+            // line 420
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_textField", ["serial", (($__internal_compile_27 = twig_get_attribute($this->env, $this->source,             // line 420
-($context["item"] ?? null), "fields", [], "any", false, false, false, 420)) && is_array($__internal_compile_27) || $__internal_compile_27 instanceof ArrayAccess ? ($__internal_compile_27["serial"] ?? null) : null), __("Serial number"), twig_array_merge(            // line 422
-($context["field_options"] ?? null), ["required" => true])], 418, $context, $this->getSourceContext());
-            // line 425
+            echo twig_call_macro($macros["fields"], "macro_textField", ["serial", (($__internal_compile_27 = twig_get_attribute($this->env, $this->source,             // line 422
+($context["item"] ?? null), "fields", [], "any", false, false, false, 422)) && is_array($__internal_compile_27) || $__internal_compile_27 instanceof ArrayAccess ? ($__internal_compile_27["serial"] ?? null) : null), __("Serial number"), twig_array_merge(            // line 424
+($context["field_options"] ?? null), ["required" => true])], 420, $context, $this->getSourceContext());
+            // line 427
             echo "
                      ";
         }
-        // line 427
+        // line 429
         echo "
                      ";
-        // line 437
+        // line 439
         echo "
                      ";
-        // line 447
+        // line 449
         echo "
                    
 
                      ";
-        // line 450
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "users_id"], "method", false, false, false, 450)) {
-            // line 451
+        // line 452
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "users_id"], "method", false, false, false, 452)) {
+            // line 453
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_dropdownField", ["User", "users_id", (($__internal_compile_28 = twig_get_attribute($this->env, $this->source,             // line 454
-($context["item"] ?? null), "fields", [], "any", false, false, false, 454)) && is_array($__internal_compile_28) || $__internal_compile_28 instanceof ArrayAccess ? ($__internal_compile_28["users_id"] ?? null) : null), $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("User"), twig_array_merge(            // line 456
-($context["field_options"] ?? null), ["entity" => (($__internal_compile_29 = twig_get_attribute($this->env, $this->source,             // line 457
-($context["item"] ?? null), "fields", [], "any", false, false, false, 457)) && is_array($__internal_compile_29) || $__internal_compile_29 instanceof ArrayAccess ? ($__internal_compile_29["entities_id"] ?? null) : null), "right" => "all"])], 451, $context, $this->getSourceContext());
-            // line 460
+            echo twig_call_macro($macros["fields"], "macro_dropdownField", ["User", "users_id", (($__internal_compile_28 = twig_get_attribute($this->env, $this->source,             // line 456
+($context["item"] ?? null), "fields", [], "any", false, false, false, 456)) && is_array($__internal_compile_28) || $__internal_compile_28 instanceof ArrayAccess ? ($__internal_compile_28["users_id"] ?? null) : null), $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("User"), twig_array_merge(            // line 458
+($context["field_options"] ?? null), ["entity" => (($__internal_compile_29 = twig_get_attribute($this->env, $this->source,             // line 459
+($context["item"] ?? null), "fields", [], "any", false, false, false, 459)) && is_array($__internal_compile_29) || $__internal_compile_29 instanceof ArrayAccess ? ($__internal_compile_29["entities_id"] ?? null) : null), "right" => "all"])], 453, $context, $this->getSourceContext());
+            // line 462
             echo "
                      ";
         }
-        // line 462
+        // line 464
         echo "
                      
 
                      ";
-        // line 465
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "size"], "method", false, false, false, 465)) {
-            // line 466
+        // line 467
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "size"], "method", false, false, false, 467)) {
+            // line 468
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_numberField", ["size", (($__internal_compile_30 = twig_get_attribute($this->env, $this->source,             // line 468
-($context["item"] ?? null), "fields", [], "any", false, false, false, 468)) && is_array($__internal_compile_30) || $__internal_compile_30 instanceof ArrayAccess ? ($__internal_compile_30["size"] ?? null) : null), __("Size"), twig_array_merge(            // line 470
-($context["field_options"] ?? null), ["min" => 0, "step" => 0.01])], 466, $context, $this->getSourceContext());
-            // line 474
+            echo twig_call_macro($macros["fields"], "macro_numberField", ["size", (($__internal_compile_30 = twig_get_attribute($this->env, $this->source,             // line 470
+($context["item"] ?? null), "fields", [], "any", false, false, false, 470)) && is_array($__internal_compile_30) || $__internal_compile_30 instanceof ArrayAccess ? ($__internal_compile_30["size"] ?? null) : null), __("Size"), twig_array_merge(            // line 472
+($context["field_options"] ?? null), ["min" => 0, "step" => 1])], 468, $context, $this->getSourceContext());
+            // line 476
             echo "
                      ";
         }
-        // line 476
+        // line 478
         echo "
                      ";
-        // line 486
+        // line 488
         echo "
                      ";
-        // line 499
+        // line 501
         echo "
                      ";
-        // line 508
+        // line 510
         echo "
                      ";
-        // line 518
+        // line 520
         echo "
                      ";
-        // line 519
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "comment"], "method", false, false, false, 519)) {
-            // line 520
+        // line 521
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "comment"], "method", false, false, false, 521)) {
+            // line 522
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_textareaField", ["comment", (($__internal_compile_31 = twig_get_attribute($this->env, $this->source,             // line 522
-($context["item"] ?? null), "fields", [], "any", false, false, false, 522)) && is_array($__internal_compile_31) || $__internal_compile_31 instanceof ArrayAccess ? ($__internal_compile_31["comment"] ?? null) : null), _n("Comment", "Comments", Session::getPluralNumber()),             // line 524
-($context["field_options"] ?? null)], 520, $context, $this->getSourceContext());
-            // line 525
+            echo twig_call_macro($macros["fields"], "macro_textareaField", ["comment", (($__internal_compile_31 = twig_get_attribute($this->env, $this->source,             // line 524
+($context["item"] ?? null), "fields", [], "any", false, false, false, 524)) && is_array($__internal_compile_31) || $__internal_compile_31 instanceof ArrayAccess ? ($__internal_compile_31["comment"] ?? null) : null), _n("Comment", "Comments", Session::getPluralNumber()),             // line 526
+($context["field_options"] ?? null)], 522, $context, $this->getSourceContext());
+            // line 527
             echo "
                      ";
         }
-        // line 527
+        // line 529
         echo "
 
                      ";
-        // line 529
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "alarm_threshold"], "method", false, false, false, 529)) {
-            // line 530
+        // line 531
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "alarm_threshold"], "method", false, false, false, 531)) {
+            // line 532
             echo "                        ";
             ob_start(function () { return ''; });
-            // line 531
+            // line 533
             echo "                           ";
-            $this->extensions['Glpi\Application\View\Extension\PhpExtension']->call("Dropdown::showNumber", [0 => "alarm_threshold", 1 => twig_array_merge(["value" => (($__internal_compile_32 = twig_get_attribute($this->env, $this->source,             // line 532
-($context["item"] ?? null), "fields", [], "any", false, false, false, 532)) && is_array($__internal_compile_32) || $__internal_compile_32 instanceof ArrayAccess ? ($__internal_compile_32["alarm_threshold"] ?? null) : null), "rand" =>             // line 533
-($context["rand"] ?? null), "width" => "100%", "min" => 0, "max" => 100, "step" => 1, "toadd" => ["-1" => __("Never")]],             // line 539
+            $this->extensions['Glpi\Application\View\Extension\PhpExtension']->call("Dropdown::showNumber", [0 => "alarm_threshold", 1 => twig_array_merge(["value" => (($__internal_compile_32 = twig_get_attribute($this->env, $this->source,             // line 534
+($context["item"] ?? null), "fields", [], "any", false, false, false, 534)) && is_array($__internal_compile_32) || $__internal_compile_32 instanceof ArrayAccess ? ($__internal_compile_32["alarm_threshold"] ?? null) : null), "rand" =>             // line 535
+($context["rand"] ?? null), "width" => "100%", "min" => 0, "max" => 100, "step" => 1, "toadd" => ["-1" => __("Never")]],             // line 541
 ($context["params"] ?? null))]);
-            // line 540
+            // line 542
             echo "                        ";
             $context["dd_alarm_treshold"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-            // line 541
+            // line 543
             echo "                        ";
             ob_start(function () { return ''; });
-            // line 542
+            // line 544
             echo "                           <span class=\"text-muted\">
                               ";
-            // line 543
-            $this->extensions['Glpi\Application\View\Extension\PhpExtension']->call("Alert::displayLastAlert", [0 => ($context["item_type"] ?? null), 1 => (($__internal_compile_33 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 543)) && is_array($__internal_compile_33) || $__internal_compile_33 instanceof ArrayAccess ? ($__internal_compile_33["id"] ?? null) : null)]);
-            // line 544
+            // line 545
+            $this->extensions['Glpi\Application\View\Extension\PhpExtension']->call("Alert::displayLastAlert", [0 => ($context["item_type"] ?? null), 1 => (($__internal_compile_33 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 545)) && is_array($__internal_compile_33) || $__internal_compile_33 instanceof ArrayAccess ? ($__internal_compile_33["id"] ?? null) : null)]);
+            // line 546
             echo "                           </span>
                         ";
             $context["last_alert_html"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-            // line 546
+            // line 548
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_htmlField", ["alarm_threshold",             // line 548
-($context["dd_alarm_treshold"] ?? null), __("Alert threshold"), twig_array_merge(            // line 550
-($context["field_options"] ?? null), ["add_field_html" =>             // line 551
-($context["last_alert_html"] ?? null)])], 546, $context, $this->getSourceContext());
-            // line 553
+            echo twig_call_macro($macros["fields"], "macro_htmlField", ["alarm_threshold",             // line 550
+($context["dd_alarm_treshold"] ?? null), __("Alert threshold"), twig_array_merge(            // line 552
+($context["field_options"] ?? null), ["add_field_html" =>             // line 553
+($context["last_alert_html"] ?? null)])], 548, $context, $this->getSourceContext());
+            // line 555
             echo "
                      ";
         }
-        // line 555
+        // line 557
         echo "
 
                      ";
-        // line 557
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "begin_date"], "method", false, false, false, 557)) {
-            // line 558
+        // line 559
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "begin_date"], "method", false, false, false, 559)) {
+            // line 560
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_dateField", ["begin_date", (($__internal_compile_34 = twig_get_attribute($this->env, $this->source,             // line 560
-($context["item"] ?? null), "fields", [], "any", false, false, false, 560)) && is_array($__internal_compile_34) || $__internal_compile_34 instanceof ArrayAccess ? ($__internal_compile_34["begin_date"] ?? null) : null), __("Start date"),             // line 562
-($context["field_options"] ?? null)], 558, $context, $this->getSourceContext());
-            // line 563
+            echo twig_call_macro($macros["fields"], "macro_dateField", ["begin_date", (($__internal_compile_34 = twig_get_attribute($this->env, $this->source,             // line 562
+($context["item"] ?? null), "fields", [], "any", false, false, false, 562)) && is_array($__internal_compile_34) || $__internal_compile_34 instanceof ArrayAccess ? ($__internal_compile_34["begin_date"] ?? null) : null), __("Start date"),             // line 564
+($context["field_options"] ?? null)], 560, $context, $this->getSourceContext());
+            // line 565
             echo "
                      ";
         }
-        // line 565
+        // line 567
         echo "
                      ";
-        // line 575
+        // line 577
         echo "
                      ";
-        // line 576
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "pictures"], "method", false, false, false, 576)) {
-            // line 577
+        // line 578
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "pictures"], "method", false, false, false, 578)) {
+            // line 579
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_fileField", ["pictures", null, _n("Picture", "Pictures", Session::getPluralNumber()), ["onlyimages" => true, "multiple" => true]], 577, $context, $this->getSourceContext());
-            // line 580
+            echo twig_call_macro($macros["fields"], "macro_fileField", ["pictures", null, _n("Picture", "Pictures", Session::getPluralNumber()), ["onlyimages" => true, "multiple" => true]], 579, $context, $this->getSourceContext());
+            // line 582
             echo "
                      ";
         }
-        // line 582
+        // line 584
         echo "
                      ";
-        // line 583
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "is_active"], "method", false, false, false, 583)) {
-            // line 584
+        // line 585
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "is_active"], "method", false, false, false, 585)) {
+            // line 586
             echo "                        ";
-            echo twig_call_macro($macros["fields"], "macro_dropdownYesNo", ["is_active", (($__internal_compile_35 = twig_get_attribute($this->env, $this->source,             // line 586
-($context["item"] ?? null), "fields", [], "any", false, false, false, 586)) && is_array($__internal_compile_35) || $__internal_compile_35 instanceof ArrayAccess ? ($__internal_compile_35["is_active"] ?? null) : null), __("Active"),             // line 588
-($context["field_options"] ?? null)], 584, $context, $this->getSourceContext());
-            // line 589
+            echo twig_call_macro($macros["fields"], "macro_dropdownYesNo", ["is_active", (($__internal_compile_35 = twig_get_attribute($this->env, $this->source,             // line 588
+($context["item"] ?? null), "fields", [], "any", false, false, false, 588)) && is_array($__internal_compile_35) || $__internal_compile_35 instanceof ArrayAccess ? ($__internal_compile_35["is_active"] ?? null) : null), __("Active"),             // line 590
+($context["field_options"] ?? null)], 586, $context, $this->getSourceContext());
+            // line 591
             echo "
                      ";
         }
-        // line 591
+        // line 593
         echo "
                      ";
-        // line 592
-        $this->displayBlock('more_fields', $context, $blocks);
         // line 594
+        $this->displayBlock('more_fields', $context, $blocks);
+        // line 596
         echo "                  ";
     }
 
-    // line 592
+    // line 594
     public function block_more_fields($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 593
+        // line 595
         echo "                     ";
     }
 
@@ -869,7 +869,7 @@ class __TwigTemplate_0f0a22c8bda647bbae9e8dfc21393c94 extends Template
 
     public function getDebugInfo()
     {
-        return array (  857 => 593,  853 => 592,  849 => 594,  847 => 592,  844 => 591,  840 => 589,  838 => 588,  837 => 586,  835 => 584,  833 => 583,  830 => 582,  826 => 580,  823 => 577,  821 => 576,  818 => 575,  815 => 565,  811 => 563,  809 => 562,  808 => 560,  806 => 558,  804 => 557,  800 => 555,  796 => 553,  794 => 551,  793 => 550,  792 => 548,  790 => 546,  786 => 544,  784 => 543,  781 => 542,  778 => 541,  775 => 540,  773 => 539,  772 => 533,  771 => 532,  769 => 531,  766 => 530,  764 => 529,  760 => 527,  756 => 525,  754 => 524,  753 => 522,  751 => 520,  749 => 519,  746 => 518,  743 => 508,  740 => 499,  737 => 486,  734 => 476,  730 => 474,  728 => 470,  727 => 468,  725 => 466,  723 => 465,  718 => 462,  714 => 460,  712 => 457,  711 => 456,  710 => 454,  708 => 451,  706 => 450,  701 => 447,  698 => 437,  695 => 427,  691 => 425,  689 => 422,  688 => 420,  686 => 418,  684 => 417,  681 => 416,  678 => 406,  674 => 404,  672 => 401,  671 => 399,  670 => 398,  669 => 397,  667 => 396,  664 => 395,  661 => 394,  659 => 393,  656 => 392,  653 => 379,  649 => 377,  647 => 376,  646 => 375,  645 => 374,  643 => 371,  641 => 370,  638 => 369,  635 => 356,  631 => 354,  629 => 353,  628 => 351,  626 => 349,  624 => 348,  621 => 347,  618 => 346,  614 => 344,  611 => 341,  607 => 339,  604 => 336,  601 => 335,  599 => 334,  596 => 333,  592 => 331,  590 => 330,  589 => 329,  588 => 327,  586 => 325,  584 => 324,  581 => 323,  577 => 321,  575 => 320,  574 => 319,  573 => 317,  571 => 315,  569 => 314,  566 => 313,  562 => 311,  560 => 310,  559 => 309,  558 => 307,  556 => 305,  553 => 304,  550 => 302,  546 => 300,  544 => 299,  543 => 298,  542 => 296,  540 => 294,  538 => 293,  535 => 292,  531 => 290,  529 => 289,  528 => 288,  527 => 286,  525 => 284,  523 => 283,  520 => 282,  514 => 280,  512 => 279,  509 => 278,  505 => 276,  503 => 275,  502 => 274,  501 => 272,  499 => 270,  497 => 269,  494 => 268,  490 => 266,  488 => 265,  487 => 264,  486 => 262,  484 => 260,  482 => 259,  479 => 258,  475 => 256,  473 => 255,  472 => 254,  471 => 252,  469 => 250,  467 => 249,  464 => 248,  460 => 246,  458 => 245,  457 => 244,  456 => 242,  454 => 240,  452 => 239,  449 => 238,  445 => 236,  443 => 235,  442 => 234,  441 => 232,  439 => 230,  437 => 229,  434 => 228,  430 => 226,  428 => 225,  427 => 224,  426 => 222,  424 => 220,  422 => 219,  419 => 218,  415 => 216,  413 => 215,  412 => 214,  411 => 212,  409 => 210,  407 => 209,  404 => 208,  401 => 198,  397 => 196,  395 => 194,  394 => 193,  393 => 191,  391 => 188,  389 => 187,  386 => 186,  382 => 184,  380 => 183,  379 => 181,  378 => 180,  377 => 179,  375 => 178,  372 => 177,  369 => 176,  367 => 175,  364 => 174,  358 => 172,  356 => 171,  353 => 170,  349 => 168,  347 => 167,  346 => 162,  344 => 160,  342 => 159,  339 => 158,  335 => 156,  333 => 154,  332 => 153,  331 => 151,  329 => 148,  327 => 147,  324 => 146,  321 => 145,  318 => 144,  314 => 142,  312 => 140,  311 => 138,  308 => 137,  304 => 135,  295 => 133,  291 => 132,  288 => 131,  285 => 130,  282 => 129,  280 => 128,  277 => 127,  273 => 125,  271 => 124,  270 => 122,  268 => 120,  266 => 119,  264 => 118,  261 => 117,  257 => 115,  255 => 113,  254 => 112,  253 => 110,  252 => 109,  251 => 108,  249 => 107,  246 => 106,  244 => 105,  241 => 104,  237 => 102,  235 => 100,  234 => 99,  233 => 98,  232 => 96,  230 => 93,  227 => 92,  225 => 91,  222 => 90,  219 => 89,  216 => 88,  212 => 86,  209 => 84,  206 => 83,  204 => 82,  201 => 81,  197 => 79,  195 => 78,  194 => 77,  193 => 75,  191 => 73,  189 => 72,  186 => 71,  182 => 69,  180 => 66,  179 => 65,  178 => 64,  177 => 63,  175 => 61,  172 => 60,  168 => 59,  163 => 621,  157 => 618,  154 => 617,  152 => 616,  149 => 615,  143 => 613,  141 => 612,  136 => 611,  130 => 609,  128 => 608,  125 => 607,  123 => 606,  116 => 602,  112 => 600,  110 => 599,  107 => 598,  105 => 597,  103 => 596,  101 => 595,  99 => 59,  92 => 55,  88 => 53,  86 => 51,  84 => 50,  81 => 49,  78 => 48,  75 => 47,  72 => 46,  69 => 45,  67 => 44,  62 => 42,  58 => 41,  55 => 40,  51 => 38,  49 => 37,  47 => 36,  44 => 35,  42 => 34,  39 => 33,);
+        return array (  857 => 595,  853 => 594,  849 => 596,  847 => 594,  844 => 593,  840 => 591,  838 => 590,  837 => 588,  835 => 586,  833 => 585,  830 => 584,  826 => 582,  823 => 579,  821 => 578,  818 => 577,  815 => 567,  811 => 565,  809 => 564,  808 => 562,  806 => 560,  804 => 559,  800 => 557,  796 => 555,  794 => 553,  793 => 552,  792 => 550,  790 => 548,  786 => 546,  784 => 545,  781 => 544,  778 => 543,  775 => 542,  773 => 541,  772 => 535,  771 => 534,  769 => 533,  766 => 532,  764 => 531,  760 => 529,  756 => 527,  754 => 526,  753 => 524,  751 => 522,  749 => 521,  746 => 520,  743 => 510,  740 => 501,  737 => 488,  734 => 478,  730 => 476,  728 => 472,  727 => 470,  725 => 468,  723 => 467,  718 => 464,  714 => 462,  712 => 459,  711 => 458,  710 => 456,  708 => 453,  706 => 452,  701 => 449,  698 => 439,  695 => 429,  691 => 427,  689 => 424,  688 => 422,  686 => 420,  684 => 419,  681 => 418,  678 => 408,  674 => 406,  672 => 403,  671 => 401,  670 => 400,  669 => 399,  667 => 398,  664 => 397,  661 => 396,  659 => 395,  656 => 394,  653 => 381,  649 => 379,  647 => 378,  646 => 377,  645 => 376,  643 => 373,  641 => 372,  638 => 371,  635 => 358,  631 => 356,  629 => 355,  628 => 353,  626 => 351,  624 => 350,  621 => 349,  618 => 348,  614 => 346,  611 => 343,  607 => 341,  604 => 338,  601 => 337,  599 => 336,  596 => 335,  592 => 333,  590 => 332,  589 => 331,  588 => 329,  586 => 327,  584 => 326,  581 => 325,  577 => 323,  575 => 322,  574 => 321,  573 => 319,  571 => 317,  569 => 316,  566 => 315,  562 => 313,  560 => 312,  559 => 311,  558 => 309,  556 => 307,  553 => 306,  550 => 304,  546 => 302,  544 => 301,  543 => 300,  542 => 298,  540 => 296,  538 => 295,  535 => 294,  531 => 292,  529 => 291,  528 => 290,  527 => 288,  525 => 286,  523 => 285,  520 => 284,  514 => 282,  512 => 281,  509 => 280,  505 => 278,  503 => 275,  502 => 274,  501 => 272,  499 => 270,  497 => 269,  494 => 268,  490 => 266,  488 => 265,  487 => 264,  486 => 262,  484 => 260,  482 => 259,  479 => 258,  475 => 256,  473 => 255,  472 => 254,  471 => 252,  469 => 250,  467 => 249,  464 => 248,  460 => 246,  458 => 245,  457 => 244,  456 => 242,  454 => 240,  452 => 239,  449 => 238,  445 => 236,  443 => 235,  442 => 234,  441 => 232,  439 => 230,  437 => 229,  434 => 228,  430 => 226,  428 => 225,  427 => 224,  426 => 222,  424 => 220,  422 => 219,  419 => 218,  415 => 216,  413 => 215,  412 => 214,  411 => 212,  409 => 210,  407 => 209,  404 => 208,  401 => 198,  397 => 196,  395 => 194,  394 => 193,  393 => 191,  391 => 188,  389 => 187,  386 => 186,  382 => 184,  380 => 183,  379 => 181,  378 => 180,  377 => 179,  375 => 178,  372 => 177,  369 => 176,  367 => 175,  364 => 174,  358 => 172,  356 => 171,  353 => 170,  349 => 168,  347 => 167,  346 => 162,  344 => 160,  342 => 159,  339 => 158,  335 => 156,  333 => 154,  332 => 153,  331 => 151,  329 => 148,  327 => 147,  324 => 146,  321 => 145,  318 => 144,  314 => 142,  312 => 140,  311 => 138,  308 => 137,  304 => 135,  295 => 133,  291 => 132,  288 => 131,  285 => 130,  282 => 129,  280 => 128,  277 => 127,  273 => 125,  271 => 124,  270 => 122,  268 => 120,  266 => 119,  264 => 118,  261 => 117,  257 => 115,  255 => 113,  254 => 112,  253 => 110,  252 => 109,  251 => 108,  249 => 107,  246 => 106,  244 => 105,  241 => 104,  237 => 102,  235 => 100,  234 => 99,  233 => 98,  232 => 96,  230 => 93,  227 => 92,  225 => 91,  222 => 90,  219 => 89,  216 => 88,  212 => 86,  209 => 84,  206 => 83,  204 => 82,  201 => 81,  197 => 79,  195 => 78,  194 => 77,  193 => 75,  191 => 73,  189 => 72,  186 => 71,  182 => 69,  180 => 66,  179 => 65,  178 => 64,  177 => 63,  175 => 61,  172 => 60,  168 => 59,  163 => 623,  157 => 620,  154 => 619,  152 => 618,  149 => 617,  143 => 615,  141 => 614,  136 => 613,  130 => 611,  128 => 610,  125 => 609,  123 => 608,  116 => 604,  112 => 602,  110 => 601,  107 => 600,  105 => 599,  103 => 598,  101 => 597,  99 => 59,  92 => 55,  88 => 53,  86 => 51,  84 => 50,  81 => 49,  78 => 48,  75 => 47,  72 => 46,  69 => 45,  67 => 44,  62 => 42,  58 => 41,  55 => 40,  51 => 38,  49 => 37,  47 => 36,  44 => 35,  42 => 34,  39 => 33,);
     }
 
     public function getSourceContext()

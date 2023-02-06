@@ -371,6 +371,6 @@ $context["la_field"], "helper", [], "any", false, false, false, 225), "mb" => "m
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/service_levels.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\service_levels.html.twig");
+        return new Source("", "components/itilobject/service_levels.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\service_levels.html.twig");
     }
 }

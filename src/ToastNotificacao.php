@@ -1,5 +1,5 @@
 <?php
-$sqlcon = mysqli_connect('localhost', 'glpi', '62h$W%6vSo5V', 'glpi', '3306'); // ALTERAR AO SUBIR PARA PROD
+$sqlcon = mysqli_connect('localhost', 'root', '', 'base_104', '3306'); // ALTERAR AO SUBIR PARA PROD
 
 $GLOBALS['sqlcon'] = $sqlcon;
 $ticket = [];
@@ -103,6 +103,7 @@ function buscarRespostaChamados($user_id){
     }
     return $unresolvedTickets;
 }
+
 
 
 ?>

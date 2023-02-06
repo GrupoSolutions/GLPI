@@ -253,6 +253,6 @@ class __TwigTemplate_387623bba688fe3e00fe7d13a3983d7c6d17edd021427e8e888572394b2
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/modals_macros.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\modals_macros.html.twig");
+        return new Source("", "components/form/modals_macros.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\modals_macros.html.twig");
     }
 }

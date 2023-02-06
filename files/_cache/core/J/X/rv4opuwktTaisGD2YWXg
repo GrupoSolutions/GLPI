@@ -1,35 +1,35 @@
-1674851982
+1675370151
 3887baf8b478330e42f365da1f7703738b3f48d7
-a:1:{s:62:"bn_count_tickets_assigned_3bd92137-ce5c-4f8c-afc4-7a6fe773fdc5";s:1279:"      <style>
-         #bn_1991784561 {
+a:1:{s:62:"bn_count_tickets_assigned_3bd92137-ce5c-4f8c-afc4-7a6fe773fdc5";s:1282:"      <style>
+         #bn_635377295 {
             background-color: #f6b26b;
             color: #8c4c09;
          }
 
-         #bn_1991784561:hover {
+         #bn_635377295:hover {
             background-color: #f28c23;
             border: 1px solid #bd660b;
          }
 
-         .theme-dark #bn_1991784561 {
+         .theme-dark #bn_635377295 {
             background-color: #8c4c09;
             color: #f6b26b;
          }
 
-         .theme-dark #bn_1991784561:hover {
+         .theme-dark #bn_635377295:hover {
             background-color: #f28c23;
             color: #8c4c09;
             border: 1px solid #bd660b;
          }
       </style>
-      <a href='/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset'
-         id="bn_1991784561"
+      <a href='/glpi106/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset'
+         id="bn_635377295"
          class="card big-number  filter-dates filter-dates_mod filter-itilcategory filter-group_tech filter-user_tech filter-requesttype filter-location"
          title="">
-         <span class="content">            <span title="29"
+         <span class="content">            <span title="32"
                   class="formatted-number"
                   data-precision='0'>
-               <span class="number">29</span>
+               <span class="number">32</span>
                <span class="suffix"></span>
             </span></span>
          <div class="label" title="Chamados atribuídos">Chamados atribuídos</div>

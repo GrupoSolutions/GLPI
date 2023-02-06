@@ -81,6 +81,6 @@ class __TwigTemplate_15b7ba3212c3407ad19589b4bf391202a08d5cf81b74ddb1ea5daac9356
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/impersonate_banner.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\impersonate_banner.html.twig");
+        return new Source("", "layout/parts/impersonate_banner.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\impersonate_banner.html.twig");
     }
 }

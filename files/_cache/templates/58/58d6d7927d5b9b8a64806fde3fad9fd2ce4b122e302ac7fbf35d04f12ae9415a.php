@@ -82,6 +82,6 @@ class __TwigTemplate_43880935127d0940914242667e02a8c931d74c5dfc94936badc799f1606
 
     public function getSourceContext()
     {
-        return new Source("", "pages/assets/consumableitem.html.twig", "C:\\wamp64\\www\\glpi\\templates\\pages\\assets\\consumableitem.html.twig");
+        return new Source("", "pages/assets/consumableitem.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\pages\\assets\\consumableitem.html.twig");
     }
 }

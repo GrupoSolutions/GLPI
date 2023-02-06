@@ -173,6 +173,6 @@ class __TwigTemplate_140704d4eeeb01840d508e7df4ad355d6ecca63d9517ea1a22822af9502
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/single-action.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\single-action.html.twig");
+        return new Source("", "components/form/single-action.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\single-action.html.twig");
     }
 }

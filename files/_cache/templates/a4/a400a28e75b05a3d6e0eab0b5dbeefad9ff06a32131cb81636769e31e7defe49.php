@@ -48,7 +48,7 @@ class __TwigTemplate_520a9107b9e9a1acb49cd391ed286e47ad13b822fbf2a60b18b87ada36d
             echo twig_escape_filter($this->env, __("Search…"), "html", null, true);
             echo "\" />
       <span class=\"input-group-text\">
-         <button type=\"submit\" class=\"btn btn-link p-0 m-0 lupa\" title=\"";
+         <button type=\"submit\" class=\"btn btn-link p-0 m-0\" title=\"";
             // line 39
             echo twig_escape_filter($this->env, __("Search…"), "html", null, true);
             echo "\">
@@ -78,6 +78,6 @@ class __TwigTemplate_520a9107b9e9a1acb49cd391ed286e47ad13b822fbf2a60b18b87ada36d
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/global_search_form.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\global_search_form.html.twig");
+        return new Source("", "layout/parts/global_search_form.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\global_search_form.html.twig");
     }
 }

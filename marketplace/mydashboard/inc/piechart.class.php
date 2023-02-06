@@ -29,151 +29,195 @@
  * It sets basical parameters to display a pie chart with Flotr2
  * This widget class is meant to display data as a pie chart
  */
-class PluginMydashboardPieChart extends PluginMydashboardChart
-{
+class PluginMydashboardPieChart extends PluginMydashboardChart {
 
-    /**
-     * @param array $graph_datas
-     * @param array $graph_criterias
-     *
-     * @return string
-     */
-    static function launchPieGraph($graph_datas = [], $graph_criterias = []) {
 
-        $onclick = 0;
-        if (count($graph_criterias) > 0) {
-            $onclick = 1;
-        }
-        $name           = $graph_datas['name'];
-        $datas          = $graph_datas['data'];
-        $ids            = $graph_datas['ids'];
-        $label          = $graph_datas['label'] ?? "";
-        $labels         = $graph_datas['labels'];
-        $title          = $graph_datas['title'] ?? "";
-        $comment        = $graph_datas['comment'] ?? "";
-        $url            = $graph_criterias['url'] ?? PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php";
-        $theme          = PluginMydashboardPreference::getPalette(Session::getLoginUserID());
-        $json_criterias = json_encode($graph_criterias);
+   /**
+    * PluginMydashboardPieChart constructor.
+    */
+   function __construct() {
+      parent::__construct();
+      $this->setOption('grid', ['verticalLines' => false, 'horizontalLines' => false]);
+      $this->setOption('xaxis', ['showLabels' => false]);
+      $this->setOption('yaxis', ['showLabels' => false]);
+      $this->setOption('mouse', ['track' => true, 'trackFormatter' => self::getTrackFormatter()]);
+      $this->setOption('legend', ['position' => 'ne', 'backgroundColor' => '#D2E8FF']);
+      $this->setOption('pie', ['show'        => true, 'explode' => 0,
+                               'fillOpacity' => PluginMydashboardColor::getOpacity()]);
+   }
 
-        $graph = "<script type='text/javascript'>
-          var id$name = $ids;
-          var canvas$name = echarts.init(document.getElementById('$name'), '$theme');
-          window.onresize = function() {
-            canvas$name.resize();
-          };
-          var option;
 
-            option = {
-//               title: {
-//                text: '$title',
-//                textStyle: {
-//                  fontSize: '14',
-//                  },
-//                subtext: '$comment'
-//              },
-              tooltip: {
-                backgroundColor: 'rgba(255,255,255)',
-                trigger: 'item'
-              },
-              legend: {
-                left: 'center',
-                top: 'bottom',
-                data: $labels
-              },
-              toolbox: {
-                show: true,
-                feature: {
-                  dataView: { show: true, readOnly: false },
-                  restore: { show: true },
-                  saveAsImage: { show: true },
-//                  myPDFExport: {
-//                        show: true,
-//                        title: 'PDF Export',
-//                        icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-//                        onclick: function (){
-////                            const btnExport = document.getElementById('export');
-//
-//                            self.addEventListener('click', async () => {
-//                            try {
-//  
-//                            function loadImage(src) {
-//                              return new Promise((resolve, reject) => {
-//                                const img = new Image();
-//                                img.onload = () => resolve(img);
-//                                img.onerror = reject;
-//                                img.src = src;
-//                              });
-//                            }
-//                            function getChartImage(chart) {
-//                              return loadImage(chart.getDataURL());
-//                            }
-//                            const img = await getChartImage(canvas$name);
-//                            const dpr = canvas$name.getDevicePixelRatio();
-//                        
-//                            const doc = new jspdf.jsPDF({
-//                              unit: 'px',
-//                              orientation: 'l',
-//                              hotfixes: ['px_scaling']
-//                            });
-//                        
-////                            doc.addImage(img1.src, 'PNG', 0, 0, img1.width / dpr1, img1.height / dpr1);
-//                            const canvas = await html2canvas(document.getElementById('$name'));
-//                            const pageWidth = doc.internal.pageSize.getWidth();
-//                            const pageHeight = doc.internal.pageSize.getHeight();
-//                        
-//                            const widthRatio = pageWidth / canvas.width;
-//                            const heightRatio = pageHeight / canvas.height;
-//    
-//                            const canvasWidth = img.width / dpr;
-//                            const canvasHeight = img.height / dpr;
-//                            
-//                            const marginX = (pageWidth - canvasWidth) / 2;
-//                            const marginY = (pageHeight - canvasHeight) / 2;
-//                        
-//                            doc.addImage(img.src, 'PNG', marginX, marginY, canvasWidth, canvasHeight);
-//                            
-//                        
-//                            await doc.save('charts.pdf', {
-//                              returnPromise: true
-//                            });
-//                           } catch (e) {
-//                                console.error('failed to export', e);
-//                              }
-//                        });
-//                        }
-//                    },
-                }
-              },
-              calculable: true,
-              grid: { left: 16, right: 32, top: 32, bottom: 32, containLabel: true },
-              series: [
-                        {
-                          type: 'pie',
-                          name: \"$label\",
-                          radius: '50%',
-                          data: $datas,
-                          emphasis: {
-                            itemStyle: {
-                              shadowBlur: 10,
-                              shadowOffsetX: 0,
-                              shadowColor: 'rgba(0, 0, 0, 0.5)'
-                            }
-                          }
-                        }
-                      ]
+   /**
+    * @return a JSon formatted string that can be used to add a widget in a dashboard (with sDashboard)
+    */
+   function getJSonDatas() {
+      $jsonDatasLabels = [];
+
+      foreach ($this->getTabDatas() as $sliceLabel => $sliceValue) {
+         if (is_array($sliceValue)) {
+            $this->debugError(__("You can't have more than one serie for a pie chart", 'mydashboard'));
+            break;
+         }
+         $jsonDatasLabels[] = ["data" => [[0, round($sliceValue, 2)]], "label" => $sliceLabel];
+      }
+
+      return PluginMydashboardHelper::safeJsonData($jsonDatasLabels, $this->getOptions());
+   }
+
+
+   /**
+    * Get a custom label format
+    *
+    * @param int    $id , the id of the format within {1,2,3,x}
+    *      1: $prefix+<percentage>+% (+<value>+)+$suffix
+    *      2: $prefix+<value>+$suffix
+    *      3: empty
+    *      x:(default) $prefix+<percentage>+%+$suffix
+    * @param string $prefix , a custom $prefix
+    * @param string $suffix , a custom $suffix
+    * @param int    $minvalue
+    *
+    * @return string
+    */
+   static function getLabelFormatter($id = 0, $prefix = "", $suffix = "", $minvalue = 0) {
+      $cond = "";
+      if ($minvalue != 0) {
+         $cond = "if(parseInt(value) < $minvalue) { return ''; }";
+      }
+
+      switch ($id) {
+         case 1 :
+            $funct = 'function(total, value){ ' . $cond . ' return "' . $prefix . ' "+(100 * value / total).toFixed(2)+"% (" +(value)+ ")"+" ' . $suffix . '"; }';
+            break;
+         case 2 :
+            $funct = 'function(total, value){ ' . $cond . ' return "' . $prefix . ' "+value+" ' . $suffix . '"; }';
+            break;
+         case 3 :
+            $funct = 'function(total, value){ return ""; }';
+            break;
+         default :
+            $funct = 'function(total, value){ ' . $cond . ' return "' . $prefix . ' "+(100 * value / total).toFixed(2)+"%"+" ' . $suffix . '"; }';
+            break;
+      }
+      return $funct;
+   }
+
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    *
+    * @return string
+    */
+   static function launchPieGraph($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
+
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+      $name            = $graph_datas['name'];
+      $datas           = $graph_datas['data'];
+      $ids             = $graph_datas['ids'];
+      $label           = $graph_datas['label'];
+      $labels          = $graph_datas['labels'];
+      $backgroundColor = $graph_datas['backgroundColor'];
+      $format          = isset($graph_datas['format']) ? $graph_datas['format'] : json_encode("");
+      $json_criterias = json_encode($graph_criterias);
+
+      $formatter = "formatter: function(value) {
+                           let piformat = $format;
+                           let percentage = value + piformat;
+                           return  percentage;
+                         },";
+      if(isset($graph_datas["percentage"]) && $graph_datas["percentage"] == true ){
+         $formatter = "formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+\"%\";
+                            return percentage;
+                        },";
+      }
+      $title = "";
+      $disp = true;
+      if(isset($graph_datas['title']) && !empty($graph_datas['title'])){
+         $title =" title:{
+            display:true,
+                     text:'".$graph_datas['title']."'
+                 },";
+
+      }
+
+      $graph = "<script type='text/javascript'>
+            var dataPie$name = {
+              datasets: [{
+                data: $datas,
+                label: \"$label\",
+                backgroundColor: $backgroundColor,
+              }],
+              labels: $labels,
             };
-            
-            option && canvas$name.setOption(option);
-            //canvas$name.resize();
-            canvas$name.on('click', function(params) {
-              // Print name in console
-            //  console.log(params);
-              if ($onclick) {
-                 var idx = params.dataIndex;
+             var id$name = $ids;
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+               type: 'pie',
+               data: dataPie$name,
+               options: {
+                 plugins: {
+                    datalabels: {
+                        $formatter
+                     color: 'black',
+                   },
+                   labels: {
+                     render: 'value',
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+                     fontColor: '#FFF',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                $title
+                 responsive: true,
+                 maintainAspectRatio: true,
+//                  tooltips: {
+//                      mode: 'label',
+//                      callbacks: {
+//                          label: function(tooltipItem, data) {
+//                              return data['datasets'][0]['data'][tooltipItem['index']] + ' %';
+//                          }
+//                      }
+//                  },
+                 animation: {
+                     onComplete: function() {
+                       isChartRendered = true;
+                     }
+                   },
+                   hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                }
+             });
+             canvas$name.onclick = function(evt) {
+               var activePoints = $name.getElementsAtEvent(evt);
+               if (activePoints[0] && $onclick) {
+                 var chartData = activePoints[0]['_chart'].config.data;
+                 var idx = activePoints[0]['_index'];
+                 var label = chartData.labels[idx];
+                 var value = chartData.datasets[0].data[idx];
                  var tab = id$name;
                  var selected_id = tab[idx];
                  $.ajax({
-                    url: '$url',
+                    url: '" . PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php',
                     type: 'POST',
                     data:
                     {
@@ -185,162 +229,98 @@ class PluginMydashboardPieChart extends PluginMydashboardChart
                           }
                  });
                }
-});
-
+             };
+             
           </script>";
 
-        return $graph;
-    }
+      return $graph;
+   }
 
-    /**
-     * @param array $graph_datas
-     * @param array $graph_criterias
-     *
-     * @return string
-     */
-    static function launchPolarAreaGraph($graph_datas = [], $graph_criterias = []) {
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    *
+    * @return string
+    */
+   static function launchPolarAreaGraph($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
 
-        $onclick = 0;
-        if (count($graph_criterias) > 0) {
-            $onclick = 1;
-        }
-        $name           = $graph_datas['name'];
-        $datas          = $graph_datas['data'];
-        $ids            = $graph_datas['ids'];
-        $label          = $graph_datas['label'] ?? "";
-        $labels         = $graph_datas['labels'];
-        $title          = $graph_datas['title'] ?? "";
-        $comment        = $graph_datas['comment'] ?? "";
-        $url            = $graph_criterias['url'] ?? PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php";
-        $theme          = PluginMydashboardPreference::getPalette(Session::getLoginUserID());
-        $json_criterias = json_encode($graph_criterias);
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+      $name            = $graph_datas['name'];
+      $datas           = $graph_datas['data'];
+      $ids             = $graph_datas['ids'];
+      $label           = $graph_datas['label'];
+      $labels          = $graph_datas['labels'];
+      $backgroundColor = $graph_datas['backgroundColor'];
+      $format          = isset($graph_datas['format']) ? $graph_datas['format'] : json_encode("");
+      $json_criterias = json_encode($graph_criterias);
 
-        $graph = "<script type='text/javascript'>
-
-          var id$name = $ids;
-          var canvas$name = echarts.init(document.getElementById('$name'), '$theme');
-          window.onresize = function() {
-            canvas$name.resize();
-          };
-          var option;
-
-            option = {
-//               title: {
-//                text: '$title',
-//                textStyle: {
-//                  fontSize: '14',
-//                  },
-//                subtext: '$comment'
-//              },
-              tooltip: {
-                backgroundColor: 'rgba(255,255,255)',
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-              },
-              legend: {
-                left: 'center',
-                top: 'bottom',
-                data: $labels
-              },
-              toolbox: {
-                show: true,
-                feature: {
-                  mark: { show: true },
-                  dataView: { show: true, readOnly: false },
-                  restore: { show: true },
-                  saveAsImage: { show: true },
-//                  myPDFExport: {
-//                        show: true,
-//                        title: 'PDF Export',
-//                        icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-//                        onclick: function (){
-////                            const btnExport = document.getElementById('export');
-//
-//                            self.addEventListener('click', async () => {
-//                            try {
-//  
-//                            function loadImage(src) {
-//                              return new Promise((resolve, reject) => {
-//                                const img = new Image();
-//                                img.onload = () => resolve(img);
-//                                img.onerror = reject;
-//                                img.src = src;
-//                              });
-//                            }
-//                            function getChartImage(chart) {
-//                              return loadImage(chart.getDataURL());
-//                            }
-//                            const img = await getChartImage(canvas$name);
-//                            const dpr = canvas$name.getDevicePixelRatio();
-//                        
-//                            const doc = new jspdf.jsPDF({
-//                              unit: 'px',
-//                              orientation: 'l',
-//                              hotfixes: ['px_scaling']
-//                            });
-//                        
-////                            doc.addImage(img1.src, 'PNG', 0, 0, img1.width / dpr1, img1.height / dpr1);
-//                            const canvas = await html2canvas(document.getElementById('$name'));
-//                            const pageWidth = doc.internal.pageSize.getWidth();
-//                            const pageHeight = doc.internal.pageSize.getHeight();
-//                        
-//                            const widthRatio = pageWidth / canvas.width;
-//                            const heightRatio = pageHeight / canvas.height;
-//    
-//                            const canvasWidth = img.width / dpr;
-//                            const canvasHeight = img.height / dpr;
-//                            
-//                            const marginX = (pageWidth - canvasWidth) / 2;
-//                            const marginY = (pageHeight - canvasHeight) / 2;
-//                        
-//                            doc.addImage(img.src, 'PNG', marginX, marginY, canvasWidth, canvasHeight);
-//                            
-//                        
-//                            await doc.save('charts.pdf', {
-//                              returnPromise: true
-//                            });
-//                           } catch (e) {
-//                                console.error('failed to export', e);
-//                              }
-//                        });
-//                        }
-//                    },
-                }
-              },
-//              grid: { left: 16, right: 32, top: 32, bottom: 32, containLabel: true },
-              series: [
-                        {
-                          type: 'pie',
-                          name: \"$label\",
-                          radius: [20, 140],
-                          roseType: 'area',
-                          itemStyle: {
-                            borderRadius: 5
-                          },
-                          label: {
-                            show: false
-                          },
-                          emphasis: {
-                            label: {
-                              show: true
-                            }
-                          },
-                          data: $datas,
-                        }
-                      ]
+      $graph = "<script type='text/javascript'>
+            var dataPie$name = {
+              datasets: [{
+                data: $datas,
+                label: \"$label\",
+                backgroundColor: $backgroundColor,
+              }],
+              labels: $labels,
             };
-            
-            option && canvas$name.setOption(option);
-            //canvas$name.resize();
-            canvas$name.on('click', function(params) {
-              // Print name in console
-            //  console.log(params);
-              if ($onclick) {
-                 var idx = params.dataIndex;
+             var id$name = $ids;
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+               type: 'polarArea',
+               data: dataPie$name,
+               options: {
+                 plugins: {
+                    datalabels: {
+                       formatter: function(value) {
+                           let piformat = $format;
+                           let percentage = value + piformat;
+                           return  percentage;
+                         },
+                     color: 'white',
+                   },
+                   labels: {
+                     render: 'value',
+//                     fontSize: 14,
+//                     fontStyle: 'bold',
+                     fontColor: '#fff',
+//                     fontFamily: 'Lucida Console, Monaco, monospace'
+                   }
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 animation: {
+                     onComplete: function() {
+                       isChartRendered = true;
+                     }
+                   },
+                 hover: {
+                      onHover: function(event,elements) {
+                         if ($onclick) {
+                            $('#$name').css('cursor', elements[0] ? 'pointer' : 'default');
+                         }
+                       }
+                    }
+                }
+             });
+             canvas$name.onclick = function(evt) {
+               var activePoints = $name.getElementsAtEvent(evt);
+               if (activePoints[0] && $onclick) {
+                 var chartData = activePoints[0]['_chart'].config.data;
+                 var idx = activePoints[0]['_index'];
+                 var label = chartData.labels[idx];
+                 var value = chartData.datasets[0].data[idx];
                  var tab = id$name;
                  var selected_id = tab[idx];
                  $.ajax({
-                    url: '$url',
+                    url: '" . PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php',
                     type: 'POST',
                     data:
                     {
@@ -352,176 +332,116 @@ class PluginMydashboardPieChart extends PluginMydashboardChart
                           }
                  });
                }
-            });
+             };
+             
           </script>";
 
-        return $graph;
-    }
+      return $graph;
+   }
 
-    /**
-     * @param array $graph_datas
-     * @param array $graph_criterias
-     *
-     * @return string
-     */
-    static function launchDonutGraph($graph_datas = [], $graph_criterias = []) {
+   /**
+    * @param array $graph_datas
+    * @param array $graph_criterias
+    *
+    * @return string
+    */
+   static function launchDonutGraph($graph_datas = [], $graph_criterias = []) {
+      global $CFG_GLPI;
 
-        $onclick = 0;
-        if (count($graph_criterias) > 0) {
-            $onclick = 1;
-        }
-        $name           = $graph_datas['name'];
-        $datas          = $graph_datas['data'];
-        $ids            = $graph_datas['ids'];
-        $label          = $graph_datas['label'] ?? "";
-        $labels         = $graph_datas['labels'];
-        $title          = $graph_datas['title'] ?? "";
-        $comment        = $graph_datas['comment'] ?? "";
-        $url            = $graph_criterias['url'] ?? PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php";
-        $theme          = PluginMydashboardPreference::getPalette(Session::getLoginUserID());
-        $json_criterias = json_encode($graph_criterias);
+      $onclick = 0;
+      if (count($graph_criterias) > 0) {
+         $onclick = 1;
+      }
+      $name            = $graph_datas['name'];
+      $datas           = $graph_datas['data'];
+      $ids             = $graph_datas['ids'];
+      $label           = $graph_datas['label'];
+      $labels          = $graph_datas['labels'];
+      $backgroundColor = $graph_datas['backgroundColor'];
+      $format          = isset($graph_datas['format']) ? $graph_datas['format'] : json_encode("");
+      $json_criterias  = json_encode($graph_criterias);
 
-        $graph = "<script type='text/javascript'>
-            var id$name = $ids;
-          var canvas$name = echarts.init(document.getElementById('$name'), '$theme');
-          window.onresize = function() {
-            canvas$name.resize();
-          };
-          var option;
-
-            option = {
-//               title: {
-//                text: '$title',
-//                textStyle: {
-//                  fontSize: '14',
-//                  },
-//                subtext: '$comment'
-//              },
-              tooltip: {
-                backgroundColor: 'rgba(255,255,255)',
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-              },
-              legend: {
-                left: 'center',
-                top: 'bottom',
-                data: $labels
-              },
-              toolbox: {
-                show: true,
-                feature: {
-                  dataView: { show: true, readOnly: false },
-                  restore: { show: true },
-                  saveAsImage: { show: true },
-//                  myPDFExport: {
-//                        show: true,
-//                        title: 'PDF Export',
-//                        icon: 'path://M432.45,595.444c0,2.177-4.661,6.82-11.305,6.82c-6.475,0-11.306-4.567-11.306-6.82s4.852-6.812,11.306-6.812C427.841,588.632,432.452,593.191,432.45,595.444L432.45,595.444z M421.155,589.876c-3.009,0-5.448,2.495-5.448,5.572s2.439,5.572,5.448,5.572c3.01,0,5.449-2.495,5.449-5.572C426.604,592.371,424.165,589.876,421.155,589.876L421.155,589.876z M421.146,591.891c-1.916,0-3.47,1.589-3.47,3.549c0,1.959,1.554,3.548,3.47,3.548s3.469-1.589,3.469-3.548C424.614,593.479,423.062,591.891,421.146,591.891L421.146,591.891zM421.146,591.891',
-//                        onclick: function (){
-////                            const btnExport = document.getElementById('export');
-//
-//                            self.addEventListener('click', async () => {
-//                            try {
-//  
-//                            function loadImage(src) {
-//                              return new Promise((resolve, reject) => {
-//                                const img = new Image();
-//                                img.onload = () => resolve(img);
-//                                img.onerror = reject;
-//                                img.src = src;
-//                              });
-//                            }
-//                            function getChartImage(chart) {
-//                              return loadImage(chart.getDataURL());
-//                            }
-//                            const img = await getChartImage(canvas$name);
-//                            const dpr = canvas$name.getDevicePixelRatio();
-//                        
-//                            const doc = new jspdf.jsPDF({
-//                              unit: 'px',
-//                              orientation: 'l',
-//                              hotfixes: ['px_scaling']
-//                            });
-//                        
-////                            doc.addImage(img1.src, 'PNG', 0, 0, img1.width / dpr1, img1.height / dpr1);
-//                            const canvas = await html2canvas(document.getElementById('$name'));
-//                            const pageWidth = doc.internal.pageSize.getWidth();
-//                            const pageHeight = doc.internal.pageSize.getHeight();
-//                        
-//                            const widthRatio = pageWidth / canvas.width;
-//                            const heightRatio = pageHeight / canvas.height;
-//    
-//                            const canvasWidth = img.width / dpr;
-//                            const canvasHeight = img.height / dpr;
-//                            
-//                            const marginX = (pageWidth - canvasWidth) / 2;
-//                            const marginY = (pageHeight - canvasHeight) / 2;
-//                        
-//                            doc.addImage(img.src, 'PNG', marginX, marginY, canvasWidth, canvasHeight);
-//                            
-//                            await doc.save('charts.pdf', {
-//                              returnPromise: true
-//                            });
-//                           } catch (e) {
-//                                console.error('failed to export', e);
-//                              }
-//                        });
-//                        }
-//                    },
-                }
-              },
-              calculable: true,
-              grid: { left: 16, right: 32, top: 32, bottom: 32, containLabel: true },
-              series: [
-                        {
-                          type: 'pie',
-                          radius: ['40%', '70%'],
-                          avoidLabelOverlap: false,
-                          name: \"$label\",
-                          label: {
-                            show: false,
-                            position: 'center'
-                          },
-                          emphasis: {
-                            label: {
-                              show: true,
-                              fontSize: '40',
-                              fontWeight: 'bold'
-                            }
-                          },
-                          labelLine: {
-                            show: false
-                          },
-                          data: $datas,
-                        }
-                      ]
+      $graph = "<script type='text/javascript'>
+            var dataPie$name = {
+              datasets: [{
+                data: $datas,
+                label: \"$label\",
+                backgroundColor: $backgroundColor,
+              }],
+              labels: $labels,
             };
-            
-            option && canvas$name.setOption(option);
-            //canvas$name.resize();
-            canvas$name.on('click', function(params) {
-              // Print name in console
-            //  console.log(params);
-              if ($onclick) {
-                 var idx = params.dataIndex;
-                 var tab = id$name;
-                 var selected_id = tab[idx];
-                 $.ajax({
-                    url: '$url',
-                    type: 'POST',
-                    data:
-                    {
-                        selected_id:selected_id,
-                        params: $json_criterias
-                      },
-                    success:function(response) {
-                            window.open(response);
-                          }
-                 });
-               }
-            });
+             var id$name = $ids;
+             var format = $format;
+             var isChartRendered = false;
+             var canvas$name = document.getElementById('$name');
+             var ctx = canvas$name.getContext('2d');
+             ctx.canvas.width = 700;
+             ctx.canvas.height = 400;
+             var $name = new Chart(ctx, {
+               type: 'doughnut',
+               data: dataPie$name,
+               options: {
+                 plugins: {
+                    datalabels: {
+                        formatter: function(value) {
+                           let piformat = $format;
+                           let percentage = value + piformat;
+                           return  percentage;
+                         },
+                        color: 'white',
+                        labels: {
+                          color: 'white'
+                      }
+                   },
+                },
+                 responsive: true,
+                 maintainAspectRatio: true,
+                 animation: {
+                     onComplete: function() {
+                       isChartRendered = true;
+                     }
+                   },
+//                 tooltips: {
+//                     callbacks: {
+//                       label: function(tooltipItem, data) {
+//                        var dataset = data.datasets[tooltipItem.datasetIndex];
+//                         var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+//                           return previousValue + currentValue;
+//                         });
+//                         var currentValue = dataset.data[tooltipItem.index];
+//                         var percentage = Math.floor(((currentValue/total) * 100)+0.5);
+//                         return percentage + \"%\";
+//                       }
+//                     }
+//                   }
+                }
+             });
+//             canvas$name.onclick = function(evt) {
+//               var activePoints = $name.getElementsAtEvent(evt);
+//               if (activePoints[0] && $onclick) {
+//                 var chartData = activePoints[0]['_chart'].config.data;
+//                 var idx = activePoints[0]['_index'];
+//                 var label = chartData.labels[idx];
+//                 var value = chartData.datasets[0].data[idx];
+//                 var tab = id$name;
+//                 var selected_id = tab[idx];
+//                 $.ajax({
+//                    url: '" . PLUGIN_MYDASHBOARD_WEBDIR . "/ajax/launchURL.php',
+//                    type: 'POST',
+//                    data:
+//                    {
+//                        selected_id:selected_id,
+//                        params: $json_criterias
+//                      },
+//                    success:function(response) {
+//                            window.open(response);
+//                          }
+//                 });
+//               }
+//             };
+             
           </script>";
 
-        return $graph;
-    }
+      return $graph;
+   }
 }

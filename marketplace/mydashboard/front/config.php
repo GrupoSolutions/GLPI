@@ -26,9 +26,11 @@
 
 include('../../../inc/includes.php');
 
+$plugin = new Plugin();
+
 global $CFG_GLPI;
 
-if (Plugin::isPluginActive("mydashboard")) {
+if ($plugin->isActivated("mydashboard")) {
    if (Session::haveRight("plugin_mydashboard_config", UPDATE)) {
 
       Html::redirect(PLUGIN_MYDASHBOARD_WEBDIR. "/front/config.form.php");

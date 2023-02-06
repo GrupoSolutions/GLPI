@@ -110,6 +110,6 @@ class __TwigTemplate_2c97ded6de1ea6ed75ed8170f7723b96f65501eb03b50b8e7f672a6904e
 
     public function getSourceContext()
     {
-        return new Source("", "pages/login_error.html.twig", "C:\\wamp64\\www\\glpi\\templates\\pages\\login_error.html.twig");
+        return new Source("", "pages/login_error.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\pages\\login_error.html.twig");
     }
 }

@@ -1,6 +1,6 @@
-1675088148
+1675429967
 7299f64e0c182b7b1f9ffb0bcb89dda716eef9b1
-a:1:{s:57:"count_Computer_State_31d75ba5-73a9-4788-9e87-434087c9cb7f";s:6244:"      <style>
+a:1:{s:57:"count_Computer_State_31d75ba5-73a9-4788-9e87-434087c9cb7f";s:6319:"      <style>
          #chart-dashboard_card_central_3e11207b2eacdb02fc4ea51c4426ed98b10cdccf {
             background-color: #e69393;
             color: #8c2121
@@ -34,11 +34,11 @@ a:1:{s:57:"count_Computer_State_31d75ba5-73a9-4788-9e87-434087c9cb7f";s:6244:"  
 //<![CDATA[
 
       $(function () {
-         var chart = new Chartist.Pie('#chart-dashboard_card_central_3e11207b2eacdb02fc4ea51c4426ed98b10cdccf .chart', {
+         var chart = new Chartist.Pie(Dashboard.getActiveDashboard().element.find('#chart-dashboard_card_central_3e11207b2eacdb02fc4ea51c4426ed98b10cdccf .chart')[0], {
             labels: ["OK","COM DEFEITO"],
-            series: [{"meta":"OK","value":13,"url":"\/front\/computer.php?reset&criteria%5B0%5D%5Bfield%5D=31&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset"},{"meta":"COM DEFEITO","value":2,"url":"\/front\/computer.php?reset&criteria%5B0%5D%5Bfield%5D=31&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset"}],
+            series: [{"meta":"OK","value":13,"url":"\/glpi106\/front\/computer.php?reset&criteria%5B0%5D%5Bfield%5D=31&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=4&reset=reset"},{"meta":"COM DEFEITO","value":2,"url":"\/glpi106\/front\/computer.php?reset&criteria%5B0%5D%5Bfield%5D=31&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset"}],
          }, {
-            width: 'calc(100% - 5px)',
+            width: '100%',
             chartPadding: 4,
             donut: true,
             
@@ -69,7 +69,7 @@ a:1:{s:57:"count_Computer_State_31d75ba5-73a9-4788-9e87-434087c9cb7f";s:6244:"  
                      'data-clickable': true
                   });
                   data.element._node.onclick = function() {
-                     if (!Dashboard.edit_mode) {
+                     if (!Dashboard.getActiveDashboard().edit_mode) {
                         window.location = url;
                      }
                   }

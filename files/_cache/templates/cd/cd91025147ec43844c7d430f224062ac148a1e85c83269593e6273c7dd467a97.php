@@ -66,13 +66,13 @@ class __TwigTemplate_151d9983d2cae8fc0eb15359a6094d50a1d34472563821810ffd671ec03
             echo "               <a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeFormPath("User", (($__internal_compile_3 = ($context["user"] ?? null)) && is_array($__internal_compile_3) || $__internal_compile_3 instanceof ArrayAccess ? ($__internal_compile_3["id"] ?? null) : null)), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, (($__internal_compile_4 = ($context["user"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["user_name"] ?? null) : null), "html", null, true);
+            echo twig_escape_filter($this->env, (($__internal_compile_4 = ($context["user"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["firstname"] ?? null) : null), "html", null, true);
             echo "</a>
             ";
         } else {
             // line 51
             echo "               ";
-            echo twig_escape_filter($this->env, (($__internal_compile_5 = ($context["user"] ?? null)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["user_name"] ?? null) : null), "html", null, true);
+            echo twig_escape_filter($this->env, (($__internal_compile_5 = ($context["user"] ?? null)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["firstname"] ?? null) : null), "html", null, true);
             echo "
             ";
         }
@@ -160,7 +160,7 @@ class __TwigTemplate_151d9983d2cae8fc0eb15359a6094d50a1d34472563821810ffd671ec03
         if (((($__internal_compile_19 = ($context["user"] ?? null)) && is_array($__internal_compile_19) || $__internal_compile_19 instanceof ArrayAccess ? ($__internal_compile_19["usercategories_id"] ?? null) : null) > 0)) {
             // line 87
             echo "               <div title=\"";
-            echo twig_escape_filter($this->env, _n("Departamento", "Categories", 1), "html", null, true);
+            echo twig_escape_filter($this->env, _n("Category", "Categories", 1), "html", null, true);
             echo "\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\">
                   <i class=\"fas fa-fw fa-user-tag\"></i>
                   ";
@@ -230,6 +230,6 @@ class __TwigTemplate_151d9983d2cae8fc0eb15359a6094d50a1d34472563821810ffd671ec03
 
     public function getSourceContext()
     {
-        return new Source("", "components/user/info_card.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\user\\info_card.html.twig");
+        return new Source("", "components/user/info_card.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\user\\info_card.html.twig");
     }
 }

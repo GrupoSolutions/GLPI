@@ -110,6 +110,6 @@ class __TwigTemplate_539b2c1c76adc266178b8765c812b0aa3a58af08578b3c4601b213a9517
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/dates.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\dates.html.twig");
+        return new Source("", "components/form/dates.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\dates.html.twig");
     }
 }

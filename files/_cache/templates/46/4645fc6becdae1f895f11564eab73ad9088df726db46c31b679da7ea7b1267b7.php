@@ -432,6 +432,6 @@ $context["disable_assign_to_me"]) ?? (false)), "main_rand" =>             // lin
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/actors/main.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\actors\\main.html.twig");
+        return new Source("", "components/itilobject/actors/main.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\actors\\main.html.twig");
     }
 }

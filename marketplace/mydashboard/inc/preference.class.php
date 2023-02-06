@@ -209,17 +209,18 @@ class PluginMydashboardPreference extends CommonDBTM {
 
       echo "<tr class='tab_bg_1'><td>" . __("Palette color", "mydashboard") . "</td>";
       echo "<td>";
-       echo Html::select(
-           'color_palette',
-           $this->getPalettes(),
-           [
-               'id'        => 'theme-selector',
-               'selected'  => $this->fields['color_palette']
-           ]
-       );
+      $palette  = [1 => __("Palette color", "mydashboard") . ' 1',
+                   2 => __("Palette color", "mydashboard") . ' 2'];
+      $selected = $this->fields['color_palette'];
+      Dropdown::showFromArray('color_palette',
+                              $palette,
+                              [
+                                 'id'    => 'color_palette',
+                                 'value' => $selected
+                              ]);
+
       echo "</td>";
       echo "</tr>";
-
 
       $this->showFormButtons($options);
 
@@ -228,18 +229,6 @@ class PluginMydashboardPreference extends CommonDBTM {
          $blacklist->showUserForm(Session::getLoginUserID());
       }
    }
-
-    public function getPalettes() {
-        $themes_files = scandir(PLUGIN_MYDASHBOARD_DIR . "/lib/echarts/theme");
-        $themes = [];
-        foreach ($themes_files as $file) {
-            if (strpos($file, ".js") !== false) {
-                $name     = substr($file, 0, -3);
-                $themes[$name] = ucfirst($name);
-            }
-        }
-        return $themes;
-    }
 
    /**
     * @param $users_id
@@ -255,7 +244,7 @@ class PluginMydashboardPreference extends CommonDBTM {
       $input['prefered_group']           = "[]";
       $input['requester_prefered_group'] = "[]";
       $input['prefered_entity']          = "0";
-      $input['color_palette']            = "";
+      $input['color_palette']            = "1";
       $input['edit_mode']                = "0";
       $input['drag_mode']                = "0";
       $this->add($input);

@@ -95,6 +95,6 @@ class __TwigTemplate_0ab31a76ffe018403dc50c1660f4aada783a9e354dfaeba4b69daac6cb3
 
     public function getSourceContext()
     {
-        return new Source("", "pages/assets/monitor.html.twig", "C:\\wamp64\\www\\glpi\\templates\\pages\\assets\\monitor.html.twig");
+        return new Source("", "pages/assets/monitor.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\pages\\assets\\monitor.html.twig");
     }
 }

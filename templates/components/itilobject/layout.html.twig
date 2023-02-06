@@ -54,12 +54,7 @@
 {% endif %}
 
 
-<<<<<<< HEAD
-<div id="itil-object-container" class="mt-n1 right-collapsed">
-=======
-<div id="itil-object-container" class="mt-n1 right-collapsed{{ collapsed_cls }} {{ expanded_cls }}">
->>>>>>> 4da57d3b525f7854ad330f81531da1f6e7167122
-
+<div id="itil-object-container" class=" right-collapsed">
    {% if item.isNewItem and not params['template_preview'] %}
       {{ include('components/itilobject/mainform_open.html.twig') }}
    {% endif %}

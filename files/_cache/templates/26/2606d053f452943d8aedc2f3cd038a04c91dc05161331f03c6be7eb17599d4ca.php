@@ -318,6 +318,6 @@ array_key_exists("fluid_search", $context)) ? (_twig_default_filter(($context["f
 
     public function getSourceContext()
     {
-        return new Source("", "components/pager.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\pager.html.twig");
+        return new Source("", "components/pager.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\pager.html.twig");
     }
 }

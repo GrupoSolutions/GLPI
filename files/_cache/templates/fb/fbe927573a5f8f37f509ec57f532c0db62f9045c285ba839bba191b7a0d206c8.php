@@ -86,150 +86,144 @@ class __TwigTemplate_ac7e030aa0111085adf7e0cb87ca79452d8a548df31f0143e065c002bc8
         // line 55
         echo "
 
-<div id=\"itil-object-container\" class=\"mt-n1 right-collapsed";
-        // line 57
-        echo twig_escape_filter($this->env, ($context["collapsed_cls"] ?? null), "html", null, true);
-        echo " ";
-        echo twig_escape_filter($this->env, ($context["expanded_cls"] ?? null), "html", null, true);
-        echo "\">
-
+<div id=\"itil-object-container\" class=\" right-collapsed\">
    ";
-        // line 59
-        if ((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "any", false, false, false, 59) &&  !(($__internal_compile_2 = ($context["params"] ?? null)) && is_array($__internal_compile_2) || $__internal_compile_2 instanceof ArrayAccess ? ($__internal_compile_2["template_preview"] ?? null) : null))) {
-            // line 60
+        // line 58
+        if ((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "any", false, false, false, 58) &&  !(($__internal_compile_2 = ($context["params"] ?? null)) && is_array($__internal_compile_2) || $__internal_compile_2 instanceof ArrayAccess ? ($__internal_compile_2["template_preview"] ?? null) : null))) {
+            // line 59
             echo "      ";
             echo twig_include($this->env, $context, "components/itilobject/mainform_open.html.twig");
             echo "
    ";
         }
-        // line 62
+        // line 61
         echo "
    <div class=\"row d-flex flex-column alin-items-stretch itil-object\">
       ";
+        // line 63
+        $context["fl_direction"] = ((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "any", false, false, false, 63)) ? ("flex-column") : ("flex-column-reverse"));
         // line 64
-        $context["fl_direction"] = ((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "any", false, false, false, 64)) ? ("flex-column") : ("flex-column-reverse"));
-        // line 65
         echo "      <div class=\"itil-left-side col-12 ";
         echo twig_escape_filter($this->env, ($context["left_side_cls"] ?? null), "html", null, true);
         echo " order-last order-md-first pt-2 pe-2 pe-md-4 d-flex ";
         echo twig_escape_filter($this->env, ($context["fl_direction"] ?? null), "html", null, true);
         echo " border-top border-4\">
          ";
-        // line 66
-        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 66)) {
-            // line 67
+        // line 65
+        if (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 65)) {
+            // line 66
             echo "            ";
             echo twig_include($this->env, $context, "components/itilobject/timeline/new_form.html.twig");
             echo "
          ";
         } else {
-            // line 69
+            // line 68
             echo "            ";
             echo twig_include($this->env, $context, "components/itilobject/timeline/timeline.html.twig");
             echo "
          ";
         }
-        // line 71
+        // line 70
         echo "      </div>
       <div class=\"itil-right-side col-12 ";
-        // line 72
+        // line 71
         echo twig_escape_filter($this->env, ($context["right_side_cls"] ?? null), "html", null, true);
         echo " mt-0 mt-md-n1 card-footer p-0 rounded-0\">
          ";
-        // line 73
-        if ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 73)) {
-            // line 74
+        // line 72
+        if ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 72)) {
+            // line 73
             echo "            ";
             echo twig_include($this->env, $context, "components/itilobject/mainform_open.html.twig");
             echo "
          ";
         }
-        // line 76
+        // line 75
         echo "         ";
         echo twig_include($this->env, $context, "components/itilobject/fields_panel.html.twig");
         echo "
          ";
-        // line 77
-        if ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 77)) {
-            // line 78
+        // line 76
+        if ( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 76)) {
+            // line 77
             echo "            ";
             echo twig_include($this->env, $context, "components/itilobject/mainform_close.html.twig");
             echo "
          ";
         }
-        // line 80
+        // line 79
         echo "      </div>
    </div>
 
    ";
-        // line 83
+        // line 82
         if ( !(($__internal_compile_3 = ($context["params"] ?? null)) && is_array($__internal_compile_3) || $__internal_compile_3 instanceof ArrayAccess ? ($__internal_compile_3["template_preview"] ?? null) : null)) {
-            // line 84
+            // line 83
             echo "      ";
             echo twig_include($this->env, $context, "components/itilobject/footer.html.twig");
             echo "
    ";
         }
-        // line 86
+        // line 85
         echo "
    ";
-        // line 87
-        if (( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 87) &&  !(($__internal_compile_4 = ($context["params"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["template_preview"] ?? null) : null))) {
-            // line 88
+        // line 86
+        if (( !twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isNewItem", [], "method", false, false, false, 86) &&  !(($__internal_compile_4 = ($context["params"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["template_preview"] ?? null) : null))) {
+            // line 87
             echo "      ";
             echo twig_include($this->env, $context, "components/itilobject/mainform_close.html.twig");
             echo "
    ";
         }
-        // line 90
+        // line 89
         echo "
 </div>
 
 ";
-        // line 93
+        // line 92
         if (($context["ticket_ticket"] ?? null)) {
-            // line 94
+            // line 93
             echo "   ";
-            // line 95
+            // line 94
             echo "   <form method=\"POST\" action=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["ticket_ticket"] ?? null), "getFormURL", [], "method", false, false, false, 95), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["ticket_ticket"] ?? null), "getFormURL", [], "method", false, false, false, 94), "html", null, true);
             echo "\" class=\"d-none\" id=\"linked_tickets_";
             echo twig_escape_filter($this->env, ($context["main_rand"] ?? null), "html", null, true);
             echo "\" data-submit-once>
       <input type=\"hidden\" name=\"_glpi_csrf_token\" value=\"";
-            // line 96
+            // line 95
             echo twig_escape_filter($this->env, Session::getNewCSRFToken(), "html", null, true);
             echo "\" />
       <input type=\"hidden\" name=\"purge\" value=\"1\" />
       <input type=\"hidden\" name=\"tickets_id\" value=\"";
-            // line 98
-            echo twig_escape_filter($this->env, (($__internal_compile_5 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 98)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["id"] ?? null) : null), "html", null, true);
+            // line 97
+            echo twig_escape_filter($this->env, (($__internal_compile_5 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 97)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["id"] ?? null) : null), "html", null, true);
             echo "\" />
    </form>
 ";
         }
-        // line 101
+        // line 100
         echo "
 ";
-        // line 103
+        // line 102
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable([0 => "requester", 1 => "observer", 2 => "assign"]);
         foreach ($context['_seq'] as $context["_key"] => $context["actortype"]) {
-            // line 104
+            // line 103
             echo "   <form method=\"POST\" action=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getFormURL", [], "method", false, false, false, 104), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getFormURL", [], "method", false, false, false, 103), "html", null, true);
             echo "\" class=\"d-none\" id=\"addme_as_";
             echo twig_escape_filter($this->env, $context["actortype"], "html", null, true);
             echo "_";
             echo twig_escape_filter($this->env, ($context["main_rand"] ?? null), "html", null, true);
             echo "\" data-submit-once>
       <input type=\"hidden\" name=\"_glpi_csrf_token\" value=\"";
-            // line 105
+            // line 104
             echo twig_escape_filter($this->env, Session::getNewCSRFToken(), "html", null, true);
             echo "\" />
       <input type=\"hidden\" name=\"addme_as_actor\" value=\"1\" />
       <input type=\"hidden\" name=\"actortype\" value=\"";
-            // line 107
+            // line 106
             echo twig_escape_filter($this->env, $context["actortype"], "html", null, true);
             echo "\" />
    </form>
@@ -238,24 +232,24 @@ class __TwigTemplate_ac7e030aa0111085adf7e0cb87ca79452d8a548df31f0143e065c002bc8
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['actortype'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 110
+        // line 109
         echo "
 <form name=\"massaction_";
-        // line 111
+        // line 110
         echo twig_escape_filter($this->env, ($context["rand"] ?? null), "html", null, true);
         echo "\" id=\"massaction_";
         echo twig_escape_filter($this->env, ($context["rand"] ?? null), "html", null, true);
         echo "\" method=\"post\"
       action=\"";
-        // line 112
+        // line 111
         echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("/front/massiveaction.php"), "html", null, true);
         echo "\" data-submit-once>
    <div id=\"massive_container_";
-        // line 113
+        // line 112
         echo twig_escape_filter($this->env, ($context["rand"] ?? null), "html", null, true);
         echo "\"></div>
    <input type=\"hidden\" name=\"_glpi_csrf_token\" value=\"";
-        // line 114
+        // line 113
         echo twig_escape_filter($this->env, Session::getNewCSRFToken(), "html", null, true);
         echo "\" />
 </form>
@@ -266,31 +260,31 @@ class __TwigTemplate_ac7e030aa0111085adf7e0cb87ca79452d8a548df31f0143e065c002bc8
        if (\$('#itil-object-container').hasClass('right-collapsed')) {
            \$('#itil-object-container').removeClass('right-collapsed');
        } else if (\$('.itil-left-side').hasClass(\"";
-        // line 122
+        // line 121
         echo twig_escape_filter($this->env, ($context["left_regular_cls"] ?? null), "html", null, true);
         echo "\")) {
          // Expand right-side panel
          \$('#itil-object-container').addClass('right-expanded');
          // Left side
          \$('.itil-left-side').removeClass(\"";
-        // line 126
+        // line 125
         echo twig_escape_filter($this->env, ($context["left_regular_cls"] ?? null), "html", null, true);
         echo "\").addClass(\"";
         echo twig_escape_filter($this->env, ($context["left_expanded_cls"] ?? null), "html", null, true);
         echo "\");
          \$('.itil-footer .timeline-buttons').removeClass(\"";
-        // line 127
+        // line 126
         echo twig_escape_filter($this->env, ($context["left_regular_cls"] ?? null), "html", null, true);
         echo "\").addClass(\"";
         echo twig_escape_filter($this->env, ($context["left_expanded_cls"] ?? null), "html", null, true);
         echo "\");
          // Right side
          \$('.itil-footer .form-buttons').removeClass('col-md').addClass(\"";
-        // line 129
+        // line 128
         echo twig_escape_filter($this->env, ($context["right_expanded_cls"] ?? null), "html", null, true);
         echo "\");
          \$('.itil-right-side').removeClass(\"";
-        // line 130
+        // line 129
         echo twig_escape_filter($this->env, ($context["right_regular_cls"] ?? null), "html", null, true);
         echo "\").addClass(\"";
         echo twig_escape_filter($this->env, ($context["right_expanded_cls"] ?? null), "html", null, true);
@@ -304,24 +298,24 @@ class __TwigTemplate_ac7e030aa0111085adf7e0cb87ca79452d8a548df31f0143e065c002bc8
          \$('#itil-object-container').removeClass('right-expanded');
          // Left side
          \$('.itil-left-side').removeClass(\"";
-        // line 139
+        // line 138
         echo twig_escape_filter($this->env, ($context["left_expanded_cls"] ?? null), "html", null, true);
         echo "\").addClass(\"";
         echo twig_escape_filter($this->env, ($context["left_regular_cls"] ?? null), "html", null, true);
         echo "\");
          \$('.itil-footer .timeline-buttons').removeClass(\"";
-        // line 140
+        // line 139
         echo twig_escape_filter($this->env, ($context["left_expanded_cls"] ?? null), "html", null, true);
         echo "\").addClass(\"";
         echo twig_escape_filter($this->env, ($context["left_regular_cls"] ?? null), "html", null, true);
         echo "\");
          // Right side
          \$('.itil-footer .form-buttons').removeClass(\"";
-        // line 142
+        // line 141
         echo twig_escape_filter($this->env, ($context["right_expanded_cls"] ?? null), "html", null, true);
         echo "\").addClass('col-md');
          \$('.itil-right-side').removeClass(\"";
-        // line 143
+        // line 142
         echo twig_escape_filter($this->env, ($context["right_expanded_cls"] ?? null), "html", null, true);
         echo "\").addClass(\"";
         echo twig_escape_filter($this->env, ($context["right_regular_cls"] ?? null), "html", null, true);
@@ -411,11 +405,11 @@ class __TwigTemplate_ac7e030aa0111085adf7e0cb87ca79452d8a548df31f0143e065c002bc8
 
     public function getDebugInfo()
     {
-        return array (  325 => 143,  321 => 142,  314 => 140,  308 => 139,  294 => 130,  290 => 129,  283 => 127,  277 => 126,  270 => 122,  259 => 114,  255 => 113,  251 => 112,  245 => 111,  242 => 110,  233 => 107,  228 => 105,  219 => 104,  215 => 103,  212 => 101,  206 => 98,  201 => 96,  194 => 95,  192 => 94,  190 => 93,  185 => 90,  179 => 88,  177 => 87,  174 => 86,  168 => 84,  166 => 83,  161 => 80,  155 => 78,  153 => 77,  148 => 76,  142 => 74,  140 => 73,  136 => 72,  133 => 71,  127 => 69,  121 => 67,  119 => 66,  112 => 65,  110 => 64,  106 => 62,  100 => 60,  98 => 59,  91 => 57,  87 => 55,  83 => 53,  80 => 52,  78 => 51,  76 => 50,  74 => 49,  71 => 48,  69 => 47,  67 => 46,  64 => 45,  62 => 44,  60 => 43,  57 => 42,  55 => 41,  53 => 40,  51 => 39,  49 => 38,  47 => 37,  44 => 36,  42 => 35,  40 => 34,  37 => 33,);
+        return array (  319 => 142,  315 => 141,  308 => 139,  302 => 138,  288 => 129,  284 => 128,  277 => 126,  271 => 125,  264 => 121,  253 => 113,  249 => 112,  245 => 111,  239 => 110,  236 => 109,  227 => 106,  222 => 104,  213 => 103,  209 => 102,  206 => 100,  200 => 97,  195 => 95,  188 => 94,  186 => 93,  184 => 92,  179 => 89,  173 => 87,  171 => 86,  168 => 85,  162 => 83,  160 => 82,  155 => 79,  149 => 77,  147 => 76,  142 => 75,  136 => 73,  134 => 72,  130 => 71,  127 => 70,  121 => 68,  115 => 66,  113 => 65,  106 => 64,  104 => 63,  100 => 61,  94 => 59,  92 => 58,  87 => 55,  83 => 53,  80 => 52,  78 => 51,  76 => 50,  74 => 49,  71 => 48,  69 => 47,  67 => 46,  64 => 45,  62 => 44,  60 => 43,  57 => 42,  55 => 41,  53 => 40,  51 => 39,  49 => 38,  47 => 37,  44 => 36,  42 => 35,  40 => 34,  37 => 33,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/layout.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\layout.html.twig");
+        return new Source("", "components/itilobject/layout.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\layout.html.twig");
     }
 }

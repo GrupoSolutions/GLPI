@@ -172,240 +172,81 @@ class __TwigTemplate_2a16ec83e8da95462169606dd5f7006d0cc82d6865ac8cf0c689365eba4
             }
             // line 97
             echo "
-            <div class=\"row mx-n3 mx-xxl-auto\">
-               <div class=\"col-12 col-xl-7 col-xxl-8\">
-                  ";
-            // line 100
-            $context["content"] = (($__internal_compile_12 = twig_get_attribute($this->env, $this->source, ($context["subitem"] ?? null), "fields", [], "any", false, false, false, 100)) && is_array($__internal_compile_12) || $__internal_compile_12 instanceof ArrayAccess ? ($__internal_compile_12["content"] ?? null) : null);
-            // line 101
-            echo "                  ";
-            if ((($context["kb_id_toload"] ?? null) > 0)) {
-                // line 102
-                echo "                     ";
-                $context["kb_item"] = $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItem("KnowbaseItem", ($context["kb_id_toload"] ?? null));
-                // line 103
-                echo "                     ";
-                $context["content"] = (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["kb_item"] ?? null), "fields", [], "any", false, true, false, 103), "answer", [], "array", true, true, false, 103) &&  !(null === (($__internal_compile_13 = twig_get_attribute($this->env, $this->source, ($context["kb_item"] ?? null), "fields", [], "any", false, true, false, 103)) && is_array($__internal_compile_13) || $__internal_compile_13 instanceof ArrayAccess ? ($__internal_compile_13["answer"] ?? null) : null)))) ? ((($__internal_compile_14 = twig_get_attribute($this->env, $this->source, ($context["kb_item"] ?? null), "fields", [], "any", false, true, false, 103)) && is_array($__internal_compile_14) || $__internal_compile_14 instanceof ArrayAccess ? ($__internal_compile_14["answer"] ?? null) : null)) : (""));
-                // line 104
-                echo "                  ";
-            }
-            // line 105
-            echo "
-                  ";
-            // line 106
-            echo twig_call_macro($macros["fields"], "macro_textareaField", ["content",             // line 108
-($context["content"] ?? null), "", ["full_width" => true, "no_label" => true, "enable_richtext" => true, "enable_fileupload" => true, "enable_mentions" => true, "rand" =>             // line 116
-($context["rand"] ?? null), "disabled" =>             // line 117
-($context["disabled"] ?? null)]], 106, $context, $this->getSourceContext());
-            // line 119
-            echo "
-               </div>
-               <div class=\"col-12 col-xl-5 col-xxl-4 order-first order-md-last pe-o pe-xxl-auto\">
-                  <div class=\"row\">
-                     ";
-            // line 123
-            if (($context["candedit"] ?? null)) {
-                // line 124
-                echo "                        ";
-                if (($context["can_read_kb"] ?? null)) {
-                    // line 125
-                    echo "                           ";
-                    ob_start(function () { return ''; });
-                    // line 126
-                    echo "                              <a href=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path((((("/front/knowbaseitem.php?item_itemtype=" . twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getType", [], "method", false, false, false, 126)) . "&item_items_id=") . twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getID", [], "method", false, false, false, 126)) . "&forcetab=Knowbase\$1")), "html", null, true);
-                    echo "\"
-                                 class=\"btn btn-secondary overflow-hidden text-nowrap\" type=\"submit\"
-                                 title=\"";
-                    // line 128
-                    echo twig_escape_filter($this->env, __("Search a solution"), "html", null, true);
-                    echo "\"
-                                 data-bs-toggle=\"tooltip\" data-bs-placement=\"top\">
-                                 <i class=\"fas fa-search\"></i>
-                              </a>
-                           ";
-                    $context["search_solution_button"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-                    // line 133
-                    echo "                           ";
-                    echo twig_call_macro($macros["fields"], "macro_field", ["",                     // line 135
-($context["search_solution_button"] ?? null), "", ["full_width" => true, "icon_label" => true]], 133, $context, $this->getSourceContext());
-                    // line 141
-                    echo "
-                        ";
-                }
-                // line 143
-                echo "
-                        ";
-                // line 144
-                ob_start(function () { return ''; });
-                // line 145
-                echo "                           <i class=\"fas fa-reply fa-fw me-1\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\"
-                              title=\"";
-                // line 146
-                echo twig_escape_filter($this->env, _n("Solution template", "Solution templates", Session::getPluralNumber()), "html", null, true);
-                echo "\"></i>
-                        ";
-                $context["sol_template_lbl"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-                // line 148
-                echo "                        ";
-                echo twig_call_macro($macros["fields"], "macro_dropdownField", ["SolutionTemplate", "solutiontemplates_id", 0,                 // line 152
-($context["sol_template_lbl"] ?? null), ["full_width" => true, "icon_label" => true, "on_change" => (("solutiontemplate_update" .                 // line 156
-($context["rand"] ?? null)) . "(this.value)"), "rand" =>                 // line 157
-($context["rand"] ?? null), "disabled" =>                 // line 158
-($context["disabled"] ?? null)]], 148, $context, $this->getSourceContext());
-                // line 160
-                echo "
-
-                     ";
-            }
-            // line 163
-            echo "
-                     ";
-            // line 164
-            ob_start(function () { return ''; });
-            // line 165
-            echo "                        <i class=\"fas fa-tag fa-fw me-1\" title=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("SolutionType"), "html", null, true);
-            echo "\"
-                           data-bs-toggle=\"tooltip\" data-bs-placement=\"top\"></i>
-                     ";
-            $context["sol_type_lbl"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-            // line 168
-            echo "                     ";
-            echo twig_call_macro($macros["fields"], "macro_dropdownField", ["SolutionType", "solutiontypes_id", (($__internal_compile_15 = twig_get_attribute($this->env, $this->source,             // line 171
-($context["subitem"] ?? null), "fields", [], "any", false, false, false, 171)) && is_array($__internal_compile_15) || $__internal_compile_15 instanceof ArrayAccess ? ($__internal_compile_15["solutiontypes_id"] ?? null) : null),             // line 172
-($context["sol_type_lbl"] ?? null), ["full_width" => true, "icon_label" => true, "rand" =>             // line 176
-($context["rand"] ?? null), "disabled" =>             // line 177
-($context["disabled"] ?? null)]], 168, $context, $this->getSourceContext());
-            // line 179
-            echo "
-
-                     ";
-            // line 181
-            if ((($context["can_read_kb"] ?? null) && (($context["kb_id_toload"] ?? null) > 0))) {
-                // line 182
-                echo "                        ";
-                ob_start(function () { return ''; });
-                // line 183
-                echo "                           <i class=\"fas fa-link fa-fw me-1\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\"
-                              title=\"";
-                // line 184
-                echo twig_escape_filter($this->env, twig_replace_filter(__("Link to knowledge base entry #%id"), ["%id" => ($context["kb_id_toload"] ?? null)]), "html", null, true);
-                echo "\"></i>
-                        ";
-                $context["link_kb_lbl"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-                // line 186
-                echo "                        ";
-                echo twig_call_macro($macros["fields"], "macro_sliderField", ["kb_linked_id",                 // line 188
-($context["kb_id_toload"] ?? null),                 // line 189
-($context["link_kb_lbl"] ?? null), ["full_width" => true, "icon_label" => true, "rand" =>                 // line 193
-($context["rand"] ?? null)]], 186, $context, $this->getSourceContext());
-                // line 195
-                echo "
-                     ";
-            }
-            // line 197
-            echo "
-                     ";
-            // line 198
-            if (((($context["candedit"] ?? null) && ($context["can_update_kb"] ?? null)) &&  !($context["nokb"] ?? null))) {
-                // line 199
-                echo "                        ";
-                ob_start(function () { return ''; });
-                // line 200
-                echo "                           <i class=\"far fa-save fa-fw me-1\" title=\"";
-                echo twig_escape_filter($this->env, __("Save and add to the knowledge base"), "html", null, true);
-                echo "\"
-                              data-bs-toggle=\"tooltip\" data-bs-placement=\"top\"></i>
-                        ";
-                $context["sol_to_kb_lbl"] = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
-                // line 203
-                echo "                        ";
-                echo twig_call_macro($macros["fields"], "macro_sliderField", ["_sol_to_kb", 0,                 // line 206
-($context["sol_to_kb_lbl"] ?? null), ["full_width" => true, "icon_label" => true, "rand" =>                 // line 210
-($context["rand"] ?? null)]], 203, $context, $this->getSourceContext());
-                // line 212
-                echo "
-                     ";
-            }
-            // line 214
-            echo "                  </div>
-               </div>
-            </div>
+           
 
          ";
-            // line 218
+            // line 100
             if ( !($context["noform"] ?? null)) {
-                // line 219
+                // line 101
                 echo "               ";
                 echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook("post_item_form", ["item" => ($context["subitem"] ?? null), "options" => ($context["params"] ?? null)]), "html", null, true);
                 echo "
                <div class=\"d-flex card-footer mx-n3 mb-n3\">
                   ";
-                // line 221
-                if (((($__internal_compile_16 = twig_get_attribute($this->env, $this->source, ($context["subitem"] ?? null), "fields", [], "any", false, false, false, 221)) && is_array($__internal_compile_16) || $__internal_compile_16 instanceof ArrayAccess ? ($__internal_compile_16["id"] ?? null) : null) <= 0)) {
-                    // line 222
+                // line 103
+                if (((($__internal_compile_12 = twig_get_attribute($this->env, $this->source, ($context["subitem"] ?? null), "fields", [], "any", false, false, false, 103)) && is_array($__internal_compile_12) || $__internal_compile_12 instanceof ArrayAccess ? ($__internal_compile_12["id"] ?? null) : null) <= 0)) {
+                    // line 104
                     echo "                     <button class=\"btn btn-primary me-2\" type=\"submit\" name=\"add\">
                         <i class=\"fas fa-plus\"></i>
                         <span>";
-                    // line 224
+                    // line 106
                     echo twig_escape_filter($this->env, _x("button", "Add"), "html", null, true);
                     echo "</span>
                      </button>
                   ";
                 } else {
-                    // line 227
+                    // line 109
                     echo "                     <input type=\"hidden\" name=\"id\" value=\"";
-                    echo twig_escape_filter($this->env, (($__internal_compile_17 = twig_get_attribute($this->env, $this->source, ($context["subitem"] ?? null), "fields", [], "any", false, false, false, 227)) && is_array($__internal_compile_17) || $__internal_compile_17 instanceof ArrayAccess ? ($__internal_compile_17["id"] ?? null) : null), "html", null, true);
+                    echo twig_escape_filter($this->env, (($__internal_compile_13 = twig_get_attribute($this->env, $this->source, ($context["subitem"] ?? null), "fields", [], "any", false, false, false, 109)) && is_array($__internal_compile_13) || $__internal_compile_13 instanceof ArrayAccess ? ($__internal_compile_13["id"] ?? null) : null), "html", null, true);
                     echo "\" />
                      <button class=\"btn btn-primary me-2\" type=\"submit\" name=\"update\">
                         <i class=\"far fa-save\"></i>
                         <span>";
-                    // line 230
+                    // line 112
                     echo twig_escape_filter($this->env, _x("button", "Save"), "html", null, true);
                     echo "</span>
                      </button>
                   ";
                 }
-                // line 233
+                // line 115
                 echo "               </div>
 
                <input type=\"hidden\" name=\"_glpi_csrf_token\" value=\"";
-                // line 235
+                // line 117
                 echo twig_escape_filter($this->env, Session::getNewCSRFToken(), "html", null, true);
                 echo "\" />
             </form>
          ";
             }
-            // line 238
+            // line 120
             echo "      </div>
 
       <script type=\"text/javascript\">
          function solutiontemplate_update";
-            // line 241
+            // line 123
             echo twig_escape_filter($this->env, ($context["rand"] ?? null), "html", null, true);
             echo "(value) {
             \$.ajax({
                url: '";
-            // line 243
+            // line 125
             echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("/ajax/solution.php"), "html", null, true);
             echo "',
                type: 'POST',
                data: {
                   solutiontemplates_id: value,
                   items_id: '";
-            // line 247
-            echo twig_escape_filter($this->env, (($__internal_compile_18 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 247)) && is_array($__internal_compile_18) || $__internal_compile_18 instanceof ArrayAccess ? ($__internal_compile_18["id"] ?? null) : null), "html", null, true);
+            // line 129
+            echo twig_escape_filter($this->env, (($__internal_compile_14 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 129)) && is_array($__internal_compile_14) || $__internal_compile_14 instanceof ArrayAccess ? ($__internal_compile_14["id"] ?? null) : null), "html", null, true);
             echo "',
                   itemtype: '";
-            // line 248
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getType", [], "method", false, false, false, 248), "html", null, true);
+            // line 130
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getType", [], "method", false, false, false, 130), "html", null, true);
             echo "'
                }
             }).done(function (data) {
                // set textarea content
                if (tasktinymce = tinymce.get(\"content_";
-            // line 252
+            // line 134
             echo twig_escape_filter($this->env, ($context["rand"] ?? null), "html", null, true);
             echo "\")) {
                   tasktinymce.setContent(data.content);
@@ -416,7 +257,7 @@ class __TwigTemplate_2a16ec83e8da95462169606dd5f7006d0cc82d6865ac8cf0c689365eba4
                   ? 0
                   : parseInt(data.solutiontypes_id);
                \$(\"#dropdown_solutiontypes_id";
-            // line 260
+            // line 142
             echo twig_escape_filter($this->env, ($context["rand"] ?? null), "html", null, true);
             echo "\").trigger(\"setValue\", solutiontypes_id);
             });
@@ -438,11 +279,11 @@ class __TwigTemplate_2a16ec83e8da95462169606dd5f7006d0cc82d6865ac8cf0c689365eba4
 
     public function getDebugInfo()
     {
-        return array (  420 => 260,  409 => 252,  402 => 248,  398 => 247,  391 => 243,  386 => 241,  381 => 238,  375 => 235,  371 => 233,  365 => 230,  358 => 227,  352 => 224,  348 => 222,  346 => 221,  340 => 219,  338 => 218,  332 => 214,  328 => 212,  326 => 210,  325 => 206,  323 => 203,  316 => 200,  313 => 199,  311 => 198,  308 => 197,  304 => 195,  302 => 193,  301 => 189,  300 => 188,  298 => 186,  293 => 184,  290 => 183,  287 => 182,  285 => 181,  281 => 179,  279 => 177,  278 => 176,  277 => 172,  276 => 171,  274 => 168,  267 => 165,  265 => 164,  262 => 163,  257 => 160,  255 => 158,  254 => 157,  253 => 156,  252 => 152,  250 => 148,  245 => 146,  242 => 145,  240 => 144,  237 => 143,  233 => 141,  231 => 135,  229 => 133,  221 => 128,  215 => 126,  212 => 125,  209 => 124,  207 => 123,  201 => 119,  199 => 117,  198 => 116,  197 => 108,  196 => 106,  193 => 105,  190 => 104,  187 => 103,  184 => 102,  181 => 101,  179 => 100,  174 => 97,  168 => 94,  164 => 92,  162 => 91,  157 => 89,  152 => 87,  148 => 86,  145 => 85,  140 => 83,  137 => 82,  135 => 81,  132 => 80,  126 => 78,  123 => 77,  121 => 76,  118 => 75,  113 => 72,  108 => 69,  106 => 68,  105 => 67,  104 => 66,  102 => 65,  100 => 64,  97 => 63,  95 => 62,  92 => 61,  86 => 58,  82 => 56,  80 => 55,  75 => 52,  73 => 49,  70 => 48,  67 => 47,  63 => 46,  58 => 34,  56 => 44,  54 => 43,  52 => 42,  50 => 41,  48 => 40,  46 => 39,  44 => 37,  42 => 35,  35 => 34,);
+        return array (  261 => 142,  250 => 134,  243 => 130,  239 => 129,  232 => 125,  227 => 123,  222 => 120,  216 => 117,  212 => 115,  206 => 112,  199 => 109,  193 => 106,  189 => 104,  187 => 103,  181 => 101,  179 => 100,  174 => 97,  168 => 94,  164 => 92,  162 => 91,  157 => 89,  152 => 87,  148 => 86,  145 => 85,  140 => 83,  137 => 82,  135 => 81,  132 => 80,  126 => 78,  123 => 77,  121 => 76,  118 => 75,  113 => 72,  108 => 69,  106 => 68,  105 => 67,  104 => 66,  102 => 65,  100 => 64,  97 => 63,  95 => 62,  92 => 61,  86 => 58,  82 => 56,  80 => 55,  75 => 52,  73 => 49,  70 => 48,  67 => 47,  63 => 46,  58 => 34,  56 => 44,  54 => 43,  52 => 42,  50 => 41,  48 => 40,  46 => 39,  44 => 37,  42 => 35,  35 => 34,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/timeline/form_solution.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\timeline\\form_solution.html.twig");
+        return new Source("", "components/itilobject/timeline/form_solution.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\timeline\\form_solution.html.twig");
     }
 }

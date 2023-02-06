@@ -133,6 +133,6 @@ class __TwigTemplate_761c1f951e6f91bf7b64c31a6b381334af8012f3912a154f40b90e80075
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/saved_searches_list.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\saved_searches_list.html.twig");
+        return new Source("", "layout/parts/saved_searches_list.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\saved_searches_list.html.twig");
     }
 }

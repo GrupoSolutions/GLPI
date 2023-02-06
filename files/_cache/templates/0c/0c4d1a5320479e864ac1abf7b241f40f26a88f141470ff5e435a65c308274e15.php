@@ -48,7 +48,7 @@ class __TwigTemplate_764feeadbeb0e72d88ffef17cb52a710cfd3010ff0f9b2fb5dfa1e41949
    <title>";
         // line 37
         echo twig_escape_filter($this->env, ($context["title"] ?? null), "html", null, true);
-        echo " - Grupo Solutions</title>
+        echo " - GLPI</title>
 
    <meta charset=\"utf-8\" />
 
@@ -60,71 +60,75 @@ class __TwigTemplate_764feeadbeb0e72d88ffef17cb52a710cfd3010ff0f9b2fb5dfa1e41949
         // line 45
         echo "   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
 
+   ";
+        // line 48
+        echo "   <meta name=\"robots\" content=\"noindex, nofollow\" />
+
    <meta property=\"glpi:csrf_token\" content=\"";
-        // line 47
+        // line 50
         echo twig_escape_filter($this->env, Session::getNewCSRFToken(true), "html", null, true);
         echo "\" />
 
    ";
-        // line 49
+        // line 52
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["css_files"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["css_file"]) {
-            // line 50
+            // line 53
             echo "      <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->cssPath(twig_get_attribute($this->env, $this->source, $context["css_file"], "path", [], "any", false, false, false, 50), (((twig_get_attribute($this->env, $this->source, $context["css_file"], "options", [], "any", true, true, false, 50) &&  !(null === twig_get_attribute($this->env, $this->source, $context["css_file"], "options", [], "any", false, false, false, 50)))) ? (twig_get_attribute($this->env, $this->source, $context["css_file"], "options", [], "any", false, false, false, 50)) : ([]))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->cssPath(twig_get_attribute($this->env, $this->source, $context["css_file"], "path", [], "any", false, false, false, 53), (((twig_get_attribute($this->env, $this->source, $context["css_file"], "options", [], "any", true, true, false, 53) &&  !(null === twig_get_attribute($this->env, $this->source, $context["css_file"], "options", [], "any", false, false, false, 53)))) ? (twig_get_attribute($this->env, $this->source, $context["css_file"], "options", [], "any", false, false, false, 53)) : ([]))), "html", null, true);
             echo "\" />
    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['css_file'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+        // line 55
         echo "
    ";
-        // line 53
+        // line 56
         echo $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->customCss();
         echo "
 
    <link rel=\"shortcut icon\" type=\"images/x-icon\" href=\"";
-        // line 55
+        // line 58
         echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->assetPath("/pics/favicon.ico"), "html", null, true);
         echo "\" />
 
    ";
-        // line 57
+        // line 60
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["js_files"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["js_file"]) {
-            // line 58
+            // line 61
             echo "      <script type=\"text/javascript\" src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->jsPath(twig_get_attribute($this->env, $this->source, $context["js_file"], "path", [], "any", false, false, false, 58), (((twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", true, true, false, 58) &&  !(null === twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 58)))) ? (twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 58)) : ([]))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->jsPath(twig_get_attribute($this->env, $this->source, $context["js_file"], "path", [], "any", false, false, false, 61), (((twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", true, true, false, 61) &&  !(null === twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 61)))) ? (twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 61)) : ([]))), "html", null, true);
             echo "\"></script>
    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['js_file'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 60
+        // line 63
         echo "
    ";
-        // line 61
+        // line 64
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["js_modules"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["js_file"]) {
-            // line 62
+            // line 65
             echo "      <script type=\"module\" src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->jsPath(twig_get_attribute($this->env, $this->source, $context["js_file"], "path", [], "any", false, false, false, 62), (((twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", true, true, false, 62) &&  !(null === twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 62)))) ? (twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 62)) : ([]))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->jsPath(twig_get_attribute($this->env, $this->source, $context["js_file"], "path", [], "any", false, false, false, 65), (((twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", true, true, false, 65) &&  !(null === twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 65)))) ? (twig_get_attribute($this->env, $this->source, $context["js_file"], "options", [], "any", false, false, false, 65)) : ([]))), "html", null, true);
             echo "\"></script>
    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['js_file'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 64
+        // line 67
         echo "
    ";
-        // line 65
+        // line 68
         echo $this->extensions['Glpi\Application\View\Extension\FrontEndAssetsExtension']->localesJs();
         echo "
 </head>
@@ -143,11 +147,11 @@ class __TwigTemplate_764feeadbeb0e72d88ffef17cb52a710cfd3010ff0f9b2fb5dfa1e41949
 
     public function getDebugInfo()
     {
-        return array (  128 => 65,  125 => 64,  116 => 62,  112 => 61,  109 => 60,  100 => 58,  96 => 57,  91 => 55,  86 => 53,  83 => 52,  74 => 50,  70 => 49,  65 => 47,  61 => 45,  57 => 42,  50 => 37,  41 => 35,  37 => 33,);
+        return array (  132 => 68,  129 => 67,  120 => 65,  116 => 64,  113 => 63,  104 => 61,  100 => 60,  95 => 58,  90 => 56,  87 => 55,  78 => 53,  74 => 52,  69 => 50,  65 => 48,  61 => 45,  57 => 42,  50 => 37,  41 => 35,  37 => 33,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "layout/parts/head.html.twig", "C:\\wamp64\\www\\glpi\\templates\\layout\\parts\\head.html.twig");
+        return new Source("", "layout/parts/head.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\layout\\parts\\head.html.twig");
     }
 }

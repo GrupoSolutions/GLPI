@@ -203,7 +203,7 @@ class PluginFinancialreportsPdf extends TCPDF {
       $this->SetY($this->top_margin);
 
       /* Logo. */
-      $this->Image('../pics/logo.png', 13, 10, 35, 12); // x, y, w, h
+      $this->Image('../pics/logo.jpg', 15, 10, 30, 9); // x, y, w, h
       $this->Cell($logo_width, $this->line_height * 4, '', 1, 0, 'C');
       /* Title. */
       $this->SetFont($this->pol_def, 'B', $this->tail_titre);
@@ -246,28 +246,21 @@ class PluginFinancialreportsPdf extends TCPDF {
 
          /* En tete tableau. */
          $this->CellHeadTable(false, 45, __('Name'), 1, 'C', 1);
-         $this->CellHeadTable(false, 45, __('Data da Compra'), 1, 'C', 1);
+         $this->CellHeadTable(false, 35, __('Inventory number'), 1, 'C', 1);
+         $this->CellHeadTable(false, 20, __('Decommission date'), 1, 'C', 1);
          if ($disposal != 1) {
-            $this->CellHeadTable(false, 50, __('User / Group', 'financialreports'), 1, 'C', 1);
+            $this->CellHeadTable(false, 40, __('User / Group', 'financialreports'), 1, 'C', 1);
             $this->CellHeadTable(false, 40, __('Location'), 1, 'C', 1);
          }
-         
-         if ($disposal != 1 ){
-            $this->CellHeadTable(false, 40, __('Model'), 1, 'C', 1);
-            $this->CellHeadTable(false, 40, __('Supplier'), 1, 'C', 1);
-         }
-         else{
-            $this->CellHeadTable(false, 50, __('Model'), 1, 'C', 1);
-            $this->CellHeadTable(false, 40, __('Supplier'), 1, 'C', 1);
-         }
-        
+         $this->CellHeadTable(false, 40, __('Model'), 1, 'C', 1);
+         $this->CellHeadTable(false, 40, __('Supplier'), 1, 'C', 1);
 
          if ($disposal == 1) {
-            $this->CellHeadTable(false, 20, __('Valor', 'financialreports'), 1, 'C', 1);
-            $this->CellHeadTable(false, 35, __('Decommission date'), 1, 'C', 1);
-            $this->CellHeadTable(false, 45, __('Comments'), 1, 'C', 1);
+            $this->CellHeadTable(false, 20, __('HT', 'financialreports'), 1, 'C', 1);
+            $this->CellHeadTable(false, 25, __('Decommission date'), 1, 'C', 1);
+            $this->CellHeadTable(false, 55, __('Comments'), 1, 'C', 1);
          } else {
-            $this->CellHeadTable(false, 20, __('Valor', 'R$' . 'financialreports'), 1, 'C', 1);
+            $this->CellHeadTable(false, 20, __('HT', 'financialreports'), 1, 'C', 1);
          }
          $this->SetY($this->GetY() + $this->line_height);
          /* ligne. */
@@ -280,35 +273,26 @@ class PluginFinancialreportsPdf extends TCPDF {
             $this->SetFondWhite();
             if ($i % 2) $this->SetVeryLightBackgroung();
             $this->CellLineTable(false, 45, $data["ITEM_0"]);
-            $this->CellLineTable(false, 45, Html::convDate($data["ITEM_3"]), 1, 'C', 1);
+            $this->CellLineTable(false, 35, $data["ITEM_2"]);
+            $this->CellLineTable(false, 20, Html::convDate($data["ITEM_3"]), 1, 'C', 1);
             $this->SetTextBlue();
-            if($disposal != 1){
-               $this->CellLineTable(false, 50,$dbu->formatUserName($data["ITEM_4_3"], $data["ITEM_4"], $data["ITEM_4_2"], $data["ITEM_4_4"], 0));//Username
-
-            }
-            else{
-               $this->CellLineTable(false, 50, $data["ITEM_6"]); // Modelo
-
-            }
+            $this->CellLineTable(false, 40,$dbu->formatUserName($data["ITEM_4_3"], $data["ITEM_4"], $data["ITEM_4_2"], $data["ITEM_4_4"], 0));
             $this->SetTextBlack();
             if ($disposal != 1) {
-               $this->CellLineTable(false, 40, $data["ITEM_9"]);//Localização
-               $this->CellLineTable(false, 40, $data["ITEM_6"]); // Modelo
+               $this->CellLineTable(false, 40, $data["ITEM_9"]);
+               $this->CellLineTable(false, 40, $data["ITEM_6"]);
             }
-            $this->CellLineTable(false, 40, $data["ITEM_7"]);//Valor
-            
+
+            $this->CellLineTable(false, 40, $data["ITEM_7"]);
 
             if ($disposal == 1) {
+               $this->SetTextRed();
+               $this->CellLineTable(false, 20, Glpi\RichText\RichText::getTextFromHtml(Html::formatNumber($data["ITEM_8"])), 1, 'R', 1);
                $this->SetTextBlack();
-
-               $this->CellLineTable(false, 20, Glpi\RichText\RichText::getTextFromHtml(Html::formatNumber($data["ITEM_8"])), 1, 'R', 1);//valor
-               $this->SetTextBlack();
-
-               $this->CellLineTable(false, 35, Html::convDate($data["ITEM_10"]), 1, 'C', 1);//Data Desativação
-               $this->CellLineTable(false, 45, $data["ITEM_9"]);
+               $this->CellLineTable(false, 25, Html::convDate($data["ITEM_10"]), 1, 'C', 1);
+               $this->CellLineTable(false, 55, $data["ITEM_9"]);
             } else {
-               $this->SetTextBlack();
-               
+               $this->SetTextRed();
                $this->CellLineTable(false, 20, Glpi\RichText\RichText::getTextFromHtml(Html::formatNumber($data["ITEM_8"])), 1, 'R', 1);
                $this->SetTextBlack();
             }
@@ -317,7 +301,7 @@ class PluginFinancialreportsPdf extends TCPDF {
          /* pied */
          if ($total != -1) {
             $this->CellHeadTable(true, $this->large_cell_width - 20, __('Total'), 1, 'R', 1);
-            $this->SetTextBlack();
+            $this->SetTextRed();
             $this->CellHeadTable(false, 20, Glpi\RichText\RichText::getTextFromHtml(Html::formatNumber($total)), 1, 'R', 1);
             $this->SetTextBlack();
             $this->SetY($this->GetY() + $this->line_height);

@@ -196,6 +196,6 @@ $context["linked"], "tickets_id_1", [], "array", true, true, false, 47), 2 => tr
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/linked_tickets.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\linked_tickets.html.twig");
+        return new Source("", "components/itilobject/linked_tickets.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\linked_tickets.html.twig");
     }
 }

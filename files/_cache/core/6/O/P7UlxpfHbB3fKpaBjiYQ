@@ -1,35 +1,35 @@
-1674851982
+1675370151
 4fffb9f72734530dac5a64efaab424f0ef489421
-a:1:{s:69:"plugin_formcreator_closed_issues_ad09cc27-dcfc-4826-bcfb-defdcbde019a";s:1157:"      <style>
-         #bn_1570505308 {
+a:1:{s:69:"plugin_formcreator_closed_issues_ad09cc27-dcfc-4826-bcfb-defdcbde019a";s:1165:"      <style>
+         #bn_1108734608 {
             background-color: #bcbcbc;
             color: #565656;
          }
 
-         #bn_1570505308:hover {
+         #bn_1108734608:hover {
             background-color: #969696;
             border: 1px solid #707070;
          }
 
-         .theme-dark #bn_1570505308 {
+         .theme-dark #bn_1108734608 {
             background-color: #565656;
             color: #bcbcbc;
          }
 
-         .theme-dark #bn_1570505308:hover {
+         .theme-dark #bn_1108734608:hover {
             background-color: #969696;
             color: #565656;
             border: 1px solid #707070;
          }
       </style>
-      <a href='/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset'
-         id="bn_1570505308"
+      <a href='/glpi106/marketplace/formcreator/front/issue.php?criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset'
+         id="bn_1108734608"
          class="card big-number "
          title="">
-         <span class="content">            <span title="29"
+         <span class="content">            <span title="40"
                   class="formatted-number"
                   data-precision='0'>
-               <span class="number">29</span>
+               <span class="number">40</span>
                <span class="suffix"></span>
             </span></span>
          <div class="label" title="Fechado">Fechado</div>

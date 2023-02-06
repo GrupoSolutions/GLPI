@@ -27,182 +27,154 @@
 /**
  * Class PluginMydashboardReports_Map
  */
-class PluginMydashboardReports_Map extends CommonGLPI
-{
-    private $options;
-    private $pref;
-    public static $reports = [29];
+class PluginMydashboardReports_Map extends CommonGLPI {
 
-    /**
-     * PluginMydashboardReports_Map constructor.
-     *
-     * @param array $_options
-     */
-    public function __construct($_options = [])
-    {
-        $this->options = $_options;
+   private       $options;
+   private       $pref;
+   public static $reports = [29];
 
-        $preference = new PluginMydashboardPreference();
-        if (Session::getLoginUserID() !== false
-            && !$preference->getFromDB(Session::getLoginUserID())) {
-            $preference->initPreferences(Session::getLoginUserID());
-        }
-        $preference->getFromDB(Session::getLoginUserID());
-        $this->preferences = $preference->fields;
-    }
+   /**
+    * PluginMydashboardReports_Map constructor.
+    *
+    * @param array $_options
+    */
+   public function __construct($_options = []) {
+      $this->options = $_options;
 
-    /**
-     * @return array
-     */
-    public function getWidgetsForItem()
-    {
-        $widgets = [
-           __('Map', "mydashboard") => [
-              $this->getType() . "29" => ["title"   => __("OpenStreetMap - Opened tickets by location", "mydashboard"),
-                                          "icon"    => "ti ti-map",
-                                          "comment" => __("Display Tickets by location (Latitude / Longitude)", "mydashboard")],
-           ]
-        ];
-        return $widgets;
-    }
+      $preference = new PluginMydashboardPreference();
+      if (Session::getLoginUserID() !== false
+          && !$preference->getFromDB(Session::getLoginUserID())) {
+         $preference->initPreferences(Session::getLoginUserID());
+      }
+      $preference->getFromDB(Session::getLoginUserID());
+      $this->preferences = $preference->fields;
+   }
+
+   /**
+    * @return array
+    */
+   public function getWidgetsForItem() {
+
+      $widgets = [
+         __('Map', "mydashboard") => [
+            $this->getType() . "29" => ["title"   => __("OpenStreetMap - Opened tickets by location", "mydashboard"),
+                                        "icon"    => "ti ti-map",
+                                        "comment" => __("Display Tickets by location (Latitude / Longitude)", "mydashboard")],
+         ]
+      ];
+      return $widgets;
+   }
 
 
-    /**
-     * @return array
-     */
-    public function getTitleForWidget($widgetID)
-    {
+   /**
+    * @param       $widgetId
+    * @param array $opt
+    *
+    * @return \PluginMydashboardHtml
+    */
+   public function getWidgetContentForItem($widgetId, $opt = []) {
+      global $DB, $CFG_GLPI;
+      $isDebug = $_SESSION['glpi_use_mode'] == Session::DEBUG_MODE;
+      $dbu     = new DbUtils();
+      switch ($widgetId) {
 
-        $widgets = $this->getWidgetsForItem();
-        foreach ($widgets as $class => $widget) {
-            return $widget[$widgetID]['title'];
-        }
-        return false;
+         case $this->getType() . "29":
 
-    }
+            if (isset($_SESSION['glpiactiveprofile']['interface'])
+                && Session::getCurrentInterface() == 'central') {
+               $criterias = ['entities_id',
+                             'is_recursive',
+                             'type',
+                             'technicians_groups_id',
+                             'group_is_recursive'];
+            }
+            if (isset($_SESSION['glpiactiveprofile']['interface'])
+                && Session::getCurrentInterface() != 'central') {
+               $criterias = ['type'];
+            }
 
-    public function getCommentForWidget($widgetID)
-    {
+            $paramsc = ["preferences" => $this->preferences,
+                        "criterias"   => $criterias,
+                        "opt"         => $opt];
+            $options = PluginMydashboardHelper::manageCriterias($paramsc);
 
-        $widgets = $this->getWidgetsForItem();
-        foreach ($widgets as $class => $widget) {
-            return $widget[$widgetID]['comment'];
-        }
-        return false;
+            $opt  = $options['opt'];
+            $crit = $options['crit'];
 
-    }
+            $type                 = $opt['type'];
+            $entities_id_criteria = $crit['entity'];
+            $sons_criteria        = $crit['sons'];
+            $groups_criteria      = $crit['technicians_groups_id'];
 
-    /**
-     * @param       $widgetId
-     * @param array $opt
-     *
-     * @return \PluginMydashboardHtml
-     */
-    public function getWidgetContentForItem($widgetId, $opt = [])
-    {
-        global $DB, $CFG_GLPI;
-        $isDebug = $_SESSION['glpi_use_mode'] == Session::DEBUG_MODE;
-        $dbu     = new DbUtils();
-        switch ($widgetId) {
-            case $this->getType() . "29":
+            $widget = new PluginMydashboardHtml();
+            $title  = __("OpenStreetMap - Opened tickets by location", "mydashboard");
+            $widget->setWidgetComment(__("Display Tickets by location (Latitude / Longitude)", "mydashboard"));
+            $widget->setWidgetTitle((($isDebug) ? "29 " : "") . $title);
 
-                if (isset($_SESSION['glpiactiveprofile']['interface'])
-                    && Session::getCurrentInterface() == 'central') {
-                    $criterias = ['entities_id',
-                                  'is_recursive',
-                                  'type',
-                                  'technicians_groups_id',
-                                  'group_is_recursive'];
-                }
-                if (isset($_SESSION['glpiactiveprofile']['interface'])
-                    && Session::getCurrentInterface() != 'central') {
-                    $criterias = ['type'];
-                }
+            $params['as_map']     = 1;
+            $params['is_deleted'] = 0;
+            $params['order']      = 'DESC';
+            $params['sort']       = 19;
+            $params['start']      = 0;
+            $params['list_limit'] = 999999;
+            $itemtype             = 'Ticket';
 
-                $paramsc = ["preferences" => $this->preferences,
-                            "criterias"   => $criterias,
-                            "opt"         => $opt];
-                $options = PluginMydashboardHelper::manageCriterias($paramsc);
+            if (isset($sons_criteria) && $sons_criteria > 0) {
+               $params['criteria'][] = [
+                  'field'      => 80,
+                  'searchtype' => 'under',
+                  'value'      => $entities_id_criteria
+               ];
+            } else {
+               $params['criteria'][] = [
+                  'field'      => 80,
+                  'searchtype' => 'equals',
+                  'value'      => $entities_id_criteria
+               ];
+            }
+            $params['criteria'][] = [
+               'link'       => 'AND',
+               'field'      => 12,
+               'searchtype' => 'equals',
+               'value'      => 'notold'
+            ];
+            $params['criteria'][] = [
+               'link'       => 'AND NOT',
+               'field'      => 998,
+               'searchtype' => 'contains',
+               'value'      => 'NULL'
+            ];
+            $params['criteria'][] = [
+               'link'       => 'AND NOT',
+               'field'      => 999,
+               'searchtype' => 'contains',
+               'value'      => 'NULL'
+            ];
 
-                $opt  = $options['opt'];
-                $crit = $options['crit'];
-
-                $type                 = $opt['type'];
-                $entities_id_criteria = $crit['entity'];
-                $sons_criteria        = $crit['sons'];
-                $groups_criteria      = $crit['technicians_groups_id'];
-
-                $widget = new PluginMydashboardHtml();
-                $title   = $this->getTitleForWidget($widgetId);
-                $comment = $this->getCommentForWidget($widgetId);
-                $widget->setWidgetTitle((($isDebug) ? "29 " : "") . $title);
-                $widget->setWidgetComment($comment);
-                $widget->toggleWidgetRefresh();
-
-                $params['as_map']     = 1;
-                $params['is_deleted'] = 0;
-                $params['order']      = 'DESC';
-                $params['sort']       = 19;
-                $params['start']      = 0;
-                $params['list_limit'] = 999999;
-                $itemtype             = 'Ticket';
-
-                if (isset($sons_criteria) && $sons_criteria > 0) {
-                    $params['criteria'][] = [
-                       'field'      => 80,
-                       'searchtype' => 'under',
-                       'value'      => $entities_id_criteria
-                    ];
-                } else {
-                    $params['criteria'][] = [
-                       'field'      => 80,
-                       'searchtype' => 'equals',
-                       'value'      => $entities_id_criteria
-                    ];
-                }
-                $params['criteria'][] = [
-                   'link'       => 'AND',
-                   'field'      => 12,
-                   'searchtype' => 'equals',
-                   'value'      => 'notold'
-                ];
-                $params['criteria'][] = [
-                   'link'       => 'AND NOT',
-                   'field'      => 998,
-                   'searchtype' => 'contains',
-                   'value'      => 'NULL'
-                ];
-                $params['criteria'][] = [
-                   'link'       => 'AND NOT',
-                   'field'      => 999,
-                   'searchtype' => 'contains',
-                   'value'      => 'NULL'
-                ];
-
-                if ($type > 0) {
-                    $params['criteria'][] = [
-                       'link'       => 'AND',
-                       'field'      => 14,
-                       'searchtype' => 'equals',
-                       'value'      => $type
-                    ];
-                }
-                $grp_criteria = is_array($groups_criteria) ? $groups_criteria : [$groups_criteria];
-                if (is_array($grp_criteria) && count($grp_criteria) > 0) {
-                    $options['criteria'][7]['link'] = 'AND';
-                    $nb                             = 0;
-                    foreach ($grp_criteria as $group) {
-                        if ($nb == 0) {
-                            $options['criteria'][7]['criteria'][$nb]['link'] = 'AND';
-                        } else {
-                            $options['criteria'][7]['criteria'][$nb]['link'] = 'OR';
-                        }
-                        $options['criteria'][7]['criteria'][$nb]['field']      = 8;
-                        $options['criteria'][7]['criteria'][$nb]['searchtype'] = 'equals';
-                        $options['criteria'][7]['criteria'][$nb]['value']      = $group;
-                        $nb++;
-                    }
-                }
+            if ($type > 0) {
+               $params['criteria'][] = [
+                  'link'       => 'AND',
+                  'field'      => 14,
+                  'searchtype' => 'equals',
+                  'value'      => $type
+               ];
+            }
+            $grp_criteria = is_array($groups_criteria) ? $groups_criteria : [$groups_criteria];
+            if (is_array($grp_criteria) && count($grp_criteria) > 0) {
+               $options['criteria'][7]['link'] = 'AND';
+               $nb                             = 0;
+               foreach ($grp_criteria as $group) {
+                  if ($nb == 0) {
+                     $options['criteria'][7]['criteria'][$nb]['link'] = 'AND';
+                  } else {
+                     $options['criteria'][7]['criteria'][$nb]['link'] = 'OR';
+                  }
+                  $options['criteria'][7]['criteria'][$nb]['field']      = 8;
+                  $options['criteria'][7]['criteria'][$nb]['searchtype'] = 'equals';
+                  $options['criteria'][7]['criteria'][$nb]['value']      = $group;
+                  $nb++;
+               }
+            }
 
 //            if ($groups_criteria > 0) {
 //               $params['criteria'][] = [
@@ -212,48 +184,50 @@ class PluginMydashboardReports_Map extends CommonGLPI
 //                  'value'      => $groups_criteria
 //               ];
 //            }
-                $data = Search::prepareDatasForSearch('Ticket', $params);
-                Search::constructSQL($data);
-                Search::constructData($data);
+            $data = Search::prepareDatasForSearch('Ticket', $params);
+            Search::constructSQL($data);
+            Search::constructData($data);
 
-                $paramsh = ["widgetId"  => $widgetId,
-                            "name"      => 'TicketsByLocationOpenStreetMap',
-                            "onsubmit"  => false,
-                            "opt"       => $opt,
-                            "criterias" => $criterias,
-                            "export"    => false,
-                            "canvas"    => false,
-                            "nb"        => 1];
-                $graph   = PluginMydashboardHelper::getGraphHeader($paramsh);
+            $paramsh = ["widgetId"  => $widgetId,
+                        "name"      => 'TicketsByLocationOpenStreetMap',
+                        "onsubmit"  => false,
+                        "opt"       => $opt,
+                        "criterias" => $criterias,
+                        "export"    => false,
+                        "canvas"    => false,
+                        "nb"        => 1];
+            $graph   = PluginMydashboardHelper::getGraphHeader($paramsh);
 
-                if ($data['data']['totalcount'] > 0) {
-                    $target   = $data['search']['target'];
-                    $criteria = $data['search']['criteria'];
+            if ($data['data']['totalcount'] > 0) {
 
-                    $criteria[]   = [
-                       'link'       => 'AND',
-                       'field'      => 83,
-                       'searchtype' => 'equals',
-                       'value'      => 'CURLOCATION'
-                    ];
-                    $globallinkto = Toolbox::append_params(
-                        [
-                           'criteria'     => Toolbox::stripslashes_deep($criteria),
-                           'metacriteria' => Toolbox::stripslashes_deep($data['search']['metacriteria'])
-                        ],
-                        '&amp;'
-                    );
-                    $parameters   = "as_map=0&amp;" . $globallinkto;
+               $target   = $data['search']['target'];
+               $criteria = $data['search']['criteria'];
 
-                    $typename = $itemtype::getTypeName(2);
+               $criteria[]   = [
+                  'link'       => 'AND',
+                  'field'      => 83,
+                  'searchtype' => 'equals',
+                  'value'      => 'CURLOCATION'
+               ];
+               $globallinkto = Toolbox::append_params(
+                  [
+                     'criteria'     => Toolbox::stripslashes_deep($criteria),
+                     'metacriteria' => Toolbox::stripslashes_deep($data['search']['metacriteria'])
+                  ],
+                  '&amp;'
+               );
+               $parameters   = "as_map=0&amp;sort=" . $data['search']['sort'] . "&amp;order=" . $data['search']['order'] . '&amp;' .
+                               $globallinkto;
 
-                    if (strpos($target, '?') == false) {
-                        $fulltarget = $target . "?" . $parameters;
-                    } else {
-                        $fulltarget = $target . "&" . $parameters;
-                    }
-                    $root_doc = PLUGIN_MYDASHBOARD_WEBDIR;
-                    $graph    .= "<script>
+               $typename = $itemtype::getTypeName(2);
+
+               if (strpos($target, '?') == false) {
+                  $fulltarget = $target . "?" . $parameters;
+               } else {
+                  $fulltarget = $target . "&" . $parameters;
+               }
+               $root_doc = PLUGIN_MYDASHBOARD_WEBDIR;
+               $graph    .= "<script>
                 var _loadMap = function(map_elt, itemtype) {
                   L.AwesomeMarkers.Icon.prototype.options.prefix = 'fas';
                   var _micon = 'circle';
@@ -385,19 +359,19 @@ class PluginMydashboardReports_Map extends CommonGLPI
                          _loadMap(map, 'Ticket');
                    });
                ";
-                    $graph .= "</script>";
-                }
-                $graph .= "<div id=\"TicketsByLocationOpenStreetMap\" class=\"mapping\"></div>";
-                $widget->toggleWidgetRefresh();
-                $widget->setWidgetHtmlContent(
-                    $graph
-                );
+               $graph .= "</script>";
+            }
+            $graph .= "<div id=\"TicketsByLocationOpenStreetMap\" class=\"mapping\"></div>";
+            $widget->toggleWidgetRefresh();
+            $widget->setWidgetHtmlContent(
+               $graph
+            );
 
-                return $widget;
-                break;
+            return $widget;
+            break;
 
-            default:
-                break;
-        }
-    }
+         default:
+            break;
+      }
+   }
 }

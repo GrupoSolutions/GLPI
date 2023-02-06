@@ -206,6 +206,6 @@ class __TwigTemplate_f4ebcc8331b587fafe382bc731b762a3ae22a4cecedfa3abd1bd03aaf8d
 
     public function getSourceContext()
     {
-        return new Source("", "components/dropdown/limit.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\dropdown\\limit.html.twig");
+        return new Source("", "components/dropdown/limit.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\dropdown\\limit.html.twig");
     }
 }

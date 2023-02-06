@@ -259,7 +259,9 @@ function plugin_timelineticket_ticket_purge(Ticket $item) {
 
 function plugin_timelineticket_getDropdown() {
 
-   if (Plugin::isPluginActive("timelineticket")) {
+   $plugin = new Plugin();
+
+   if ($plugin->isActivated("timelineticket")) {
       return ['PluginTimelineticketGrouplevel'=>PluginTimelineticketGrouplevel::getTypeName(2)];
    } else {
       return [];
@@ -269,7 +271,8 @@ function plugin_timelineticket_getDropdown() {
 // Define dropdown relations
 function plugin_timelineticket_getDatabaseRelations() {
 
-   if (Plugin::isPluginActive("timelineticket")) {
+   $plugin = new Plugin();
+   if ($plugin->isActivated("timelineticket")) {
       return ["glpi_entities" => ["glpi_plugin_timelineticket_grouplevels" => "entities_id"]];
    } else {
       return [];

@@ -293,8 +293,8 @@ class __TwigTemplate_313453b68de03e4d53440f9b48bd2a85fbd42da206766843ebd387b2085
             echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook("pre_item_form", ["item" => ($context["subitem"] ?? null), "options" => ($context["params"] ?? null)]), "html", null, true);
             echo "
 
-            <div class=\"row mx-n3 mx-xxl-auto\">
-               <div class=\"col-12 col-xl-7 col-xxl-8\">
+            <div class=\"row\">
+               <div class=\"col-12\">
                   ";
             // line 164
             echo twig_call_macro($macros["fields"], "macro_textareaField", ["content", (($__internal_compile_22 = twig_get_attribute($this->env, $this->source,             // line 166
@@ -774,6 +774,6 @@ function ($__i__) use ($context, $macros) { $context["i"] = $__i__; return (($co
 
     public function getSourceContext()
     {
-        return new Source("", "components/itilobject/timeline/form_task.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\itilobject\\timeline\\form_task.html.twig");
+        return new Source("", "components/itilobject/timeline/form_task.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\itilobject\\timeline\\form_task.html.twig");
     }
 }

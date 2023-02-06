@@ -73,6 +73,6 @@ class __TwigTemplate_c2aa84fd74d818ee641df092a2190a830aff1f35975da7831d481e575e0
 
     public function getSourceContext()
     {
-        return new Source("", "components/modal.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\modal.html.twig");
+        return new Source("", "components/modal.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\modal.html.twig");
     }
 }

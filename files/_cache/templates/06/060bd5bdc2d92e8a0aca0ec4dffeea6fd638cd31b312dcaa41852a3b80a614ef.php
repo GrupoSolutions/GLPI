@@ -37,7 +37,7 @@ class __TwigTemplate_644bcf771fe95d88d227e48c0a9cdf60335dbd4085cf2038b09d252232a
         echo "
 ";
         // line 34
-        if ((twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isDynamic", [], "method", false, false, false, 34) != false)) {
+        if ((Session::haveRight("inventory", twig_constant("READ")) && (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isDynamic", [], "method", false, false, false, 34) != false))) {
             // line 35
             echo "<div class=\"card m-n2 border-0 shadow-none\">
    <div class=\"card-header\">
@@ -143,18 +143,33 @@ class __TwigTemplate_644bcf771fe95d88d227e48c0a9cdf60335dbd4085cf2038b09d252232a
          </div>
 
          <div class=\"mb-3 col-12 col-sm-6\">
+            <label class=\"form-label\" >";
+                // line 85
+                echo twig_escape_filter($this->env, __("Public contact address"), "html", null, true);
+                echo "</label>
+            <span>";
+                // line 86
+                echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->getVerbatimValue((($__internal_compile_3 = twig_get_attribute($this->env, $this->source, ($context["agent"] ?? null), "fields", [], "any", false, false, false, 86)) && is_array($__internal_compile_3) || $__internal_compile_3 instanceof ArrayAccess ? ($__internal_compile_3["remote_addr"] ?? null) : null)), "html", null, true);
+                echo "</span>
+         </div>
+
+
+         <div class=\"mb-3 col-12 col-sm-6\">
+         </div>
+
+         <div class=\"mb-3 col-12 col-sm-6\">
             <label class=\"form-label\" >
                ";
-                // line 86
+                // line 95
                 echo twig_escape_filter($this->env, __("Agent status"), "html", null, true);
                 echo "
                <i id=\"update-status\" class=\"fas fa-sync\" role=\"button\" title=\"";
-                // line 87
+                // line 96
                 echo twig_escape_filter($this->env, __("Ask agent about its current status"), "html", null, true);
                 echo "\"></i>
             </label>
             <span id='agent_status'>";
-                // line 89
+                // line 98
                 echo twig_escape_filter($this->env, __("Unknown"), "html", null, true);
                 echo "</span>
          </div>
@@ -162,16 +177,16 @@ class __TwigTemplate_644bcf771fe95d88d227e48c0a9cdf60335dbd4085cf2038b09d252232a
          <div class=\"mb-3 col-12 col-sm-6\">
             <label class=\"form-label\" >
                ";
-                // line 94
+                // line 103
                 echo twig_escape_filter($this->env, __("Request inventory"), "html", null, true);
                 echo "
                <i id=\"update-inventory\" class=\"fas fa-sync\" role=\"button\" title=\"";
-                // line 95
+                // line 104
                 echo twig_escape_filter($this->env, __("Request agent to proceed an new inventory"), "html", null, true);
                 echo "\"></i>
             </label>
             <span id='inventory_status'>";
-                // line 97
+                // line 106
                 echo twig_escape_filter($this->env, __("Unknown"), "html", null, true);
                 echo "</span>
          </div>
@@ -185,19 +200,19 @@ class __TwigTemplate_644bcf771fe95d88d227e48c0a9cdf60335dbd4085cf2038b09d252232a
             \$.ajax({
                type: 'POST',
                url: '";
-                // line 108
+                // line 117
                 echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("/ajax/agent.php"), "html", null, true);
                 echo "',
                timeout: 30000, // 30 seconds timeout
                dataType: 'json',
                data: {
                   action: '";
-                // line 112
+                // line 121
                 echo twig_escape_filter($this->env, twig_constant("Agent::ACTION_STATUS"), "html", null, true);
                 echo "',
                   id: '";
-                // line 113
-                echo twig_escape_filter($this->env, (($__internal_compile_3 = twig_get_attribute($this->env, $this->source, ($context["agent"] ?? null), "fields", [], "any", false, false, false, 113)) && is_array($__internal_compile_3) || $__internal_compile_3 instanceof ArrayAccess ? ($__internal_compile_3["id"] ?? null) : null), "html", null, true);
+                // line 122
+                echo twig_escape_filter($this->env, (($__internal_compile_4 = twig_get_attribute($this->env, $this->source, ($context["agent"] ?? null), "fields", [], "any", false, false, false, 122)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["id"] ?? null) : null), "html", null, true);
                 echo "'
                },
                success: function(json) {
@@ -215,19 +230,19 @@ class __TwigTemplate_644bcf771fe95d88d227e48c0a9cdf60335dbd4085cf2038b09d252232a
             \$.ajax({
                type: 'POST',
                url: '";
-                // line 129
+                // line 138
                 echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("/ajax/agent.php"), "html", null, true);
                 echo "',
                timeout: 30000, // 30 seconds timeout
                dataType: 'json',
                data: {
                   action: '";
-                // line 133
+                // line 142
                 echo twig_escape_filter($this->env, twig_constant("Agent::ACTION_INVENTORY"), "html", null, true);
                 echo "',
                   id: '";
-                // line 134
-                echo twig_escape_filter($this->env, (($__internal_compile_4 = twig_get_attribute($this->env, $this->source, ($context["agent"] ?? null), "fields", [], "any", false, false, false, 134)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["id"] ?? null) : null), "html", null, true);
+                // line 143
+                echo twig_escape_filter($this->env, (($__internal_compile_5 = twig_get_attribute($this->env, $this->source, ($context["agent"] ?? null), "fields", [], "any", false, false, false, 143)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["id"] ?? null) : null), "html", null, true);
                 echo "'
                },
                success: function(json) {
@@ -241,17 +256,53 @@ class __TwigTemplate_644bcf771fe95d88d227e48c0a9cdf60335dbd4085cf2038b09d252232a
       });
       </script>
    ";
+            } else {
+                // line 156
+                echo "   <div class=\"card-body row\">
+      <div class=\"mb-3 col-12 col-sm-6\">
+         ";
+                // line 158
+                echo twig_escape_filter($this->env, __("No agent has been linked."), "html", null, true);
+                echo "
+      </div>
+   </div>
+   ";
             }
-            // line 147
+            // line 162
+            echo "
+   ";
+            // line 164
             echo "   ";
-            if ((((($__internal_compile_5 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 147)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["id"] ?? null) : null) > 0) && twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "is_dynamic"], "method", false, false, false, 147))) {
-                // line 148
+            // line 165
+            echo "   ";
+            if ((($this->extensions['Glpi\Application\View\Extension\PhpExtension']->isUsingTrait(($context["item"] ?? null), "Glpi\\Features\\Inventoriable") && (twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "getInventoryAgent", [], "method", false, false, false, 165) == null)) && twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "last_inventory_update"], "method", false, false, false, 165))) {
+                // line 166
+                echo "      <div class=\"card-body row\">
+         <div class=\"mb-3 col-12 col-sm-6\">
+            <label class=\"form-label\" >";
+                // line 168
+                echo twig_escape_filter($this->env, __("Last inventory"), "html", null, true);
+                echo "</label>
+            <span>";
+                // line 169
+                echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->getFormattedDatetime((($__internal_compile_6 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 169)) && is_array($__internal_compile_6) || $__internal_compile_6 instanceof ArrayAccess ? ($__internal_compile_6["last_inventory_update"] ?? null) : null)), "html", null, true);
+                echo "</span>
+         </div>
+      </div>
+   ";
+            }
+            // line 173
+            echo "
+   ";
+            // line 174
+            if ((((($__internal_compile_7 = twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "fields", [], "any", false, false, false, 174)) && is_array($__internal_compile_7) || $__internal_compile_7 instanceof ArrayAccess ? ($__internal_compile_7["id"] ?? null) : null) > 0) && twig_get_attribute($this->env, $this->source, ($context["item"] ?? null), "isField", [0 => "is_dynamic"], "method", false, false, false, 174))) {
+                // line 175
                 echo "      ";
                 echo twig_escape_filter($this->env, $this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook(twig_constant("Glpi\\Plugin\\Hooks::AUTOINVENTORY_INFORMATION"), ($context["item"] ?? null)), "html", null, true);
                 echo "
    ";
             }
-            // line 150
+            // line 177
             echo "</div>
 ";
         }
@@ -269,11 +320,11 @@ class __TwigTemplate_644bcf771fe95d88d227e48c0a9cdf60335dbd4085cf2038b09d252232a
 
     public function getDebugInfo()
     {
-        return array (  255 => 150,  249 => 148,  246 => 147,  230 => 134,  226 => 133,  219 => 129,  200 => 113,  196 => 112,  189 => 108,  175 => 97,  170 => 95,  166 => 94,  158 => 89,  153 => 87,  149 => 86,  141 => 81,  137 => 80,  130 => 76,  126 => 75,  119 => 71,  115 => 70,  107 => 65,  103 => 64,  98 => 62,  94 => 60,  91 => 59,  89 => 58,  86 => 57,  80 => 54,  74 => 52,  67 => 48,  60 => 45,  57 => 44,  55 => 43,  50 => 41,  42 => 35,  40 => 34,  37 => 33,);
+        return array (  306 => 177,  300 => 175,  298 => 174,  295 => 173,  288 => 169,  284 => 168,  280 => 166,  277 => 165,  275 => 164,  272 => 162,  265 => 158,  261 => 156,  245 => 143,  241 => 142,  234 => 138,  215 => 122,  211 => 121,  204 => 117,  190 => 106,  185 => 104,  181 => 103,  173 => 98,  168 => 96,  164 => 95,  152 => 86,  148 => 85,  141 => 81,  137 => 80,  130 => 76,  126 => 75,  119 => 71,  115 => 70,  107 => 65,  103 => 64,  98 => 62,  94 => 60,  91 => 59,  89 => 58,  86 => 57,  80 => 54,  74 => 52,  67 => 48,  60 => 45,  57 => 44,  55 => 43,  50 => 41,  42 => 35,  40 => 34,  37 => 33,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/inventory_info.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\inventory_info.html.twig");
+        return new Source("", "components/form/inventory_info.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\inventory_info.html.twig");
     }
 }

@@ -1,6 +1,6 @@
-1674851347
+1675429968
 8bfad92badc36977c1c9498bf11da49a479e2e4f
-a:1:{s:68:"count_Peripheral_PeripheralType_805e7c76-07a2-4437-85e8-14b0038a0f0d";s:8057:"      <style>
+a:1:{s:68:"count_Peripheral_PeripheralType_805e7c76-07a2-4437-85e8-14b0038a0f0d";s:8213:"      <style>
          #chart-dashboard_card_central_cf62ce697fb71cce2389aa496129ae6c4a58fe23 {
             background-color: #d5e1ec;
             color: #4c7da9
@@ -34,11 +34,11 @@ a:1:{s:68:"count_Peripheral_PeripheralType_805e7c76-07a2-4437-85e8-14b0038a0f0d"
 //<![CDATA[
 
       $(function () {
-         var chart = new Chartist.Pie('#chart-dashboard_card_central_cf62ce697fb71cce2389aa496129ae6c4a58fe23 .chart', {
-            labels: ["MODEM","SIM CARD MODEM","ROTEADOR","Scanner","IMPRESSORA","SIM CARD CORPORATIVO","SSD GOLDENFIR T650-120GB","ADAPTADOR WIRELESS","BALAN\u00c7A","CALCULADORA","SOPRADOR TERMICO"],
-            series: [{"meta":"MODEM","value":12,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=5&reset=reset"},{"meta":"SIM CARD MODEM","value":10,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset"},{"meta":"ROTEADOR","value":5,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset"},{"meta":"Scanner","value":4,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=1&reset=reset"},{"meta":"IMPRESSORA","value":3,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=9&reset=reset"},{"meta":"SIM CARD CORPORATIVO","value":2,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset"},{"meta":"SSD GOLDENFIR T650-120GB","value":1,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=12&reset=reset"},{"meta":"ADAPTADOR WIRELESS","value":1,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=7&reset=reset"},{"meta":"BALAN\u00c7A","value":1,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=10&reset=reset"},{"meta":"CALCULADORA","value":1,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=11&reset=reset"},{"meta":"SOPRADOR TERMICO","value":1,"url":"\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=8&reset=reset"}],
+         var chart = new Chartist.Pie(Dashboard.getActiveDashboard().element.find('#chart-dashboard_card_central_cf62ce697fb71cce2389aa496129ae6c4a58fe23 .chart')[0], {
+            labels: ["MODEM","SIM CARD MODEM","ROTEADOR","Scanner","IMPRESSORA","SIM CARD CORPORATIVO","ADAPTADOR WIRELESS","BALAN\u00c7A","CALCULADORA","SOPRADOR TERMICO","SSD GOLDENFIR T650-120GB"],
+            series: [{"meta":"MODEM","value":12,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=5&reset=reset"},{"meta":"SIM CARD MODEM","value":10,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&reset=reset"},{"meta":"ROTEADOR","value":5,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=3&reset=reset"},{"meta":"Scanner","value":4,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=1&reset=reset"},{"meta":"IMPRESSORA","value":3,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=9&reset=reset"},{"meta":"SIM CARD CORPORATIVO","value":2,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=2&reset=reset"},{"meta":"ADAPTADOR WIRELESS","value":1,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=7&reset=reset"},{"meta":"BALAN\u00c7A","value":1,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=10&reset=reset"},{"meta":"CALCULADORA","value":1,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=11&reset=reset"},{"meta":"SOPRADOR TERMICO","value":1,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=8&reset=reset"},{"meta":"SSD GOLDENFIR T650-120GB","value":1,"url":"\/glpi106\/front\/peripheral.php?reset&criteria%5B0%5D%5Bfield%5D=4&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=12&reset=reset"}],
          }, {
-            width: 'calc(100% - 5px)',
+            width: '100%',
             chartPadding: 4,
             donut: true,
             
@@ -69,7 +69,7 @@ a:1:{s:68:"count_Peripheral_PeripheralType_805e7c76-07a2-4437-85e8-14b0038a0f0d"
                      'data-clickable': true
                   });
                   data.element._node.onclick = function() {
-                     if (!Dashboard.edit_mode) {
+                     if (!Dashboard.getActiveDashboard().edit_mode) {
                         window.location = url;
                      }
                   }

@@ -348,6 +348,6 @@ class __TwigTemplate_8ced7580bad6c29afa511cfcaf3cefc58f50ca9e5675833f9e38c336f63
 
     public function getSourceContext()
     {
-        return new Source("", "components/form/buttons.html.twig", "C:\\wamp64\\www\\glpi\\templates\\components\\form\\buttons.html.twig");
+        return new Source("", "components/form/buttons.html.twig", "C:\\wamp64\\www\\glpi106\\templates\\components\\form\\buttons.html.twig");
     }
 }

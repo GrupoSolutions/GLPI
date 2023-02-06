@@ -30,7 +30,9 @@ Session::checkLoginUser();
 
 Html::header(PluginMydashboardMenu::getTypeName(2), '', "tools", "pluginmydashboardmenu",'pluginmydashboardstockwidget');
 
-if (Plugin::isPluginActive("mydashboard")) {
+$plugin = new Plugin();
+
+if ($plugin->isActivated("mydashboard")) {
 
    $config = new PluginMydashboardStockWidget();
    $config->checkGlobal(READ);

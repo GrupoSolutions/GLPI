@@ -589,7 +589,7 @@ class PluginFinancialreportsFinancialreport extends CommonDBTM {
       $item_num = 1;
       echo Search::showNewLine($output_type, $row_num % 2);
       echo Search::showItem($output_type, __('General Total', 'financialreports'), $item_num, $row_num);
-      echo Search::showItem($output_type, Html::formatNumber($master_total) . " " . _n('Real', 'Reais', 2, 'financialreports'), $item_num, $row_num);
+      echo Search::showItem($output_type, Html::formatNumber($master_total) . " " . _n('Euro', 'Euros', 2, 'financialreports'), $item_num, $row_num);
       echo Search::showEndLine($output_type);
 
       $title = "";
@@ -638,8 +638,8 @@ class PluginFinancialreportsFinancialreport extends CommonDBTM {
 
          if ($output_type == Search::HTML_OUTPUT) {
             if ($total != -1) {
-               echo "<th>" . $titre . "</th><th><span style='color:green'>"
-                    .  _n('Real', 'R$', 2, 'financialreports') . " " . Html::formatNumber($total). "</span></th><th>";
+               echo "<th>" . $titre . "</th><th><span style='color:red'>"
+                    . Html::formatNumber($total) . " " . _n('Euro', 'Euros', 2, 'financialreports') . "</span></th><th>";
             } else {
                echo "<th>" . $titre . "</th><th></th><th>";
             }
@@ -665,7 +665,7 @@ class PluginFinancialreportsFinancialreport extends CommonDBTM {
             echo Search::showHeaderItem($output_type, $titre, $header_num);//th
             echo Search::showHeaderItem($output_type, __('Total'), $header_num);
             if ($total != -1) {
-               echo Search::showHeaderItem($output_type, Html::formatNumber($total) . " " . _n('Real', 'R$', 2, 'financialreports'), $header_num);
+               echo Search::showHeaderItem($output_type, Html::formatNumber($total) . " " . _n('Euro', 'Euros', 2, 'financialreports'), $header_num);
             }
          }
 
@@ -689,7 +689,7 @@ class PluginFinancialreportsFinancialreport extends CommonDBTM {
             echo Search::showHeaderItem($output_type, __('Decommission date'), $header_num);
             echo Search::showHeaderItem($output_type, __('Comments'), $header_num);
          } else {
-            echo Search::showHeaderItem($output_type, __('Preço de compra ', 'financialreports') . " " . _n('(Real)', '(R$)', 2, 'financialreports'), $header_num);
+            echo Search::showHeaderItem($output_type, __('Purchase Price HT in', 'financialreports') . " " . _n('Euro', 'Euros', 2, 'financialreports'), $header_num);
          }
          // End Line for column headers
          echo Search::showEndLine($output_type);
@@ -740,7 +740,7 @@ class PluginFinancialreportsFinancialreport extends CommonDBTM {
                } else {
                   //value
                   if ($output_type == Search::HTML_OUTPUT) {
-                     $ouput_value = "<span style='color:green'>" . Html::formatNumber($data["ITEM_8"]) . "</span>";
+                     $ouput_value = "<span style='color:red'>" . Html::formatNumber($data["ITEM_8"]) . "</span>";
                   } else {
                      $ouput_value = Html::formatNumber($data["ITEM_8"]);
                   }
