@@ -9,15 +9,28 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 $sqlcon = mysqli_connect('localhost', 'root', '', 'base_104', '3306'); // ALTERAR AO SUBIR PARA PROD
 $GLOBALS['sqlcon'] = $sqlcon;
 
-#print_r($idsSolicitacoes);
-function buscaSolicitacaoAprovada(){
-
+$data_inicial = $_POST['data_inicial'];
+$data_final = $_POST['data_final'];
+$frmStatus = $_POST['status'];
+switch ($frmStatus) {
+    case 0:
+        $status = " ";
+    case 1:
+        $status = "= 1";
+        break;
+    case 101:
+        $status = "= 101";
+        break;
+    case 102:
+        $status = "= 102";
+        break;
+}
+function buscaSolicitacaoAprovada($data_inicial, $data_final, $status){
 $sqlcon = $GLOBALS['sqlcon'];
 $arrSolicitacao = [];
-$idsSolicitacoes = [];
 
 //BUSCA OS ID's DAS SOLICITAÇÕES, JUNTAMENTE COM COMENTARIO E NOME DO SOLICITANTE
-$sqlSolicitacao = "SELECT glpi_plugin_formcreator_formanswers.id AS ID, USUARIOS.name as SOLICITANTE, DATE_FORMAT(request_date,'%d/%m/%Y %H:%i') AS DATA_PEDIDO, glpi_plugin_formcreator_formanswers.comment as COMENTARIO FROM glpi_plugin_formcreator_formanswers LEFT JOIN glpi_users USUARIOS on USUARIOS.id = glpi_plugin_formcreator_formanswers.requester_id WHERE STATUS = 1";
+    $sqlSolicitacao = "SELECT glpi_plugin_formcreator_formanswers.id AS ID, USUARIOS.name as SOLICITANTE, DATE_FORMAT(request_date,'%d/%m/%Y %H:%i') AS DATA_PEDIDO, glpi_plugin_formcreator_formanswers.comment as COMENTARIO FROM glpi_plugin_formcreator_formanswers LEFT JOIN glpi_users USUARIOS on USUARIOS.id = glpi_plugin_formcreator_formanswers.requester_id WHERE glpi_plugin_formcreator_formanswers.request_date between '{$data_inicial}' AND '{$data_final}' AND STATUS {$status}";
 $solicitacaoRetorno = mysqli_query($sqlcon, $sqlSolicitacao);
 
 if($solicitacaoRetorno){
@@ -67,6 +80,6 @@ for($i = 1; $i < $qtdSolicitacao; $i++){
     
 }
 
-buscaSolicitacaoAprovada();
+buscaSolicitacaoAprovada($data_inicial, $data_final, $status);
 
 ?>

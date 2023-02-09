@@ -22859,7 +22859,7 @@ msgstr "Para %s"
 
 #: src/NotificationTargetTicket.php:86
 msgid "To answer by email, write above this line"
-msgstr "Para responder por e-mail, escreva acima dessa linha"
+msgstr ", escreva acima dessa linha"
 
 #: src/NotificationTargetTicket.php:105
 msgid "To answer by email, write under this line"

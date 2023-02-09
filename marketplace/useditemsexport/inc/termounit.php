@@ -78,32 +78,32 @@
 			else if($tipo == "Monitor"){
 				$aid = $row["monitortypes_id"];
 				$bid = $row["monitormodels_id"];
-				$query = "SELECT * FROM glpi_monitors where id = $id";
+				$query = "SELECT * FROM glpi_monitors where id = $aid";
 				$qmodel = "SELECT DISTINCT a.name, b.name, c.name FROM glpi_monitortypes a, glpi_monitormodels b, glpi_manufacturers c WHERE a.id = $aid and b.id = $bid and c.id = $cid";
 			}
 			else if($tipo == "Dispositivo de rede"){
 				$aid = $row["networkequipmenttypes_id"];
 				$bid = $row["networkequipmentmodels_id"];
-				$query = "SELECT * FROM glpi_networkequipments where id = $id";
+				$query = "SELECT * FROM glpi_networkequipments where id = $aid";
 				$qmodel = "SELECT DISTINCT a.name, b.name, c.name FROM glpi_networkequipmenttypes a, glpi_networkequipmentmodels b, glpi_manufacturers c WHERE a.id = $aid and b.id = $bid and c.id = $cid";
 			}
 			else if($tipo == "Impressora"){
 				$aid = $row["printertypes_id"];
 				$bid = $row["printermodels_id"];
-				$query = "SELECT * FROM glpi_printers where id = $id";
+				$query = "SELECT * FROM glpi_printers where id = $aid";
 				$qmodel = "SELECT DISTINCT a.name, b.name, c.name FROM glpi_printertypes a, glpi_printermodels b, glpi_manufacturers c WHERE a.id = $aid and b.id = $bid and c.id = $cid";
 
 			}
 			else if($tipo == "Telefone"){
 				$aid = $row["phonetypes_id"];
 				$bid = $row["phonemodels_id"];
-				$query = "SELECT * FROM glpi_phones where id = $id";
+			$query = "SELECT * FROM glpi_phones where id = {$aid}";
 				$qmodel = "SELECT DISTINCT a.name, b.name, c.name FROM glpi_phonetypes a, glpi_phonemodels b, glpi_manufacturers c WHERE a.id = $aid and b.id = $bid and c.id = $cid";			
 			}			
 			else if($tipo == "Dispositivo"){
 				$aid = $row["peripheraltypes_id"];
 				$bid = $row["peripheralmodels_id"];
-				$query = "SELECT * FROM glpi_peripherals where id = $id";
+			$query = "SELECT * FROM glpi_peripherals where id = {$aid}";
 				$qmodel = "SELECT DISTINCT a.name, b.name, c.name FROM glpi_peripheraltypes a, glpi_peripheralmodels b, glpi_manufacturers c WHERE a.id = $aid and b.id = $bid and c.id = $cid";
 			} 
 			else{

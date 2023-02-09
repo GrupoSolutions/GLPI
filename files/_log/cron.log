@@ -154,3 +154,69 @@ Interno #1: Executar temp
 Interno #1: Executar closeticket
 2023-02-06 15:53:48 [2@GS003021]
 Interno #1: Executar alertnotclosed
+2023-02-06 18:43:31 [2@GS003021]
+Interno #1: Executar infocom
+2023-02-07 14:11:03 [2@GS003021]
+Interno #1: Executar session
+2023-02-07 16:59:30 [2@GS003021]
+Interno #1: Executar createinquest
+2023-02-07 18:43:07 [2@GS003021]
+Interno #1: Executar watcher
+2023-02-07 18:43:15 [2@GS003021]
+Erro ao enviar o e-mail<br/>SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2023-02-07 18:48:21 [2@GS003021]
+Interno #1: Executar queuednotificationclean
+2023-02-07 18:56:56 [2@GS003021]
+Interno #1: Executar contract
+2023-02-07 19:02:06 [2@GS003021]
+Interno #1: Executar mailgateerror
+2023-02-07 19:21:26 [2@GS003021]
+Interno #1: Executar certificate
+2023-02-07 19:27:02 [2@GS003021]
+Interno #1: Executar RecurrentItems
+2023-02-07 19:45:25 [2@GS003021]
+Interno #1: Executar reservation
+2023-02-07 19:53:43 [2@GS003021]
+Interno #1: Executar mailgate
+2023-02-07 19:54:14 [2@GS003021]
+Ocorreu um erro ao tentar conectar ao coletor.<br/>host doesn't allow connection
+2023-02-07 20:53:49 [2@GS003021]
+Interno #1: Executar planningrecall
+2023-02-08 11:10:33 [2@GS003021]
+Interno #1: Executar graph
+2023-02-08 11:40:38 [2@GS003021]
+Interno #1: Executar checkdbreplicate
+2023-02-08 11:40:55 [@GS003021]
+Interno #1: Executar slaticket
+2023-02-08 11:51:06 [2@GS003021]
+Interno #1: Executar olaticket
+2023-02-08 12:07:05 [2@GS003021]
+Interno #1: Executar consumable
+2023-02-08 16:58:01 [2@GS003021]
+Interno #1: Executar temp
+2023-02-08 17:03:12 [2@GS003021]
+Interno #1: Executar closeticket
+2023-02-08 18:53:23 [2@GS003021]
+Interno #1: Executar alertnotclosed
+2023-02-08 19:06:46 [2@GS003021]
+Interno #1: Executar infocom
+2023-02-08 19:15:31 [2@GS003021]
+Interno #1: Executar mailgate
+2023-02-08 19:16:02 [2@GS003021]
+Ocorreu um erro ao tentar conectar ao coletor.<br/>host doesn't allow connection
+2023-02-08 19:23:12 [2@GS003021]
+Interno #1: Executar RecurrentItems
+2023-02-08 19:35:19 [2@GS003021]
+Interno #1: Executar reservation
+2023-02-08 19:43:55 [2@GS003021]
+Interno #1: Executar planningrecall
+2023-02-08 19:51:12 [2@GS003021]
+Interno #1: Executar checkdbreplicate
+2023-02-08 19:56:34 [2@GS003021]
+Interno #1: Executar slaticket
+2023-02-08 20:01:15 [@GS003021]
+Interno #1: Executar olaticket
+2023-02-08 20:04:27 [2@GS003021]
+Interno #1: Executar graph
+2023-02-08 20:10:00 [2@GS003021]
+Interno #1: Executar consumable

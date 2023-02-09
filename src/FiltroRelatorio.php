@@ -14,11 +14,11 @@
         </div>
         <div style="float:left;">
             <div><label>Status:</label></div>
-            <select>
-                <option>Todos</option>
-                <option>Aprovado</option>
-                <option>Recusado</option>
-                <option>Em Aberto</option>
+            <select name="status" id="status">
+                <option value="0">Todos</option>
+                <option value="1">Aprovado</option>
+                <option value="102">Recusado</option>
+                <option value="101">Em Aberto</option>
             </select>
             <button type="submit" class="btn btn-primary" onclick="return checaDatas()" id="envio">Gerar Relatório</button>
         </div>
@@ -29,12 +29,12 @@
 function checaDatas(){
     const data_inicial = document.getElementById('data_inicial').value;
     const data_final = document.getElementById('data_final').value;
-
+    const status = document.getElementById('status').value;
+    
     if(data_inicial > data_final){
         setTimeout(alert("Insira um intervalo de datas válido."), 4000);
         return false;
     } else{
-        document.getElementById("relatorio_soli").submit();
         return true;
     }
 }
