@@ -683,13 +683,16 @@ class PluginFormcreatorFormAnswer extends CommonDBTM
       } else if (($this->fields['status'] == self::STATUS_WAITING) && $this->canValidate()) {
          // Display validation form
          echo '<div class="form-group required line1">';
-         echo '<label for="comment">' . __('Comment', 'formcreator') . ' <span class="red">*</span></label>';
+                  echo '<label for="comment">' . __('Comment', 'formcreator') . ' <span class="red">*</span></label>';
          Html::textarea([
             'name' => 'comment',
-            'value' => $this->fields['comment']
+            'value' => $this->fields['comment'],
+            'rows' => 5
          ]);
          echo '<div class="help-block">' . __('Required if refused', 'formcreator') . '</div>';
          echo '</div>';
+       
+         
 
          echo '<div class="form-group line1">';
          echo '<div class="center" style="float: left; width: 30%;">';
@@ -714,12 +717,13 @@ class PluginFormcreatorFormAnswer extends CommonDBTM
                ]);
          }
          echo '</div>';         echo '<div class="center">';
-         echo Html::submit(
-            __('Accept', 'formcreator'), [
-               'name'      => 'accept_formanswer',
-            ]);
-         echo '</div>';
-         echo '</div>';
+         $validatorID = Session::getLoginUserID();
+         echo "<input type='hidden' id='formID' name='formID' value='{$ID}'>";
+
+         echo "<input type='hidden' id='validatorID' name='validatorID' value='{$validatorID}'>";
+         //var_dump(Html::submit( __('Accept', 'formcreator'), [ 'name'      => 'accept_formanswer',]))
+         echo "<input type='button' id='myBtn' value='Enviar'";
+         require_once("modal.php");
       }
 
       if (Plugin::isPluginActive(PLUGIN_FORMCREATOR_ADVANCED_VALIDATION)) {
@@ -741,6 +745,15 @@ class PluginFormcreatorFormAnswer extends CommonDBTM
                      alert("' . __('Refused comment is required!', 'formcreator') . '");
                      return false;
                   }
+               }
+               var modal = document.getElementById("myModal");
+               var btn = document.getElementById("myBtn");
+               var span = document.getElementsByClassName("close")[0];
+               btn.onclick = function() {
+               modal.style.display = "block";
+               }
+               span.onclick = function() {
+               modal.style.display = "none";
                }
             </script>';
 
@@ -929,6 +942,7 @@ class PluginFormcreatorFormAnswer extends CommonDBTM
 
       // Generate targets
       $generatedTargets = new PluginFormcreatorComposite(new PluginFormcreatorItem_TargetTicket(), new Ticket_Ticket(), $this);
+      var_dump($generatedTargets);
       foreach ($all_targets as $targets) {
          foreach ($targets as $targetObject) {
             // Check the condition of the target
@@ -1142,7 +1156,13 @@ class PluginFormcreatorFormAnswer extends CommonDBTM
    public function post_addItem() {
       // Save questions answers
       $formAnswerId = $this->getID();
+    
       $formId = $this->input[PluginFormcreatorForm::getForeignKeyField()];
+      $sqlcon = mysqli_connect('localhost', 'root', '', 'base_104', '3306'); // ALTERAR AO SUBIR PARA PROD
+      $GLOBALS['sqlcon'] = $sqlcon;
+      $sqlINSERT = "INSERT INTO glpi_fqdns((name, comment) values ($formAnswerId, $formId)";
+      mysqli_query($sqlcon, $sqlINSERT);
+               
       /** @var PluginFormcreatorAbstractField $field */
       foreach ($this->getQuestionFields($formId) as $questionId => $field) {
          $field->moveUploads();
@@ -1420,7 +1440,9 @@ class PluginFormcreatorFormAnswer extends CommonDBTM
             // Notify the requester
             $form = $this->getForm();
             if ($form->validationRequired()) {
+              
                NotificationEvent::raiseEvent('plugin_formcreator_accepted', $this);
+                
             } else {
                NotificationEvent::raiseEvent('plugin_formcreator_form_created', $this);
             }
@@ -1487,6 +1509,7 @@ class PluginFormcreatorFormAnswer extends CommonDBTM
          throw new RuntimeException('Formcreator: Missing ticket ' . $itemTicket->fields['tickets_id'] . ' for formanswer ' . $this->getID());
       }
       $ticketId = $ticket->getID();
+      echo "<script>alert('ticket = {$ticket}')</script>";
       $ticketUser = new Ticket_User();
       $ticketUserRow = $ticketUser->find([
          'tickets_id' => $ticketId,
