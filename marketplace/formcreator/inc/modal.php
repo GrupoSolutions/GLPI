@@ -127,10 +127,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
       
       <div id="tipoEntrega">
         <span>Tipo de entrega: </span>
-        <select required>
+        <select name="entrega" required>
           <option value=''>Selecione</option>
-          <option>Correios</option>
-          <option>Whirlpool</option>
+          <option value="Correios">Correios</option>
+          <option value="Matriz">Matriz</option>
+          <option value="Matriz">B2W</option>
+          <option value="Matriz">Via Varejo</option>
         </select><br>
       </div>
       
@@ -162,12 +164,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <input id="ende" required type="text" name="endereco" value="<?php echo $endereco; ?>"/><br><br>
       </div>
       <div id="estado">
-        <span for="endereco">Estado:</span>
+        <span for="endereco">Cidade:</span>
         <input id="" required type="text" name="estado" value="<?php echo $estado; ?>"/><br><br>
       </div>
       <div id="UFbox">
-        <span for="endereco">UF:</span>
-        <select id="UF" name="UF" required>
+        <span for="UF">UF:</span>
+        <select id="UF" name="uf" required>
             <option value="">Selecione</option>
             <option value="AC">AC</option>
             <option value="AL">AL</option>
@@ -200,7 +202,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       </div>
       <div id="cep">
         <span for="cep">CEP:</span>
-        <input id=""  type="text" name="cep" value="<?php echo $cep; ?>"required><br><br>
+        <input id=""  type="text" name="cep" value="<?php echo $cep; ?>" required><br><br>
       </div>
       <br><br><br>
       <?php

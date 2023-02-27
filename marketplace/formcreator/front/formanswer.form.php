@@ -103,12 +103,15 @@ if (isset($_POST['update'])) {
                      $endereco = $_POST['endereco'];
                      $cep = $_POST['cep'];
                      $estado = $_POST['estado'];
-                     
-                     $insertEndereco = "UPDATE glpi_plugin_formcreator_formanswers SET endereco = '{$endereco}', cep = '{$cep}', estado = '{$estado}' WHERE glpi_plugin_formcreator_formanswers.id = '{$formID}'";
+                     $uf = $_POST['uf'];
+                     $tipoentrega = $_POST['entrega'];
+                     $insertEndereco = "UPDATE glpi_plugin_formcreator_formanswers SET endereco = '{$endereco}', cep = '{$cep}', estado = '{$estado}', uf = '{$uf}', entrega = '{$tipoentrega}' WHERE glpi_plugin_formcreator_formanswers.id = '{$formID}'";
                     
                   }
                   else{
-                     echo "<script>alert('Erro ao efetuar pedido " . $consumivel . ", favor contatar o suporte!'); history.go(-1);</script>";
+                     //echo "<script>alert('Erro ao efetuar pedido " . $consumivel . ", favor contatar o suporte!'); history.go(-1);</script>";
+                     require_once('erroNomenclatura.php');
+
                      exit;
                   }
                } else{
@@ -135,12 +138,14 @@ if (isset($_POST['update'])) {
                      $endereco = $_POST['endereco'];
                      $cep = $_POST['cep'];
                      $estado = $_POST['estado'];
-                     
-                     $insertEndereco = "UPDATE glpi_plugin_formcreator_formanswers SET endereco = '{$endereco}', cep = '{$cep}', estado = '{$estado}' WHERE glpi_plugin_formcreator_formanswers.id = '{$formID}'";
+                     $uf = $_POST['uf'];
+                     $tipoentrega = $_POST['entrega'];
+                     $insertEndereco = "UPDATE glpi_plugin_formcreator_formanswers SET endereco = '{$endereco}', cep = '{$cep}', estado = '{$estado}', uf = '{$uf}', entrega = '{$tipoentrega}' WHERE glpi_plugin_formcreator_formanswers.id = '{$formID}'";
                      
                   }
                   else {
-                     echo "<script>alert('Erro ao efetuar pedido " . $consumivel . " , favor contatar o suporte!'); history.go(-1);;</script>";
+                     //echo "<script>alert('Erro ao efetuar pedido " . $consumivel . " , favor contatar o suporte!'); history.go(-1);;</script>";
+                     require_once("../inc/erroNomenclatura.php");
                      exit;
                   }
                   
